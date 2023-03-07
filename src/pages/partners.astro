@@ -20,7 +20,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- Start of Gold Sponsors -->
   <div class="mt-3 p-5 container">
-    <h4 class="text-warning p-3">GOLD SPONSORS</h4>
+    <h4 class="text-white p-3">GOLD SPONSORS</h4>
     <div id="gold-card-group" class="card-group">
       <!-- <div class="py-4 card text-center bg-transparent align-items-center" style="border: none !important;">
         <div class="ratio ratio-1x1 rounded-circle overflow-hidden w-25">
@@ -38,14 +38,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <!-- End of Gold Sponsors -->
 
     <!-- Start of Silver Sponsors -->
-    <h4 class="text-secondary p-3">SILVER SPONSORS</h4>
+    <h4 class="text-white p-3">SILVER SPONSORS</h4>
+    <div id="silver-card-group" class="card-group"></div>
     <!-- End of Silver Sponsors -->
+
+    <!-- Start of Bronze Sponsors -->
+    <h4 class="text-white p-3">BRONZE SPONSORS</h4>
+    <div id="bronze-card-group" class="card-group"></div>
+    <!-- End of Bronze Sponsors -->
 
   </div>
 
   <script>
     // Components
     const goldCardGroup = document.querySelector('#gold-card-group');
+    const silverCardGroup = document.querySelector('#silver-card-group');
+    const bronzeCardGroup = document.querySelector('#bronze-card-group');
 
     // Fill Gold sponsors
     for (let i = 0; i < 4; i++) {
@@ -69,6 +77,54 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>`;
 
       goldCardGroup.appendChild(goldCard);
+    }
+
+    // Fill Silver sponsors
+    for (let i = 0; i < 4; i++) {
+      const silverCard = document.createElement('div');
+      silverCard.classList.add('py-4');
+      silverCard.classList.add('card');
+      silverCard.classList.add('text-center');
+      silverCard.classList.add('bg-transparent');
+      silverCard.classList.add('align-items-center');
+
+      silverCard.style.border = 'none';
+      silverCard.innerHTML = `
+        <div class="ratio ratio-1x1 rounded-circle overflow-hidden w-25">
+          <img class="" src="https://i.pinimg.com/736x/fa/6d/0e/fa6d0e3fef447a2a5ad05b5cdd397e3f.jpg" alt="sample">
+        </div>
+
+        <div class="card-body text-white">
+          <h4 class="card-title">Company Name</h4>
+          <p class="card-text">Facebook</p>
+          <p class="card-text">Twitter</p>
+        </div>`;
+
+      silverCardGroup.appendChild(silverCard);
+    }
+
+    // Fill Bronze sponsors
+    for (let i = 0; i < 4; i++) {
+      const bronzeCard = document.createElement('div');
+      bronzeCard.classList.add('py-4');
+      bronzeCard.classList.add('card');
+      bronzeCard.classList.add('text-center');
+      bronzeCard.classList.add('bg-transparent');
+      bronzeCard.classList.add('align-items-center');
+
+      bronzeCard.style.border = 'none';
+      bronzeCard.innerHTML = `
+        <div class="ratio ratio-1x1 rounded-circle overflow-hidden w-25">
+          <img class="" src="https://i.pinimg.com/originals/19/df/a5/19dfa547459179e0e73cc60ca9bb6a04.png" alt="sample">
+        </div>
+
+        <div class="card-body text-white">
+          <h4 class="card-title">Company Name</h4>
+          <p class="card-text">Facebook</p>
+          <p class="card-text">Twitter</p>
+        </div>`;
+
+      bronzeCardGroup.appendChild(bronzeCard);
     }
   </script>
 </BaseLayout>
