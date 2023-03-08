@@ -1,0 +1,83 @@
+.projectlist{
+    background-image: url("bg_4.png");
+    width: 100vw;
+    color: white;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0px;
+}
+
+.header{
+    width: 55vw;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin:0 80px;
+    margin-bottom: 30px;
+}
+
+.header > .title{
+    margin-bottom: 30px;
+    font-size: 80px;
+    text-align: center;
+}
+.header > .desc{
+    text-align: center;
+    font-size: 20px;
+}
+
+.project-list-container{
+    
+    display: grid;
+    grid-template-columns: auto auto auto;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+.project-item > img{
+    width: 400px;
+    height: 400px;
+   
+}
+
+
+#chain_1{
+    height: 1500px;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+    transform: rotate(-30deg);
+
+}
+#chain_2{
+    height: 1500px;
+    position: absolute;
+    bottom: 0;
+    left: 100px;
+
+    transform: rotate(30deg);
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 768px){
+    .project-list-container{
+        grid-template-columns: auto auto;
+    }
+    .project-item > img{
+        width: 300px;
+        height: 300px;
+       
+    }
+}
+@media screen and (max-width: 576px){
+    .project-list-container{
+        grid-template-columns: auto;
+    }
+
+}
