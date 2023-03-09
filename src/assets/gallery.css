@@ -13,17 +13,17 @@
     
 }
 .chain img{
-    width: min(35vw, 400px);
+    width: min(45vw, 600px);
 }
 body{
     min-height: 100vh;
     background-image: url("bg_4.png");
     position: relative;
+    overflow-x: hidden;
 }
 header{
-    width: 50vw;
-    margin: 3rem auto;
-    margin-bottom: 5rem;
+    width: max(60vw, 325px);
+    margin: 4rem auto;
     color: #fff; 
 }
 header .primary-text{
@@ -31,18 +31,19 @@ header .primary-text{
     font-weight: 800;
     text-transform: uppercase;
     margin-bottom: 2rem;
-    font-size: 3.5rem;
+    font-size: min(10vw, 5rem);
     letter-spacing: 3px;
     text-align: center;
 }
 header .secondary-text{
     text-align: justify;
+    font-size: min(3vw, 1.5rem);
 }
 
 .img-container{
     display: grid;
     align-content: center;
-    margin: 3rem 5rem;
+    margin: 6rem;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
@@ -54,8 +55,26 @@ header .secondary-text{
 .img-container img{
     background-color: #e1e1e1;
     display: block;
-    max-width: 400px;
-    width: 100%;
+    width: min(100%, 400px);
     height: auto;
     margin: 0 auto;
+}
+
+@media screen and (max-width: 768px){
+    .img-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .img-container{
+        margin: 4rem;
+    }
+    
+}
+@media screen and (max-width: 576px){
+    .img-container img{
+        width: min(100%, 300px);
+    }
+    .img-container{
+        margin: 2rem;
+    }
+    
 }
