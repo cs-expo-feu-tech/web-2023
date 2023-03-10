@@ -1,11 +1,14 @@
 .projectlist{
     background-image: url("bg_4.png");
-    width: 100vw;
+    /* width: 100vw; */
     color: white;
     align-items: center;
     display: flex;
     flex-direction: column;
     padding: 50px 0px;
+
+    position: relative;
+    overflow: hidden;
 }
 
 .header{
@@ -28,7 +31,6 @@
 }
 
 .project-list-container{
-    
     display: grid;
     grid-template-columns: auto auto auto;
     row-gap: 20px;
@@ -38,32 +40,30 @@
 .project-item > img{
     width: 400px;
     height: 400px;
-   
 }
 
-
-#chain_1{
+.chain {
     height: 1500px;
     position: absolute;
-    bottom: 0;
+}
+
+.chain#left {
+    /* bottom: 0; */
+    top: -260px;
     right: 100px;
     transform: rotate(-30deg);
-
 }
-#chain_2{
-    height: 1500px;
-    position: absolute;
-    bottom: 0;
-    left: 100px;
 
+.chain#right {
+    /* bottom: 0; */
+    top: -260px;
+    left: 100px;
     transform: rotate(30deg);
 }
 
-
-
-
-
-
+.content {
+    z-index: 2;
+}
 
 @media screen and (max-width: 768px){
     .project-list-container{
