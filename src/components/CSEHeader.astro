@@ -1,67 +1,41 @@
 ---
-<style>
-    :root {
-        --main-color: rgb(124,230,240);
-        --secondary-color: rgb(89,93,161);
-    }
-
-    .navbar-toggler {
-        border-width: 0.1rem;
-        border-color: var(--main-color);
-    }
-
-    .navbar-toggler-icon {
-        background-image: url(
-"data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(124,230,240)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-    }
-
-    .navbar-toggler:focus {
-        outline: none;
-        color: var(--secondary-color);
-    }
-
+<style>			
     .nav-link {
-        color: var(--main-color);
-        border-radius: 50px;
-        font-weight: 500;
-        margin: 0.25rem 0 0.25rem 0;
+        color: white !important;
+        opacity: 0.9;
+        transition: 0.2s;
     }
 
     .nav-link:hover {
-        background-color: var(--main-color);
-        color: black;
+        opacity: 0.5;
     }
 
-    .nav-link:focus {
-        background-color: var(--secondary-color);              
-        color: white !important;
-    }
-</style> 
+</style>
 ---
-<nav class="navbar navbar-expand-lg" style="background-color: rgb(0,0,0,0);">
+<nav class="navbar navbar-dark navbar-expand-lg" style="background-color: black;">
     <div class="container-fluid">
-        <a class="navbar-brand ps-3" href="#">
-            <img src="logo.png" alt="CS Expo" width="75" height="75">
+        <a class="navbar-brand ms-3" href="#">
+            <img src="logo-2.png" alt="CS Expo" width="75" height="40">
         </a>
         <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-end flex-grow-1 pe-3 ps-3">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link px-3 mx-1" aria-current="page" href="#">Home</a>
+                    <a class="nav-link px-3 mx-2" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link px-3 mx-1" href="#">Partners</a>
+                    <a class="nav-link px-3 mx-2" href="#">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link px-3 mx-1" href="#">About Us</a>
+                    <a class="nav-link px-3 mx-2" href="#">Partners</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link px-3 mx-1" href="#">Gallery</a>
+                    <a class="nav-link px-3 mx-2" href="#">Gallery</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link px-3 ms-1" href="#">View Projects</a>
+                    <a class="nav-link px-3 mx-2" href="#">About</a>
                 </li>
             </ul>
         </div>
