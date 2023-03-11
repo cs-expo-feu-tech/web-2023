@@ -12,19 +12,19 @@
     overflow-x: hidden;
 }
 
-.speakerstitle{
+.speakers .speakerstitle{
+
+    text-align: center;
     position: relative;
     font-size: 7rem;
     color:#fff;
     font-family: 'Akira Expanded';
     margin:auto;
-    text-align: center;
-    padding-top: 7rem;
 }
 
-.speakersparagraph{
+.speakers .speakersparagraph{
     position: relative;
-    font-size: 30px;
+    font-size: 26px;
     color:#fff;
     font-family: 'DIN';
     margin:auto;
@@ -35,10 +35,8 @@
 }
 
 .carousel-item{
-    height:32rem;
+    height: auto;
     color: #fff;
-    border: 15px;
-    margin-top: 50px;
     position: relative;
     width: 100%;
 }
@@ -62,7 +60,7 @@
  
 
 .details{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-family: 'DIN';
     padding-top: 10px;
     padding-bottom: 20px;
@@ -79,22 +77,10 @@
     height: 600px;
     background-size: 100%;
     background-repeat: no-repeat;
-    background-image: url('C:\Users\Angelica Desales\Downloads\web-2023-main\src\assets\anon.jpg');
+    background-image: url('C:\Users\Angelica Desales\Downloads\web-2023\src\assets\sample.png');
 
 }
 
-.frame{
-
-    position: absolute;
-    left:56.3%;
-    top:5%;
-    width: 600px;
-    height: 600px;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-image: url('C:\Users\Angelica Desales\Downloads\web-2023-main\src\assets\frame_speakers.png');
-
-}
 
 .container2{
 
@@ -115,7 +101,7 @@
  
 
 .details2{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-family: 'DIN';
     padding-top: 10px;
     padding-bottom: 20px;
@@ -124,14 +110,22 @@
 }
 
 .speakers{
-    position: fixed;
     display: flex;
     height:100vh;
     width:100vw;
     right:0;
     bottom:1;
-    background-image: url('C:\Users\Angelica Desales\Downloads\web-2023-main\src\assets\cs_expo_2.png');
+}
+
+.bg_image1{
+    height: auto;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: url('C:\Users\Angelica Desales\Downloads\web-2023\src\assets\cs_expo_2.png') no-repeat;
     background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 2rem;
 }
