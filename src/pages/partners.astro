@@ -19,9 +19,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     background-repeat: no-repeat;
   }
 
+  .card-groups {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 20px 0 20px;
+  }
+
   @media screen and (max-width: 700px) {
     .chain-container {
       margin-bottom: -160px;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    .card-groups {
+      justify-content: center;
     }
   }
 </style>
@@ -50,9 +63,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <!-- Start of Gold Sponsors -->
   <div class="mt-3 p-5 container">
     <h4 class="text-white p-3">GOLD SPONSORS</h4>
-    <div id="gold-card-group" class="card-group">
+    <div id="gold-card-group" class="card-groups">
       <!-- <div class="py-4 card text-center bg-transparent align-items-center" style="border: none !important;">
-        <div class="ratio ratio-1x1 rounded-circle overflow-hidden w-25">
+        <div class="ratio ratio-1x1 rounded-circle overflow-hidden w-50">
           <img class="" src="https://logopond.com/logos/97c275e2d904133b81678ab0446648d7.png" alt="sample">
         </div>
 
@@ -68,27 +81,27 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     <!-- Start of Silver Sponsors -->
     <h4 class="text-white p-3">SILVER SPONSORS</h4>
-    <div id="silver-card-group" class="card-group"></div>
+    <div id="silver-card-group" class="card-groups"></div>
     <!-- End of Silver Sponsors -->
 
     <!-- Start of Bronze Sponsors -->
     <h4 class="text-white p-3">BRONZE SPONSORS</h4>
-    <div id="bronze-card-group" class="card-group"></div>
+    <div id="bronze-card-group" class="card-groups"></div>
     <!-- End of Bronze Sponsors -->
 
     <!-- Start of Major Partners -->
     <h4 class="text-white p-3">MAJOR PARTNERS</h4>
-    <div id="major-card-group" class="card-group"></div>
+    <div id="major-card-group" class="card-groups"></div>
     <!-- End of Major Partners -->
 
     <!-- Start of Minor Partners -->
     <h4 class="text-white p-3">MINOR PARTNERS</h4>
-    <div id="minor-card-group" class="card-group"></div>
+    <div id="minor-card-group" class="card-groups"></div>
     <!-- End of Minor Partners -->
 
     <!-- Start of Media Partners -->
     <h4 class="text-white p-3">MEDIA PARTNERS</h4>
-    <div id="media-card-group" class="card-group"></div>
+    <div id="media-card-group" class="card-groups"></div>
     <!-- End of Media Partners -->
   </div>
 
@@ -104,22 +117,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     // Fill Gold sponsors
     for (let i = 0; i < 4; i++) {
       const goldCard = document.createElement('div');
-      goldCard.classList.add('py-4');
+
       goldCard.classList.add('card');
+      goldCard.classList.add('py-4');
       goldCard.classList.add('text-center');
       goldCard.classList.add('bg-transparent');
       goldCard.classList.add('align-items-center');
 
       goldCard.style.border = 'none';
       goldCard.innerHTML = `
-        <div class="ratio ratio-1x1 rounded-circle overflow-hidden w-25">
+        <div class="ratio ratio-1x1 rounded-circle overflow-hidden w-50">
           <img class="" src="https://logopond.com/logos/97c275e2d904133b81678ab0446648d7.png" alt="sample">
         </div>
 
         <div class="card-body text-white">
           <h5 class="card-title">Company Name</h5>
-          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">Facebook</a>
-          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">Twitter</a>
+          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none"><i class='bx bxl-facebook-circle'></i> Facebook</a><br>
+          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none"><i class='bx bxl-twitter' ></i> Twitter</a>
         </div>`;
 
       goldCardGroup.appendChild(goldCard);
@@ -136,14 +150,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       silverCard.style.border = 'none';
       silverCard.innerHTML = `
-        <div class="ratio ratio-1x1 rounded-circle overflow-hidden w-25">
+        <div class="ratio ratio-1x1 rounded-circle overflow-hidden w-50">
           <img class="" src="https://i.pinimg.com/736x/fa/6d/0e/fa6d0e3fef447a2a5ad05b5cdd397e3f.jpg" alt="sample">
         </div>
 
         <div class="card-body text-white">
           <h5 class="card-title">Company Name</h5>
-          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">Facebook</a>
-          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">Twitter</a>
+          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none"><i class='bx bxl-facebook-circle'></i> Facebook</a><br>
+          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none"><i class='bx bxl-twitter' ></i> Twitter</a>
         </div>`;
 
       silverCardGroup.appendChild(silverCard);
@@ -160,14 +174,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       bronzeCard.style.border = 'none';
       bronzeCard.innerHTML = `
-        <div class="ratio ratio-1x1 rounded-circle overflow-hidden w-25">
+        <div class="ratio ratio-1x1 rounded-circle overflow-hidden w-50">
           <img class="" src="https://i.pinimg.com/originals/19/df/a5/19dfa547459179e0e73cc60ca9bb6a04.png" alt="sample">
         </div>
 
         <div class="card-body text-white">
           <h5 class="card-title">Company Name</h5>
-          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">Facebook</a>
-          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">Twitter</a>
+          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none"><i class='bx bxl-facebook-circle'></i> Facebook</a><br>
+          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none"><i class='bx bxl-twitter' ></i> Twitter</a>
         </div>`;
 
       bronzeCardGroup.appendChild(bronzeCard);
@@ -184,14 +198,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       majorCard.style.border = 'none';
       majorCard.innerHTML = `
-        <div class="ratio ratio-1x1 rounded-circle overflow-hidden w-25">
+        <div class="ratio ratio-1x1 rounded-circle overflow-hidden w-50">
           <img class="" src="https://i.pinimg.com/originals/04/1f/6d/041f6dd3f26274371857038443c8aeeb.png" alt="sample">
         </div>
 
         <div class="card-body text-white">
           <h5 class="card-title">Company Name</h5>
-          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">Facebook</a>
-          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">Twitter</a>
+          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none"><i class='bx bxl-facebook-circle'></i> Facebook</a><br>
+          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none"><i class='bx bxl-twitter' ></i> Twitter</a>
         </div>`;
 
       majorCardGroup.appendChild(majorCard);
@@ -208,14 +222,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       minorCard.style.border = 'none';
       minorCard.innerHTML = `
-        <div class="ratio ratio-1x1 rounded-circle overflow-hidden w-25">
+        <div class="ratio ratio-1x1 rounded-circle overflow-hidden w-50">
           <img class="" src="https://th.bing.com/th/id/OIP.qWBhUs6cG3b5MP-wB4GKAwHaHa?pid=ImgDet&w=577&h=577&rs=1" alt="sample">
         </div>
 
         <div class="card-body text-white">
           <h5 class="card-title">Company Name</h5>
-          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">Facebook</a>
-          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">Twitter</a>
+          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none"><i class='bx bxl-facebook-circle'></i> Facebook</a><br>
+          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none"><i class='bx bxl-twitter' ></i> Twitter</a>
         </div>`;
 
       minorCardGroup.appendChild(minorCard);
@@ -232,14 +246,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       mediaCard.style.border = 'none';
       mediaCard.innerHTML = `
-        <div class="ratio ratio-1x1 rounded-circle overflow-hidden w-25">
+        <div class="ratio ratio-1x1 rounded-circle overflow-hidden w-50">
           <img class="" src="https://i.pinimg.com/originals/f4/cf/ec/f4cfec4f3b4bbf24798b26aa4a5508f2.png" alt="sample">
         </div>
 
         <div class="card-body text-white">
           <h5 class="card-title">Company Name</h5>
-          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">Facebook</a>
-          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">Twitter</a>
+          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none"><i class='bx bxl-facebook-circle'></i> Facebook</a><br>
+          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none"><i class='bx bxl-twitter' ></i> Twitter</a>
         </div>`;
 
       mediaCardGroup.appendChild(mediaCard);
