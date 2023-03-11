@@ -4,35 +4,30 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <style>
   body {
-    background-color: black;
+    background-image: url("../components/CS-EXPO-2.png");
+    overflow-x: hidden;
   }
 
-  .main {
-    position: fixed;
-    z-index: -1;
-    top: 50%;
-    left: 50%;
-    height: 1px;
-    width: 1px;
-    background-color: #fff;
-    border-radius: 50%;
-    box-shadow: -24vw -44vh 2px 2px #fff,38vw -4vh 0px 0px #fff,-20vw -48vh 1px 2px #fff,-39vw 38vh 3px 1px #fff,-42vw -11vh 0px 3px #fff,12vw 15vh 3px 3px #fff,42vw 6vh 3px 2px #fff,-8vw 9vh 0px 2px #fff,34vw -38vh 1px 0px #fff,-17vw 45vh 3px 1px #fff,22vw -36vh 3px 2px #fff,-42vw 1vh 1px 0px #fff;
-    animation: zoom 10s alternate infinite;
+  .chain-container {
+    /* border: 1px solid red; */
+    background-image: url("../components/CHAIN.png");
+    background-size: contain;
+    width: auto;
+    min-height: 200px;
+    margin-top: 100px;
+    margin-bottom: -110px;
+    background-repeat: no-repeat;
   }
 
-  @keyframes zoom {
-    0% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(1.5);
+  @media screen and (max-width: 700px) {
+    .chain-container {
+      margin-bottom: -160px;
     }
   }
 </style>
 
 <BaseLayout title="Partners">
 
-  <div class="main"></div>
   <!-- Start of Banner -->
   <div class="d-flex container flex-wrap">
     <div class="row g-0 justify-content-around align-items-center">
@@ -47,6 +42,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </div>
   <!-- End of Banner -->
+
+  <!-- Start of Chain -->
+  <div class="chain-container"></div>
+  <!-- End of Chain -->
 
   <!-- Start of Gold Sponsors -->
   <div class="mt-3 p-5 container">
@@ -118,9 +117,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
 
         <div class="card-body text-white">
-          <h4 class="card-title">Company Name</h4>
-          <p class="card-text">Facebook</p>
-          <p class="card-text">Twitter</p>
+          <h5 class="card-title">Company Name</h5>
+          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">Facebook</a>
+          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">Twitter</a>
         </div>`;
 
       goldCardGroup.appendChild(goldCard);
@@ -142,9 +141,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
 
         <div class="card-body text-white">
-          <h4 class="card-title">Company Name</h4>
-          <p class="card-text">Facebook</p>
-          <p class="card-text">Twitter</p>
+          <h5 class="card-title">Company Name</h5>
+          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">Facebook</a>
+          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">Twitter</a>
         </div>`;
 
       silverCardGroup.appendChild(silverCard);
@@ -166,9 +165,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
 
         <div class="card-body text-white">
-          <h4 class="card-title">Company Name</h4>
-          <p class="card-text">Facebook</p>
-          <p class="card-text">Twitter</p>
+          <h5 class="card-title">Company Name</h5>
+          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">Facebook</a>
+          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">Twitter</a>
         </div>`;
 
       bronzeCardGroup.appendChild(bronzeCard);
@@ -190,9 +189,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
 
         <div class="card-body text-white">
-          <h4 class="card-title">Company Name</h4>
-          <p class="card-text">Facebook</p>
-          <p class="card-text">Twitter</p>
+          <h5 class="card-title">Company Name</h5>
+          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">Facebook</a>
+          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">Twitter</a>
         </div>`;
 
       majorCardGroup.appendChild(majorCard);
@@ -214,9 +213,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
 
         <div class="card-body text-white">
-          <h4 class="card-title">Company Name</h4>
-          <p class="card-text">Facebook</p>
-          <p class="card-text">Twitter</p>
+          <h5 class="card-title">Company Name</h5>
+          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">Facebook</a>
+          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">Twitter</a>
         </div>`;
 
       minorCardGroup.appendChild(minorCard);
@@ -238,9 +237,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
 
         <div class="card-body text-white">
-          <h4 class="card-title">Company Name</h4>
-          <p class="card-text">Facebook</p>
-          <p class="card-text">Twitter</p>
+          <h5 class="card-title">Company Name</h5>
+          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">Facebook</a>
+          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">Twitter</a>
         </div>`;
 
       mediaCardGroup.appendChild(mediaCard);
