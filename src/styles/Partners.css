@@ -1,6 +1,6 @@
 @font-face{
     font-family: 'Akira Expanded';
-    src: url("../fonts/akira expanded/AkiraExpanded.otf");
+    src: url("/assets/fonts/akira expanded/AkiraExpanded.otf");
 }
 
 .bg_image2{
@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    background: url('C:\Users\Angelica Desales\Downloads\web-2023\src\assets\cs_expo_3.png') no-repeat;
+    background: url('/assets/cs_expo_3.png') no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

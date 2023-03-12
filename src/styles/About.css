@@ -1,11 +1,11 @@
 @font-face{
     font-family: 'Akira Expanded';
-    src: url("../fonts/akira expanded/AkiraExpanded.otf");
+    src: url("/assets/fonts/akira expanded/AkiraExpanded.otf");
 }
 
 @font-face{
     font-family: 'DIN';
-    src: url("../fonts/din font/din.ttf");
+    src: url("/assets/fonts/din font/din.ttf");
 }
 
 *{
@@ -35,7 +35,7 @@ p{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    background: url('C:\Users\Angelica Desales\Downloads\web-2023\src\assets\cs_expo_4.png') no-repeat;
+    background: url('/assets/cs_expo_2.png') no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -93,7 +93,7 @@ background-color:#FFFFFF;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    background: url(csexpo2.png) no-repeat;
+    background: url(./assets/cs_expo_2.png) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
