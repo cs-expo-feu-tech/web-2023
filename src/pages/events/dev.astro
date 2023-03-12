@@ -1,7 +1,168 @@
 ---
-import EventPage from "../../layouts/EventPage.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+import CSESpeakersPage from "../../components/CSESpeakersPage.astro";
 ---
 
-<EventPage title="Dev Day">
-    
-</EventPage>
+<style is:global>
+    :root {
+        --background-color: 47, 47, 47;
+    }
+
+    .content {
+        background-color: rgb(var(--background-color));
+        background-image: url("/assets/images/bg_4.png");
+    }
+
+    .cse-header {
+        background-color: rgb(var(--background-color));
+        background-image: url("/assets/images/events/devday_bg.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        transition: all 0.5s;
+        /* padding: 0; */
+
+        height: 500px;
+    }
+
+    .cse-header > .cse-header-gradient-overlay {
+        background: linear-gradient(
+            180deg,
+            rgba(var(--background-color), 0) 70%,
+            rgba(var(--background-color), 255) 100%
+        );
+    }
+</style>
+
+<BaseLayout title="Dev Day">
+    <div class="container-fluid position-relative cse-header d-flex align-items-center justify-content-center text-white lh-1" >
+        <div class="h-100 w-100 position-absolute cse-header-gradient-overlay"></div>
+        <div class="cse-text-container p-5 px-sm-0 position-relative start-0 bottom-0 z-1">
+
+            <style>
+                .cse-date-sticker {
+                    position: absolute;
+                    right: 10%;
+                    bottom: 20%;
+                    transform: rotate(16deg);
+                    padding: 0;
+                }
+            </style>
+
+            <p class="lh-1 m-0">// CS EXPO 2023</p>
+            <p class="lh-1 fw-bold m-0 display-1">DEV DAY</p>
+        </div>
+        <div class="cse-date-sticker">
+            <div class="px-3 py-3" style="background-color:blue;">
+                <p class="w-100 m-0 text-center">March</p>
+                <p class="w-100 m-0 text-center display-4">17</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid py-5 text-white cse-content-bg position-relative">
+        <style>
+            .cse-content-bg {
+                background-color: rgb(var(--background-color));
+            }
+        </style>
+        <div class="container">
+            <h1>What is DEV DAY?</h1>
+            <p>
+                <span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Consequatur et eum eos deleniti iste ad nemo ex veniam molestias
+                    voluptatem voluptas aliquid laboriosam itaque commodi rerum,
+                    similique libero nesciunt distinctio.</span>
+                <span>
+                    Odio sit ad, molestias iusto temporibus voluptatum. Nemo
+                    reprehenderit fugiat quae possimus amet excepturi nulla,
+                    facilis, quasi ratione consectetur tenetur commodi dicta,
+                    placeat pariatur provident blanditiis doloribus qui iste
+                    perferendis?</span>
+                <span>
+                    Dolorem sint qui molestias obcaecati suscipit aspernatur nemo
+                    adipisci quisquam facilis aut quos illo reiciendis nihil
+                    veritatis sequi mollitia, praesentium eligendi dignissimos porro
+                    minima inventore neque quo! Voluptatibus, facilis enim.</span>
+                <span>
+                    Accusantium expedita ducimus facilis assumenda consequuntur
+                    adipisci quam neque. Nesciunt eum laudantium ratione tenetur
+                    corporis placeat, temporibus in dolorum soluta rem totam
+                    sapiente quis maxime est. Sed animi quas eos.</span>
+                <span>
+                    Iste animi saepe vitae non quo, incidunt unde tempore quis.
+                    Nostrum praesentium quidem, debitis quia odit doloremque non
+                    alias aliquid. Voluptas nesciunt ratione autem ea accusantium
+                    inventore reprehenderit eos sed.</span>
+            </p>            
+        </div>
+    </div>
+    <div class="cse-content-gradient-overlay w-100">
+        <style>    
+            .cse-content-gradient-overlay {
+                height: 100px;
+                background: linear-gradient(
+                    180deg,
+                    rgba(var(--background-color), 255) 0%,
+                    rgba(var(--background-color), 0) 100%
+                );
+            }
+        </style>
+    </div>
+
+    <div class="container py-3 py-md-5 text-white">
+        <h1 class="w-100 m-auto text-center text-uppercase py-5 display-2">Speakers</h1> 
+        <CSESpeakersPage title="Keynote Title" name="Speaker Name" credential="Speaker Credentials" image_url="https://via.placeholder.com/200" />        
+        <CSESpeakersPage title="Talk 1 Title" name="Speaker Name" credential="Speaker Credentials" image_url="https://via.placeholder.com/200" />        
+        <CSESpeakersPage title="Talk 2 Title" name="Speaker Name" credential="Speaker Credentials" image_url="https://via.placeholder.com/200" />        
+    </div>
+
+    <div class="container py-3 py-md-5 text-white">
+        <h1 class="w-100 m-auto text-center text-uppercase py-5 display-2">Schedule</h1>
+        <table class="table table-dark table-striped text-white">
+            <thead>
+                <tr>
+                    <th scope="col" class="col-4">Time</th>
+                    <th scope="col">Event</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>07:00 AM to 08:00 AM</td>
+                    <td>Registration</td>
+                </tr>
+                <tr>
+                    <td>08:00 AM to 09:00 AM</td>
+                    <td>Invocation and Opening Remarks</td>
+                </tr>
+                <tr>
+                    <td>09:00 AM to 09:30 AM</td>
+                    <td>Keynote Speaker</td>
+                </tr>
+                <tr>
+                    <td>09:30 AM to 11:30 AM</td>
+                    <td>Speaker 1</td>
+                </tr>
+                <tr>
+                    <td>11:30 AM to 12:30 PM</td>
+                    <td>Lunch</td>
+                </tr>
+                <tr>
+                    <td>12:30 PM to 02:30 PM</td>
+                    <td>Speaker 2</td>
+                </tr>
+                <tr>
+                    <td>02:30 PM to 03:30 PM</td>
+                    <td>Awardings</td>
+                </tr>
+                <tr>
+                    <td>03:30 PM to 04:00 PM</td>
+                    <td>Closing Remarks</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</BaseLayout>
