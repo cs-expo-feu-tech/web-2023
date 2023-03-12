@@ -16,7 +16,7 @@ import CSESpeakersPage from "../../components/CSESpeakersPage.astro";
 
     .cse-header {
         background-color: rgb(var(--background-color));
-        background-image: url("/assets/images/events/devday_bg.png");
+        background-image: url("/assets/images/events/expo_bg.png");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -36,7 +36,7 @@ import CSESpeakersPage from "../../components/CSESpeakersPage.astro";
     }
 </style>
 
-<BaseLayout title="Dev Day">
+<BaseLayout title="About CS EXPO 2023">
     <div class="container-fluid position-relative cse-header d-flex align-items-center justify-content-center text-white lh-1" >
         <div class="h-100 w-100 position-absolute cse-header-gradient-overlay"></div>
         <div class="cse-text-container p-5 px-sm-0 position-relative start-0 bottom-0 z-1">
@@ -48,17 +48,40 @@ import CSESpeakersPage from "../../components/CSESpeakersPage.astro";
                     bottom: 20%;
                     transform: rotate(16deg);
                     padding: 0;
+
+                    z-index: 3;
+                }
+
+                .darker: {
+                    background-color: rgba(0, 0, 0, 255)
+                    z-index: 1;
+                }
+
+                .cse-expo-logo {
+                    width: 625px;
+                    height: 625px;
+                    z-index: 4;
                 }
             </style>
 
-            <p class="lh-1 fw-bold m-0 display-1">CS EXPO 2023</p>
+            <img class="cse-expo-logo" src="/assets/images/expo_logo.png" alt="CS Expo 2023 logo">
         </div>
+
+        <div class="h-100 w-100 position-absolute top-0 darker" />
+
         <div class="cse-date-sticker">
             <div class="px-3 py-3" style="background-color:blue;">
                 <p class="w-100 m-0 text-center">March</p>
                 <p class="w-100 m-0 text-center display-4">14-15</p>
             </div>
         </div>
+
+        <div class="fluid-container w-100 h-100 position-absolute d-flex flex-column align-items-center justify-content-center">
+            <img src="/assets/images/events/text_white_thin.svg" role="presentation" class="p-1"/>
+            <img src="/assets/images/events/text_white_thin.svg" role="presentation" class="p-1"/>
+            <img src="/assets/images/events/text_white_thin.svg" role="presentation" class="p-1"/>
+        </div>
+
     </div>
 
     <div class="container-fluid py-5 text-white cse-content-bg position-relative">
