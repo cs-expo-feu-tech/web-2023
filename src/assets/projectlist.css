@@ -1,5 +1,12 @@
-@import url('https://fonts.cdnfonts.com/css/akira-expanded');
-@import url('https://fonts.cdnfonts.com/css/din-2');
+@font-face {
+    font-family: AkiraExpanded;
+    src: url("/src/assets/AkiraExpanded.otf");
+}
+@font-face {
+    font-family: DIN;
+    src: url("/src/assets/DIN.ttf");
+}
+
 
 .projectlist{
     background-image: url("bg_4.png");
@@ -22,7 +29,7 @@
 .header > .title{
     margin: 50px 0;
     text-align: center;
-    font-family: 'Akira Expanded', sans-serif;
+    font-family: 'AkiraExpanded', sans-serif;
     font-weight: 800;
     text-transform: uppercase;
     font-size: min(10vw, 5rem);
@@ -38,7 +45,6 @@
 
     display: grid;
     align-content: center;
-    margin: 6rem;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px 20px;
    
@@ -75,19 +81,27 @@
     font-size: 20px;
     padding: 20px;
     text-align: center;
+    margin-bottom: 0;
 }
 
 .project-item:hover{
     cursor: pointer;
+
 }
 
 .project-item:hover #group-name {
     opacity: 1;
 }
 
+.project-item img:hover{
+    filter: brightness(70%);
+    transition: .3s;
+}
 
-
-
+.project-item img:hover .project-item img{
+    filter: brightness(70%);
+    transition: .3s;
+}
 
 
 
