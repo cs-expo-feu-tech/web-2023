@@ -66,13 +66,16 @@
 @media (min-width: 1200px){
     .group-name-container{
         right: -20rem;
-        width: 75%;
+        width: 30%;
     }
 }
 
 .page-bg{
-    background-image: url("../images/cs-expo-bg-4.png");
+    background-image: url("../images/indiv-projects-bg-chain.png"), url("../images/indiv-projects-bg.png");
+    background-position: top, bottom;
+    background-repeat: no-repeat, repeat;
     background-size: contain;
+    overflow: hidden;
     padding: 0;
 }
 
@@ -139,3 +142,71 @@
     height: 20vh;
     width: 100%;
 }
+
+.ease-anim{
+    position: relative;
+    opacity: 0;
+}
+.ease-anim.active{
+    opacity: 1;
+}
+.active.fade-bottom{
+    animation: fade-bottom 0.3s ease-in;
+}
+.active.fade-left{
+    animation: fade-left 0.3s ease-in;
+}
+.active.fade-right{
+    animation: fade-right 0.3s ease-in;
+}
+.drop-in{
+    animation: drop-in 1s ease 200ms backwards;
+}
+.drop-in-2{
+    animation: drop-in 1s ease 500ms backwards;
+}
+.ease-left{
+    animation: fade-left 1s ease 500ms;
+}
+@keyframes fade-bottom{
+    from{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes fade-left{
+    from{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes fade-right{
+    from{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes drop-in {
+    from{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+

@@ -25,7 +25,7 @@ data.forEach((element, i) => {
     const dev = document.querySelector(".card-container");
 
     const card = document.createElement("div");
-    card.className = 'col-8 col-sm-4 col-md-4 col-xl-2 developer-card';
+    card.className = 'col-8 col-sm-4 col-md-4 col-xl-2 developer-card ease-anim fade-bottom';
     
     const developerCard = `
         <img class="card-img-top" src="${data[i].imageSrc}">
@@ -39,3 +39,21 @@ data.forEach((element, i) => {
     card.innerHTML += developerCard;
     dev.appendChild(card);
 });
+
+function ease(){
+    var ease = document.querySelectorAll(".ease-anim")
+    for (var i = 0; i < ease.length; i++){
+        var windowHeight = window.innerHeight;
+        var elementTop = ease[i].getBoundingClientRect().top;
+        var elementVisible = 150;
+        
+        if(elementTop < windowHeight - elementVisible){
+            ease[i].classList.add("active");
+        } 
+        else{
+            ease[i].classList.remove("active");
+        }
+    }
+}
+
+window.addEventListener("scroll", ease);
