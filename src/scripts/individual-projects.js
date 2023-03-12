@@ -50,9 +50,6 @@ function ease(){
         if(elementTop < windowHeight - elementVisible){
             ease[i].classList.add("active");
         } 
-        else{
-            ease[i].classList.remove("active");
-        }
     }
 }
 
