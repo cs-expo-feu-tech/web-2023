@@ -50,6 +50,17 @@ import CSESpeakersPage from "../../components/CSESpeakersPage.astro";
                 z-index: 3;
             }
 
+            .tape {
+                position: relative;
+                color: black;
+                font-weight: bolder;
+                background-image: url("/assets/images/dt4.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                transform: scale(120%);
+            }
+
             .darker: {
                 background-color: rgba(0, 0, 0, 255);
             }
@@ -71,9 +82,9 @@ import CSESpeakersPage from "../../components/CSESpeakersPage.astro";
         <div class="h-100 w-100 position-absolute top-0 darker"/>
 
         <div class="cse-date-sticker">
-            <div class="px-3 py-3" style="background-color:blue;">
+            <div class="px-3 py-3 tape">
                 <p class="w-100 m-0 text-center">March</p>
-                <p class="w-100 m-0 text-center display-4">14-15</p>
+                <p class="w-100 mx-0 my-3 text-center h1">14-15</p>
             </div>
         </div>
 
