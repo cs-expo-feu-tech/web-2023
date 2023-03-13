@@ -34,6 +34,17 @@ import CSESpeakersPage from "../../components/CSESpeakersPage.astro";
             rgba(var(--background-color), 255) 100%
         );
     }
+
+    .tape {
+        position: relative;
+        color: black;
+        font-weight: bolder;
+        background-image: url("/assets/images/dt3.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: scale(120%);
+    }
 </style>
 
 <BaseLayout title="About DEVDAY">
@@ -55,9 +66,9 @@ import CSESpeakersPage from "../../components/CSESpeakersPage.astro";
             <p class="lh-1 fw-bold m-0 display-1">DEV DAY</p>
         </div>
         <div class="cse-date-sticker">
-            <div class="px-3 py-3" style="background-color:blue;">
+            <div class="px-3 py-3 tape">
                 <p class="w-100 m-0 text-center">March</p>
-                <p class="w-100 m-0 text-center display-4">17</p>
+                <p class="w-100 m-0 text-center h1">17</p>
             </div>
         </div>
     </div>
