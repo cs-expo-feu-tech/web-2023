@@ -1,0 +1,117 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.chain{
+    width: 100vw;
+    overflow-x: clip;
+    z-index: -999;
+    top: -100px;
+    position:absolute;
+}
+
+.chain-1{
+    left: 5%;
+    transform: rotate(20deg);
+}
+.chain-2{
+    right: 5%;
+    transform: rotate(-23deg); 
+}
+.chain-3{
+    right:10%;
+    transform: rotate(-38deg);
+}
+.chain-item{
+    width: min(8vw, 70px);
+    height: min(100vh, 1800px);
+    min-height: 500px;
+    transition: all 200ms;
+    position:absolute;
+}
+body{
+    min-height: 100vh;
+    background-image: url("bg_4.png");
+    position: relative;
+    overflow-x: hidden;
+}
+header{
+    width: min(80vw, 900px);
+    margin: 4rem auto;
+    color: #fff; 
+}
+header .primary-text{
+    /* font-family: 'Akira Expanded', sans-serif; */
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    font-size: min(10vw, 5rem);
+    letter-spacing: 3px;
+    text-align: center;
+}
+header .secondary-text{
+    text-align: justify;
+    font-size: min(3vw, 1.5rem);
+}
+
+.img-container{
+    display: grid;
+    align-content: center;
+    margin: 6rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 30px;
+}
+
+.img-container img{
+    background-color: #e1e1e1;
+    display: block;
+    width: min(100%, 600px);
+    height: auto;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 768px){
+
+    .chain-1{
+        left: -8%;
+        transform: rotate(25deg);
+   
+    }
+    .chain-2{
+        right: -8%;
+        transform: rotate(-18deg);
+      
+    }
+    .chain-3{
+        right:-10%;
+        transform: rotate(-30deg);
+    }
+    .img-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .img-container{
+        margin: 4rem;
+    }
+
+    
+}
+@media screen and (max-width: 576px){
+    .chain-1{
+        left: -15%; 
+    }
+    .chain-2{
+        right: -10%;    
+    }
+    .chain-3{
+        right:-15%;
+    }
+    .img-container img{
+        width: min(100%, 300px);
+    }
+    .img-container{
+        margin: 2rem;
+    }
+    
+}
