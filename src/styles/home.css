@@ -20,6 +20,7 @@
 }
 .logo-container{
     padding: 0;
+    border: 1px solid red;  
 }
 .logo{
     transition: transform 0.5s;
