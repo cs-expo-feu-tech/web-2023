@@ -20,57 +20,59 @@ h1{
     background-image: url("../components/CHAIN-2-SOFT.png");
     background-repeat: no-repeat;
     background-size: contain;
-    border: 1px solid red;
 }
 .partners-img{
 	-webkit-mask-image: url("src/images/mask.png");
 	mask-image: url("src/images/mask.png");
 	-webkit-mask-repeat: no-repeat;
 	mask-repeat: no-repeat;
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	position: relative;
+}
+.shape{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 60%;
 }
 
 #banner p {
-font-size: 19px;
-color: aqua;
+	font-size: 1.2rem;
+	color: aqua;
 }
 
-.chain-container {
-/* border: 1px solid red; */
-background-image: url("../components/CHAIN.png");
-background-size: contain;
-width: auto;
-opacity: 0.6;
-min-height: 200px;
-margin-top: 100px;
-margin-bottom: -110px;
-background-repeat: no-repeat;
+.chain{
+	width: 100%;
+	transform: rotate(-3deg);
 }
 
-.partners-body {
-margin-bottom: 100px;
+.spacer {
+	height: 10vh;
 }
 
 .section-bg-1 {
-background-image: url("../components/FW_Paper_Black_27.png");
-background-size: cover;
-width: 100%;
-height: 100%;
-padding: 200px 70px 50px 70px;
-margin: 70px 0 100px 0; 
-opacity: 60%;
+	background-image: url("../components/FW_Paper_Black_27.png");
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	padding: 200px 70px 50px 70px;
+	margin: 70px 0 100px 0; 
+	opacity: 60%;
 }
 
 .section-bg-1 h4, .section-bg-2 h4 {
-font-family: AkiraExpandedDemo;
+	font-family: AkiraExpandedDemo;
 }
 
 .section-bg-2 {
-background-image: url("../components/FW_Paper_Black_26.png");
-background-size: cover;
-width: 100%;
-height: 100%;
-padding: 50px 70px 50px 70px;
-margin-top: 70px;
+	background-image: url("../components/FW_Paper_Black_26.png");
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	padding: 50px 70px 50px 70px;
+	margin-top: 70px;
+	opacity: 60%;
 }
 
 .card-groups {

@@ -5,84 +5,78 @@ import "../styles/partners.css";
 
 <BaseLayout title="Partners">
     <div class="partners-container">
-    <!-- Start of Banner -->
-    <div id="banner" class="d-flex flex-wrap">
-      <div class="row g-0 justify-content-end align-items-center">
-        <div class="mt-5 col-5 offset-1">
-        	<h1 class="text-white">
-				OUR<br>PARTNERS
-			</h1>
-			<p>
-				We are delighted to announce that CS EXPO 2023 is made possible by our partnerships with exceptional companies and organizations in the industry. These partners bring valuable knowledge and expertise to the event, ensuring that it is informative, engaging, and impactful. It's an honor to work with them to make this event a success.
-          	</p>
-        </div>
-		<div class="col-12 partners-img">
-			<img class="w-100" src="src/images/filler.png"/>
-        </div>
-      </div>
-    </div>
-    <!-- End of Banner -->
+    	<!-- Start of Banner -->
+		<div id="banner" class="d-flex flex-wrap">
+			<div class="row g-0 justify-content-center justify-content-lg-end align-items-center">
+				<div class="mt-5 col-10 col-md-5 offset-1">
+					<h1 class="text-white">
+						OUR<br>PARTNERS
+					</h1>
+					<p>
+						We are delighted to announce that CS EXPO 2023 is made possible by our partnerships with exceptional companies and organizations in the industry. These partners bring valuable knowledge and expertise to the event, ensuring that it is informative, engaging, and impactful. It's an honor to work with them to make this event a success.
+					</p>
+				</div>
+				<div class="col-10 col-md-6 partners-img">
+					<img class="w-100" src="src/images/filler.png"/>
+					<img class="shape" src="src/images/shape_89.png">
+				</div>
+			</div>
+		</div>
+		<!-- End of Banner -->
 
-    <!-- Start of Chain -->
-    <div class="chain-container"></div>
-    <!-- End of Chain -->
+		<!-- Start of Chain -->
+		<div class="spacer"></div>
+		<img class="chain" src="src/components/CHAIN.png">
+		<div class="spacer"></div>
+		<!-- End of Chain -->
 
-    <!-- Start of Gold Sponsors -->
-    <div class="partners-body">
-      <div class="section-bg-1">
-        <h4 style="color: #F6D333;">GOLD SPONSORS</h4>
-        <div id="gold-card-group" class="card-groups"></div>
-        <!-- <div class="py-4 card text-center bg-transparent align-items-center" style="border: none !important;">
-        <div class="ratio ratio-1x1 rounded-circle overflow-hidden w-50">
-          <img class="" src="https://logopond.com/logos/97c275e2d904133b81678ab0446648d7.png" alt="sample">
-        </div>
+		<!-- Start of Gold Sponsors -->
+		<div class="partners-body">
+			<div class="section-bg-1">
+				<h4 style="color: #F6D333;">GOLD SPONSORS</h4>
+				<div id="gold-card-group" class="card-groups"></div>
+			</div>
+			<!-- End of Gold Sponsors -->
+			<div class="spacer"></div>
+			<!-- Start of Silver Sponsors -->
+			<div class="section-bg-2">
+				<h4 style="color: #B8B8B8;">SILVER SPONSORS</h4>
+				<div id="silver-card-group" class="card-groups"></div>
+			</div>
+			<!-- End of Silver Sponsors -->
+			<div class="spacer"></div>
+			<!-- Start of Bronze Sponsors -->
+			<div class="section-bg-1">
+				<h4 style="color: #BC7836;">BRONZE SPONSORS</h4>
+				<div id="bronze-card-group" class="card-groups"></div>
+			</div>
+			<!-- End of Bronze Sponsors -->
+			<div class="spacer"></div>
+			<!-- Start of Major Partners -->
+			<div class="section-bg-2">
+				<h4 style="color: #F4B5EA;">MAJOR PARTNERS</h4>
+				<div id="major-card-group" class="card-groups"></div>
+			</div>
+			<!-- End of Major Partners -->
+			<div class="spacer"></div>
+			<!-- Start of Minor Partners -->
+			<div class="section-bg-1">
+				<h4 style="color: #F4B5EA;">MINOR PARTNERS</h4>
+				<div id="minor-card-group" class="card-groups"></div>
+			</div>
+			<!-- End of Minor Partners -->
+			<div class="spacer"></div>
+			<!-- Start of Media Partners -->
+			<div class="section-bg-2">
+				<h4 style="color: #4A4D88;">MEDIA PARTNERS</h4>
+				<div id="media-card-group" class="card-groups"></div>
+			</div>
+			<!-- End of Media Partners -->
+			<div class="spacer"></div>
+		</div>
+	</div>
 
-        <div class="card-body text-white">
-          <h4 class="card-title">Company Name</h4>
-          <p class="card-text">Facebook</p>
-          <p class="card-text">Twitter</p>
-        </div>
-      </div> -->
-      </div>
-      <!-- End of Gold Sponsors -->
-
-      <!-- Start of Silver Sponsors -->
-      <div class="section-bg-2">
-        <h4 style="color: #B8B8B8;">SILVER SPONSORS</h4>
-        <div id="silver-card-group" class="card-groups"></div>
-      </div>
-      <!-- End of Silver Sponsors -->
-
-      <!-- Start of Bronze Sponsors -->
-      <div class="section-bg-1">
-        <h4 style="color: #BC7836;">BRONZE SPONSORS</h4>
-        <div id="bronze-card-group" class="card-groups"></div>
-      </div>
-      <!-- End of Bronze Sponsors -->
-
-      <!-- Start of Major Partners -->
-      <div class="section-bg-2">
-        <h4 style="color: #F4B5EA;">MAJOR PARTNERS</h4>
-        <div id="major-card-group" class="card-groups"></div>
-      </div>
-      <!-- End of Major Partners -->
-
-      <!-- Start of Minor Partners -->
-      <div class="section-bg-1">
-        <h4 style="color: #F4B5EA;">MINOR PARTNERS</h4>
-        <div id="minor-card-group" class="card-groups"></div>
-      </div>
-      <!-- End of Minor Partners -->
-
-      <!-- Start of Media Partners -->
-      <div class="section-bg-2">
-        <h4 style="color: #4A4D88;">MEDIA PARTNERS</h4>
-        <div id="media-card-group" class="card-groups"></div>
-      </div>
-      <!-- End of Media Partners -->
-    </div>
-  </div>
-  <script>
+	<script>
     // Components
     const goldCardGroup = document.querySelector("#gold-card-group");
     const silverCardGroup = document.querySelector("#silver-card-group");
@@ -93,30 +87,30 @@ import "../styles/partners.css";
 
     // Fill Gold sponsors
     for (let i = 0; i < 4; i++) {
-      const goldCard = document.createElement("div");
+		const goldCard = document.createElement("div");
 
-      goldCard.classList.add("card");
-      goldCard.classList.add("py-4");
-      goldCard.classList.add("text-center");
-      goldCard.classList.add("bg-transparent");
-      goldCard.classList.add("align-items-center");
+		goldCard.classList.add("card");
+		goldCard.classList.add("py-4");
+		goldCard.classList.add("text-center");
+		goldCard.classList.add("bg-transparent");
+		goldCard.classList.add("align-items-center");
 
-      // You can change the logo, facebook link, and twitter link here:
-      goldCard.style.border = "none";
-      goldCard.innerHTML = `
-        <div class="ratio ratio-1x1 rounded-circle overflow-hidden w-50">
-          <img class="" src="https://logopond.com/logos/97c275e2d904133b81678ab0446648d7.png" alt="sample">
-        </div>
+		// You can change the logo, facebook link, and twitter link here:
+		goldCard.style.border = "none";
+		goldCard.innerHTML = `
+			<div class="ratio ratio-1x1 rounded-circle overflow-hidden w-50">
+			<img class="" src="https://logopond.com/logos/97c275e2d904133b81678ab0446648d7.png" alt="sample">
+			</div>
 
-        <div class="card-body text-white">
-          <h5 style="font-family: AkiraExpandedDemo; font-size: 18px; text-shadow: 1px 1px aqua" class="card-title">Company<br>Name</h5>
-          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">
-            <i class='bx bxl-facebook-circle'></i> <span style="color: aqua;">Facebook</span></a><br>
-          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">
-            <i class='bx bxl-twitter' ></i> <span style="color: aqua;">Twitter</span></a>
-        </div>`;
+			<div class="card-body text-white">
+			<h5 style="font-family: AkiraExpandedDemo; font-size: 18px; text-shadow: 1px 1px aqua" class="card-title">Company<br>Name</h5>
+			<a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">
+				<i class='bx bxl-facebook-circle'></i> <span style="color: aqua;">Facebook</span></a><br>
+			<a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">
+				<i class='bx bxl-twitter' ></i> <span style="color: aqua;">Twitter</span></a>
+			</div>`;
 
-      goldCardGroup.appendChild(goldCard);
+		goldCardGroup.appendChild(goldCard);
     }
 
     // Fill Silver sponsors
