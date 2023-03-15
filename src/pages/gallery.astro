@@ -1,47 +1,44 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/gallery.css';
 ---
 
-<link rel="stylesheet" href="src/assets/gallery.css">
 <BaseLayout>
-    <div class="chain">
-        <img class="chain-item chain-1" src="src/assets/FW_Chain.png" alt="">
-        <img class="chain-item chain-2" src="src/assets/FW_Chain.png" alt="">
-        <img class="chain-item chain-3" src="src/assets/FW_Chain.png" alt="">
+    <div class="container-fluid gallery-container">
+        <header>
+            <h1 class="primary-text">Gallery</h1>
+            <p class="secondary-text">In years to come, CS EXPO continues to showcase innovative ideas from CS students. Various groups work together to brainstorm and develop systems to present to the institution, in turn being presented to the public. Here is a glimpse of the previous expos held by CS students in FEU Tech!
+                </p>
+        </header>
+        <main class="img-container">
+            <div class="list-item">
+                <img src="src/assets/placeholder-image.png" alt="">
+            </div>
+            <div class="list-item">
+                <img src="src/assets/placeholder-image.png" alt="">
+            </div>
+            <div class="list-item">
+                <img src="src/assets/placeholder-image.png" alt="">
+            </div>
+            <div class="list-item">
+                <img src="src/assets/placeholder-image.png" alt="">
+            </div>
+            <div class="list-item">
+                <img src="src/assets/placeholder-image.png" alt="">
+            </div>
+            <div class="list-item">
+                <img src="src/assets/placeholder-image.png" alt="">
+            </div>
+            <div class="list-item">
+                <img src="src/assets/placeholder-image.png" alt="">
+            </div>
+            <div class="list-item">
+                <img src="src/assets/placeholder-image.png" alt="">
+            </div>
+            <div class="list-item">
+                <img src="src/assets/placeholder-image.png" alt="">
+            </div>
+    
+        </main>
     </div>
-    <header>
-        <h1 class="primary-text">Gallery</h1>
-        <p class="secondary-text">In years to come, CS EXPO continues to showcase innovative ideas from CS students. Various groups work together to brainstorm and develop systems to present to the institution, in turn being presented to the public. Here is a glimpse of the previous expos held by CS students in FEU Tech!
-            </p>
-    </header>
-    <main class="img-container">
-        <div class="list-item">
-            <img src="src/assets/placeholder-image.png" alt="">
-        </div>
-        <div class="list-item">
-            <img src="src/assets/placeholder-image.png" alt="">
-        </div>
-        <div class="list-item">
-            <img src="src/assets/placeholder-image.png" alt="">
-        </div>
-        <div class="list-item">
-            <img src="src/assets/placeholder-image.png" alt="">
-        </div>
-        <div class="list-item">
-            <img src="src/assets/placeholder-image.png" alt="">
-        </div>
-        <div class="list-item">
-            <img src="src/assets/placeholder-image.png" alt="">
-        </div>
-        <div class="list-item">
-            <img src="src/assets/placeholder-image.png" alt="">
-        </div>
-        <div class="list-item">
-            <img src="src/assets/placeholder-image.png" alt="">
-        </div>
-        <div class="list-item">
-            <img src="src/assets/placeholder-image.png" alt="">
-        </div>
-
-    </main>
 </BaseLayout>

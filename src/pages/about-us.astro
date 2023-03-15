@@ -1,20 +1,24 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/about-us.css';
 ---
 
-<link rel="stylesheet" href="src/assets/about-us.css">
 <BaseLayout>
-    <div class="chain">
-        <img class="chain-1" src="src/assets/FW_Chain.png" alt="">
-        <img class="chain-2" src="src/assets/FW_Chain.png" alt="">
-        <img class="chain-3" src="src/assets/FW_Chain.png" alt="">
-    </div>
-    <header>
-        <h1 class="primary-text">About cs expo 2023</h1>
-        <p class="secondary-text">The CS Expo showcases diverse students' innovative solutions in areas such as image processing and machine learning, with engaging presentations and insightful discussions. It's a must-attend event for an insightful experience.
-            </p>
+    <div class="container-fluid about-container">
+      <div class="spacer"></div>
+      <div class="row justify-content-center">
+        <div class="col-10">
+          <h1 class="primary-text">About cs expo 2023</h1>
+        </div>
+      </div>
+      <div class="spacer"></div>
+      <div class="row justify-content-center">
+        <div class="col-8"></div>
+      </div>
+      <p class="secondary-text">
+        The CS Expo showcases diverse students' innovative solutions in areas such as image processing and machine learning, with engaging presentations and insightful discussions. It's a must-attend event for an insightful experience.
+      </p>
 
-    </header>
     <main class="container">
         <section class="faculty-container">
             <h1 class="primary-text">
@@ -196,6 +200,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                   <span class="visually-hidden">Next</span>
                 </button>
               </div>
+              </div>
         </section>
     </main>
+    </div>
 </BaseLayout>
