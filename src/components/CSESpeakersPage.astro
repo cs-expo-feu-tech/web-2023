@@ -1,0 +1,38 @@
+---
+export interface Props {
+	title: string;
+    name: string;
+    credential: string;
+    image_url: string;
+}
+
+const { title, name, credential, image_url } = Astro.props;
+---
+
+<style>
+    .cse-speakers {
+        padding: 1rem;
+    }
+    
+    .cse-speakers-image {
+        /* width and height */
+        width: 200px;
+        height: 200px;
+        aspect-ratio: 1;
+        overflow: hidden;
+
+        /* border-radius */
+        border-radius: 999px;
+    }
+</style>
+
+<div class="cse-speakers d-flex flex-column flex-md-row align-items-center">
+    <div class="cse-speakers-image mb-3 mb-md-0">
+        <img src={image_url} alt={`Image of ${name}`}>
+    </div>
+    <div class="cse-speakers-text px-5">
+        <p class="display-4 text-center text-md-start">{title}</p>
+        <p class="h3 text-center text-md-start">{name}</p>
+        <p class="text-center text-md-start">{credential}</p>
+    </div>
+</div>    

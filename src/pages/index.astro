@@ -1,13 +1,30 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-
-// components
+import '../styles/home.css';
 import Speakers from '../components/Speakers.astro';
 import About from '../components/About.astro';
 import Partners from '../components/Partners.astro';
 ---
 
 <BaseLayout>
+    <div class="container-fluid home-container">
+        <div class="container-fluid section-cs-expo">
+            <div class="row justify-content-center align-items-center logo-row">
+                <div class="logo-container">
+                    <a href="/events/expo">
+                        <img class="img-fluid mx-auto d-block logo" src="src/images/logo-2.png" width="40%">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid section-dev-day">
+            <div class="row justify-content-center">
+                <div class="col-8">
+                    <p class="dev-day-title">DEVDAY</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <Speakers />
     <About />
     <Partners />

@@ -1,0 +1,38 @@
+@font-face{
+    font-family: 'Akira Expanded';
+    src: url("../fonts/AkiraExpandedDemo.otf");
+}
+@font-face {
+    font-family: 'DIN';
+    src: url("../fonts/DIN.ttf");
+}
+
+.home-container{
+    padding: 0;
+}
+.section-cs-expo{
+    background-image: url("../images/expo_bg-2.png");
+    background-size: cover;
+    height: 100vh;
+}
+.logo-row{
+    height: 100%;
+}
+.logo-container{
+    padding: 0;
+}
+.logo{
+    transition: transform 0.5s;
+}
+.logo:hover{
+    transform: scale(1.2);
+}
+.section-dev-day{
+    background-image: url("../images/indiv-projects-bg.png");
+}
+.dev-day-title{
+    font-family: "Akira Expanded";
+    font-size: 10rem;
+    text-align: center;
+    color: #D9D9D9;
+}
