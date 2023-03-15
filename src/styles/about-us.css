@@ -1,0 +1,70 @@
+@font-face{
+    font-family: 'Akira Expanded';
+    src: url("../fonts/AkiraExpandedDemo.otf");
+}
+@font-face {
+    font-family: 'DIN';
+    src: url("../fonts/DIN.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.spacer{
+    height: 5rem;
+}
+.about-container{
+    background-image: url("../images/indiv-projects-bg-chain.png"), url("../images/indiv-projects-bg.png");
+    background-position: top, bottom;
+    background-repeat: no-repeat, repeat;
+    background-size: contain;
+    overflow: hidden;
+}
+header{
+    margin: 4rem auto;
+    color: #fff; 
+}
+.primary-text{
+    color: #fff; 
+    font-family: "Akira Expanded";
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+    font-size: min(7vw, 3.5rem);
+    letter-spacing: 3px;
+    text-align: center;
+}
+header .secondary-text{
+    text-align: justify;
+    font-size: min(3vw, 1.25rem);
+}
+.container .primary-text{
+    font-family: "Akira Expanded";
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    font-size: min(4vw, 2.5rem);
+    letter-spacing: 3px;
+    text-align: center;
+    color: #fff; 
+}
+
+
+@media screen and (max-width: 768px){
+    .img-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .img-container{
+        margin: 4rem;
+    }
+}
+@media screen and (max-width: 576px){
+    .img-container img{
+        width: min(100%, 300px);
+    }
+    .img-container{
+        margin: 2rem;
+    }
+}
