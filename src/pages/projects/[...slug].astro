@@ -8,22 +8,24 @@ export async function getStaticPaths() {
             slug: group.slug,
             name: group.group_name,
             title: group.title,
+            abstract: group.abstract,
             description: group.description,
             photo: group.group_photo,
             developers: group.developers,
-            avp: group.group_avp
+            avp: group.group_avp,
+            manuscript: group.manuscript
         }
     });
 
-    return pages.map(({slug, name, title, description, photo, developers}) => {
+    return pages.map(({slug, name, title, abstract, description, photo, developers, avp, manuscript}) => {
         return {
             params: { slug },
-            props: { name, title, description, photo, developers }
+            props: { name, title, abstract, description, photo, developers, avp, manuscript }
         }
     });
 }
 
-const { name, title, description, photo, developers } = Astro.props;
+const { name, title, abstract, description, photo, developers, avp, manuscript } = Astro.props;
 
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CSEDevCard from "../../components/CSEDevCard.astro";
@@ -57,19 +59,12 @@ import '../../styles/individual-projects.css';
             <div class="col-10 col-xl-4">
                 <img class="img-responsive project-image drop-in-2" src={`/src/images/${photo}`}>
             </div>
-            <div class="col-10 col-xl-6">
-                <p class="project-long-desc drop-in-2">
-                    <br><br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur fugiat ducimus veniam nam ut nisi et explicabo nemo facilis natus est culpa modi, laudantium perferendis blanditiis beatae assumenda reprehenderit. Repellat.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus possimus consequuntur ex, eum aspernatur ratione, ea repellendus dolor nemo aut deserunt voluptate est ab animi rerum! Nulla unde velit dolorem?
-                    <br><br>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit quae odit laborum, fugiat aspernatur in ipsa aut excepturi perferendis quos temporibus maxime, non quod nostrum iste suscipit consequatur unde labore!
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto ducimus ratione, a itaque quod nisi sint voluptatum soluta vero corporis autem, atque voluptatibus consequatur laboriosam nostrum consequuntur perferendis placeat facere?
-                    <br><br>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem quisquam recusandae sunt dolor in, doloribus, modi aliquid dolores iste, delectus blanditiis nisi facere! Voluptas hic eligendi aliquid? Libero, saepe adipisci?
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, cumque! Esse ad, quo dolor explicabo nihil beatae nulla, dolore impedit voluptatibus officia voluptates iusto eos accusamus omnis dicta id quis?             
-                    <br><br>
+            <div class="col-10 col-xl-6 drop-in-2">
+                <p class="project-long-desc fst-italic">
+                    {abstract}
                 </p>
+                <a href={avp} target="_blank" class="btn btn-primary">Project AVP</a>
+                <a href={manuscript} target="_blank" class="btn btn-primary">Download Manuscript</a>
             </div>
         </div>
         <div class="spacer"></div>
@@ -81,12 +76,13 @@ import '../../styles/individual-projects.css';
         </div>
         <div class="spacer"></div>
         <div class="row justify-content-center card-container">
-        {developers.forEach(dev => (<p class="text-white">{`${dev.name} ${dev.photo}`}</p>))}
+        {developers.map(dev => {
+            return (
+                <CSEDevCard name={dev.name} image={dev.photo} />
+            )
+        })}
         </div>
         <div class="spacer"></div>
         <div class="col-12 spacer plastic"></div>
     </div>
-    <script>
-
-    </script>
 </BaseLayout>
