@@ -10,20 +10,20 @@ export async function getStaticPaths() {
             title: group.title,
             description: group.description,
             photo: group.group_photo,
-            members: group.developers,
+            developers: group.developers,
             avp: group.group_avp
         }
     });
 
-    return pages.map(({slug, name, title, description, photo, members}) => {
+    return pages.map(({slug, name, title, description, photo, developers}) => {
         return {
             params: { slug },
-            props: { name, title, description, photo, members }
+            props: { name, title, description, photo, developers }
         }
     });
 }
 
-const { name, title, description, photo, members } = Astro.props;
+const { name, title, description, photo, developers } = Astro.props;
 
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CSEDevCard from "../../components/CSEDevCard.astro";
@@ -81,13 +81,7 @@ import '../../styles/individual-projects.css';
         </div>
         <div class="spacer"></div>
         <div class="row justify-content-center card-container">
-            {
-                members.forEach(member => {
-                    return (
-                        <CSEDevCard name={member.name} image={member.photo} />
-                    )
-                })
-            }
+        {developers.forEach(dev => (<p class="text-white">{`${dev.name} ${dev.photo}`}</p>))}
         </div>
         <div class="spacer"></div>
         <div class="col-12 spacer plastic"></div>
