@@ -10,7 +10,7 @@ export async function getStaticPaths() {
             title: group.title,
             abstract: group.abstract,
             description: group.description,
-            photo: group.group_photo,
+            photo: group.poster,
             developers: group.developers,
             avp: group.group_avp,
             manuscript: group.group_manuscript
@@ -57,7 +57,16 @@ import '../../styles/individual-projects.css';
         <div class="spacer"></div>
         <div class="row justify-content-center align-items-top">
             <div class="col-10 col-xl-4">
-                <img class="img-responsive project-image drop-in-2" src={`/src/images/${photo}`}>
+                <style>
+                    .poster-img {
+                        background-color: #c8c8c8;
+                        background-image: url("/src/images/project-border.png");
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                </style>
+                <img class="p-3 p-md-4 p-xl-4 poster-img project-image drop-in-2" src={`/src/images/group-posters/${photo}`}>
             </div>
             <div class="col-10 col-xl-6 mt-5 mt-xl-0 drop-in-2">
                 <p class="project-name fs-2">Abstract</p>
