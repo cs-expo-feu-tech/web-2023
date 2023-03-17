@@ -13,19 +13,19 @@ export async function getStaticPaths() {
             photo: group.group_photo,
             developers: group.developers,
             avp: group.group_avp,
-            manuscript: group.manuscript
+            manuscript: group.group_manuscript
         }
     });
 
     return pages.map(({slug, name, title, abstract, description, photo, developers, avp, manuscript}) => {
         return {
             params: { slug },
-            props: { name, title, abstract, description, photo, developers, avp, manuscript }
+            props: { slug, name, title, abstract, description, photo, developers, avp, manuscript }
         }
     });
 }
 
-const { name, title, abstract, description, photo, developers, avp, manuscript } = Astro.props;
+const { slug, name, title, abstract, description, photo, developers, avp, manuscript } = Astro.props;
 
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CSEDevCard from "../../components/CSEDevCard.astro";
@@ -33,7 +33,7 @@ import '../../styles/individual-projects.css';
 
 ---
 
-<BaseLayout title="Project Page">
+<BaseLayout title={`${title} by group ${name}`}>
     <script src="../../scripts/individual-projects.js"></script>
     <div class="container-fluid page-bg">
         <div class="spacer"></div>
@@ -49,22 +49,23 @@ import '../../styles/individual-projects.css';
         <div class="spacer"></div>
         <div class="row justify-content-center">
             <div class="col-10 col-xl-8">
-                <p class="project-short-desc drop-in">
+                <p class="project-short-desc drop-in text-center">
                     {description}
                 </p>
             </div>
         </div>
         <div class="spacer"></div>
-        <div class="row justify-content-center align-items-center">
+        <div class="row justify-content-center align-items-top">
             <div class="col-10 col-xl-4">
                 <img class="img-responsive project-image drop-in-2" src={`/src/images/${photo}`}>
             </div>
-            <div class="col-10 col-xl-6 drop-in-2">
+            <div class="col-10 col-xl-6 mt-5 mt-xl-0 drop-in-2">
+                <p class="project-name fs-2">Abstract</p>
                 <p class="project-long-desc fst-italic">
                     {abstract}
                 </p>
-                <a href={avp} target="_blank" class="btn btn-primary">Project AVP</a>
-                <a href={manuscript} target="_blank" class="btn btn-primary">Download Manuscript</a>
+                {avp && <a href={avp} target="_blank" class="btn btn-primary">Project AVP</a>}
+                {manuscript && <a href={manuscript} target="_blank" class="btn btn-primary">Download Manuscript</a>}
             </div>
         </div>
         <div class="spacer"></div>
@@ -78,7 +79,7 @@ import '../../styles/individual-projects.css';
         <div class="row justify-content-center card-container">
         {developers.map(dev => {
             return (
-                <CSEDevCard name={dev.name} image={dev.photo} />
+                <CSEDevCard slug={slug} name={dev.name} image={dev.photo} />
             )
         })}
         </div>

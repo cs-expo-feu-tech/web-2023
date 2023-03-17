@@ -1,23 +1,27 @@
 ---
 export interface Props {
+    slug: string,
     name: string,
     image: string
 }
 
-const { name, image } = Astro.props;
+const { slug, name, image } = Astro.props;
 ---
 
 <style>
     .developer-card{
         border: 24px solid white;
+        background-color: #CACACA;
         border-radius: 8px;
         padding: 0;
         margin: 1rem;
     }   
+
     .card-img-top{
         object-fit: cover;
         width: 100%;
     }
+
     .card-text{
         background-color: #CACACA;
         font-family: 'DIN Black';
@@ -25,17 +29,19 @@ const { name, image } = Astro.props;
         width: 100%;
         text-align: center;
     }
+
     .ease-anim{
     position: relative;
     opacity: 0;
     }
+
     .ease-anim.active{
         opacity: 1;
     }
 </style>
 
 <div class="col-8 col-sm-4 col-md-4 col-xl-2 developer-card ease-anim fade-bottom">
-    <img class="card-img-top" src={`/src/images/group-photos/${image}`}/>
+    <img class="card-img-top" src={`/src/images/group-photos/${slug}/${image}`}/>
     <div class="card-body">
         <p class="card-text">{name}</p>
     </div>
