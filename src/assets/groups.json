@@ -99,15 +99,15 @@
         "developers": [
             {
                 "name": "Mohammad Noor",
-                "photo": "136.png"
-            },
-            {
-                "name": "Ma. Alexies Mae de Lara",
                 "photo": "138.png"
             },
             {
-                "name": "Marc Ivan Guillermo",
+                "name": "Ma. Alexies Mae de Lara",
                 "photo": "140.png"
+            },
+            {
+                "name": "Marc Ivan Guillermo",
+                "photo": "136.png"
             }
         ]
     },
