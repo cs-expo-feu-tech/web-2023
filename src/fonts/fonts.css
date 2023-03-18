@@ -40,6 +40,29 @@
     font-display: swap;
 }
 
+.font-din {
+    font-family: 'DIN', 'Bahnscrift', 'Arial', 'sans-serif';
+}
+
+.font-din-black {
+    font-family: 'DIN Black', 'Bahnscrift', 'Arial Black', 'sans-serif';
+    font-weight: 900;
+}
+
+.font-thedus-wide {
+    font-family: 'Thedus Wide', 'Arial Black', 'sans-serif';
+    font-weight: 900;
+}
+
+.font-thedus-condensed {
+    font-family: 'Thedus Condensed', 'Arial', 'sans-serif';
+}
+
+.font-akira-expanded {
+    font-family: 'Akira Expanded', 'Arial Black', 'sans-serif';
+    font-weight: 900;
+}
+
 p, a {
     font-family: 'DIN', 'Bahnscrift', 'Arial', 'sans-serif';
 }
