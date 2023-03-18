@@ -23,10 +23,9 @@ import "../../fonts/fonts.css";
         background-repeat: no-repeat;
         background-size: cover;
 
-        font-family: 'Thedus Wide', sans-serif;
         line-height: 0.4rem;
 
-        height: 500px;
+        height: 800px;
     }
 
     .cse-header > .cse-header-gradient-overlay {
@@ -53,7 +52,6 @@ import "../../fonts/fonts.css";
     <div class="container-fluid position-relative cse-header d-flex align-items-center justify-content-center text-white lh-1" >
         <div class="h-100 w-100 position-absolute cse-header-gradient-overlay"></div>
         <div class="cse-text-container p-5 px-sm-0 position-relative start-0 bottom-0 z-1">
-
             <style>
                 .cse-date-sticker {
                     position: absolute;
@@ -62,21 +60,66 @@ import "../../fonts/fonts.css";
                     transform: rotate(16deg);
                     padding: 0;
                 }
-            </style>
 
-            <p class="lh-1 m-0">// CS EXPO 2023</p>
-            <p class="lh-1 fw-bold m-0 display-1">DEV DAY</p>
+                .fs-logo-size {
+                    font-size: min(16vw, 9rem);
+                }
+
+                .fs-logo-size-sub {
+                    
+                    font-size: min(8vw, 2rem);
+                }
+            </style>
+            <p class="lh-1 m-0 fs-logo-size-sub font-thedus-wide">// CS EXPO 2023</p>
+            <p class="lh-1 fw-bold m-0 font-akira-expanded fs-logo-size">DEVDAY</p>
         </div>
         <div class="cse-date-sticker">
-            <div class="px-3 py-3 tape">
+            <div class="p-4 p-lg-5 tape">
                 <p class="w-100 m-0 text-center">March</p>
                 <p class="w-100 m-0 text-center h1">17</p>
             </div>
         </div>
     </div>
 
-    <div class="container-fluid py-5 text-white cse-content-bg position-relative">
-        <div class="container">
+<div class="container-fluid container-spill text-white position-relative">
+        <style>
+            .container-spill {
+                position: relative;
+                z-index: 0;
+            }
+
+            .container-spill::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: calc(100% + 256px);
+                background-color: white;
+
+                top: -128px;
+                left: 0;
+
+                background-image: url("/src/images/white_paper_tile.png");
+                background-repeat: repeat;
+                background-size: 128px 128px;
+                mask-image: url("/src/images/rip_mask.png");
+                mask-size: 100% 100%;
+
+                -webkit-mask-image: url("/src/images/rip_mask.png");
+                -webkit-mask-size: cover;
+            }
+            
+            @media only screen and (min-width: 768px) {
+                .container-spill::before {
+                    -webkit-mask-size: 100% 100%;
+                }
+            }
+
+            .container-spill > .container {
+                position: relative;
+                z-index: 1;
+            }
+        </style>
+        <div class="container py-5 text-black">
             <h1>What is DEV DAY?</h1>
             <p>
                 <span>
@@ -108,7 +151,8 @@ import "../../fonts/fonts.css";
             </p>            
         </div>
     </div>
-    <div class="container py-3 py-md-5 text-white">
+
+    <div class="container mt-5 py-3 py-md-5 text-white">
         <h1 class="w-100 m-auto text-center text-uppercase py-5 display-2">Speakers</h1> 
         <CSESpeakersPage title="Keynote Title" name="Speaker Name" credential="Speaker Credentials" image_url="https://via.placeholder.com/200" />        
         <CSESpeakersPage title="Talk 1 Title" name="Speaker Name" credential="Speaker Credentials" image_url="https://via.placeholder.com/200" />        
@@ -118,7 +162,7 @@ import "../../fonts/fonts.css";
     <div class="container py-3 py-md-5 text-white">
         <h1 class="w-100 m-auto text-center text-uppercase py-5 display-2">Schedule</h1>
         <table class="table table-dark table-striped text-white">
-            <thead>
+            <thead>Z
                 <tr>
                     <th scope="col" class="col-4">Time</th>
                     <th scope="col">Event</th>
