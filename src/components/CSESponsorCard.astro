@@ -1,0 +1,73 @@
+---
+export interface Props {
+    html_class?: string;
+    partner_img: string;
+    partner_name: string;
+    requires_bg_logo?: boolean;
+    bg_color?: string;
+    links: {
+        website?: string;
+        facebook?: string;
+        twitter?: string;
+        instagram?: string;
+        linkedin?: string;
+    };
+}
+
+const { html_class, partner_img, partner_name, requires_bg_logo, links } = Astro.props;
+const bg_color = Astro.props.bg_color || "#ffffff";
+---
+<style define:vars={{bg_color}}>
+    .bg {
+        background-color: var(--bg_color);
+    }
+
+    .partner-img {
+        width: 12rem;
+    }
+
+    .partner-img > img {
+        object-fit: contain;
+    }
+</style>
+
+<div class={`${html_class} d-flex flex-column align-items-center py-5`}>
+    <div class={`${requires_bg_logo && 'bg'} partner-img ratio ratio-1x1 rounded overflow-hidden mb-3`}>
+        <img class="p-4" src={partner_img} alt={`${partner_name}'s logo`}>
+    </div>
+    
+    <div class="card-body text-white">
+        <p class="h4 text-center" style="font-family: AkiraExpandedDemo; text-shadow: 1px 1px aqua" class="card-title">{ partner_name }</p>
+
+        {
+            links.website && (
+                <a target="_blank" href={links.website} class="card-text text-white text-decoration-none">
+                <i class='bx bxl-chrome' ></i> <span style="color: aqua;">Website</span></a><br>
+            )
+        }
+        {
+            links.facebook && (
+                <a target="_blank" href={links.facebook} class="card-text text-white text-decoration-none">
+                <i class='bx bxl-facebook-circle'></i> <span style="color: aqua;">Facebook</span></a><br>
+            )
+        }
+        {
+            links.twitter && (
+                <a target="_blank" href={links.twitter} class="card-text text-white text-decoration-none">
+                <i class='bx bxl-twitter' ></i> <span style="color: aqua;">Twitter</span></a><br>
+            )
+        }
+        {
+            links.instagram && (
+                <a target="_blank" href={links.instagram} class="card-text text-white text-decoration-none">
+                <i class='bx bxl-instagram' ></i> <span style="color: aqua;">Instagram</span></a><br>
+            )
+        }
+        {
+            links.linkedin && (
+                <a target="_blank" href={links.linkedin} class="card-text text-white text-decoration-none">
+                <i class='bx bxl-linkedin' ></i> <span style="color: aqua;">LinkedIn</span></a><br>
+            )
+        }
+    </div>
+</div>

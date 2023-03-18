@@ -1,0 +1,327 @@
+{
+    "partner_groups": [
+        {
+            "id": "gold_sponsors",
+            "title": "Gold Sponsors",
+            "color": "#FFD700",
+            "path": "gold",
+            "partners": [
+                {
+                    "id": "orange_and_bronze",
+                    "name": "Orange and Bronze Software Labs",
+                    "logo": "onb.png",
+                    "requires_bg_logo": true,
+                    "bg_color": "#ffffff",
+                    "links": {
+                        "website": "https://www.orangeandbronze.com/",
+                        "facebook": "https://www.facebook.com/orangeandbronze",
+                        "linkedin": "https://www.linkedin.com/company/orange-and-bronze-software-labs/",
+                        "twitter": "https://twitter.com/orangeandbronze"
+                    }
+                },
+                {
+                    "id": "ph_coffee_barista",
+                    "name": "Philippine Coffee and Barista Institute",
+                    "logo": "coffee_genesis.png",
+                    "requires_bg_logo": true,
+                    "bg_color": "#ffffff",
+                    "links": {
+                        "facebook": "https://www.facebook.com/philippinecoffeebaristainstitute"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "bronze_sponsors",
+            "title": "Bronze Sponsors",
+            "color": "#CD7F32",
+            "path": "bronze",
+            "partners": [
+                {
+                    "id": "chalkboard",
+                    "name": "The Chalkboard, Inc.",
+                    "logo": "chalkboard.png",
+                    "requires_bg_logo": true,
+                    "bg_color": "#ffffff",
+                    "links": {
+                        "facebook": "https://www.facebook.com/thechalkboardinc",
+                        "website": "https://chalkboard.com.ph/",
+                        "linkedin": "https://www.linkedin.com/company/thechalkboard-inc/",
+                        "twitter": "https://twitter.com/chalkboard_inc"
+                    }
+                },
+                {
+                    "id": "cgi",
+                    "name": "CGI Philippines, Inc.",
+                    "logo": "cgi.png",
+                    "requires_bg_logo": true,
+                    "bg_color": "#ffffff",
+                    "links": {
+                        "facebook": "https://www.facebook.com/connect2CGI",
+                        "linkedin": "https://www.linkedin.com/company/cgi/",
+                        "website": "https://www.cgi.com/philippines/en",
+                        "twitter": "https://twitter.com/CGI_Global"
+                    }
+                },
+                {
+                    "id": "trend_micro",
+                    "name": "Trend Micro",
+                    "logo": "trend.jpg",
+                    "requires_bg_logo": true,
+                    "bg_color": "#ffffff",
+                    "links": {
+                        "facebook": "https://www.facebook.com/TrendMicroCareersPH",
+                        "linkedin": "https://www.linkedin.com/company/trend-micro/",
+                        "website": "https://careers.trendmicro.com.ph/",
+                        "twitter": "https://twitter.com/TrendMicro"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "media_partners",
+            "title": "Media Partners",
+            "color": "#ffffff",
+            "path": "media",
+            "partners": [
+                {
+                    "id": "inquirer",
+                    "name": "Inquirer.net",
+                    "logo": "inquirer.png",
+                    "requires_bg_logo": true,
+                    "bg_color": "#ffffff",
+                    "links": {
+                        "facebook": "https://www.facebook.com/inquirerdotnet",
+                        "website": "https://www.inquirer.net/",
+                        "linkedin": "https://www.linkedin.com/company/inquirerdotnet/",
+                        "twitter": "https://twitter.com/inquirerdotnet"
+                    }
+                },
+                {
+                    "id": "inquirerpop",
+                    "name": "InqPOP!",
+                    "logo": "inquirerpop.png",
+                    "requires_bg_logo": true,
+                    "bg_color": "#ffffff",
+                    "links": {
+                        "facebook": "https://www.facebook.com/inqpop",
+                        "website": "https://pop.inquirer.net/",
+                        "twitter": "https://twitter.com/inqpop"
+                    }
+                },
+                {
+                    "id": "pilipinomirror",
+                    "name": "PILIPINO Mirror",
+                    "logo": "phmirror.png",
+                    "requires_bg_logo": true,
+                    "bg_color": "#ffffff",
+                    "links": {
+                        "facebook": "https://www.facebook.com/pilipinomirrornegosyo",
+                        "website": "https://pilipinomirror.com/",
+                        "twitter": "https://twitter.com/mirror_pilipino"
+                    }
+                },
+                {
+                    "id": "sparkup",
+                    "name": "SparkUp",
+                    "logo": "sparkup_ph.png",
+                    "requires_bg_logo": true,
+                    "bg_color": "#ffffff",
+                    "links": {
+                        "facebook": "https://www.facebook.com/SparkUpPH",
+                        "twitter": "https://twitter.com/SparkUpPH",
+                        "linkedin": "https://www.linkedin.com/company/sparkup-ph/",
+                        "website": "https://www.bworldonline.com/sparkup/"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "major_partners",
+            "title": "Major Partners",
+            "color": "#ffffff",
+            "path": "major",
+            "partners": [
+                {
+                    "id": "feutechacm",
+                    "name": "FEU Tech ACM Student Chapter",
+                    "logo": "feutechacm.png",
+                    "requires_bg_logo": true,
+                    "bg_color": "#ffffff",
+                    "links": {
+                        "facebook": "https://www.facebook.com/feutechACM/",
+                        "instagram": "https://www.instagram.com/feutechacm/",
+                        "twitter": "https://twitter.com/feutechacm"
+                    }
+                },
+                {
+                    "id": "plmicpep",
+                    "name": "PLM - Institute of Computer Engineering of the Philippines (ICpEP)",
+                    "logo": "icpep-plm.png",
+                    "requires_bg_logo": true,
+                    "bg_color": "#ffffff",
+                    "links": {
+                        "facebook": "https://www.facebook.com/ICpEP.sePLM"
+                    }
+                },
+                {
+                    "id": "acomss",
+                    "name": "Adamson Computer Science Students Society (ACOMSS)",
+                    "logo": "acomss.png",
+                    "requires_bg_logo": true,
+                    "bg_color": "#ffffff",
+                    "links": {
+                        "facebook": "https://www.facebook.com/ACOMSSofficial",
+                        "twitter": "https://twitter.com/ACOMSS_official"
+                    }
+                },
+                {
+                    "id": "pupascii",
+                    "name": "PUP - Association of Students for Computer Intelligence Integration (ASCII)",
+                    "logo": "ascii.png",
+                    "requires_bg_logo": true,
+                    "bg_color": "#ffffff",
+                    "links": {
+                        "facebook": "https://www.facebook.com/PUPASCII"
+                    }
+                },
+                {
+                    "id": "access",
+                    "name": "Academic Consortium of Computer Science Students (ACCeSS)",
+                    "logo": "access.png",
+                    "requires_bg_logo": true,
+                    "bg_color": "#ffffff",
+                    "links": {
+                        "facebook": "https://www.facebook.com/ACCESSOfficial",
+                        "twitter": "https://twitter.com/OfficialACCESS"
+                    }
+                },
+                {
+                    "id": "jpcs-apc",
+                    "name": "Junior Philippine Computer Society - Asia Pacific College (JPCS)",
+                    "logo": "jpcs-apc.png",
+                    "requires_bg_logo": true,
+                    "bg_color": "#ffffff",
+                    "links": {
+                        "facebook": "https://www.facebook.com/JPCSAPC",
+                        "instagram": "https://www.instagram.com/jpcs_apc/",
+                        "twitter": "https://twitter.com/jpcs_apc"
+                    }
+                },
+                {
+                    "id": "tambayantv",
+                    "name": "TAMbayan TV",
+                    "logo": "tambayantv.png",
+                    "requires_bg_logo": true,
+                    "bg_color": "#ffffff",
+                    "links": {
+                        "facebook": "https://www.facebook.com/feuTAMbayanTV",
+                        "twitter": "https://twitter.com/TBTV_FEUADT"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "minor_partners",
+            "title": "Minor Partners",
+            "color": "#ffffff",
+            "path": "minor",
+            "partners": [
+                {
+                    "id": "syntax",
+                    "name": "Syntax - CIIT Developer's Organization",
+                    "logo": "syntax.png",
+                    "requires_bg_logo": true,
+                    "bg_color": "#ffffff",
+                    "links": {
+                        "facebook": "https://www.facebook.com/syntaxciit"
+                    }
+                },
+                {
+                    "id": "ijsd",
+                    "name": "iJSD - iAcademy's Junior Software Developers",
+                    "logo": "ijsd.png",
+                    "requires_bg_logo": true,
+                    "bg_color": "#ffffff",
+                    "links": {
+                        "facebook": "https://www.facebook.com/ijsd.official"
+                    }
+                },
+                {
+                    "id": "comsa",
+                    "name": "Earist - Computer Science Association (COMSA)",
+                    "logo": "earist.png",
+                    "requires_bg_logo": true,
+                    "bg_color": "#ffffff",
+                    "links": {
+                        "facebook": "https://www.facebook.com/Computer-Science-Association-2022-2023-107281537333573"
+                    }
+                },
+                {
+                    "id": "puptpg",
+                    "name": "PUP - The Programmers' Guild ",
+                    "logo": "tpg.png",
+                    "requires_bg_logo": true,
+                    "bg_color": "#ffffff",
+                    "links": {
+                        "facebook": "https://www.facebook.com/PUPTPG",
+                        "twitter": "https://twitter.com/pup_tpg"
+
+                    }
+                },
+                {
+                    "id": "sitescvsu",
+                    "name": "Society of Industrial Technology - Electronics Students CVSU",
+                    "logo": "sites.png",
+                    "requires_bg_logo": true,
+                    "bg_color": "#ffffff",
+                    "links": {
+                        "facebook": "https://www.facebook.com/cvsu.elex.sites"
+                    }
+                },
+                {
+                    "id": "feuaacm",
+                    "name": "FEU Alabang ACM Student Chapter",
+                    "logo": "feua-acm.png",
+                    "requires_bg_logo": true,
+                    "bg_color": "#ffffff",
+                    "links": {
+                        "facebook": "https://www.facebook.com/feuaacm"
+                    }
+                },
+                {
+                    "id": "fsoc",
+                    "name": "FEU Tech Freshmen Society (FSOC)",
+                    "logo": "fsoc-tech.png",
+                    "requires_bg_logo": true,
+                    "bg_color": "#ffffff",
+                    "links": {
+                        "facebook": "https://www.facebook.com/FEUTechFSoc",
+                        "instagram": "https://www.instagram.com/feutechfsoc/"
+                    }
+                },
+                {
+                    "id": "teams",
+                    "name": "FEU Tech TEAMS",
+                    "logo": "teams.png",
+                    "requires_bg_logo": true,
+                    "bg_color": "#ffffff",
+                    "links": {
+                        "facebook": "https://www.facebook.com/feutechTEAMS",
+                        "instagram": "https://www.instagram.com/feutechteams/"
+                    }
+                },
+                {
+                    "id": "dlsuacm",
+                    "name": "DLSU ACM Student Chapter",
+                    "logo": "dlsuacm.png",
+                    "requires_bg_logo": true,
+                    "bg_color": "#ffffff",
+                    "links": {
+                        "facebook": "https://www.facebook.com/dlsu.acm"
+                    }
+                }
+            ]
+        }
+    ]
+}
