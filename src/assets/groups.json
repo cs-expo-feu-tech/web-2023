@@ -1,0 +1,893 @@
+{
+    "4bytes": {
+        "slug": "4bytes",
+        "group_name": "4Bytes",
+        "poster": "4Bytes.png",
+        "title": "LOC8TE: A Velocity Renovation and Google API as Geofencing Professional Locator & Virtual Space",
+        "abstract": "The thesis study was formulated by the proponents to help locate professionals that are near a specific individual and communicate with them. Correspondingly, it will also help various professionals to establish connections and trust with the clients who connect with them. Using the Google API, and the Android operating system while applying the Kanban scheduling system upon building the software, the proponents developed a mobile application that will locate professionals on the map and can be filtered based on their category (8 professions) or their distance-by-radius (the user is the center of the circle). It also lets the clients view the profile of the professionals which contains relevant details such as their ratings about them, experiences, skills, and others. Further, once a client connects with professionals, then he or she will be able to chat with them. There is also an event feature that will let professionals create events that can be configured to allow clients or only their fellow professionals to participate in them. Moreover, the proponents surveyed 30 respondents, consisting of 15 clients and 15 professionals. The respondents rated the application with a weighted mean of 4.78 in terms of Functionality which is equivalent to 'Excellent' and it can be inferred that it is useful for both clients and professionals. Future researchers can enrich the proponents' study by using other shortest-path algorithms which have a faster time complexity than O(V^3), wherein V is the total number of vertices. Also, utilize SQL databases (i.e., MySQL, PostgreSQL, etc.) with a proper design in order to query swiftly.",
+        "description": "An android application aimed at connecting individuals with nearby professionals and facilitating communication between them. It enables professionals to build relationships and establish trust with clients by showcasing their profiles, which include information such as ratings, experiences, skills, and more. Moreover, clients can view the profiles of the professionals and initiate communication once a connection is established. Lastly, there is a feature which lets professionals organize events so that other professionals and clients can participate in it.",
+        "group_photo": "4Bytes",
+        "group_avp": "",
+        "group_manuscript": "",
+        "developers": [
+            {
+                "name": "Mark Jason Galang",
+                "photo": "150.png"
+            },
+            {
+                "name": "Mary Angeline Corral",
+                "photo": "155.png"
+            },
+            {
+                "name": "Allen Christopher Dela Rosa",
+                "photo": "154.png"
+            },
+            {
+                "name": "Joshua Matthew Padilla",
+                "photo": "151.png"
+            }
+        ]
+    },
+    "4horsemen": {
+        "slug": "4horsemen",
+        "group_name": "4Horsemen",
+        "poster": "4Horsemen.png",
+        "title": "EmoBot: A Depression Prevention Android App using Machine Learning",
+        "abstract": "The World needs a mentally healthy person to enjoy life. We need everything we can get our hands on to help overcome the stigma around mental health. We gain confidence that it is okay to need and ask for help; in return, we gain the ability to live the best life we can see ourselves living. The Emotion Virtual Guide, or EMOBOT, is a free smartphone application that supports those coping with psychiatric disorders but cannot afford to hire their physician. According to a study published in 2018, apps for mental health may benefit the monitoring and management of mental health conditions. This study's major purpose is to assist individuals in recovering from any mental illnesses they may be facing. The goal of this study is to assist and benefit those suffering from depression, anxiety, or any other mental illness in Covid 19 pandemic using an antidepressant application. ",
+        "description": "EmoBot is a one-of-a-kind android application designed to help you apply effective strategies for preventing incoming depression. EmoBot draws upon the principles and techniques of Cognitive Behavior Therapy (CBT), one of the most effective and scientifically-supported methods of psychotherapy. With four integrated tools, EmoBot helps you to engage in mood-enhancing activities, identify and change unhealthy thinking, rate and chart mood and hobbies across time, and give someone that will listen and talk about their problem.",
+        "group_photo": "4Horsemen",
+        "group_avp": "",
+        "group_manuscript": "",
+        "developers": [
+            {
+                "name": "William Vincent Talaña",
+                "photo": "265.png"
+            },
+            {
+                "name": "Mark Daniel Sumatra",
+                "photo": "271.png"
+            },
+            {
+                "name": "Sean Kobe Adawag",
+                "photo": "268.png"
+            },
+            {
+                "name": "Miguel Angelo Bartolome",
+                "photo": "266.png"
+            }
+        ]
+    },
+    "alphabeta": {
+        "slug": "alphabeta",
+        "group_name": "AlphaBeta",
+        "poster": "AlphaBeta.png",
+        "title": "Liwanag: Emotion Recognition Using Facial Expression for the Visually Impaired",
+        "abstract": "The goal of this study was to develop an Android mobile application entitled 'Liwanag' that enables visually impaired individuals to use facial recognition to determine the emotion of the person they are interacting with. Face recognition has been used in earlier studies using a variety of methods and algorithms and through this, the application combined 5 algorithms for facial and emotion detection; the detected and analyzed captured input was processed with the use of Viola-Jones algorithm and Haar-like features. The emotions represented will then be determined by feature extraction using HOG and LBP. Lastly, the detected face will be categorized using SVM into categories that specify the emotions it expresses. Liwanag caters 18 emotions that are composed of 7 basic emotions and 11 compound emotions. The application was tested by 50 respondents that are composed of visually impaired, IT/CS professionals, and psychology professionals to evaluate the overall functionality of the application. The overall accuracy of the application attained 56%, still, the overall rating of the application based on the respondents is 5.83 out of 7. This rating reflects as Agree. The proponents advised future researchers to use different classification algorithm aside from SVM, adding features such as basing the predicted expression based on the tone of the voice, being able to recognize the person they are talking to, giving the user an option to choose the time of interval between predictions, and lastly, to fully integrate all the components into one by using compatible frameworks to make the application independent.",
+        "description": "Liwanag is an android mobile application that gives the visually impaired an access to non-verbal communication specifically facial expression by determining the emotion presented on the face of the person whom the visually impaired is talking to with the use of the rear camera of the phone.",
+        "group_photo": "AlphaBeta",
+        "group_avp": "",
+        "group_manuscript": "",
+        "developers": [
+            {
+                "name": "Ralph Edchris Salmorin",
+                "photo": "55.png"
+            },
+            {
+                "name": "Kathlene Jane Roxas",
+                "photo": "50.png"
+            },
+            {
+                "name": "Richard Neil Punzalan",
+                "photo": "57.png"
+            },
+            {
+                "name": "Vernes Abella",
+                "photo": "53.png"
+            }
+        ]
+    },
+    "bamm": {
+        "slug": "bamm",
+        "group_name": "BAMM",
+        "poster": "BAMM.png",
+        "title": "FIREph: Budget Planner Application using Regression Algorithms",
+        "abstract": "In this paper, the proponents aimed to develop an Budget Planner Mobile Application with the usage of Regression Algorithms. They aimed to create an application that people can use to see the trend of their expenses and track their budget. The application will display the forecast of their expenditures for users to be aware of their financial behavior as well as observe if their savings have been maximized. In the case of the forecasts, the algorithms that were utilized were Random Forest Regression as well as Exponential Smoothing. To evaluate that this system is beneficial to people who wants to budget and that this system is feasible, the proponents conducted a survey among 50 people consisting of budget trackers and non-budget trackers. The researchers surveyed 50 respondents, composed of students and professionals to evaluate the system. The respondents evaluated the application with an average of 4.46 from its functionality, usability, reliability, portability, and security. Hence, the system or the overall application is evaluated as 'Agree'. The system can be improved by future researchers where the application should be available for iOS to extend its user base. Implement OCR (Optical Character Recognition) to make inputting expenses easier in the 'Insert Expenses' module. Add more categories for inputting expenses to allow users to diversify their expense categorization. Allow users to edit their profiles to reflect changes in their employment status or income. Include a tips section in the application to provide users with suggestions for saving and growing their income, as predicted by the application. ",
+        "description": "FirePH is a financial management tool that uses regression and time-series forecasting algorithms to help users track and forecast their expenses. The application includes modules for inserting transactions, retrieving and displaying transactions, forecasting transactions, generating reports, managing expenses, and offering credential verification. The application serves to help users become more aware of their expenditures and identify areas where they can reduce their spending.",
+        "group_photo": "BAMM",
+        "group_avp": "",
+        "group_manuscript": "",
+        "developers": [
+            {
+                "name": "Mohammad Noor",
+                "photo": "138.png"
+            },
+            {
+                "name": "Ma. Alexies Mae de Lara",
+                "photo": "140.png"
+            },
+            {
+                "name": "Marc Ivan Guillermo",
+                "photo": "136.png"
+            }
+        ]
+    },
+    "bethesdaboys": {
+        "slug": "bethesdaboys",
+        "group_name": "Bethesda Boys",
+        "poster": "Bethesda-Boys.jpg",
+        "title": "Codex Learning: A Game-Based Intelligent Tutoring System using Expert-Based Modeling to Measure the Skills and Knowledge of Novice Programmers in Java Programming",
+        "abstract": "Codex Learning, a gamified Java Fundamentals teaching program that measures the skills and performance of Novice Java Programmers. Codex Learning collects data from the performance of the users to provide motivational dialogues. Previous research gathers data from students with the use of Fuzzy Logic Algorithm, and behaviors of the students were observed and obtained during laboratory activities by observers. We used Agile development methodology to find and fix bugs in the gameplay and calculations in the software. Codex Learning classifies the behaviors of the user while playing the game using Decision Tree as a model in Machine Learning in order to teach Java Fundamentals. Java Fundamentals are useful for the user to have a foundation in Java Programming Language. We developed an application that will teach Novice Programmers the basics of Java Programming. Upon making the application we used an Expert-Based Model that uses Fuzzy Logic Algorithm as its rules engine. The Expert-Based Model allows the system to provide feedback and guidance to the users. Overall, Codex Learning offers a unique and effective approach to teaching Java Programming to Novice Programmers. Its use of expert-based modeling and intelligent tutoring system helps to engage students and provide them with the guidance they need to learn more about the topics. ",
+        "description": "A retro styled gamified desktop application that teaches the Fundamentals of Java Programming Language (JPL). The application collects the value of the skills and knowledge of novice programmers through theoretical -Question and Answer- and practical -Place the block- activities. This application is built to inspire and teach novice programmers to know the basics and proper placement of code components of JPL.",
+        "group_photo": "Bethesda Boys",
+        "group_avp": "",
+        "group_manuscript": "",
+        "developers": [
+            {
+                "name": "Richmond Jyron Esguerra",
+                "photo": "90.png"
+            },
+            {
+                "name": "Paul Bryan Co",
+                "photo": "87.png"
+            },
+            {
+                "name": "Aaron John Fernandez",
+                "photo": "92.png"
+            },
+            {
+                "name": "Aldreck Argueza",
+                "photo": "85.png"
+            }
+        ]
+    },
+    "brocode": {
+        "slug": "brocode",
+        "group_name": "BroCode",
+        "poster": "BroCode.png",
+        "title": "License Plate Recognition with Violation Checker Using Yolo and Tesseract-CNN Algorithm",
+        "abstract": "The purpose of this project is to test the feasibility of creating a License Plate Detection system using Tesseract-CNN algorithm and YOLO algorithm. The application contains several subfeatures. This includes a violation checker to check for the users violations, super admin to filter fraudulent and verify legitimate accounts, an csv import file to easily populate the database, and an SMS-based notification system to notify traffic officials for detected hot plates and notify vehicle owners when the vehicle gets tagged with a violation,. The application was created using flask, and python (with python libraries) with the use of Visual Studio Code IDE (VS CODE). The researchers has 4 categories (Traffic Officials, Computer Professionals, Drivers with and without NCAP ) and has a total of 53 respondents. The survey questions follows the ISO-9126 standard questions for Computer Professionals, the black box testing questions for Drivers with and without NCAP, and the gray box testing questions for Traffic Officials. The researchers used a unipolar likert scale to evaluate the results of the survey and achieved an 6.69 average for Computer Professionals, an 6.13 average for Traffic Officials, an 6.94 average for drivers with NCA, and an 6.73 average for Drivers without NCA. In conclusion the researchers was able to meet the objectives of the study. ",
+        "description": "A web based application that uses YOLO and Tesseract-CNN algorithms to detect license plate numbers through video feeds. This mainly benefits drivers and traffic officials. An authorized administrator can perform CRUD operations on car and violation data. Additionally, there is a violation checker that allows vehicle owners to input their engine number. Selected traffic officals can receive SMS notifications about detected hot plates and related information, while vehicle owners can receive notifications if they have been issued a violation.",
+        "group_photo": "BroCode",
+        "group_avp": "",
+        "group_manuscript": "",
+        "developers": [
+            {
+                "name": "Mark Angelo Capili",
+                "photo": "279.png"
+            },
+            {
+                "name": "Emanuelle Bermudo",
+                "photo": "221.png"
+            },
+            {
+                "name": "Vincent Adrian Lim",
+                "photo": "217.png"
+            },
+            {
+                "name": "Ruth De Guzman",
+                "photo": "218.png"
+            }
+        ]
+    },
+    "codeeldrick": {
+        "slug": "codeeldrick",
+        "group_name": "CodeEldrick",
+        "poster": "CodeEldrick.jpg",
+        "title": "(B.M.A) Android/iOS Budget Monitoring Application using Predictive Analytics",
+        "abstract": "Everyone wants to save money and stay within their budget. However, because of our hectic daily routines, we may lose track of our costs and wind-up overspending, which leads to debt. The goal of this project is to create a mobile application that assists users in keeping track of all costs and simplifies the tracking procedure. The suggested system would also create precise information on which shopping categories we are exceeding our budgets, allowing the user to monitor and manage his spending within his budget limit. The fast advancement of technology has resulted in the creation of smart mobile applications. The application scans shopping receipts and extracts data such as merchant name, merchant type, date of purchase, and the amount spent on each shopping item on any given day using an Optical Character Recognition (OCR) engine. Optical character recognition (OCR) is a method of converting printed text or documents into digital text. The data recovered after OCR is then displayed using a variety of analytical charts and reports, which will assist customers in estimating and tracking their spending in order to stay within budget. ",
+        "description": "BMA is a mobile application designed to help users monitor their budget and give them a glimpse of what could be their future expenditure with the help of AI. It features a predictive AI that gives the user an estimate of what could be their future expense based on the user's past data. It also has an OCR function to make it easier for the users to input their expense by taking a picture of receipts and it goes directly to our database which the user can also see inside the App.",
+        "group_photo": "CodeEldrick",
+        "group_avp": "",
+        "group_manuscript": "",
+        "developers": [
+            {
+                "name": "Eldrick Marasigan",
+                "photo": "134.png"
+            },
+            {
+                "name": "Kyle Domingo",
+                "photo": "130.png"
+            },
+            {
+                "name": "Shiela Bellosillo",
+                "photo": "132.png"
+            },
+            {
+                "name": "Mark Bernard Estrada",
+                "photo": "127.png"
+            }
+        ]
+    },
+    "codepanda": {
+        "slug": "codepanda",
+        "group_name": "CodePanda",
+        "poster": "CodePanda.png",
+        "title": "Grocery Dash: A Mobile-based Grocery Shopping Assistant with the Application of the Hamiltonian Path Problem of Graph Theory",
+        "abstract": "Grocery shopping can often be viewed as a chore by most people, specifically men, especially if an individual does not know where a specific item that they need is located. An average shopping trip lasts for 41 minutes, and an average shopper spends more than 53 hours a year in a grocery store. Existing solutions for this problem may include online shopping, wherein a user may check-out from a particular store using a website or an application, and have it delivered directly at his or her home. However, this also does not solve the problem for people who prefer to shop on-site for a more personalized experience, as well as the staff of grocery services, since even though the buyer was able to place a grocery order online, the assigned grocery store would still need to gather the respective items. The researchers then decided to create a system that aims to reduce the total time spent and distance traveled, by generating a route inside the store that gathers all the user’s needed items. The said system made use of a heuristic that is based algorithms used for graph traversal and pathfinding algorithms, such as the A* Algorithm and 2-Opt Algorithm, as well as an implementation of the Apriori Algorithm for frequently bought products recommendation. A comparison was made between a shopper with the application and a shopper without the application, using a randomized list of ten items. The researchers found that it is indeed faster to gather a certain list of items using the application, and there is a very significant difference when it comes to the total distance traveled inside the store. The application was then evaluated based on the standards of the ISO-9126, and garnered an average rating of 4.66, with the Usability and Effectiveness category gathering the highest scores, and the Maintainability category gathering the lowest scores.",
+        "description": "An android application that allows on-site grocery shoppers to list their desired items, view the total price, check for item suggestions, and follow a generated sub-optimal path for gathering all of their grocery needs. Developed using Java and Google Firebase, Grocery Dash incorporates various algorithms for pathfinding, graph traversal, and shortest path problems to help its users navigate the grocery store.",
+        "group_photo": "CodePanda",
+        "group_avp": "",
+        "group_manuscript": "",
+        "developers": [
+            {
+                "name": "Karl Matthew Parafina",
+                "photo": "17.png"
+            },
+            {
+                "name": "Charles Dune Villegas",
+                "photo": "11.png"
+            },
+            {
+                "name": "Angelika Gene Reyes",
+                "photo": "9.png"
+            },
+            {
+                "name": "Daniel Luis De Torrontegui",
+                "photo": "15.png"
+            }
+        ]
+    },
+    "complaintcenter": {
+        "slug": "complaintcenter",
+        "group_name": "Complaint Center",
+        "poster": "Complaint-Center.png",
+        "title": "An Android Application for Symptom Awareness of Measles, Mumps, and Rubella with Digital Rash Image Detection",
+        "abstract": "The system is a mobile-based application used to detect and classify skin diseases using image processing and machine learning. The aim of the application is to raise awareness about the severity of measles, mumps, and rubella, also the importance of proper vaccination. Grayscale conversion, contrast enhancement, and median filter are the image processing techniques used to enhance the image. After the image was enhanced, the next process would be image segmentation using a thresholding technique called Otsu's method. To further improve the accuracy of the system, the GLCM is used for feature extraction to remove unwanted elements. Furthermore, C4.5 is used to classify the kind of skin disease based on numerical data gathered by the GLCM. After the classification process, hospitals and clinics that provide treatment will be recommended. ",
+        "description": "SKIP is an android application that provides information to users about the importance of MMR vaccine. Information such as symptoms and incubation period of diseases like measles, mumps, and rubella will be available to users. The application also provides a list of locations as well as the contact information of hospitals and clinics that provide the MMR vaccine. An additional feature of the application is to classify whether the skin is healthy or not.",
+        "group_photo": "Complaint Center",
+        "group_avp": "",
+        "group_manuscript": "",
+        "developers": [
+            {
+                "name": "Kyle Christian Rillera",
+                "photo": "238.png"
+            },
+            {
+                "name": "Aaron Kyle Hernandez",
+                "photo": "243.png"
+            },
+            {
+                "name": "Crispin Tubon",
+                "photo": "245.png"
+            },
+            {
+                "name": "Angelica Desales",
+                "photo": "240.png"
+            }
+        ]
+    },
+    "dijamcoandfriends": {
+        "slug": "dijamcoandfriends",
+        "group_name": "Dijamco and Friends",
+        "poster": "Dijamco-and-Friends.png",
+        "title": "Facial Recognition Attendance System Using Line Detection Algorithm",
+        "abstract": "As jobs in countries worldwide shift back to the on-site format following the aftermath of the COVID-19 Pandemic, there is a growing need for more non-contact methods to do things. The proponents propose using a single-camera pseudo-distance based algorithm as a trigger for facial recognition to record personnel presence within an organization's premises. Also, considering current times, the facial recognition model is trained to recognize users, regardless of whether they are masked or otherwise. This system shall be another alternative to manual methods while also aiming to eliminate any need for skin contact to any additional surfaces to curb the spread of harmful material like viruses, which are known to infect people without manifested symptoms [7]. And being that COVID-19 can be potentially fatal [3], it has become even more important for systems to be in place to prevent further spread of such viruses. The system makes use of the YOLOv5 model for object detection and the VGG-19 model for classification. A line detection algorithm is created to facilitate the recognition of personnel within the imagespace. (1) Video frames are input into the system for (2) the YOLOv5 model to detect faces and regions-of-interest (ROIs) within the image. A line threshold is manually set on the imagespace, usually close to the bottom of the image, as a means to trigger ROI detection, when a detected face reaches the said threshold. (3) The line detection algorithm is used to check the faces' location within the image. When a face is detected to be within range via the threshold, (4) ROI detection is run on the region where the face is, then (5) the VGG-19 model takes the input ROI and draws an inference on the person's identity. (6) An inference filtering algorithm is also created to sift through the inferences made by the classifier to arrive at a final conclusion. The models generated very favorable results during the testing phase, with the object detection getting 90.2% overall, while the system got 93.31%, 80.43%, and 92.5% for the recognition accuracy results for the per-frame, per-run, and per-run without false negatives tests, respectively. An overall system score of 4.68/5.00 was recorded as scored by 38 respondents, a mix of CS/IT Students, CS/IT Professionals, non-CS/IT Employees and non-CS/IT Managers. ",
+        "description": "An attendance system that provides a touch-less alternative to other personnel monitoring methods, especially to manual methods still used today. This is done by utilizing object detection and facial recognition models, in conjunction with a line detection algorithm to create a system whose operation is triggered by a user's proximity to the camera, while also being able to recognize users despite the presence of face masks. A web-based application is also created to facilitate user/admin functionalities.",
+        "group_photo": "Dijamco and Friends",
+        "group_avp": "",
+        "group_manuscript": "",
+        "developers": [
+            {
+                "name": "Adrianne Magracia",
+                "photo": "144.png"
+            },
+            {
+                "name": "Dave Bornilla",
+                "photo": "145.png"
+            },
+            {
+                "name": "Carl Michael Dijamco",
+                "photo": "141.png"
+            },
+            {
+                "name": "Lorenze Dionell Arroyo",
+                "photo": "148.png"
+            }
+        ]
+    },
+    "direckt": {
+        "slug": "direckt",
+        "group_name": "DIREckt",
+        "poster": "DIREckt.png",
+        "title": "iAksyonPadayon.ph: Emergency Assistance Communication Tracker for Fire, Calamities and Accidents Rescue Application for City Disaster Risk and Rescue Management Office (CDRRMO) in Catbalogan City, Samar using Dijkstra's Algorithm",
+        "abstract": "The advancement of technological tools and devices has enhanced the lives of people all around the world. The developer created the iAksyonPadayon.ph during this research to provide effective and efficient rescue operations to residents in the event of emergencies and disasters. The rapid reaction and activities of the many command centers include safety and security for their people by disseminating correct information on safer places and guidance on what to do when an emergency or disaster occurs through the use of this application. The user requests assistance using the application, and upon verification, the cooperating agencies will respond immediately via the Global Positioning System (GPS) and Dijkstra Algorithm. The application provides users with immediate access and functionality in response to an emergency in Catbalogan City, Samar, which will provide a direct call to the CDRRMO using the panic buttons provided in the mobile application to alert the responder and immediately locate the person who requires assistance using the Global Positioning System (GPS). The application helps the community by utilizing the capabilities of mobile and smartphone devices for Catbaloganon's emergency demands. Through assessment, the built application satisfies the demands of the users, making it user-friendly for the selected population.",
+        "description": "iAksyonPadayon.ph is an application dedicated to assisting the people of Catbalogan city samar and the CDRRMO. iAksyonPadayon.ph provides multiple features, from the option Pag-Andam, which discusses the do’s and don’ts on certain scenarios and calamities, Pag-Likas, which displays information on the nearest areas of interest in case of calamities and/or emergencies and displays alternate paths towards the location in case of hindrances. Lastly, Pag-Arobulig, which is used to report and capture scenarios that will be sent to the CDRRMO.",
+        "group_photo": "DIREckt",
+        "group_avp": "",
+        "group_manuscript": "",
+        "developers": [
+            {
+                "name": "Jose Rafael Cruz",
+                "photo": "39.png"
+            },
+            {
+                "name": "Alec Bryan Sison",
+                "photo": "35.png"
+            },
+            {
+                "name": "Rovinjan Medrano",
+                "photo": "36.png"
+            },
+            {
+                "name": "Lealyn Rose Froilan",
+                "photo": "41.png"
+            }
+        ]
+    },
+    "edith": {
+        "slug": "edith",
+        "group_name": "EDITH",
+        "poster": "EDITH.jpg",
+        "title": "Chop-In: An Intelligent Piano Performance Assessment Tool using Pattern Matching Algorithms",
+        "abstract": "The purpose of this project is to explore the implementation of pattern-matching algorithms in identifying the correctness of piano performances. This project aims to analyze the music-related data inside a MIDI (Musical Instrument Digital Interface) recording to understand the behavior of each piano performance. The extracted data includes three major components: note accuracy, note-timing, and melody similarity. These three data will then be compared to the ground truth data using an approximate pattern-matching algorithm to determine the similarity of user performance compared to the original music score. The researchers provided the assessment report by scaling them from general to specific results. The researchers implemented a constraint-based learning model that allows users to learn through mistakes with a set of constraints. The project was evaluated by 30 respondents, composed of beginner piano players, experienced piano players, music professionals, and software engineers. Software evaluation was conducted with on-site testing inside Far Eastern University Manila for beginner and experienced piano players. Research result suggests that both piano player categories have improved and progressed with the proposed project's aid. Research data shows that users tend to easily adapt to hitting the correct notes along the music sequence but struggle on achieving proper timing such as articulation and rhythm. Overall this research shows that pattern-matching algorithms can be used on assessing piano performance with the assistance of MIDI technology. ",
+        "description": "Chop-In is an assessment tool that utilizes MIDI Technology to break down piano performances into smaller components. This application allows users to connect their piano to a computer and practice music pieces using piano roll notation. The system delivers insightful feedback containing reports about accuracy, timing, and errors with the use of a fuzzy matching algorithm. Chop-In allows piano users to assess themselves and track their progress along with their mastery of specific piano pieces",
+        "group_photo": "EDITH",
+        "group_avp": "",
+        "group_manuscript": "",
+        "developers": [
+            {
+                "name": "Jared Lester Huna",
+                "photo": "109.png"
+            },
+            {
+                "name": "Francis Keanu Ventura",
+                "photo": "112.png"
+            },
+            {
+                "name": "Jerome Felicilda",
+                "photo": "117.png"
+            },
+            {
+                "name": "Neille Cedrick Juan",
+                "photo": "115.png"
+            }
+        ]
+    },
+    "grabcode": {
+        "slug": "grabcode",
+        "group_name": "GrabCode",
+        "poster": "GrabCode.png",
+        "title": "SMR: Image Digitization, Recognition, and Conversion of Sheet Music",
+        "abstract": "Sheet music is objective and straightforward, yet intricate in its structure and nuances. It represents the ideal medium for conferring the subtle properties of music such as rhythm, tempo, pitch, sequencing, and sizeable variations of accidentals. Different image recognition software for sheet music exists today; the field coined Optical Music Recognition (OMR). This enables immediate understanding of a piece's musical composition. To improve upon this, the proponents aimed to implement editing functionality towards a scanned sheet music score after processing the initial sheet music image through ABC notation. Recognition of individual musical components such as notes, pitch, and rhythm will further support the user's learning experience with music and assess the modulation of personal music theory ideas. Further cementing the understanding of sheet music, the user will also be presented with the option of finding similar sounding scores through a local database of previously scanned sheet music. The first option compares the track's base statistics such as composer, genre, tempo, etc. For the second option, The proponents utilized Parson's code; A phonetic system of identifying melodic patterns by identifying the tendency of the pitch to go up or down. String matching algorithms compared each track's Parson's code to evaluate its melodic similarity among one another. The system was able to achieve an accuracy of 92.56% in detection of note heads across nine image samples of three test cases each. Inconsistencies in note recognition often occurred in clumped note heads across a tight vertical plane along a staff line. Software assessment across performance, reliability, portability, functionality, and usability achieved an overall score of 4.82 among 50 respondents. Moving forward, improvement in the OMR algorithms will enable further accuracy in complex, contemporary style sheet music. Along with this, general frontend improvements will greatly hone the software, such as realtime editing of musical components during playback will further improve upon the user's experience for efficiency. ",
+        "description": "SMR is an application wherein proponents can convert an image into digital audio while maximizing the potential of the edit function. Once the image is converted through image processing and machine learning, the users can use the application to hear the musical output of the sheet, and view recommended similar music through comparing the metadata or melody to other songs inside the application’s database. In the end, it can be exported to a playable audio format and/or a digital image.",
+        "group_photo": "GrabCode",
+        "group_avp": "",
+        "group_manuscript": "",
+        "developers": [
+            {
+                "name": "Michael Anthony Kho",
+                "photo": "19.png"
+            },
+            {
+                "name": "Earl Zeann Lumanlan",
+                "photo": "13.png"
+            },
+            {
+                "name": "Genesis Charles Tan",
+                "photo": "24.png"
+            },
+            {
+                "name": "Sophia Abbyghaile Tandoc",
+                "photo": "21.png"
+            }
+        ]
+    },
+    "hblhbldrivers": {
+        "slug": "hblhbldrivers",
+        "group_name": "HBL-HBL Drivers",
+        "poster": "HBL-HBL-Drivers.png",
+        "title": "Project SavvyMo: Tagalog Transcribing Web Application through the use of Convolutional Neural Network and Long Short-term Memory",
+        "abstract": "Manual transcription has been the only way to achieve audio-based data for plenty of years. It has come to light the challenge of gathering data manually through writing the audio recording while listening to it simultaneously, and most likely create human errors along the process. With SavvyMo, an application that develops an Automatic Speech-to-Text Transcription, the researchers addressed those challenges; providing ease, convenience, and an innovative way of transcription. This study aimed to utilize a quantitative research design through survey, specifically, the ISO/IEC 9126 model through the use of a validated questionnaire. In addition, results showed that the web application garnered a Satisfactory result within the overall experience of the respondents. Furthermore, included in this study is the recommended acoustic model, Convolutional Neural Network and Long Short-term Memory for the development of SavvyMo with three (3) diagrams to govern the flow of the development. ",
+        "description": "SavvyMo is an automated Tagalog transcriber web application that converts spoken Tagalog speech into written text. Users can upload audio or video files, and the application uses speech recognition technology to transcribe the speech into text. The output is then displayed, and users can choose to edit or export the transcribed text. SavvyMo is designed to provide convenience, especially for those researchers and those who are not fluent in Tagalog as it saves time and effort compared to manual transcription.",
+        "group_photo": "HBL-HBL Drivers",
+        "group_avp": "",
+        "group_manuscript": "",
+        "developers": [
+            {
+                "name": "Maegan Therese Gabriana",
+                "photo": "191.png"
+            },
+            {
+                "name": "Dianne Yael Cabrales",
+                "photo": "187.png"
+            },
+            {
+                "name": "Janezen Dagami",
+                "photo": "189.png"
+            },
+            {
+                "name": "Jefferson Jadoc",
+                "photo": "282.png"
+            }
+        ]
+    },
+    "incognito": {
+        "slug": "incognito",
+        "group_name": "Incognito",
+        "poster": "Incognito.png",
+        "title": "Intelligent Chatbot for Barangay Complaint Services using Natural Language Processing, Decision Trees, and Queue",
+        "abstract": "Local governments are sworn to serve their communities for their needs and concerns that are discernible. Citizens seek the barangay tanods, mayors, and the barangay officials, should they have any issues that involve their local community. The presence of these officials helps organize and lead a community towards a healthier, safer, and better living space. Without their presence and leadership, disorganization arises. Although, these officials are only a small population compared to the citizens they aid. It is naturally their intention to be able to cater to all the needs of their citizens. With an impractical and time-consuming process of complaint services, it makes it difficult for the officials to handle the cases, and for the citizens to file complaints. On both ends, this becomes unnecessarily restrictive and aggravating. With the presence of quickly progressing technology, this study aims to follow the trend of allowing technology to be utilized much more flexibly and be of greater help to our advancement as a society. With the use of Python, an advanced AI chatbot will be created as a project that aims to focus on developing and improving the process of filing and handling complaints. The chatbot should be able to handle issues such as obtaining information regarding the purpose or reason of the complaint, the personal information of the complainants, and their additional remarks and concerns. With this project, barangays are provided with a much more convenient way of handling and filing complaints, allowing for a much more efficient complaint filing. ",
+        "description": "A chatbot system that lets the citizens of Barangay Mapulang Lupa to file a complaint within their local government. The system was developed through Python using Natural Language Processing algorithms such as entity recognition. The user can speak Tagalog while interacting with the chatbot. The system aims to replace the traditional pen and paper way of filing a complaint and let the locals file in their homes.",
+        "group_photo": "Incognito",
+        "group_avp": "",
+        "group_manuscript": "",
+        "developers": [
+            {
+                "name": "Steven Go",
+                "photo": "212.png"
+            },
+            {
+                "name": "Adrian Levi Urrutia",
+                "photo": "208.png"
+            },
+            {
+                "name": "Raven John Salvador",
+                "photo": "210.png"
+            },
+            {
+                "name": "Geoffrey Abis",
+                "photo": "215.png"
+            }
+        ]
+    },
+    "kairos": {
+        "slug": "kairos",
+        "group_name": "Kairos",
+        "poster": "Kairos.png",
+        "title": "Pet Lifestyle Matcher and Adoption Application Using Recommendation Algorithms",
+        "abstract": "Similarities between the potential adopter and pets are critical and contribute to a high likelihood of adoption success. Several factors must be evaluated prior to committing to adopting a pet, including one's lifestyle and personality. Pet owners encounter difficulties when acquiring a pet such as experiencing problems with the pet's behavior, finding that their pet is incompatible with other pets and themselves, having preconceived expectations that failed to be met after adopting, and developing issues with their health and household. All of these lead to unsuccessful pet adopts and eventual pet returns [1]. To help address this issue, the proponents came up with an application that will aid in decreasing the cases of pet abandonment and pet returns to animal shelters. The application will determine the compatibility between potential pet adopters and pets via questionnaires. It will then use recommendation algorithms and the multi-criteria decisionmaking approach to recommend pets to potential adopters. The proponents surveyed 22 respondents. 16 of whom were potential pet adopters, 4 were CS/IT professionals, and 2 were animal shelters. Adapting ISO 25010 - specifically functionality, reliability, usability, and efficiency - a total average of 4.37 were gathered from potential pet adopters, 4.33 from CS/IT Professionals, and 4.50 from Non-profit animal shelters. These values affirm that the application has indeed piqued its target market's interest in the application. For future studies, the proponents recommend for the application to have an iOS version, an in-app messaging option, a flowchart on how the application works, a feedback feature for successful adoptions, a feature where shelters can post pets' updates, and a filter function for the animal list.",
+        "description": "PETNERSHIP is a pet lifestyle matcher and adoption mobile application that caters to both animal shelters and pet adopters. Through a recommendation algorithm, it generates the top 3 most compatible pets for the aspiring adopter based on their preferences and the pets' characteristics. The pets in the system are cats and dogs under the care of nonprofit animal shelters. PETNERSHIP matches one to their ideal partner in life while easing animal shelters' load and complementing their adoption processes.",
+        "group_photo": "Kairos",
+        "group_avp": "",
+        "group_manuscript": "",
+        "developers": [
+            {
+                "name": "Krysch Chalia Atienza",
+                "photo": "34.png"
+            },
+            {
+                "name": "Rahmat Zaina Isnain",
+                "photo": "30.png"
+            },
+            {
+                "name": "Jannel Lacbain",
+                "photo": "25.png"
+            },
+            {
+                "name": "Roland Val Tristan Bonus",
+                "photo": "27.png"
+            }
+        ]
+    },
+    "kamigami": {
+        "slug": "kamigami",
+        "group_name": "Kamigami",
+        "poster": "Kamigami.png",
+        "title": "SENYAS: A Web-based Filipino Sign Language Learning Application with Image Detection using CNN and Boyer-Moore Algorithm",
+        "abstract": "SENYAS is a web-based application designed to make learning Filipino Sign Language (FSL) easier and more accessible. This innovative application uses image detection with convolutional neural networks (CNN) and BoyerMoore algorithm to enable users to learn FSL without having to attend classes. The application can be used to identify and translate FSL signs from images taken with a smartphone, and the user can then practice their skills using the application's interactive quizzes and activities. SENYAS also includes a feature that allows users to record and save their own FSL signs, and the application can then translate the signs back into FSL. The application is designed to make the learning of FSL easier and more accessible, and it is an important tool for helping users to better understand and communicate with the Filipino Deaf community.",
+        "description": "SENYAS is a web-based application designed to teach Filipino Sign Language (FSL) through image detection technology powered by Convolutional Neural Networks (CNNs). The app provides video tutorials, with interactive quiz-type examination and real-time feedback to help users progress in their FSL learning journey. Whether you are a beginner or an advanced learner, SENYAS is designed to meet your learning needs. With SENYAS, individuals can improve their communication skills with the deaf community and make a positive impact in their daily lives.",
+        "group_photo": "Kamigami",
+        "group_avp": "",
+        "group_manuscript": "",
+        "developers": [
+            {
+                "name": "Raphael Jericho Barlin",
+                "photo": "260.png"
+            },
+            {
+                "name": "Andrei Josef Nicolas",
+                "photo": "256.png"
+            },
+            {
+                "name": "Princess Bea Castillo",
+                "photo": "262.png"
+            },
+            {
+                "name": "Aaron Marleon Seth Uson",
+                "photo": "257.png"
+            }
+        ]
+    },
+    "lambdainvariants": {
+        "slug": "lambdainvariants",
+        "group_name": "Lambda Invariants",
+        "poster": "LambdaInvariants.png",
+        "title": "Mutlimodal Generative Design: An Approach to Streamline Design Workflows using Generative Adversarial Networks",
+        "abstract": "Rapid prototyping is used during the design process to create a pool of candidate design layouts. The traditional means of developing rapid prototypes have been through manual sketches of an imagined scene. Computer-Aided Design (CAD) software enables the designer to express their concept in a precise language that requires technical skills. While CAD results are enhanced to accurately fit the design specification, the development process takes time. The researchers propose to improve the design workflow by incorporating techniques from generative modeling. The researchers developed a multimodal interface for generating design concepts through text, based images, and manual scene sketches using latent diffusion. The user survey evaluates degrees of satisfaction with rendered design quality and cognitive load at using our system against traditional sketches. The findings indicated that our system does not incur high cognitive loads across different user types. Secondly, the findings suggested that users are satisfied with rendered results. Finally, the application is built on top of Stable Diffusion with tuned parameters for optimal rendering. The refined version of the model achieved minimal compute cost, minimal memory footprint, and state-of-the-art results with an inception score of 11.68. ",
+        "description": "Meshr aims to enable designers to streamline their design process. This app makes use of the Latent Diffusion model to produce a unique and high-quality image. We provide the users multimodal interface to guide their design process by enabling them to interact with text-guided image generation, sketching a scene, or deriving alternative forms of an image. Meshr is designed with a low cognitive overhead so anyone without a design background can enjoy its rich features.",
+        "group_photo": "Lambda Invariants",
+        "group_avp": "",
+        "group_manuscript": "",
+        "developers": [
+            {
+                "name": "Dave Arthur Amiana",
+                "photo": "224.png"
+            },
+            {
+                "name": "John Kevin Cortes",
+                "photo": "226.png"
+            },
+            {
+                "name": "Akio Allen Yapan",
+                "photo": "228.png"
+            },
+            {
+                "name": "Kendrew Javelosa",
+                "photo": "230.png"
+            }
+        ]
+    },
+    "llp": {
+        "slug": "llp",
+        "group_name": "LLP",
+        "poster": "LLP.png",
+        "title": "A Web-based Application for the Detection of Dengue Fever using Convolutional Neural Network",
+        "abstract": "This study aims to help Yoga practitioners who are either keen on learning how to properly perform the various postures involved in Yoga, or to those who want to practice Yoga at home without paying for classes and having to travel a lot by providing them with a way to verify whether their posture is correct with a single snapshot. The proponent’s goal is to make Yoga a more accessible practice to the general public by offering them a handheld Yoga Guru whose main purpose is to ensure that they are correctly performing the various poses that are involved in the practice without the need for enrolling in an expensive Yoga class or by hiring a Yoga guru. With this in mind, Yoga as practice is advertised as an activity which is accessible to everyone due to its low demands in external tools and physical requirements. According to the U.S. Consumer Product Safety Commission in 2019, there were more than 34,000 Yoga related injuries sustained during that year alone. The implementation of this application would eliminate the fear of practicing Yoga wrongfully which could lead to long-standing chronic problems which is commonly caused by repetitive strain to and overstretching of the neck, shoulders, spine, legs, and knees. With the aid of a Yoga Guru with more than 10 years of experience the proponents were able to produce an application consisting of 11 Yoga Asanas or postures divided into three Yoga flows that is able to track and assess its users whilst practicing Yoga. This was done with the implementation of Convolutional Neural Networks, K-Nearest Neighbors algorithm, and CNN G-HUM BlazePose 3D Models. ",
+        "description": "GURU is an android application aimed to detect yoga postures by accessing the camera and detecting the human body. It is able to assess and track 11 yoga postures divided into 3 yoga flows with the use of CNN among other algorithms. The application is intended for people both beginner and advanced in helping them practce yoga in a safe manner and make yoga a more safe and fun",
+        "group_photo": "LLP",
+        "group_avp": "",
+        "group_manuscript": "",
+        "developers": [
+            {
+                "name": "Andrey Levy Pulusan",
+                "photo": "204.png"
+            },
+            {
+                "name": "Robert Michael Aquino",
+                "photo": "43.png"
+            },
+            {
+                "name": "Jeramy Galor",
+                "photo": "46.png"
+            },
+            {
+                "name": "Jamille Jose Quigao",
+                "photo": "44.png"
+            }
+        ]
+    },
+    "loveableboys": {
+        "slug": "loveableboys",
+        "group_name": "Loveable Boys",
+        "poster": "Loveable-Boys.png",
+        "title": "A Secure and Safe Application Using Hybrid Cryptography Based End-to-End Encryption and Explicit Image Filtering",
+        "abstract": "EfasChas is a social messaging application that uses hybrid cryptography-based end-to-end encryption (E2EE) with explicit image filtering to provide a secure and safe platform for users to communicate and exchange content. The explicit content detector (ECD) feature, a trained model using Convolutional Neural Network to classify images, achieved 88% accuracy in detecting explicit images, preventing the sending of the image to another user and protecting the users from seeing such images. In addition to the application, it uses hybrid cryptography, which combines symmetric (Advanced Encryption Standard) and asymmetric (Rivest-Shamir-Adleman) encryption to secure the communication between users and the server, ensuring only authorized users have access to the transmitted messages. Through user evaluation and testing, we found that the majority of the respondents strongly agreed that the ECD feature and the encryption mechanism to them messages effectively protected their privacy and made the more likely to use the application.",
+        "description": "This program is a safe and secure tool that employs end-to-end encryption in cooperation with hybrid cryptography to safeguard user data. In order to ensure that only relevant content is shared, it also includes explicit image filtering. Users of the program can be assured of a high level of security, preventing unauthorized access to personal information and maintaining the confidentiality of their communications.",
+        "group_photo": "Loveable Boys",
+        "group_avp": "",
+        "group_manuscript": "",
+        "developers": [
+            {
+                "name": "James Ralph Balagtas",
+                "photo": "68.png"
+            },
+            {
+                "name": "Paul Kristopher Espina",
+                "photo": "75.png"
+            },
+            {
+                "name": "Francis Miguel Dela Cruz",
+                "photo": "71.png"
+            },
+            {
+                "name": "Reggie Noel Guday",
+                "photo": "73.png"
+            }
+        ]
+    },
+    "nakakapagpagabag": {
+        "slug": "nakakapagpagabag",
+        "group_name": "Nakakapagpabagabag",
+        "poster": "Nakakapagpabagabag.png",
+        "title": "Android Mobile Application for Detecting Fake Medicine Packaging Through Application of Image Processing",
+        "abstract": "Fake medicines are common in today's world, and they may be found almost anywhere. The goal of this study was to develop an Android app that could scan medicine packaging using image processing to recognize fraudulent medications. A descriptive study was employed by the researchers to give systematic information about a phenomenon. The study employed Sloven's Formula to determine the population size of responders (15) in the field of Computer Science or Information Technology, as well as Pharmacists, in terms of how well the application performs and is successful. On a 5-point Likert scale, the sample's view of the application was evaluated. The reliability of the survey questions can be evaluated using the Cronbach's Alpha. Each of the five data sets (Alaxan, Biogesic, Neozep, Kremil-s, and Bioflu) had 100 pieces of counterfeit medication obtained from the internet, primarily from the FDA website, along with 60 authentic medication pieces that the researchers had physically gathered. The program detects genuine Biogesic packaging with 80% accuracy and fraudulent Biogesic packaging with 100% accuracy. Real Alaxan packaging is 80% accurate, whereas fake Alaxan packaging is 96% accurate. There is an 80% accuracy for genuine Kremil-S and a 92% accuracy for phony medicine packing. Bioflu is 88% accurate, whereas fraudulent Bioflu is 92% accurate. and for Neozep, 92% for genuine and 100% for counterfeit. In hindsight, an application that detects fake medicine conveniently will greatly improve the public health safety of the more uninformed portion of the population. ",
+        "description": "A mobile application called PharmaScanner aids in determining a medicine's legitimacy by scanning its packaging. It contains a capability that enables the user to upload or capture a photograph of a medicine. In order to speed up the system's processing, Convolutional Neural Network (CNN) will be employed as the classification model in conjunction with GPU.",
+        "group_photo": "Nakakapagpabagabag",
+        "group_avp": "",
+        "group_manuscript": "",
+        "developers": [
+            {
+                "name": "Eduardo Villanueva",
+                "photo": "236.png"
+            },
+            {
+                "name": "Nicole Anne Mabale",
+                "photo": "234.png"
+            },
+            {
+                "name": "Renee Anne Joy Gula",
+                "photo": "232.png"
+            }
+        ]
+    },
+    "providence": {
+        "slug": "providence",
+        "group_name": "Providence",
+        "poster": "Providence.png",
+        "title": "Detection and Classification of Malaria: An Image Processing and Deep Learning Program Study",
+        "abstract": "Malaria is a deadly disease caused by infected female Anopheles mosquito bites that can be transferred to humans which can be life threatening and therefore it must be detected early in order to treat the patient effectively and prevent further infection complications that can result in diseases related to severe malaria infections. Having a microscope will provide a more efficient use for this equipment is vital that will help understand the disease however over time the diagnosis of Malaria tends to be inefficient being dependent on the specialist's knowledge and experience especially areas with less experts to evaluate the data that gave entry to Automated methods that will reduce the workload of the expert giving an improvement to the practicality of the diagnosis. Automated methods based on deep learning, image processing, computer vision, and artificial intelligence are constantly improving that can assist to solve this problem by offering more reliable and consistent decisions, however it still lacks the practical performance efficiency. This study will implement CLAHE and YOLO algorithms to increase the practical performance and accuracy with data sets used that are available to the public. ",
+        "description": "An application tool designed to be used on a desktop capable of detecting malaroa and being able to classify its parasites with the use of captured blood smeared images. The application was developed through python with the implementation of YOLOv4 with image processing algorithms  to enhance its detection. The applications purpose is to be a right-hand tool for medical professionals to reduce the workload on a quickpace working environment",
+        "group_photo": "Providence",
+        "group_avp": "",
+        "group_manuscript": "",
+        "developers": [
+            {
+                "name": "William Romano",
+                "photo": "180.png"
+            },
+            {
+                "name": "Michael Angelo Mendoza",
+                "photo": "182.png"
+            },
+            {
+                "name": "Andrey Leynes",
+                "photo": "186.png"
+            },
+            {
+                "name": "Syrill Bobadilla",
+                "photo": "184.png"
+            }
+        ]
+    },
+    "quaranteam": {
+        "slug": "quaranteam",
+        "group_name": "Quaranteam",
+        "poster": "Quaranteam.png",
+        "title": "CURITY: Emergency/SOS Button for Crime Prevention in Manila",
+        "abstract": "Crimes have been more prevalent and crime prevention strategies have moved on digitally. Using one's smartphone for preparedness is the most viable option as smartphones are always attached to their owners. A beacon could also be used as crime prevention. It is a source of light or fire that acts as a signal or warning. Beacons aid in situational awareness. Similarly, an application that can act as a beacon can aid in determining an individual's safety. The researchers propose to develop an application that helps in those sketchy situations. The application would be like a beacon that sends out alert signals to authorities or loved ones. It utilizes A* Algorithm to track the route between the victim and alert recipient. The app also includes a chat function with Two-fish encryption to give ongoing messages of the current situation with additional image attachment support. Lastly, it logs the reports for the authority. Hence, authorities can keep track of the number of incidents and archive the cases faster with the builtin automatic timestamps and basic user info. For the location tracking to be precise and encryption accurate. The researchers prepared multiple test cases for both with comparing their given data to other similar methods like Bing Maps and CRC32 respectively. The researchers tested the app's overall function and reliability with the residents residing in the Barangays in Sampaloc Manila. The survey shows that the application was able to cater to the users' need, and has proven to have the potential to aid in crime prevention strategies with its useful features.",
+        "description": "The Curity app is an android application which contains a button that will be pressed by the user. Once the user releases the button a confirmation message will appear. If the user was not able to respond in a given time, the application will send its location to the Official Authorities which contains valuable information that will help find the user.",
+        "group_photo": "Quaranteam",
+        "group_avp": "",
+        "group_manuscript": "",
+        "developers": [
+            {
+                "name": "Jenerose Corpuz",
+                "photo": "198.png"
+            },
+            {
+                "name": "Elyzza Jane Abrigo",
+                "photo": "201.png"
+            },
+            {
+                "name": "Ella Fritz Sarmiento",
+                "photo": "196.png"
+            },
+            {
+                "name": "Geraldine Sophia Quizon",
+                "photo": "202.png"
+            }
+        ]
+    },
+    "samgroupsal": {
+        "slug": "samgroupsal",
+        "group_name": "Samgroupsal",
+        "poster": "Samgroupsal.png",
+        "title": "Cobb Angle Digital Measurement Mobile Application: An Object and Landmark detection application for diagnosing scoliosis using Convolutional Neural Network",
+        "abstract": "Measuring and acquiring one's Cobb angle is often done manually to diagnose and classify conditions related to one's spine. Dealing with manual computations is time-consuming, and human errors are likely to occur. To solve this problem, the researchers devised a mobile application that automatically performs the calculations required to obtain the Cobb angle. The doctor only needs to upload or take a photo of the spine radiograph of the patient then the app will automatically compute the cobb angle. The app will utilize image pre-processing techniques and computer vision applications such as object detection and landmark detection in conjunction with a Convolutional Neural Network technique to carry out measurements on the photo. This will aid medical professionals with a quick assessment that can assist them in making a diagnosis of a patient's spine condition.",
+        "description": "CADMA is a mobile application that utilize object detection, landmark detection, and convolutional neural network that can automate the manual measurement of the spine's cobb angle and classify the gathered data depending on the guidelines set for each scoliosis type.",
+        "group_photo": "Samgroupsal",
+        "group_avp": "",
+        "group_manuscript": "",
+        "developers": [
+            {
+                "name": "Jerome Tiuzen",
+                "photo": "168.png"
+            },
+            {
+                "name": "John Deniel Coronel",
+                "photo": "163.png"
+            },
+            {
+                "name": "Kent Vincent Dimla",
+                "photo": "166.png"
+            },
+            {
+                "name": "Franz Millan De Vera",
+                "photo": "157.png"
+            }
+        ]
+    },
+    "semicolonizers": {
+        "slug": "semicolonizers",
+        "group_name": "semicolonizers;",
+        "poster": "Semicolonizers.png",
+        "title": "Area Occupancy Detection using Computer Vision and Machine Learning",
+        "abstract": "In this paper proposed a system in which it is described as a way to detect occupancy levels through the use of existing surveillance infrastructure installed on modern rooms to solve an issue where varying occupancy on certain times and dates mean losing time on the preparation of one's trip. Using the YOLOv5 Object Detection algorithm, the Time Series models for prediction of the number of people in a room, as well as a web interface for universal access of information, the proponents of this study prepared a proof-of- concept that demonstrates how effective the system is, even with just a use of a web camera. In tests, the YOLOv5 scored a 61% to 78% accuracy, and it performs enough to determine an area's occupancy, with a correlation of 0.56 for head detection, meaning that it is moderately correlated, and 0.31 for body detection, which means that it is fairly correlated. Prediction models are also able to loosely predict peak area occupancy with tests setting its peak detection in the afternoon. In addition, an evaluation based on the ISO 25010 standard is performed to 30 respondents, in which all eight categories scored a \"strongly agree\" on each. Despite delays, the developed system performs well in identifying and predicting occupancy of an area through object detection and classification in record time. In addition, a month-long testing of the system is performed to allow the evaluation of the said system, and based on the study's results, majority of the respondents agree that the use of this system can aid in resolving the problems of people with regards to building occupancy. ",
+        "description": "A proof-of-concept system powered by Python that determines an area's occupancy using off-the-shelf camera systems and the YOLOv5 object detection algorithm, and aims to provide predictive occupancy readings from historical data of the room. This proof-of-concept showcases an application of this system to provide a web interface showing room occupancy, as well as systems to manage and notify specified recipients on any updates by the system",
+        "group_photo": "project-border.png",
+        "group_avp": "",
+        "group_manuscript": "",
+        "developers": [
+            {
+                "name": "Marc Steven Clemen",
+                "photo": "173.png"
+            },
+            {
+                "name": "Aerhiel Dhenhice Bisnan",
+                "photo": "170.png"
+            },
+            {
+                "name": "Janah Reginna Ignacio",
+                "photo": "177.png"
+            },
+            {
+                "name": "Juan Miguel Duran",
+                "photo": "175.png"
+            }
+        ]
+    },
+    "sixsteveneight": {
+        "slug": "sixsteveneight",
+        "group_name": "SixStevenEight",
+        "poster": "SixStevenEight.jpg",
+        "title": "Identification of Influencers using a Recommendation System Developed through Social Network Analysis and Graph Theory",
+        "abstract": "Influencers utilize different social media platforms to engage with their respective audiences. The aim of this study was to develop a system that could provide recommendations on which influencer to choose to help out on a specific business problem. This study developed a system based on Twitter as this micro-blogging site has not officially developed any Recommender System for their platform. The proponents of this study applied multiple algorithms to create unique functions, namely: Influence Scoring Formula by Abdessamad Essaidi et. al for Influence Ranking, Breadth-First Search and Longest Path for Reach and Engagements, Louvain Algorithm and Betweenness Centrality for Gatekeeper Identification. The system has been evaluated by 40 respondents. It was composed of 20 entrepreneurs/business owners, 10 CS/IT professionals and 10 Twitter users. The result of the evaluation, 4.11 [entrepreneurs/business owners], 4.50 [CS/IT professionals], 3.78 [Twitter users], showed that all of the respondents can be considered Satisfied with the system. However, the results also pointed out that efficiency requires to be improved and written feedback from respondents wanted major changes on user interface. Finally, full archive or highest level access to Twitter user's dataset is the greatest recommendation for shorter time in processing output and to drastically improve efficiency. For future researchers, models based on other social platforms are recommended.",
+        "description": "An application built from multiple combinations of algorithms provides three key features for identifying the best Twitter influencer for a job. Its objective is to generate recommendations based on set parameters and business goals. Our application should help distinguish the notable Twitter influencers from their domain. Companies, organizations, and other entities looking for Twitter influencers could come in contact with us in order to help them find the most suitable influencer for their respective endeavors.",
+        "group_photo": "SixStevenEight",
+        "group_avp": "",
+        "group_manuscript": "",
+        "developers": [
+            {
+                "name": "Harley Steven Vegara",
+                "photo": "82.png"
+            },
+            {
+                "name": "James Florence Conales",
+                "photo": "78.png"
+            },
+            {
+                "name": "Korj Phillip Luna",
+                "photo": "80.png"
+            },
+            {
+                "name": "Medrick Amis",
+                "photo": "77.png"
+            }
+        ]
+    },
+    "takoyaki": {
+        "slug": "takoyaki",
+        "group_name": "Takoyaki",
+        "poster": "Takoyaki.png",
+        "title": "BAYBAYIN: A Mobile Intelligent Tutoring System to Detect Signs of Functional Speech Sound Disorder in Selected Grade 1 Pupils in Quezon City Learning Proper Filipino Pronunciation",
+        "abstract": "When the COVID-19 happened, suspending in-person classes and work has been most efficient and practical way to prevent virus from spreading. This pandemic has made it more challenging for teachers and parents to ensure that young learners learn, understand, and practice specific skills. The proponents focused on examining the pronunciation skills of selected Grade 1 pupils of Ste. Anne de Beupré School to observe any signs that might be linked to potentially having Speech Sound Disorder. The study aims to detect the signs of Functional Speech Sound Disorder (FSSD) by providing exercises that follow the standard speech sound test commonly conducted by the SLP and observing the frequency of mispronunciations committed. The system is programmed to help the user pronounce Filipino words correctly by generating hints and help the concerned parents and teachers better understand and know what help they can provide the learners by generating graphs based on the usage and performance of each pupil. The system is programmed to help the user pronounce Filipino words correctly by generating hints and help the concerned parents and teachers better understand and know what help they can provide the learners by generating graphs based on the usage and performance of each pupil. The testers and their parents and teachers found that the prototype and its functions were satisfactory as they were able to receive the appropriate feedback on the speech detected, that the pupils were able to learn from the sample audio provided in order to let them hear the expected pronunciation, and that the teachers and parents were able to better understand the learners` and their strengths and weaknesses in terms of pronunciation when the prototype presented them the data in graphs.",
+        "description": "Baybayin is a mobile application capable of Detecting signs of Functional Speech Sound Disorder while guiding young Filipino learners in learning and practicing the proper pronunciation of Filipino words. With the help of audio guides as hints, appropriate pronunciation assessment, and graphs of the summary of the learners' progress and performance, the application aspires to help the concerned parents, guardians, and language instructors better understand and know the type of assistance that the pupils need.",
+        "group_photo": "Takoyaki",
+        "group_avp": "",
+        "group_manuscript": "",
+        "developers": [
+            {
+                "name": "Junelle Espero",
+                "photo": "67.png"
+            },
+            {
+                "name": "Ishmael Bautista",
+                "photo": "60.png"
+            },
+            {
+                "name": "Jerloy Mathew Tudio",
+                "photo": "63.png"
+            },
+            {
+                "name": "Mark Martin Banuelos",
+                "photo": "62.png"
+            }
+        ]
+    },
+    "tonyongbayawak": {
+        "slug": "tonyongbayawak",
+        "group_name": "Tonyong Bayawak",
+        "poster": "Tonyong-Bayawak.png",
+        "title": "Developing predictive model using LSTM on AXS for Long-Term AXS Investors",
+        "abstract": "The rapid technological advancement paved the way for digital transactions to be available to society, where companies and individuals are starting to accept the new digital currency called Cryptocurrency due to its amazing applications. Cryptocurrency made online gaming, trading and interactions easy, safe and enjoyable through play to earn games through the use of NFT assets where the increasing trend of NFT games became the reason why people are starting to ride the bandwagon due to its fast return of investment. AXS (Axie Infinity Shard) is a cryptocurrency which is a governance token used in the widely popular NFT game Axie Infinity, where many people are starting to invest immediately because of its short term profit while playing the game, and also trading from AXS themselves. However, due to the volatility of the AXS or Cryptocurrency in general, the majority of people who invested in such are prone to loss of investments. The proponents of this study aimed to address this volatility problem by developing an LSTM predictive model that generates an accurate forecast that is fed with sequential and/or temporal dataset and validated using RMSE as its scoring rule, the predictive model's forecast will be deployed into an interactive website for the AXS investors or future investors to analyze. The website's quality, reliability, and overall design was evaluated using ISO 9126 Criteria from the questionnaire that were constructed by the proponents. The same questionnaire is also used for capturing the attitude of the AXS Investors in terms of Liquidating, Holding, Selling and Buying. The predictive model yielded an Accurate Normalized RMSE value of 0.2495 wherein its forecast captured the downward trend from October to November 2022, at the time where this study is being conducted, also half of the sample from the study who are prioritizing on Minimizing Loss are hesitant to Trade/Play where the other half are confident enough from the generated forecast from the website. The study shows that the predictive model's forecast which is deployed in the website guided half of the sample, they are those who are prioritizing on Maximizing Profit which is AXS Investors and also those who didn't change their plan.",
+        "description": "This crypto forecasting website for the popular NFT game cryptocurrency AXS provides real-time current and historical price analysis, Future price forecast analysis based on historical data, and machine learning using LSTM. Users can access the platform to make informed investment decisions, and stay updated on the latest AXS news and developments.",
+        "group_photo": "Tonyong Bayawak",
+        "group_avp": "",
+        "group_manuscript": "",
+        "developers": [
+            {
+                "name": "Joshua Miguel Tuan",
+                "photo": "125.png"
+            },
+            {
+                "name": "Jerwin Peralta",
+                "photo": "119.png"
+            },
+            {
+                "name": "Anna Mae Kathryn Co",
+                "photo": "121.png"
+            },
+            {
+                "name": "Jericho Pilapil",
+                "photo": "122.png"
+            }
+        ]
+    },
+    "vaccshift": {
+        "slug": "vaccshift",
+        "group_name": "Vaccshift",
+        "poster": "Vaccshift.png",
+        "title": "iCHOR: Classification of Different Red Blood Cell Abnormalites using Deep Learning",
+        "abstract": "The Philippines is plagued by its lack of healthcare workers and access to basic healthcare. Hence, some Filipinos are struggling to help themselves when it comes to diseases. The hematology sector is no different because although there are ways to detect abnormalities in the blood, such as the peripheral blood smear test and digital morphological analyzers, both give off disadvantages that can affect the speed and accuracy of the results. In addition to the medical issues stated above, the field has not embraced digitization yet, which is a loss, as technology can be of great help in advancing our healthcare even more. The development of the system offers a solution to aid medical workers in detecting diseases within the blood, a cheaper blood test option for patients, and the introduction of another technological breakthrough to the community. To detect white blood cells, and 13 types of abnormalities in the red blood cells, the convolutional neural network algorithm is implemented, specifically, the YOLOv4 model of the You Only Look Once series, in training the machine using a validated open-sourced dataset. 45 respondents comprising Information Technology of Computer Science professionals, medical technology graduates, pathologists, and resident pathologists volunteered to evaluate the desktop application. The respondents rated the application an average of 0.99 out of 1.0 across the categories according to ISO 9126-1 and reflects to be satisfactory. For future studies, there are recommendations to further the training process of the machine, better the user interface of the program, ability to import multiple images, and add color-based abnormalities.",
+        "description": "iCHOR is a desktop application that detects and classifies 11 types of red blood cell abnormalities in a human's peripheral blood smear, in which each carries a different disease. Furthermore, it can save the red blood cell count per type, and the possible related diseases in a database. It aims to aid medical practitioners in their patients' diagnosis - a faster, cheaper, and more efficient way than the traditional method of manually checking each type of cell. This application is made through Python with a Convolutional Neural Network algorithm, specifically, the You Only Look Once 4 model- a common algorithm used in the medical field. With an 80% confidence threshold, iCHOR ensures that it is the gateway to efficient hematology.",
+        "group_photo": "Vaccshift",
+        "group_avp": "",
+        "group_manuscript": "",
+        "developers": [
+            {
+                "name": "Christiana Aleyna Sy",
+                "photo": "2.png"
+            },
+            {
+                "name": "Seira Siez Santiago",
+                "photo": "4.png"
+            },
+            {
+                "name": "Micah Pablo",
+                "photo": "8.png"
+            },
+            {
+                "name": "Marielle Vaay",
+                "photo": "6.png"
+            }
+        ]
+    },
+    "version1": {
+        "slug": "version1",
+        "group_name": "Version-1",
+        "poster": "Version-1.png",
+        "title": "Chat, Meet, Eat - Android Based Social Media Application that Uses an Information Filtering Algorithm and Recommender System for Matching Individuals to Groups",
+        "abstract": "This thesis presents the design, implementation, and evaluation of a mobile program that aims to connect individuals, mainly those who share a certain interest in a particular food choice or to match those with similar interests like hobbies, habits, etc. The program utilizes a combination of algorithms and techniques to aid users to easily connect with others. Additionally, it presents a user-friendly interface to connect with other users and it also incorporates various tools such as instant messaging, group chat, and an integrated google maps feature. A user study was conducted with a sample of college students and professionals to assess the effectiveness and efficiency of the program in applying the algorithm that filters users' interests. Results showed high levels of user satisfaction and that the program was successful in achieving its goals and could potentially be a valuable tool for fostering community and connection in the digital age and also in facilitating communication and building relationships among participants. The program is intended to serve as a supplement to traditional groupings and meetings with other individuals for the first time by having a common interest with that being food or your hobby, a convenient support for students and also those in the working environment.",
+        "description": "Chat, meet, eat is an android based application that uses information filtering algorithm and recommender system to match individuals to groups consisting of people with similar preferences and interest to chat with each other. This is to create the opportunity for likewise individuals to be able meet over a meal and get to know each other while also overall improving their dining experience.",
+        "group_photo": "Version-1",
+        "group_avp": "",
+        "group_manuscript": "",
+        "developers": [
+            {
+                "name": "Aldwin Rivera",
+                "photo": "96.png"
+            },
+            {
+                "name": "Kenn Gudez",
+                "photo": "98.png"
+            },
+            {
+                "name": "Albert Josh Dizon",
+                "photo": "94.png"
+            },
+            {
+                "name": "Mark Llanes",
+                "photo": "99.png"
+            }
+        ]
+    },
+    "visum": {
+        "slug": "visum",
+        "group_name": "Visum",
+        "poster": "Visum.png",
+        "title": "Classifying Selected Invasive Plants in the Philippines using Convolutional Neural Network and K-Nearest Neighbor Classifier to Reduce Ecological and Economic Impact",
+        "abstract": "In this study, we aim to classify selected invasive plants in the Philippines using convolutional neural networks (CNNs) and k-nearest neighbor (KNN) classifiers in order to reduce the ecological and economic impact of these species. Invasive plants can cause significant harm to native ecosystems, and effective identification and management of these species are crucial for mitigating their negative effects. By training CNNs and KNN classifiers on images of the selected invasive plants, we aim to develop a reliable and efficient method for accurately identifying these species in the wild. Also, this research presents a novel approach for gathering data on plant species, which could be utilized by policy-making organizations such as the Department of Environment and Natural Resources (DENR) or other forestry institutions. The results of this study can inform the development of more effective strategies for managing invasive plants in the Philippines, which can help reduce the negative impacts of these species on the environment and economy. ",
+        "description": "This software aims to tackle the issue of invasive plants in the Philippines by using a combination of machine learning techniques. It utilizes Convolutional Neural Network (CNN) and K-Nearest Neighbor (KNN) classifiers to accurately classify selected invasive plant species, helping to reduce their ecological and economic impact.",
+        "group_photo": "Visum",
+        "group_avp": "",
+        "group_manuscript": "",
+        "developers": [
+            {
+                "name": "John Benedict Villacorta",
+                "photo": "100.png"
+            },
+            {
+                "name": "Kenji Shimizu",
+                "photo": "104.png"
+            },
+            {
+                "name": "James Lanbert Javier",
+                "photo": "106.png"
+            },
+            {
+                "name": "Karl Michael Marcellana",
+                "photo": "107.png"
+            }
+        ]
+    }
+}

@@ -1,0 +1,98 @@
+---
+import groups from "../../assets/groups.json"
+export async function getStaticPaths() {
+    const pages = Object.keys(groups).map(key => {
+        const group = groups[key]
+
+        return {
+            slug: group.slug,
+            name: group.group_name,
+            title: group.title,
+            abstract: group.abstract,
+            description: group.description,
+            photo: group.poster,
+            developers: group.developers,
+            avp: group.group_avp,
+            manuscript: group.group_manuscript
+        }
+    });
+
+    return pages.map(({slug, name, title, abstract, description, photo, developers, avp, manuscript}) => {
+        return {
+            params: { slug },
+            props: { slug, name, title, abstract, description, photo, developers, avp, manuscript }
+        }
+    });
+}
+
+const { slug, name, title, abstract, description, photo, developers, avp, manuscript } = Astro.props;
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CSEDevCard from "../../components/CSEDevCard.astro";
+import '../../styles/individual-projects.css';
+
+---
+
+<BaseLayout title={`${title} by group ${name}`}>
+    <script src="../../scripts/individual-projects.js"></script>
+    <div class="container-fluid page-bg">
+        <div class="spacer"></div>
+        <div class="row justify-content-center">
+            <div class="col-10 name-container">
+                <span class="fs-1 project-name">{title}</span>
+                <div class="group-name-container">
+                    <img class="group-name-bg" src="/src/images/tape.png">
+                    <span class="group-name">{name}</span>
+                </div>
+            </div>
+        </div>
+        <div class="spacer"></div>
+        <div class="row justify-content-center">
+            <div class="col-10 col-xl-8">
+                <p class="project-short-desc drop-in text-center">
+                    {description}
+                </p>
+            </div>
+        </div>
+        <div class="spacer"></div>
+        <div class="row justify-content-center align-items-top">
+            <div class="col-10 col-xl-4">
+                <style>
+                    .poster-img {
+                        background-color: #c8c8c8;
+                        background-image: url("/src/images/project-border.png");
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                </style>
+                <img class="p-3 p-md-4 p-xl-4 poster-img project-image drop-in-2" src={`/src/images/group-posters/${photo}`}>
+            </div>
+            <div class="col-10 col-xl-6 mt-5 mt-xl-0 drop-in-2">
+                <p class="project-name fs-2">Abstract</p>
+                <p class="project-long-desc fst-italic">
+                    {abstract}
+                </p>
+                {avp && <a href={avp} target="_blank" class="btn btn-primary">Project AVP</a>}
+                {manuscript && <a href={manuscript} target="_blank" class="btn btn-primary">Download Manuscript</a>}
+            </div>
+        </div>
+        <div class="spacer"></div>
+        <div class="row justify-content-center">
+            <div class="col-10 col-lg-6 col-xl-4 title-container ease-anim fade-bottom">
+                <img class="title-bg" src="/src/images/tape.png">
+                <span class="title">Developers</span>
+            </div>
+        </div>
+        <div class="spacer"></div>
+        <div class="row justify-content-center card-container">
+        {developers.map(dev => {
+            return (
+                <CSEDevCard slug={slug} name={dev.name} image={dev.photo} />
+            )
+        })}
+        </div>
+        <div class="spacer"></div>
+        <div class="col-12 spacer plastic"></div>
+    </div>
+</BaseLayout>

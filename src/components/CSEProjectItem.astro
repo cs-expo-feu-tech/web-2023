@@ -1,0 +1,67 @@
+---
+export interface Props {
+    id: string;
+    title: string;
+    poster: string;
+    group_name: string;
+}
+
+const { id, title, poster, group_name } = Astro.props;
+---
+
+<style>
+    .project-item {
+        position: relative;
+        text-align: center;
+        margin: auto auto;
+        overflow: hidden;
+    }
+
+    .project-item > img {
+        width: 420px;
+        height: 594px;
+        display: block;
+    }
+    .group-name {
+        font-family: "DIN";
+        position: absolute;
+        bottom: 0;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.8);
+        color: #f1f1f1;
+        width: 100%;
+        transition: 0.5s ease;
+        opacity: 0;
+        color: white;
+        font-size: 20px;
+        padding: 20px;
+        text-align: left;
+        margin-bottom: 0;
+    }
+
+    .project-item:hover {
+        cursor: pointer;
+    }
+    .project-item:hover .group-name {
+        opacity: 1;
+    }
+    .project-item:hover {
+        filter: brightness(70%);
+        transition: 0.3s;
+    }
+    .project-item img {
+        transition: 0.3s ease-out;
+    }
+    .project-item:hover img {
+        transform: scale(1.1);
+    }
+</style>
+
+<a href={`/projects/${id}`}>
+    <div class="project-item">
+        <img class="project-item-imgs" src={poster} alt={`${group_name}'s poster`} />
+        <p class="group-name h4">
+            {title}
+        </p>
+    </div>
+</a>

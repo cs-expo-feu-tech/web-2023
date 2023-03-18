@@ -118,23 +118,7 @@
     transform: translate(-50%, -50%);
 }
 
-.developer-card{
-    border: 24px solid white;
-    border-radius: 8px;
-    padding: 0;
-    margin: 1rem;
-}
-.card-img-top{
-    object-fit: cover;
-    width: 100%;
-}
-.card-text{
-    background-color: #CACACA;
-    font-family: 'DIN Black';
-    font-size: 1rem;
-    width: 100%;
-    text-align: center;
-}
+
 
 .plastic{
     background-image: url("../images/plastic.png");
