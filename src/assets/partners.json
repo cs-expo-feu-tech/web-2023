@@ -22,11 +22,21 @@
                 {
                     "id": "ph_coffee_barista",
                     "name": "Philippine Coffee and Barista Institute",
-                    "logo": "coffee_genesis.png",
+                    "logo": "ph_barista.jpg",
                     "requires_bg_logo": true,
                     "bg_color": "#ffffff",
                     "links": {
                         "facebook": "https://www.facebook.com/philippinecoffeebaristainstitute"
+                    }
+                },
+                {
+                    "id": "1740_coffee",
+                    "name": "1740 Coffee Genesis",
+                    "logo": "coffee_genesis.png",
+                    "requires_bg_logo": true,
+                    "bg_color": "#ffffff",
+                    "links": {
+                        "facebook": "https://www.facebook.com/1740coffeegenesis"
                     }
                 }
             ]
