@@ -22,6 +22,16 @@
     background-size: contain;
     overflow: hidden;
 }
+
+.carousel-inner{
+    height: max(90vw, 900px);
+}
+.carousel-caption{
+    transform: translateY(60%);
+}
+.carousel-caption p, .carousel-caption h5{
+    font-size: min(3vw, 1.25rem);
+}
 header{
     margin: 4rem auto;
     color: #fff; 
@@ -59,6 +69,13 @@ header .secondary-text{
     .img-container{
         margin: 4rem;
     }
+    .carousel-caption{
+        top: 85% !important;
+        transform: translateY(0);
+        margin-bottom: 5rem;
+    }
+
+    
 }
 @media screen and (max-width: 576px){
     .img-container img{
@@ -66,5 +83,11 @@ header .secondary-text{
     }
     .img-container{
         margin: 2rem;
+    }  
+    .carousel-inner{
+        height: max(90vw, 750px);
+    }
+    .carousel-caption{
+        margin-bottom: 5rem;
     }
 }
