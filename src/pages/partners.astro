@@ -3,238 +3,84 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import "../styles/partners.css";
 
 import CSESponsorContainer from "../components/CSESponsorContainer.astro";
+import CSESponsorCard from "../components/CSESponsorCard.astro";
+
+import partners from "../assets/partners.json";
 ---
 
 <BaseLayout title="Partners">
-  <div class="partners-container">
-    <!-- Start of Banner -->
-    <div id="banner" class="container-fluid d-flex flex-wrap">
-      <div class="row g-0 justify-content-center justify-content-lg-end align-items-center">
-        <div class="">
-          <h1 class="text-white">
-            OUR<br />PARTNERS
-          </h1>
-          <p>
-            We are delighted to announce that CS EXPO 2023 is made possible by
-            our partnerships with exceptional companies and organizations in the
-            industry. These partners bring valuable knowledge and expertise to
-            the event, ensuring that it is informative, engaging, and impactful.
-            It's an honor to work with them to make this event a success.
-          </p>
+    <div class="partners-container">
+        <!-- Start of Banner -->
+        <div id="banner" class="d-flex flex-wrap">
+            <div
+                class="row g-0 justify-content-center justify-content-lg-end align-items-center"
+            >
+                <div class="mt-5 col-10 col-lg-5">
+                    <h1 class="text-white">
+                        OUR PARTNERS
+                    </h1>
+                    <p>
+                        We are delighted to announce that CS EXPO 2023 is made
+                        possible by our partnerships with exceptional companies
+                        and organizations in the industry. These partners bring
+                        valuable knowledge and expertise to the event, ensuring
+                        that it is informative, engaging, and impactful. It's an
+                        honor to work with them to make this event a success.
+                    </p>
+                </div>
+                <div class="d-none d-lg-block col-10 col-lg-6 partners-img">
+                    <img class="w-100" src="src/images/filler.png" />
+                    <img class="shape" src="src/images/shape_89.png" />
+                </div>
+            </div>
         </div>
-        <div class="col-10 col-md-6 partners-img">
-          <img class="w-100" src="src/images/filler.png" />
-          <img class="shape" src="src/images/shape_89.png" />
-        </div>
-      </div>
+        <!-- End of Banner -->
+
+        <!-- Start of Chain -->
+        <div class="spacer"></div>
+        <img class="chain" src="src/components/CHAIN.png" />
+        <div class="spacer"></div>
+        <!-- End of Chain -->
+
+        {
+            partners.partner_groups.map((partner_group) => {
+                const card_elements = partner_group.partners.map((partner) => {
+                    var elem;
+
+                    if (partner.requires_bg_logo) {
+                        elem = (
+                            <CSESponsorCard
+                                html_class="col"
+                                partner_name={partner.name}
+                                partner_img={`/src/images/partners/${partner_group.path}/${partner.logo}`}
+                                links={partner.links}
+                                requires_bg_logo
+                                bg_color={partner.bg_color}
+                            />
+                        )
+                    } else {
+                        elem = (
+                            <CSESponsorCard
+                                html_class="col"
+                                partner_name={partner.partner_name}
+                                partner_img={partner.partner_img}
+                                links={partner.links}
+                            />
+                        )
+                    }
+
+                    return elem;
+                });
+
+                return (
+                    <CSESponsorContainer category_name={partner_group.title} category_color={partner_group.color}>
+                        <div class="row row-cols-1 row-cols-md-3 row-cols-xl-4">
+                            {card_elements}
+                        </div>
+                    </CSESponsorContainer>
+                    <div class="spacer" />
+                );
+            })
+        }
     </div>
-    <!-- End of Banner -->
-
-    <!-- Start of Chain -->
-    <div class="spacer"></div>
-    <img class="chain" src="src/components/CHAIN.png" />
-    <div class="spacer"></div>
-    <!-- End of Chain -->
-
-    <!-- Start of Gold Sponsors -->
-    <div class="partners-body">
-      <CSESponsorContainer bg="/src/components/FW_Paper_Black_27.png" category_name="Gold Sponsors" category_color="#f6d333">
-      </CSESponsorContainer>
-      <!-- End of Gold Sponsors -->
-      <div class="spacer"></div>
-      <!-- Start of Silver Sponsors -->
-      <CSESponsorContainer bg="/src/components/FW_Paper_Black_26.png" category_name="Silver Sponsors" category_color="#B8B8B8" />
-      <!-- End of Silver Sponsors -->
-      <div class="spacer"></div>
-      <!-- Start of Bronze Sponsors -->
-      <CSESponsorContainer bg="/src/components/FW_Paper_Black_27.png" category_name="Bronze Sponsors" category_color="#BC7836" />
-      <!-- End of Bronze Sponsors -->
-      <div class="spacer"></div>
-      <!-- Start of Major Partners -->
-      <CSESponsorContainer bg="/src/components/FW_Paper_Black_26.png" category_name="Major Partners" category_color="#F4B5EA" />
-      <!-- End of Major Partners -->
-      <div class="spacer"></div>
-      <!-- Start of Minor Partners -->
-      <CSESponsorContainer bg="/src/components/FW_Paper_Black_27.png" category_name="Minor Partners" category_color="#F4B5EA" />
-      <!-- End of Minor Partners -->
-      <div class="spacer"></div>
-      <!-- Start of Media Partners -->
-      <CSESponsorContainer bg="/src/components/FW_Paper_Black_26.png" category_name="Media Partners" category_color="#4F4b88" />
-      <!-- End of Media Partners -->
-      <div class="spacer"></div>
-    </div>
-  </div>
-
-  <script>
-    // Components
-    const goldCardGroup = document.querySelector("#gold-card-group");
-    const silverCardGroup = document.querySelector("#silver-card-group");
-    const bronzeCardGroup = document.querySelector("#bronze-card-group");
-    const majorCardGroup = document.querySelector("#major-card-group");
-    const minorCardGroup = document.querySelector("#minor-card-group");
-    const mediaCardGroup = document.querySelector("#media-card-group");
-
-    // Fill Gold sponsors
-    for (let i = 0; i < 4; i++) {
-      const goldCard = document.createElement("div");
-
-      goldCard.classList.add("card");
-      goldCard.classList.add("py-4");
-      goldCard.classList.add("text-center");
-      goldCard.classList.add("bg-transparent");
-      goldCard.classList.add("align-items-center");
-
-      // You can change the logo, facebook link, and twitter link here:
-      goldCard.style.border = "none";
-      goldCard.innerHTML = `
-			<div class="ratio ratio-1x1 rounded-circle overflow-hidden w-50">
-			<img class="" src="https://logopond.com/logos/97c275e2d904133b81678ab0446648d7.png" alt="sample">
-			</div>
-
-			<div class="card-body text-white">
-			<h5 style="font-family: AkiraExpandedDemo; font-size: 18px; text-shadow: 1px 1px aqua" class="card-title">Company<br>Name</h5>
-			<a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">
-				<i class='bx bxl-facebook-circle'></i> <span style="color: aqua;">Facebook</span></a><br>
-			<a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">
-				<i class='bx bxl-twitter' ></i> <span style="color: aqua;">Twitter</span></a>
-			</div>`;
-
-      goldCardGroup.appendChild(goldCard);
-    }
-
-    // Fill Silver sponsors
-    for (let i = 0; i < 4; i++) {
-      const silverCard = document.createElement("div");
-      silverCard.classList.add("py-4");
-      silverCard.classList.add("card");
-      silverCard.classList.add("text-center");
-      silverCard.classList.add("bg-transparent");
-      silverCard.classList.add("align-items-center");
-
-      // You can change the logo, facebook link, and twitter link here:
-      silverCard.style.border = "none";
-      silverCard.innerHTML = `
-        <div class="ratio ratio-1x1 rounded-circle overflow-hidden w-50">
-          <img class="" src="https://i.pinimg.com/736x/fa/6d/0e/fa6d0e3fef447a2a5ad05b5cdd397e3f.jpg" alt="sample">
-        </div>
-
-        <div id="sponsor-detail" class="card-body text-white">
-          <h5 style="font-family: AkiraExpandedDemo; font-size: 18px; text-shadow: 1px 1px aqua" class="card-title">Company<br>Name</h5>
-          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">
-            <i class='bx bxl-facebook-circle'></i> <span style="color: aqua;">Facebook</span></a><br>
-          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">
-            <i class='bx bxl-twitter' ></i> <span style="color: aqua;">Twitter</span></a>
-        </div>`;
-
-      silverCardGroup.appendChild(silverCard);
-    }
-
-    // Fill Bronze sponsors
-    for (let i = 0; i < 4; i++) {
-      const bronzeCard = document.createElement("div");
-      bronzeCard.classList.add("py-4");
-      bronzeCard.classList.add("card");
-      bronzeCard.classList.add("text-center");
-      bronzeCard.classList.add("bg-transparent");
-      bronzeCard.classList.add("align-items-center");
-
-      // You can change the logo, facebook link, and twitter link here:
-      bronzeCard.style.border = "none";
-      bronzeCard.innerHTML = `
-        <div class="ratio ratio-1x1 rounded-circle overflow-hidden w-50">
-          <img class="" src="https://i.pinimg.com/originals/19/df/a5/19dfa547459179e0e73cc60ca9bb6a04.png" alt="sample">
-        </div>
-
-        <div class="card-body text-white">
-          <h5 style="font-family: AkiraExpandedDemo; font-size: 18px; text-shadow: 1px 1px aqua" class="card-title">Company<br>Name</h5>
-          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">
-            <i class='bx bxl-facebook-circle'></i> <span style="color: aqua;">Facebook</span></a><br>
-          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">
-            <i class='bx bxl-twitter' ></i> <span style="color: aqua;">Twitter</span></a>
-        </div>`;
-
-      bronzeCardGroup.appendChild(bronzeCard);
-    }
-
-    // Fill Major partners
-    for (let i = 0; i < 4; i++) {
-      const majorCard = document.createElement("div");
-      majorCard.classList.add("py-4");
-      majorCard.classList.add("card");
-      majorCard.classList.add("text-center");
-      majorCard.classList.add("bg-transparent");
-      majorCard.classList.add("align-items-center");
-
-      // You can change the logo, facebook link, and twitter link here:
-      majorCard.style.border = "none";
-      majorCard.innerHTML = `
-        <div class="ratio ratio-1x1 rounded-circle overflow-hidden w-50">
-          <img class="" src="https://i.pinimg.com/originals/04/1f/6d/041f6dd3f26274371857038443c8aeeb.png" alt="sample">
-        </div>
-
-        <div class="card-body text-white">
-          <h5 style="font-family: AkiraExpandedDemo; font-size: 18px; text-shadow: 1px 1px aqua" class="card-title">Company<br>Name</h5>
-          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">
-            <i class='bx bxl-facebook-circle'></i> <span style="color: aqua;">Facebook</span></a><br>
-          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">
-            <i class='bx bxl-twitter' ></i> <span style="color: aqua;">Twitter</span></a>
-        </div>`;
-
-      majorCardGroup.appendChild(majorCard);
-    }
-
-    // Fill Minor partners
-    for (let i = 0; i < 4; i++) {
-      const minorCard = document.createElement("div");
-      minorCard.classList.add("py-4");
-      minorCard.classList.add("card");
-      minorCard.classList.add("text-center");
-      minorCard.classList.add("bg-transparent");
-      minorCard.classList.add("align-items-center");
-
-      // You can change the logo, facebook link, and twitter link here:
-      minorCard.style.border = "none";
-      minorCard.innerHTML = `
-        <div class="ratio ratio-1x1 rounded-circle overflow-hidden w-50">
-          <img class="" src="https://th.bing.com/th/id/OIP.qWBhUs6cG3b5MP-wB4GKAwHaHa?pid=ImgDet&w=577&h=577&rs=1" alt="sample">
-        </div>
-
-        <div class="card-body text-white">
-          <h5 style="font-family: AkiraExpandedDemo; font-size: 18px; text-shadow: 1px 1px aqua" class="card-title">Company<br>Name</h5>
-          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">
-            <i class='bx bxl-facebook-circle'></i> <span style="color: aqua;">Facebook</span></a><br>
-          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">
-            <i class='bx bxl-twitter' ></i> <span style="color: aqua;">Twitter</span></a>
-        </div>`;
-
-      minorCardGroup.appendChild(minorCard);
-    }
-
-    // Fill Media partners
-    for (let i = 0; i < 4; i++) {
-      const mediaCard = document.createElement("div");
-      mediaCard.classList.add("py-4");
-      mediaCard.classList.add("card");
-      mediaCard.classList.add("text-center");
-      mediaCard.classList.add("bg-transparent");
-      mediaCard.classList.add("align-items-center");
-
-      // You can change the logo, facebook link, and twitter link here:
-      mediaCard.style.border = "none";
-      mediaCard.innerHTML = `
-        <div class="ratio ratio-1x1 rounded-circle overflow-hidden w-50">
-          <img class="" src="https://i.pinimg.com/originals/f4/cf/ec/f4cfec4f3b4bbf24798b26aa4a5508f2.png" alt="sample">
-        </div>
-
-        <div class="card-body text-white">
-          <h5 style="font-family: AkiraExpandedDemo; font-size: 18px; text-shadow: 1px 1px aqua" class="card-title">Company<br>Name</h5>
-          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">
-            <i class='bx bxl-facebook-circle'></i> <span style="color: aqua;">Facebook</span></a><br>
-          <a href="https://www.youtube.com/watch?v=DKF2-zCNJ0A" class="card-text text-white text-decoration-none">
-            <i class='bx bxl-twitter' ></i> <span style="color: aqua;">Twitter</span></a>
-        </div>`;
-
-      mediaCardGroup.appendChild(mediaCard);
-    }
-  </script>
 </BaseLayout>

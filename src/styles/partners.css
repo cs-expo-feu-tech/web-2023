@@ -9,17 +9,10 @@
 }
 
 .partners-container {
-    background-image: url("../components/bg-2.png"),
-        linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.5) 0%,
-            rgba(0, 0, 0, 0.5) 100%
-        );
+    background-image: url("../components/bg-2.png");
     background-size: cover;
     background-repeat: no-repeat;
     font-family: "DIN";
-
-    overflow: hidden;
 }
 
 h1 {
@@ -66,12 +59,11 @@ h1 {
 .section-bg-1 {
     background-image: url("../components/FW_Paper_Black_27.png");
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    box-shadow: inset 0 0 5em black;
-    padding: 5em;
-
-    /* opacity: 60%; */
+    width: 100%;
+    height: 100%;
+    padding: 200px 70px 50px 70px;
+    margin: 70px 0 100px 0;
+    opacity: 60%;
 }
 
 .section-bg-1 h4,
@@ -82,9 +74,11 @@ h1 {
 .section-bg-2 {
     background-image: url("../components/FW_Paper_Black_26.png");
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    box-shadow: inset 0 0 5em black;
+    width: 100%;
+    height: 100%;
+    padding: 50px 70px 50px 70px;
+    margin-top: 70px;
+    opacity: 60%;
 }
 
 .card-groups {

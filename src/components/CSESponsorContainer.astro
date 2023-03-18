@@ -1,40 +1,33 @@
 ---
 export interface Props {
-    bg: string;
+    id?: string
     category_color: string;
     category_name: string;
 }
 
-const { category_color, category_name } = Astro.props;
-const bg = `url("${Astro.props.bg}")`;
+const { id, category_color, category_name } = Astro.props;
 ---
 
-<style define:vars={{bg, category_color}}>
+<style define:vars={{category_color}}>
     .h4 {
         font-family: 'AkiraExpandedDemo', sans-serif;
     }
-
-    #category_container {
-        background-image: var(--bg);    
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+    
+    .cse-sponsor-container {
+        background-image: url("/src/images/paper.png");
+        background-size: auto;
+        background-repeat: repeat;
+        background-size: 512px;
+        background-color: #0c0c0c;
         box-shadow: inset 0 0 5em black;
-        transition: box-shadow 0.25s ease-in-out;
     }
-
-    #category_container:hover {
-        box-shadow: inset 0 0 5em black, 0 0 2em black;
-        transition: box-shadow 0.12s ease-out;
-    }
-
+    
     #category_name {
-
         color: var(--category_color);
     }
 </style>
 
-<div id="category_container" class="container-fluid p-5">
+<div id={id} class="cse-sponsor-container container-fluid p-5">
     <div class="container">
         <p id="category_name" class="h4 pb-3">{category_name}</p>
         <slot />
