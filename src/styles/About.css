@@ -1,13 +1,3 @@
-@font-face{
-    font-family: 'Akira Expanded';
-    src: url("/assets/fonts/akira expanded/AkiraExpanded.otf");
-}
-
-@font-face{
-    font-family: 'DIN';
-    src: url("/assets/fonts/din font/din.ttf");
-}
-
 *{
     margin:0; padding:0;
     box-sizing: border-box;
