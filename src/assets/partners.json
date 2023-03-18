@@ -81,7 +81,7 @@
         {
             "id": "media_partners",
             "title": "Media Partners",
-            "color": "#ffffff",
+            "color": "#505491",
             "path": "media",
             "partners": [
                 {
@@ -139,7 +139,7 @@
         {
             "id": "major_partners",
             "title": "Major Partners",
-            "color": "#ffffff",
+            "color": "#ffbaee",
             "path": "major",
             "partners": [
                 {
@@ -224,7 +224,7 @@
         {
             "id": "minor_partners",
             "title": "Minor Partners",
-            "color": "#ffffff",
+            "color": "#ffbaee",
             "path": "minor",
             "partners": [
                 {

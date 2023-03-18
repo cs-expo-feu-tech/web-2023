@@ -14,12 +14,12 @@ const { id, category_color, category_name } = Astro.props;
     }
     
     .cse-sponsor-container {
-        background-image: url("/src/images/paper.png");
-        background-size: auto;
-        background-repeat: repeat;
-        background-size: 512px;
-        background-color: #0c0c0c;
+        position: relative;
         box-shadow: inset 0 0 5em black;
+    }
+    
+    .container{
+        position: relative;
     }
     
     #category_name {
@@ -29,7 +29,7 @@ const { id, category_color, category_name } = Astro.props;
 
 <div id={id} class="cse-sponsor-container container-fluid p-5">
     <div class="container">
-        <p id="category_name" class="h4 pb-3">{category_name}</p>
+        <p id="category_name" class="h4 pb-3 fs-1">{category_name}</p>
         <slot />
     </div>
 </div>

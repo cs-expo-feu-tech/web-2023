@@ -11,11 +11,9 @@ import partners from "../assets/partners.json";
 <BaseLayout title="Partners">
     <div class="partners-container">
         <!-- Start of Banner -->
-        <div id="banner" class="d-flex flex-wrap">
-            <div
-                class="row g-0 justify-content-center justify-content-lg-end align-items-center"
-            >
-                <div class="mt-5 col-10 col-lg-5">
+        <div class="d-flex flex-wrap">
+            <div class="row g-0 justify-content-center justify-content-lg-end align-items-center">
+                <div class="mt-5 col-10 col-lg-4">
                     <h1 class="text-white">
                         OUR PARTNERS
                     </h1>
@@ -28,19 +26,19 @@ import partners from "../assets/partners.json";
                         honor to work with them to make this event a success.
                     </p>
                 </div>
-                <div class="d-none d-lg-block col-10 col-lg-6 partners-img">
+                <div class="spacer d-lg-none"></div>
+                <div class="d-none d-lg-block offset-lg-1 col-10 col-lg-6 partners-img">
                     <img class="w-100" src="src/images/filler.png" />
                     <img class="shape" src="src/images/shape_89.png" />
                 </div>
+                <div class="d-block d-lg-none offset-lg-1 col-10 col-lg-6">
+                    <img class="w-100" src="src/images/filler.png" />
+                </div>
             </div>
         </div>
+        <div class="spacer"></div>
         <!-- End of Banner -->
-
-        <!-- Start of Chain -->
-        <div class="spacer"></div>
-        <img class="chain" src="src/components/CHAIN.png" />
-        <div class="spacer"></div>
-        <!-- End of Chain -->
+        
 
         {
             partners.partner_groups.map((partner_group) => {

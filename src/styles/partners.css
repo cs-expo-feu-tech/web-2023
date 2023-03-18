@@ -2,27 +2,22 @@
     font-family: "AkiraExpandedDemo";
     src: url("../fonts/AkiraExpandedDemo.otf");
 }
-
 @font-face {
     font-family: "DIN";
     src: url("../fonts/DIN.ttf");
 }
 
 .partners-container {
-    background-image: url("../components/bg-2.png");
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: url("../images/indiv-projects-bg-chain.png"), url("../images/indiv-projects-bg.png");
+    background-position: top, bottom;
+    background-repeat: no-repeat, repeat;
+    background-size: contain;
     font-family: "DIN";
+    color: white;
 }
 
 h1 {
     font-family: AkiraExpandedDemo;
-}
-
-#banner {
-    background-image: url("../components/CHAIN-2-SOFT.png");
-    background-repeat: no-repeat;
-    background-size: contain;
 }
 
 .partners-img {
@@ -40,16 +35,6 @@ h1 {
     top: 0;
     right: 0;
     width: 60%;
-}
-
-#banner p {
-    font-size: 1.2rem;
-    color: aqua;
-}
-
-.chain {
-    width: 100%;
-    transform: rotate(-3deg);
 }
 
 .spacer {
