@@ -1,4 +1,6 @@
 ---
+import 'shimmer-css/shimmer.css';
+
 export interface Props {
 	title: string;
     name: string;
@@ -13,22 +15,25 @@ const { title, name, credential, image_url } = Astro.props;
     .cse-speakers {
         padding: 1rem;
     }
-    
-    .cse-speakers-image {
-        /* width and height */
-        width: 200px;
-        height: 200px;
-        aspect-ratio: 1;
-        overflow: hidden;
 
-        /* border-radius */
+    .cse-speakers-image {
+        border-radius: 999px;
+
+        border: 16px solid white;
+        
+        background-color: white;
+        width: 100%;
+        max-width: 300px;
+        aspect-ratio: 1;
+    }
+    .cse-speakers-image > img {
         border-radius: 999px;
     }
 </style>
 
 <div class="cse-speakers d-flex flex-column flex-md-row align-items-center">
-    <div class="cse-speakers-image mb-3 mb-md-0">
-        <img src={image_url} alt={`Image of ${name}`}>
+    <div class="cse-speakers-image mb-3 mb-md-0 shimmer-circle shimmer-animate">
+        <img class="ratio ratio-1x1" src={image_url} alt={`Image of ${name}`}>
     </div>
     <div class="cse-speakers-text px-5">
         <p class="display-4 text-center text-md-start">{title}</p>
