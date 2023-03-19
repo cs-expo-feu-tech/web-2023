@@ -2,6 +2,9 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 import CSESpeakersPage from "../../components/CSESpeakersPage.astro";
+
+import schedule_day1 from "../../assets/schedules/expo_day1.json";
+import schedule_day2 from "../../assets/schedules/expo_day2.json";
 ---
 
 <style is:global>
@@ -35,6 +38,14 @@ import CSESpeakersPage from "../../components/CSESpeakersPage.astro";
         background-repeat: no-repeat;
         background-size: contain;
         transform: scale(120%);
+    }
+
+    td {
+        color: inherit !important;
+    }
+
+    a {
+        color: white;
     }
 </style>
 
@@ -140,6 +151,7 @@ import CSESpeakersPage from "../../components/CSESpeakersPage.astro";
     <div class="container mt-5 py-3 py-md-5 text-white">
         <h1 class="w-100 m-auto text-center text-uppercase py-5 display-2">Speakers</h1> 
         <CSESpeakersPage title="AI: Assistance or Replacement?" name="Anthony De Luna" credential="President and CEO, Flipside AI" image_url="/src/images/speakers/AnthonyDeLuna.jpeg" />     
+        <CSESpeakersPage title="Careers in Cybersecurity" name="Ambrosio Berdijo Jr." credential="Trend Micro" image_url="/src/images/partners/bronze/trend.jpg" />     
     </div>
 
     <div class="container py-3 py-md-5 text-white">
@@ -154,7 +166,7 @@ import CSESpeakersPage from "../../components/CSESpeakersPage.astro";
         </ul>
         <div class="tab-content container" id="day-tab-content">
             <div class="tab-pane active" id="day-1" role="tabpanel" aria-labelledby="day-tab-1">
-                <table class="table table-dark table-striped text-white">
+                <table class="table table-dark table-striped">
                     <thead>
                         <tr>
                             <th scope="col" class="col-4">Time</th>
@@ -162,38 +174,34 @@ import CSESpeakersPage from "../../components/CSESpeakersPage.astro";
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>07:00 AM to 08:00 AM</td>
-                            <td>Registration (for Day 1)</td>
-                        </tr>
-                        <tr>
-                            <td>08:00 AM to 09:00 AM</td>
-                            <td>Invocation and Opening Remarks</td>
-                        </tr>
-                        <tr>
-                            <td>09:00 AM to 09:30 AM</td>
-                            <td>Keynote Speaker</td>
-                        </tr>
-                        <tr>
-                            <td>09:30 AM to 11:30 AM</td>
-                            <td>Speaker 1</td>
-                        </tr>
-                        <tr>
-                            <td>11:30 AM to 12:30 PM</td>
-                            <td>Lunch</td>
-                        </tr>
-                        <tr>
-                            <td>12:30 PM to 02:30 PM</td>
-                            <td>Speaker 2</td>
-                        </tr>
-                        <tr>
-                            <td>02:30 PM to 03:30 PM</td>
-                            <td>Awardings</td>
-                        </tr>
-                        <tr>
-                            <td>03:30 PM to 04:00 PM</td>
-                            <td>Closing Remarks</td>
-                        </tr>
+                        {
+                            schedule_day1.timeslots.map((event, idx) => {
+                                var x;
+
+                                if(event.groups) {
+                                    x = event.groups.map((group) => (
+                                        <tr>
+                                            <td class="fst-italic" style="color: gray !important">{`${group.group_name}`}</td>
+                                            <td><a href={`/projects/${group.id}`}>{group.thesis_name}</a></td>
+                                        </tr>
+                                    ))
+                                }
+
+                                let main = (
+                                    <tr style={`color: ${event.color};`}>
+                                        <td>{`${event.time_start} - ${event.time_end}`}</td>
+                                        <td>{event.event}</td>
+                                    </tr>
+                                )
+
+                                return (
+                                    <>
+                                        {main}
+                                        {x}
+                                    </>
+                                )
+                            })
+                        }
                     </tbody>
                 </table>
             </div>
@@ -206,38 +214,39 @@ import CSESpeakersPage from "../../components/CSESpeakersPage.astro";
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>07:00 AM to 08:00 AM</td>
-                            <td>Registration (for Day 2)</td>
-                        </tr>
-                        <tr>
-                            <td>08:00 AM to 09:00 AM</td>
-                            <td>Invocation and Opening Remarks</td>
-                        </tr>
-                        <tr>
-                            <td>09:00 AM to 09:30 AM</td>
-                            <td>Keynote Speaker</td>
-                        </tr>
-                        <tr>
-                            <td>09:30 AM to 11:30 AM</td>
-                            <td>Speaker 1</td>
-                        </tr>
-                        <tr>
-                            <td>11:30 AM to 12:30 PM</td>
-                            <td>Lunch</td>
-                        </tr>
-                        <tr>
-                            <td>12:30 PM to 02:30 PM</td>
-                            <td>Speaker 2</td>
-                        </tr>
-                        <tr>
-                            <td>02:30 PM to 03:30 PM</td>
-                            <td>Awardings</td>
-                        </tr>
-                        <tr>
-                            <td>03:30 PM to 04:00 PM</td>
-                            <td>Closing Remarks</td>
-                        </tr>
+                        <style>
+                            tr {
+                                color: unset;
+                            }
+                        </style>
+                        {
+                            schedule_day2.timeslots.map((event, idx) => {
+                                var x;
+
+                                if(event.groups) {
+                                    x = event.groups.map((group) => (
+                                        <tr>
+                                            <td class="fst-italic" style="color: gray !important">{`${group.group_name}`}</td>
+                                            <td><a href={`/projects/${group.id}`}>{group.thesis_name}</a></td>
+                                        </tr>
+                                    ))
+                                }
+
+                                let main = (
+                                    <tr style={`color: ${event.color};`}>
+                                        <td>{`${event.time_start} - ${event.time_end}`}</td>
+                                        <td>{event.event}</td>
+                                    </tr>
+                                )
+
+                                return (
+                                    <>
+                                        {main}
+                                        {x}
+                                    </>
+                                )
+                            })
+                        }
                     </tbody>
                 </table>
             </div>

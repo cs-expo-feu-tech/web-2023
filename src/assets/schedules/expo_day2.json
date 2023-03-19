@@ -1,0 +1,130 @@
+{
+    "timeslots": [
+        {
+            "time_start": "8:55 AM",
+            "time_end": "9:00 AM",
+            "event": "Opening Spiels",
+            "color": "white"
+        },
+        {
+            "time_start": "9:00 AM",
+            "time_end": "9:05 AM",
+            "event": "Introduction to FTIC",
+            "color": "white"
+        },
+        {
+            "time_start": "9:05 AM",
+            "time_end": "9:10 AM",
+            "event": "Introduction of Keynote Speaker: Mr. Ambrosio Berdijo Jr.",
+            "color": "cyan"
+        },
+        {
+            "time_start": "9:10 AM",
+            "time_end": "9:40 AM",
+            "event": "Careers in Cybersecurity",
+            "color": "magenta"
+        },
+        {
+            "time_start": "9:50 AM",
+            "time_end": "11:10 AM",
+            "event": "Data Analytics and Artificial Intelligence",
+            "color": "white",
+            "groups": [
+                {
+                    "id": "edith",
+                    "group_name": "EDITH",
+                    "thesis_name": "Chop-In: An Intelligent Piano Performance Assessment Tool using Patttern Matching Algorithms"
+                },
+                {
+                    "id": "bethesdaboys",
+                    "group_name": "BethesdaBoys",
+                    "thesis_name": "Codex Learning: A Game-Based Intelligent Tutoring System using Expert-Based Modeling to Measure the Skills and Knowledge of Novice Programmers in Java Programming"
+                },
+                {
+                    "id": "incognito",
+                    "group_name": "Incognito",
+                    "thesis_name": "Intelligent Chatbot for Barangay Complaint Services using Natural Language Processing, Decision Trees, and Queue"
+                },
+                {
+                    "id": "takoyaki",
+                    "group_name": "Takoyaki",
+                    "thesis_name": "Baybayin: A Mobile Intelligent Tutoring System to Detect Signs of Functional Speech Sound Disorder in Selected Grade 1 Pupils in Quezon City Learning Proper Filipino Pronunciation"
+                }
+            ]
+        },
+        {
+            "time_start": "11:15 AM",
+            "time_end": "11:50 AM",
+            "event": "Lunch Break",
+            "color": "white"
+        },
+        {
+            "time_start": "11:55 AM",
+            "time_end": "1:15 PM",
+            "event": "Path Finding",
+            "color": "white",
+            "groups": [
+                {
+                    "id": "4bytes",
+                    "group_name": "4 Bytes",
+                    "thesis_name": "LOC8TE: A Velocity Renovation and Google API as Geofencing Professional Locator & Virtual Space"
+                },
+                {
+                    "id": "codepanda",
+                    "group_name": "CodePanda",
+                    "thesis_name": "Grocery Dash: A Mobile-based Grocery Shopping Assistant with the Application of the Hamiltonian Path Problem of Graph Theory"
+                },
+                {
+                    "id": "quaranteam",
+                    "group_name": "Quaranteam",
+                    "thesis_name": "Curity: Emergency/SOS Button for Crime Prevention in Manila"
+                },
+                {
+                    "id": "direckt",
+                    "group_name": "DIREckt",
+                    "thesis_name": "iAksyonPadayon.ph: Emergency Assistance Communication Tracker for Fire, Calamities and Accidents Rescue Application for Catbalogan Disaster Risk and Rescue Management Office (CDRRMO) Using Dijkstra's Algorithm."
+                }
+            ]
+        },
+        {
+            "time_start": "2:50 PM",
+            "time_end": "3:00 PM",
+            "event": "Intermission",
+            "color": "orange"
+        },
+        {
+            "time_start": "3:05 PM",
+            "time_end": "4:45 PM",
+            "event": "New and Emerging Technologies",
+            "color": "white",
+            "groups": [
+                {
+                    "id": "semicolonizers",
+                    "group_name": "semicolonizers;",
+                    "thesis_name": "Area Occupancy Detection using Computer Vision and Machine Learning"
+                },
+                {
+                    "id": "tonyongbayawak",
+                    "group_name": "tonyong bayawak",
+                    "thesis_name": "Developing predictive model using LSTM on AXS for Long-Term AXS Investors"
+                },
+                {
+                    "id": "lovableboyz",
+                    "group_name": "LovableBoyz",
+                    "thesis_name": "A Secure and Safe Social Application Using Hybrid Cryptography Based End-to-End Encryption and Protection Against Child Abuse"
+                },
+                {
+                    "id": "lambdainvariants",
+                    "group_name": "Lambda Invariants",
+                    "thesis_name": "Text-to-Mesh Synthesis using Adversarial Learning Techniques"
+                }
+            ]
+        },
+        {
+            "time_start": "4:50 PM",
+            "time_end": "5:00 PM",
+            "event": "Closing Remarks",
+            "color": "white"
+        }
+    ]
+}

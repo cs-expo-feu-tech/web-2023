@@ -3,7 +3,155 @@
         {
             "time_start": "9:00 AM",
             "time_end": "9:05 AM",
-            "event": "National Anthem & Invocation"
+            "event": "National Anthem & Invocation",
+            "color": "white"
+        },
+        {
+            "time_start": "9:05 AM",
+            "time_end": "9:10 AM",
+            "event": "Dr. Ambat's Welcoming Remarks",
+            "color": "gold"
+        },
+        {
+            "time_start": "9:10 AM",
+            "time_end": "9:20 AM",
+            "event": "Ms. Adao's Inspirational Message",
+            "color": "gold"
+        },
+        {
+            "time_start": "9:20 AM",
+            "time_end": "9:25 AM",
+            "event": "Introduction to FTIC",
+            "color": "white"
+        },
+        {
+            "time_start": "9:25 AM",
+            "time_end": "9:30 AM",
+            "event": "Introduction of Keynote Speaker: Mr. Anthony De Luna",
+            "color": "cyan"
+        },
+        {
+            "time_start": "9:30 AM",
+            "time_end": "10:10 AM",
+            "event": "AI: Assistance or Replacement",
+            "color": "magenta"
+        },
+        {
+            "time_start": "10:35 AM",
+            "time_end": "12:15 PM",
+            "event": "Data Analytics",
+            "color": "white",
+            "groups": [
+                {
+                    "id": "version1",
+                    "group_name": "Version 1",
+                    "thesis_name": "Chat, Meet, Eat - Android Based Social Media Application that uses a content based filtering algorithm and recommender system for matching individuals or groups"
+                },
+                {
+                    "id": "kairos",
+                    "group_name": "Kairos",
+                    "thesis_name": "Pet Lifestyle Matcher and Adoption Application Using Recommendation Algorithms"
+                },
+                {
+                    "id": "sixsteveneight",
+                    "group_name": "SixStevenEight",
+                    "thesis_name": "Identification of Social Network Influencers through Social Network Analysis using Graph Theory for Developing a Recommendation System"
+                },
+                {
+                    "id": "bamm",
+                    "group_name": "BAMM",
+                    "thesis_name": "FIREph: Budget Planner Application using Regression Algorithms"
+                },
+                {
+                    "id": "codeeldrick",
+                    "group_name": "Code Eldrick",
+                    "thesis_name": "(B.M.A) Android/iOS Budget Monitoring Application using Predictive Analytics"
+                }
+            ]
+        },
+        {
+            "time_start": "12:20 PM",
+            "time_end": "12:35 PM",
+            "event": "Lunch Break",
+            "color": "white"
+        },
+        {
+            "time_start": "1:05 PM",
+            "time_end": "2:45 PM",
+            "event": "Image Processing",
+            "color": "white",
+            "groups": [
+                {
+                    "id": "alphabeta",
+                    "group_name": "AlphaBeta",
+                    "thesis_name": "Liwanag: Emotion Recognition Using Facial Expressions for the Visually Impaired"
+                },
+                {
+                    "id": "nakakapagpabagabag",
+                    "group_name": "Nakakapagpabagabag",
+                    "thesis_name": "Android Mobile Application for Detecting Fake Medicine Packaging through Application of Image Processing"
+                },
+                {
+                    "id": "complaintcenter",
+                    "group_name": "Complaint Center",
+                    "thesis_name": "An Android Application for Symptom Awareness of Measles, Mumps, and Rubella with Digital Rash Image Detection"
+                },
+                {
+                    "id": "grabcode",
+                    "group_name": "GrabCode",
+                    "thesis_name": "SMR - Image Digitization, Recognition, and Conversion of Sheet Music"
+                },
+                {
+                    "id": "dijamcoandfriends",
+                    "group_name": "Dijamco and Friends",
+                    "thesis_name": "Facial Recognition Attendance System Using Line Detection Algorithm"
+                }
+            ]
+        },
+        {
+            "time_start": "2:50 PM",
+            "time_end": "3:00 PM",
+            "event": "Intermission",
+            "color": "orange"
+        },
+        {
+            "time_start": "3:05 PM",
+            "time_end": "4:45 PM",
+            "event": "Artificial Intelligence and Deep Learning",
+            "color": "white",
+            "groups": [
+                {
+                    "id": "brocode",
+                    "group_name": "BroCode",
+                    "thesis_name": "License Plate Recognition with Violation Checker Using Yolo and Tesseract-CNN Algorithm"
+                },
+                {
+                    "id": "hblhbldrivers",
+                    "group_name": "HBL-HBL Drivers",
+                    "thesis_name": "Project SavvyMo: A Tagalog Transcribing Web Application Through the use of Convolutional Neural Network and Long Short-term Memory"
+                },
+                {
+                    "id": "kamigami",
+                    "group_name": "Kamigami",
+                    "thesis_name": "SENYAS: A Web-based Filipino Sign Language Learning Application with Image Detection using CNN and Boyer-Moore Algorithm"
+                },
+                {
+                    "id": "visum",
+                    "group_name": "Visum",
+                    "thesis_name": "Classifying Selected Invasive Plants in the Philippines using Convolutional Neural Network and K-Nearest Neighbor Classifier to Reduce Ecological and Economic Impact"
+                },
+                {
+                    "id": "llp",
+                    "group_name": "LLP",
+                    "thesis_name": "GURU : A Mobile Application For Yoga practitioners Using Image Processing And Convolutional Neural Networks (CNN)"
+                }
+            ]
+        },
+        {
+            "time_start": "4:50 PM",
+            "time_end": "5:00 PM",
+            "event": "Closing Remarks",
+            "color": "white"
         }
     ]
 }
