@@ -24,60 +24,82 @@ import '../styles/about-us.css';
     
 
     <main class="container">
-        <section class="faculty-container">
-            <h1 class="primary-text">
-                faculty
-            </h1>
-            <div id="carouselExampleIndicators_faculty" class="carousel slide" data-bs-ride="true">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="src/assets/placeholder-image.png" class="d-block w-100" alt="...">
-                    <div class="carousel-caption  d-md-block">
-                      <h5>Dr. Shaneth C. Ambat</h5>
-                      <div style="text-align: justify;">
-                      <p>Dr. Shaneth C. Ambat serves as the Director of the Computer Science Program at FEU Institute of 
-                        Technology in Sampaloc Manila. Previously, she held positions as the Dean of Graduate Studies and 
-                        College of Computer Studies at AMA University in Quezon City. Dr. Ambat's research interests include 
-                        a variety of topics in computer science such as Self Organizing Map, Reinforcement Learning Algorithm, 
-                        Fuzzy Logic, Machine Learning, Data Envelopment Analysis, Ontology, Image Processing, and Computer Vision.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="src/assets/placeholder-image.png" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-md-block">
-                      <h5>Lorem ipsum dolor sit</h5>
-                      <div style="text-align: justify;">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, facere. Doloremque voluptas, non debitis 
-                        eveniet beatae perspiciatis aliquam esse modi dolores dicta sapiente earum tempora quis est labore corporis voluptatibus..</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="src/assets/placeholder-image.png" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-md-block">
-                      <h5>Lorem ipsum dolor sit</h5>
-                      <div style="text-align: justify;">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, facere. Doloremque voluptas, non debitis 
-                        eveniet beatae perspiciatis aliquam esse modi dolores dicta sapiente earum tempora quis est labore corporis voluptatibus..</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators_faculty" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators_faculty" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
+      <section class="faculty-container">
+        <h1 class="primary-text">
+            faculty
+        </h1>
+        <div id="carouselFaculty" class="carousel slide" data-bs-ride="true">
+          <style>
+            .carousel-card {
+              background: white;
+              color: black;
+              padding: 1.5rem;
+              border: 1px solid #e5e5e5;
+              border-radius: 0.5rem;
+            }
+
+            .carousel-card > * {
+              color: inherit;
+            }
+          </style>
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselFaculty" data-bs-slide-to="0" aria-labelledby="#scambat" aria-current="true" class="active"></button>
+            <button type="button" data-bs-target="#carouselFaculty" data-bs-slide-to="1" aria-labelledby="#faculty2"></button>
+            <button type="button" data-bs-target="#carouselFaculty" data-bs-slide-to="2" aria-labelledby="#faculty3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="/src/assets/placeholder-image.png" class="d-block w-100" alt="...">
+              <div class="carousel-caption">
+                <h5 id="scambat">Dr. Shaneth C. Ambat</h5>
+                <p style="text-align: justify;">
+                  Dr. Shaneth C. Ambat serves as the Director of the Computer Science Program at FEU Institute of
+                  Technology in Sampaloc Manila. Previously, she held positions as the Dean of Graduate Studies and
+                  College of Computer Studies at AMA University in Quezon City. Dr. Ambat's research interests include
+                  a variety of topics in computer science such as Self Organizing Map, Reinforcement Learning Algorithm,
+                  Fuzzy Logic, Machine Learning, Data Envelopment Analysis, Ontology, Image Processing, and Computer Vision.
+                </p>
               </div>
+            </div>
+            <div class="carousel-item p-0 p-md-5">
+              <!-- i know this is redundant. i have no idea why margins in border-box doesn't work as intended. -->
+              <div class="carousel-card"> 
+                <img src="/src/assets/placeholder-image.png" class="d-block w-100" alt="...">
+                <div class="px-3 px-md-5 py-3">
+                  <h5 id="faculty-2">Dr. Shaneth C. Ambat (1)</h5>
+                  <p>
+                    Dr. Shaneth C. Ambat serves as the Director of the Computer Science Program at FEU Institute of
+                    Technology in Sampaloc Manila. Previously, she held positions as the Dean of Graduate Studies and
+                    College of Computer Studies at AMA University in Quezon City. Dr. Ambat's research interests include
+                    a variety of topics in computer science such as Self Organizing Map, Reinforcement Learning Algorithm,
+                    Fuzzy Logic, Machine Learning, Data Envelopment Analysis, Ontology, Image Processing, and Computer Vision.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="/src/assets/placeholder-image.png" class="d-block w-100" alt="...">
+              <div class="carousel-caption">
+                <h5 id="faculty-3">Dr. Shaneth C. Ambat (2)</h5>
+                <p style="text-align: justify;">
+                  Dr. Shaneth C. Ambat serves as the Director of the Computer Science Program at FEU Institute of
+                  Technology in Sampaloc Manila. Previously, she held positions as the Dean of Graduate Studies and
+                  College of Computer Studies at AMA University in Quezon City. Dr. Ambat's research interests include
+                  a variety of topics in computer science such as Self Organizing Map, Reinforcement Learning Algorithm,
+                  Fuzzy Logic, Machine Learning, Data Envelopment Analysis, Ontology, Image Processing, and Computer Vision.
+                </p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev carousel-dark" type="button" data-bs-target="#carouselFaculty" data-bs-slide="prev">
+            <span class="carousel-icons carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next carousel-dark" type="button" data-bs-target="#carouselFaculty" data-bs-slide="next">
+            <span class="carousel-icons carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
         </section>
         <section class="commitee-container">
             <h1 class="primary-text">
