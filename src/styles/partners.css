@@ -21,11 +21,8 @@ h1 {
 }
 
 .partners-img {
-    -webkit-mask-image: url("src/images/mask.png");
     mask-image: url("src/images/mask.png");
-    -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
-    -webkit-mask-size: cover;
     mask-size: cover;
     position: relative;
 }
