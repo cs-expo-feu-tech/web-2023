@@ -82,9 +82,3 @@ h1 {
         margin-bottom: -260px;
     }
 }
-
-@media screen and (max-width: 1000px) {
-    .card-groups {
-        justify-content: center;
-    }
-}

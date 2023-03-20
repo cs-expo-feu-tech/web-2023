@@ -1,17 +1,9 @@
-@font-face{
-    font-family: 'Akira Expanded';
-    src: url("../fonts/AkiraExpandedDemo.otf");
-}
-@font-face {
-    font-family: 'DIN';
-    src: url("../fonts/DIN.ttf");
-}
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 .spacer{
     height: 5rem;
 }
