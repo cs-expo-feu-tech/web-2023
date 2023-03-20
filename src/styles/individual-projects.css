@@ -1,16 +1,3 @@
-@font-face{
-    font-family: 'Akira Expanded';
-    src: url("../fonts/AkiraExpandedDemo.otf");
-}
-@font-face {
-    font-family: 'DIN';
-    src: url("../fonts/DIN.ttf");
-}
-@font-face {
-    font-family: 'DIN Black';
-    src: url("../fonts/DINBlack.ttf");
-}
-
 @media (min-width: 0px){
     .group-name-container{
         position: absolute;
@@ -117,8 +104,6 @@
     top: 50%;
     transform: translate(-50%, -50%);
 }
-
-
 
 .plastic{
     background-image: url("../images/plastic.png");

@@ -10,6 +10,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.0.17"
+    "astro": "^2.0.17",
+    "autoprefixer": "^10.4.14",
+    "shimmer-css": "^1.0.1"
   }
 }
