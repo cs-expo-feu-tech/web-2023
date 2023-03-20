@@ -15,9 +15,6 @@
     overflow: hidden;
 }
 
-.carousel-inner{
-    height: max(90vw, 900px);
-}
 .carousel-caption{
     transform: translateY(60%);
 }
@@ -79,7 +76,7 @@
         margin: 2rem;
     }  
     .carousel-inner{
-        height: max(90vw, 750px);
+        /* height: max(90vw, 750px); */
     }
     .carousel-caption{
         margin-bottom: 5rem;

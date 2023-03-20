@@ -1,233 +1,38 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import '../styles/about-us.css';
+
+import faculty from '../assets/about/faculty.json';
+import committee from '../assets/about/committee.json';
+
+import CSECarouselFaculty from '../components/CSECarousel/CSECarouselFaculty.astro';
+import CSECarouselCommittee from '../components/CSECarousel/CSECarouselCommittee.astro';
 ---
 
 <BaseLayout>
-    <div class="container-fluid about-container">
+    <div class="container-fluid about-container text-white text-center">
       <div class="spacer"></div>
-      <div class="header row justify-content-center">
-        <div class="col-10">
-          <h1 class="primary-text">About cs expo 2023</h1>
-        </div>
-      </div>
-      <div class="spacer"></div>
-      <div class="row justify-content-center">
-        <div class="col-8"></div>
-      </div>
-      <div class="container-secondary-text">
-        <h6 class="secondary-text">
+        <h1>About CS EXPO 2023</h1>
+        <p class="h6">
           The CS Expo showcases diverse students' innovative solutions in areas such as image processing and machine learning, with engaging presentations and insightful discussions. It's a must-attend event for an insightful experience.
-        </h6>
-        <div class="spacer"></div>
-      </div>
+        </p>
+      <div class="spacer"></div>
     
 
-    <main class="container">
+    <main class="">
       <section class="faculty-container">
         <h1 class="primary-text">
             faculty
         </h1>
-        <div id="carouselFaculty" class="carousel slide" data-bs-ride="true">
-          <style>
-            .carousel-card {
-              background: white;
-              color: black;
-              padding: 1.5rem;
-              border: 1px solid #e5e5e5;
-              border-radius: 0.5rem;
-            }
-
-            .carousel-card > * {
-              color: inherit;
-            }
-          </style>
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselFaculty" data-bs-slide-to="0" aria-labelledby="#scambat" aria-current="true" class="active"></button>
-            <button type="button" data-bs-target="#carouselFaculty" data-bs-slide-to="1" aria-labelledby="#faculty2"></button>
-            <button type="button" data-bs-target="#carouselFaculty" data-bs-slide-to="2" aria-labelledby="#faculty3"></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="/src/assets/placeholder-image.png" class="d-block w-100" alt="...">
-              <div class="carousel-caption">
-                <h5 id="scambat">Dr. Shaneth C. Ambat</h5>
-                <p style="text-align: justify;">
-                  Dr. Shaneth C. Ambat serves as the Director of the Computer Science Program at FEU Institute of
-                  Technology in Sampaloc Manila. Previously, she held positions as the Dean of Graduate Studies and
-                  College of Computer Studies at AMA University in Quezon City. Dr. Ambat's research interests include
-                  a variety of topics in computer science such as Self Organizing Map, Reinforcement Learning Algorithm,
-                  Fuzzy Logic, Machine Learning, Data Envelopment Analysis, Ontology, Image Processing, and Computer Vision.
-                </p>
-              </div>
-            </div>
-            <div class="carousel-item p-0 p-md-5">
-              <!-- i know this is redundant. i have no idea why margins in border-box doesn't work as intended. -->
-              <div class="carousel-card"> 
-                <img src="/src/assets/placeholder-image.png" class="d-block w-100" alt="...">
-                <div class="px-3 px-md-5 py-3">
-                  <h5 id="faculty-2">Dr. Shaneth C. Ambat (1)</h5>
-                  <p>
-                    Dr. Shaneth C. Ambat serves as the Director of the Computer Science Program at FEU Institute of
-                    Technology in Sampaloc Manila. Previously, she held positions as the Dean of Graduate Studies and
-                    College of Computer Studies at AMA University in Quezon City. Dr. Ambat's research interests include
-                    a variety of topics in computer science such as Self Organizing Map, Reinforcement Learning Algorithm,
-                    Fuzzy Logic, Machine Learning, Data Envelopment Analysis, Ontology, Image Processing, and Computer Vision.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="/src/assets/placeholder-image.png" class="d-block w-100" alt="...">
-              <div class="carousel-caption">
-                <h5 id="faculty-3">Dr. Shaneth C. Ambat (2)</h5>
-                <p style="text-align: justify;">
-                  Dr. Shaneth C. Ambat serves as the Director of the Computer Science Program at FEU Institute of
-                  Technology in Sampaloc Manila. Previously, she held positions as the Dean of Graduate Studies and
-                  College of Computer Studies at AMA University in Quezon City. Dr. Ambat's research interests include
-                  a variety of topics in computer science such as Self Organizing Map, Reinforcement Learning Algorithm,
-                  Fuzzy Logic, Machine Learning, Data Envelopment Analysis, Ontology, Image Processing, and Computer Vision.
-                </p>
-              </div>
-            </div>
-          </div>
-          <button class="carousel-control-prev carousel-dark" type="button" data-bs-target="#carouselFaculty" data-bs-slide="prev">
-            <span class="carousel-icons carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next carousel-dark" type="button" data-bs-target="#carouselFaculty" data-bs-slide="next">
-            <span class="carousel-icons carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-        </section>
-        <section class="commitee-container">
-            <h1 class="primary-text">
-                commitee
-            </h1>
-            <div id="carouselExampleIndicators_commitee" class="carousel slide" data-bs-ride="true">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
-
-                </div>
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="src/assets/placeholder-image.png" class="d-block w-100" alt="...">
-                      <div class="carousel-caption d-md-block">
-                        <h5>Head Committee</h5>
-                        <div style="text-align: justify;">
-                        <p>The Head was responsible for overseeing the management of the event and all committee members involved in it. 
-                          They delegated and supervised the activities and progress made by the committee members and held general meetings 
-                          for all committee heads and members to provide reports that were subject to review and approval. 
-                          The Head coordinated all of the event's agenda and final decisions and presented them to the Program Director.</p>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                      <img src="src/assets/placeholder-image.png" class="d-block w-100" alt="...">
-                      <div class="carousel-caption d-md-block">
-                        <h5>Program Committee</h5>
-                        <div style="text-align: justify;">
-                          <p>The Programs Committee is responsible for planning and executing the event seamlessly. 
-                          Their primary focus was to develop the program's outline, devise promotional materials and secure suitable event hosts. 
-                          They worked in tandem with the Logistics Committee to ensure that the event's timeline was observed meticulously, and 
-                          any necessary changes were implemented as needed.</p>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                      <img src="src/assets/placeholder-image.png" class="d-block w-100" alt="...">
-                      <div class="carousel-caption d-md-block">
-                        <h5>Secretariat and Awards Committee</h5>
-                        <div style="text-align: justify;">
-                        <p>The Secretariat and Awards Committee was responsible for managing all the necessary paperwork required for the event. 
-                          They served as the primary communication channel between the entire committee, resource persons, and event audience. 
-                          The committee kept track of critical information that needed to be communicated and delivered to the event's recipients. </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="carousel-item">
-                      <img src="src/assets/placeholder-image.png" class="d-block w-100" alt="...">
-                      <div class="carousel-caption d-md-block">
-                        <h5>Publicity Committee</h5>
-                        <div style="text-align: justify;">
-                        <p>The Publicity Committee played a vital role in promoting the event to its target audience. 
-                          They collaborated with the Creatives Committee to publish visually-appealing and informative materials 
-                          on social media platforms like Facebook. In addition, they took charge of the marketing aspect of the 
-                          event by coming up with captivating captions that caught the attention of the intended audience.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="carousel-item">
-                      <img src="src/assets/placeholder-image.png" class="d-block w-100" alt="...">
-                      <div class="carousel-caption d-md-block">
-                        <h5>Logistics Committee</h5>
-                        <div style="text-align: justify;">
-                        <p>The Logistics Committee assumed responsibility for the technical and financial aspects of the event. 
-                          They were assigned to handle the live streaming setup across various platforms, oversee and regulate the event's flow 
-                          in coordination with the Programs Committee, and liaise with the resource persons during their presentations. 
-                          The committee also kept a watchful eye on the event's financial requirements.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="carousel-item">
-                      <img src="src/assets/placeholder-image.png" class="d-block w-100" alt="...">
-                      <div class="carousel-caption d-md-block">
-                        <h5>Creatives Committee</h5>
-                        <div style="text-align: justify;">
-                        <p>The Creatives Committee was assigned to manage all design-related tasks for the event. 
-                          They concentrated on developing the graphics, video presentations, and visual materials utilized 
-                          in the event and its promotions. The committee was also responsible for the design and layout of 
-                          the photobook and journal, serving as documentation and a tangible output of the event's success.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="carousel-item">
-                      <img src="src/assets/placeholder-image.png" class="d-block w-100" alt="...">
-                      <div class="carousel-caption d-md-block">
-                        <h5>Developers Committee</h5>
-                        <div style="text-align: justify;">
-                        <p>The Developers Committee (Website) played a vital role in the success of the CS EXPO 2022. 
-                          Comprising proficient developers, they were responsible for creating the website application 
-                          that housed essential information regarding the event. With oversight of the website, 
-                          they ensured that the content displayed on each section, including the thesis projects, speakers, 
-                          sponsors, and faculty, met high-quality standards.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="carousel-item">
-                      <img src="src/assets/placeholder-image.png" class="d-block w-100" alt="...">
-                      <div class="carousel-caption d-md-block">
-                        <h5>Externals Committee</h5>
-                        <div style="text-align: justify;">
-                        <p>The Programs Committee is responsible for planning and executing the event seamlessly. 
-                          Their primary focus was to develop the program's outline, devise promotional materials and secure suitable event hosts. 
-                          They worked in tandem with the Logistics Committee to ensure that the event's timeline was observed meticulously, and 
-                          any necessary changes were implemented as needed.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators_commitee" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators_commitee" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-              </div>
-        </section>
+      
+        <CSECarouselFaculty faculty={faculty} />
+      </section>
+      <section class="commitee-container">
+        <h1 class="primary-text">
+          commitee
+        </h1>
+        <CSECarouselCommittee committees={committee} />
+      </section>
     </main>
     </div>
 </BaseLayout>
