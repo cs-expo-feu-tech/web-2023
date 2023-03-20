@@ -37,13 +37,13 @@ const { index, committee } = Astro.props;
             committee.heads.map((head) => (
                 <div class="d-flex flex-column align-items-center p-3 col">
                     <img src={`/src/images/about/committee/${head.image}`} alt={`Photo of ${head.name}`} class="ratio ratio-1x1 rounded-circle committee-photo">
-                    <h1 class="text-center">{head.name}</h1>
+                    <p class="text-center fs-2 fw-bold mt-3">{head.name}</p>
                 </div>
             ))
         }
     </div>
     <div class="px-3 px-md-5 py-3 text-center">
-        <p class="fw-bold fs-2" id={`faculty-${index}`}>
+        <p class="fw-bold fs-2" id={`carousel-${index}`}>
             {committee.name}
         </p>
         <p class="fs-5">

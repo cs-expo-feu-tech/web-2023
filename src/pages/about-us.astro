@@ -11,28 +11,28 @@ import CSECarouselCommittee from '../components/CSECarousel/CSECarouselCommittee
 
 <BaseLayout>
     <div class="container-fluid about-container text-white text-center">
-      <div class="spacer"></div>
-        <h1>About CS EXPO 2023</h1>
-        <p class="h6">
+      <div class="container mt-5">
+        <h1 class="title fs-1 pt-5">About CS EXPO 2023</h1>
+        <p class="desc fs-5 py-5">
           The CS Expo showcases diverse students' innovative solutions in areas such as image processing and machine learning, with engaging presentations and insightful discussions. It's a must-attend event for an insightful experience.
         </p>
-      <div class="spacer"></div>
+      </div>
     
+      <main class="my-5">
+        <section class="mt-5 faculty-container">
+          <h1 class="primary-text">
+              Faculty
+          </h1>
+        
+          <CSECarouselFaculty faculty={faculty} />
+        </section>
 
-    <main class="">
-      <section class="faculty-container">
-        <h1 class="primary-text">
-            faculty
-        </h1>
-      
-        <CSECarouselFaculty faculty={faculty} />
-      </section>
-      <section class="commitee-container">
-        <h1 class="primary-text">
-          commitee
-        </h1>
-        <CSECarouselCommittee committees={committee} />
-      </section>
-    </main>
+        <section class="mt-5 commitee-container">
+          <h1 class="primary-text">
+            commitee
+          </h1>
+          <CSECarouselCommittee committees={committee} />
+        </section>
+      </main>
     </div>
 </BaseLayout>

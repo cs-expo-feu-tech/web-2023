@@ -1,10 +1,10 @@
 {
     "faculty_members": [
         {
-            "id": "scambat",
-            "name": "Dr. Shaneth Ambat",
+            "id": "jdelacruz",
+            "name": "Juan Dela Cruz",
             "image": "placeholder-image.png",
-            "bio": "Dr. Shaneth C. Ambat serves as the Director of the Computer Science Program at FEU Institute of Technology in Sampaloc Manila. Previously, she held positions as the Dean of Graduate Studies and College of Computer Studies at AMA University in Quezon City. Dr. Ambat's research interests include a variety of topics in computer science such as Self Organizing Map, Reinforcement Learning Algorithm, Fuzzy Logic, Machine Learning, Data Envelopment Analysis, Ontology, Image Processing, and Computer Vision. Dr. Shaneth C. Ambat serves as the Director of the Computer Science Program at FEU Institute of Technology in Sampaloc Manila. Previously, she held positions as the Dean of Graduate Studies and College of Computer Studies at AMA University in Quezon City. Dr. Ambat's research interests include a variety of topics in computer science such as Self Organizing Map, Reinforcement Learning Algorithm, Fuzzy Logic, Machine Learning, Data Envelopment Analysis, Ontology, Image Processing, and Computer Vision. Dr. Shaneth C. Ambat serves as the Director of the Computer Science Program at FEU Institute of Technology in Sampaloc Manila. Previously, she held positions as the Dean of Graduate Studies and College of Computer Studies at AMA University in Quezon City. Dr. Ambat's research interests include a variety of topics in computer science such as Self Organizing Map, Reinforcement Learning Algorithm, Fuzzy Logic, Machine Learning, Data Envelopment Analysis, Ontology, Image Processing, and Computer Vision.",
+            "bio": "Everyone has the right to an effective remedy by the competent national tribunals for acts",
             "quote": "[DEMO TEXT] Congratulations! You have taken the first step to a better future. I am here to help you achieve your goals."
         },
         {
