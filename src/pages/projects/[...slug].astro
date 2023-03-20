@@ -29,6 +29,7 @@ const { slug, name, title, abstract, description, photo, developers, avp, manusc
 
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CSEDevCard from "../../components/CSEDevCard.astro";
+
 import '../../styles/individual-projects.css';
 
 ---
@@ -41,7 +42,7 @@ import '../../styles/individual-projects.css';
             <div class="col-10 name-container">
                 <span class="fs-1 project-name">{title}</span>
                 <div class="group-name-container">
-                    <img class="group-name-bg" src="/src/images/tape.png">
+                    <img class="group-name-bg" src="/images/tape.png">
                     <span class="group-name">{name}</span>
                 </div>
             </div>
@@ -60,13 +61,13 @@ import '../../styles/individual-projects.css';
                 <style>
                     .poster-img {
                         background-color: #c8c8c8;
-                        background-image: url("/src/images/project-border.png");
+                        background-image: url("/images/project-border.png");
                         background-position: center;
                         background-repeat: no-repeat;
                         background-size: cover;
                     }
                 </style>
-                <img class="p-3 p-md-4 p-xl-4 poster-img project-image drop-in-2" src={`/src/images/group-posters/${photo}`}>
+                <img class="p-3 p-md-4 p-xl-4 poster-img project-image drop-in-2" src={`/images/group-posters/${photo}`}>
             </div>
             <div class="col-10 col-xl-6 mt-5 mt-xl-0 drop-in-2">
                 <p class="project-name fs-2">Abstract</p>
@@ -80,7 +81,7 @@ import '../../styles/individual-projects.css';
         <div class="spacer"></div>
         <div class="row justify-content-center">
             <div class="col-10 col-lg-6 col-xl-4 title-container ease-anim fade-bottom">
-                <img class="title-bg" src="/src/images/tape.png">
+                <img class="title-bg" src="/images/tape.png">
                 <span class="title">Developers</span>
             </div>
         </div>

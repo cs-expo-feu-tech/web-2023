@@ -2,6 +2,8 @@
 import CSEHeader from '../components/CSEHeader.astro'
 import CSEFooter from '../components/CSEFooter.astro'
 
+import '../styles/fonts.css'
+
 export interface Props {
 	title?: string;
 }
@@ -33,6 +35,10 @@ const { title } = Astro.props;
 		<title>{title ? `${title} | `:''}CS EXPO 2023</title>
 
 		<style>
+			html {
+				scroll-behavior: smooth;
+			}
+
 			html, body {
 				height: 100%;
 			}

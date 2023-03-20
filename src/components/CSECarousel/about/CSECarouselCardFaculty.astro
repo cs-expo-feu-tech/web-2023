@@ -34,7 +34,7 @@ const { faculty_member, index } = Astro.props;
         left: -16px;
         top: -16px;
         opacity: 0.2;
-        background-image: url('/src/images/about/quote.png');
+        background-image: url('/images/about/quote.png');
         background-repeat: no-repeat;
         background-size: contain;
         
@@ -44,7 +44,7 @@ const { faculty_member, index } = Astro.props;
 </style>
 
 <CSECarouselCard index={index}>
-    <img src={`/src/images/about/faculty/${faculty_member.image}`} class="w-100" alt={`Photo of ${faculty_member.name}`}/>
+    <img src={`/images/about/faculty/${faculty_member.image}`} class="w-100" alt={`Photo of ${faculty_member.name}`}/>
     <div class="px-3 px-md-5 py-3 text-center">
         <h2 class="fw-bold fs-2" id={`faculty-${index}`}>
             {faculty_member.name}
