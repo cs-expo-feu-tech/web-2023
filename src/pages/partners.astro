@@ -1,12 +1,88 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import "../styles/partners.css";
 
 import CSESponsorContainer from "../components/CSESponsorContainer.astro";
 import CSESponsorCard from "../components/CSESponsorCard.astro";
 
 import partners from "../assets/partners.json";
 ---
+
+<style>
+.partners-container {
+    background-image: url("../images/indiv-projects-bg-chain.png"), url("../images/indiv-projects-bg.png");
+    background-position: top, bottom;
+    background-repeat: no-repeat, repeat;
+    background-size: contain;
+    color: white;
+}
+
+.partners-img {
+    -webkit-mask-image: url("src/images/mask.png");
+    mask-image: url("src/images/mask.png");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    position: relative;
+}
+
+.shape {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+}
+
+.spacer {
+    height: 10vh;
+}
+
+.section-bg-1 {
+    background-image: url("../components/FW_Paper_Black_27.png");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    padding: 200px 70px 50px 70px;
+    margin: 70px 0 100px 0;
+    opacity: 60%;
+}
+
+.section-bg-2 {
+    background-image: url("../components/FW_Paper_Black_26.png");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    padding: 50px 70px 50px 70px;
+    margin-top: 70px;
+    opacity: 60%;
+}
+
+.card-groups {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 20px 0 20px;
+}
+
+@media screen and (max-width: 500px) {
+    .section-bg-1 {
+        padding: 300px 70px 50px 70px;
+        margin: 0px 0 100px 0;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .chain-container {
+        margin-bottom: -260px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .card-groups {
+        justify-content: center;
+    }
+}
+</style>
 
 <BaseLayout title="Partners">
     <div class="partners-container">

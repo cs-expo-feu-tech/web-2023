@@ -21,11 +21,8 @@ h1 {
 }
 
 .partners-img {
-    -webkit-mask-image: url("src/images/mask.png");
     mask-image: url("src/images/mask.png");
-    -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
-    -webkit-mask-size: cover;
     mask-size: cover;
     position: relative;
 }
@@ -83,11 +80,5 @@ h1 {
 @media screen and (max-width: 700px) {
     .chain-container {
         margin-bottom: -260px;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    .card-groups {
-        justify-content: center;
     }
 }
