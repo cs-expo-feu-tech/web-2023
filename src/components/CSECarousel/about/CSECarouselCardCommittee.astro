@@ -1,5 +1,5 @@
 ---
-import CSECarouselCard from './CSECarouselCard.astro';
+import CSECarouselCard from '../CSECarouselCard.astro';
 
 export interface Props {
     index: number;
@@ -43,9 +43,9 @@ const { index, committee } = Astro.props;
         }
     </div>
     <div class="px-3 px-md-5 py-3 text-center">
-        <p class="fw-bold fs-2" id={`carousel-${index}`}>
+        <h2 class="fw-bold fs-2" id={`carousel-${index}`}>
             {committee.name}
-        </p>
+        </h2>
         <p class="fs-5">
             {committee.description}
         </p>

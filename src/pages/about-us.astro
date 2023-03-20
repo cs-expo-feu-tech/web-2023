@@ -5,8 +5,8 @@ import '../styles/about-us.css';
 import faculty from '../assets/about/faculty.json';
 import committee from '../assets/about/committee.json';
 
-import CSECarouselFaculty from '../components/CSECarousel/CSECarouselFaculty.astro';
-import CSECarouselCommittee from '../components/CSECarousel/CSECarouselCommittee.astro';
+import CSECarouselFaculty from '../components/CSECarousel/about/CSECarouselFaculty.astro';
+import CSECarouselCommittee from '../components/CSECarousel/about/CSECarouselCommittee.astro';
 ---
 
 <BaseLayout>
@@ -29,7 +29,7 @@ import CSECarouselCommittee from '../components/CSECarousel/CSECarouselCommittee
 
         <section class="mt-5 commitee-container">
           <h1 class="primary-text">
-            commitee
+            Committee
           </h1>
           <CSECarouselCommittee committees={committee} />
         </section>
