@@ -1,0 +1,29 @@
+---
+import CSECarousel from './CSECarousel.astro';
+import CSECarouselCardFaculty from './CSECarouselCardFaculty.astro';
+
+export interface Props {
+    faculty: {
+        faculty_members: {
+            id: string;
+            name: string;
+            image: string;
+            bio: string;
+            quote: string;
+        }[]
+    }
+}
+
+const { faculty } = Astro.props;
+const id = "carousel_factory";
+---
+
+<CSECarousel id={id} size={faculty.faculty_members.length}>
+    {faculty.faculty_members.map((faculty_member, index) => (
+        <CSECarouselCardFaculty
+            index={index}
+            faculty_member={faculty_member}
+        />
+    ))}
+</CSECarousel>
+

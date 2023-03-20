@@ -1,0 +1,31 @@
+---
+export interface Props {
+    index: number;
+}
+
+const { index } = Astro.props;
+---
+
+<style>
+    .carousel-card {
+        background: white;
+        color: black;
+        padding: 1.5rem;
+        border: 1px solid #e5e5e5;
+        border-radius: 0.5rem;
+    }
+
+    .carousel-card > * {
+        color: inherit;
+    }
+
+    .carousel-card > * {
+        font-size: min(1vw, inherit);
+    }
+</style>
+
+<div class={`carousel-item p-0 p-md-5${index == 0 ? " active" : ""}`}>
+    <div class="carousel-card container">
+        <slot />
+    </div>
+</div>

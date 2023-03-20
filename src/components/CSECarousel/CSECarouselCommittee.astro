@@ -1,0 +1,34 @@
+---
+import CSECarousel from './CSECarousel.astro';
+import CSECarouselCardCommittee from './CSECarouselCardCommittee.astro';
+
+export interface Props {
+    committees: {
+        committees: {
+            id: string,
+            name: string,
+            description: string,
+            heads: {
+                name: string,
+                image: string
+            }[],
+            members: {
+                name: string
+            }[]
+        }[]
+    }
+}
+
+const { committees } = Astro.props;
+const id = "carousel_committee";
+---
+
+<CSECarousel id={id} size={committees.committees.length}>
+    {committees.committees.map((committee, index) => (
+        <CSECarouselCardCommittee
+            index={index}
+            committee={committee}
+        />
+    ))}
+</CSECarousel>
+
