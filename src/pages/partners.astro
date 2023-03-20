@@ -17,8 +17,8 @@ import partners from "../assets/partners.json";
 }
 
 .partners-img {
-    -webkit-mask-image: url("src/images/mask.png");
-    mask-image: url("src/images/mask.png");
+    -webkit-mask-image: url("/images/mask.png");
+    mask-image: url("/images/mask.png");
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     -webkit-mask-size: cover;
@@ -104,15 +104,14 @@ import partners from "../assets/partners.json";
                 </div>
                 <div class="spacer d-lg-none"></div>
                 <div class="d-none d-lg-block offset-lg-1 col-10 col-lg-6 partners-img">
-                    <img class="w-100" src="src/images/filler.png" />
-                    <img class="shape" src="src/images/shape_89.png" />
+                    <img class="w-100" src="/images/filler.png" />
+                    <img class="shape" src="/images/shape_89.png" />
                 </div>
                 <div class="d-block d-lg-none offset-lg-1 col-10 col-lg-6">
-                    <img class="w-100" src="src/images/filler.png" />
+                    <img class="w-100" src="/images/filler.png" />
                 </div>
             </div>
         </div>
-        <div class="spacer"></div>
         <!-- End of Banner -->
         
 
@@ -126,7 +125,7 @@ import partners from "../assets/partners.json";
                             <CSESponsorCard
                                 html_class="col"
                                 partner_name={partner.name}
-                                partner_img={`/src/images/partners/${partner_group.path}/${partner.logo}`}
+                                partner_img={`/images/partners/${partner_group.path}/${partner.logo}`}
                                 links={partner.links}
                                 requires_bg_logo
                                 bg_color={partner.bg_color}
