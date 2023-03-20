@@ -20,6 +20,8 @@
 }
 .section-dev-day{
     background-image: url("../images/indiv-projects-bg.png");
+    background-size: cover;
+    height: 100vh;
 }
 .dev-day-title{
     font-family: "Akira Expanded";
