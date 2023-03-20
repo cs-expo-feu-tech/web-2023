@@ -1,0 +1,475 @@
+{
+    "committees": [
+        {
+            "id": "overall",
+            "name": "Project Heads",
+            "description": "The Head was responsible for overseeing the management of the event and all committee members involved in it. They delegated and supervised the activities and progress made by the committee members and held general meetings for all committee heads and members to provide reports that were subject to review and approval. The Head coordinated all of the event's agenda and final decisions and presented them to the Program Director.",
+            "heads": [
+                {
+                    "name": "Krysch Chalia Atienza",
+                    "image": "34.png"
+                },
+                {
+                    "name": "Roland Val Tristan Bonus",
+                    "image": "27.png"
+                }
+            ],
+            "members": []
+        },
+        {
+            "id": "programs",
+            "name": "Programs Committee",
+            "description": "The Programs Committee is responsible for planning and executing the event seamlessly. Their primary focus was to develop the program's outline, devise promotional materials and secure suitable event hosts. They worked in tandem with the Logistics Committee to ensure that the event's timeline was observed meticulously, and any necessary changes were implemented as needed.",
+            "heads": [
+                {
+                    "name": "Franz Millan P. De Vera",
+                    "image": "157.png"
+                },
+                {
+                    "name": "Rahmat Zaina Isnain",
+                    "image": "30.png"
+                }
+            ],
+            "members": [
+                {
+                    "name": "Adrianne Magracia"
+                },
+                {
+                    "name": "Aerhiel Dhenhice C. Bisnan"
+                },
+                {
+                    "name": "Ignacio, Janah Reginna T."
+                },
+                {
+                    "name": "Jericho Pilapil"
+                },
+                {
+                    "name": "Juan Miguel C. Duran"
+                },
+                {
+                    "name": "Kendrew Javelosa"
+                },
+                {
+                    "name": "Nicole Anne S. Mabale"
+                },
+                {
+                    "name": "Michael Angelo M. Mendoza"
+                },
+                {
+                    "name": "Syrill Matthew R. Bobadilla"
+                },
+                {
+                    "name": "Albert Josh B. Dizon"
+                },
+                {
+                    "name": "Paul Kristopher Espina"
+                },
+                {
+                    "name": "William Romano"
+                },
+                {
+                    "name": "Ivan Dominic G. Albano"
+                }
+            ]
+        },
+        {
+            "id": "secretariat",
+            "name": "Secretariat and Awards Committee",
+            "description": "The Secretariat and Awards Committee was responsible for managing all the necessary paperwork required for the event. They served as the primary communication channel between the entire committee, resource persons, and event audience. The committee kept track of critical information that needed to be communicated and delivered to the event's recipients.",
+            "heads": [
+                {
+                    "name": "Angelika Gene Reyes",
+                    "image": "9.png"
+                },
+                {
+                    "name": "Jannel C. Lacbain",
+                    "image": "25.png"
+                }
+            ],
+            "members": [
+                {
+                    "name": "Argueza, Aldreck G."
+                },
+                {
+                    "name": "Charles Dune L. Villegas"
+                },
+                {
+                    "name": "Earl Zeann Lumanlan"
+                },
+                {
+                    "name": "Lealyn Rose S. Froilan"
+                },
+                {
+                    "name": "Lim, Vincent Adrian C."
+                },
+                {
+                    "name": "Lorenze Dionell K. Arroyo"
+                },
+                {
+                    "name": "Ma. Alexies Mae B. de Lara"
+                },
+                {
+                    "name": "Mark Martin Banuelos"
+                },
+                {
+                    "name": "Seira Siez Santiago"
+                },
+                {
+                    "name": "Sophia Abbyghaile Tandoc"
+                },
+                {
+                    "name": "Tan, Genesis Charles Lee"
+                },
+                {
+                    "name": "Kenn Gudez"
+                }
+            ]
+        },
+        {
+            "id": "logistics",
+            "name": "Logistics Committee",
+            "description": "The Logistics Committee assumed responsibility for the technical and financial aspects of the event. They were assigned to handle the live streaming setup across various platforms, oversee and regulate the event's flow in coordination with the Programs Committee, and liaise with the resource persons during their presentations. The committee also kept a watchful eye on the event's financial requirements.",
+            "heads": [
+                {
+                    "name": "Alec Bryan S. Sison",
+                    "image": "35.png"
+                },
+                {
+                    "name": "Rovinjan Medrano",
+                    "image": "36.png"
+                }
+            ],
+            "members": [
+                {
+                    "name": "Aaron Kyle A. Hernandez"
+                },
+                {
+                    "name": "Akio Allen C. Yapan"
+                },
+                {
+                    "name": "Aldwin Fernandez Rivera"
+                },
+                {
+                    "name": "Allen Christopher H. Dela Rosa"
+                },
+                {
+                    "name": "Andrey Levy Marco Pulusan"
+                },
+                {
+                    "name": "Andrey Leynes"
+                },
+                {
+                    "name": "Carl Michael D. Dijamco"
+                },
+                {
+                    "name": "Co, Anna Mae Kathryn O."
+                },
+                {
+                    "name": "Crispin III D. Tubon"
+                },
+                {
+                    "name": "Emanuelle David Bermudo"
+                },
+                {
+                    "name": "Jamille Jose E. Quigao"
+                },
+                {
+                    "name": "Jared Lester M. Huna"
+                },
+                {
+                    "name": "Jeramy Galor"
+                },
+                {
+                    "name": "Jerwin A. Peralta"
+                },
+                {
+                    "name": "John Kevin S. Cortes"
+                },
+                {
+                    "name": "Joshua Matthew Padilla"
+                },
+                {
+                    "name": "Joshua Miguel Tuan"
+                },
+                {
+                    "name": "Kyle Christian Rillera"
+                },
+                {
+                    "name": "Robert Michael D Aquino"
+                },
+                {
+                    "name": "Ruth de Guzman"
+                },
+                {
+                    "name": "Shiela Mae D. Bellosillo"
+                },
+                {
+                    "name": "Adrian Levi R. Urrutia"
+                }
+            ]
+        },
+        {
+            "id": "creatives",
+            "name": "Creatives Committee",
+            "description": "The Creatives Committee was assigned to manage all design-related tasks for the event. They concentrated on developing the graphics, video presentations, and visual materials utilized in the event and its promotions. The committee was also responsible for the design and layout of the photobook and journal, serving as documentation and a tangible output of the event's success.",
+            "heads": [
+                {
+                    "name": "John Deniel C. Coronel",
+                    "image": "163.png"
+                },
+                {
+                    "name": "Daniel Luis de Torrontegui",
+                    "image": "15.png"
+                }
+            ],
+            "members": [
+                {
+                    "name": "Aaron Marleon Seth S. Uson"
+                },
+                {
+                    "name": "Andrei Nicolas"
+                },
+                {
+                    "name": "Angelica Desales"
+                },
+                {
+                    "name": "Eldrick Dion C. Marasigan"
+                },
+                {
+                    "name": "FELICILDA, Jerome"
+                },
+                {
+                    "name": "Francis Keanu A Ventura"
+                },
+                {
+                    "name": "Geoffrey Harold Abis"
+                },
+                {
+                    "name": "Ishmael Jehoshaphat Bautista"
+                },
+                {
+                    "name": "Jerome Suarez Tiuzen"
+                },
+                {
+                    "name": "Junelle Espero"
+                },
+                {
+                    "name": "Karl Michael M. Marcellana"
+                },
+                {
+                    "name": "Kent Vincent E. Dimla"
+                },
+                {
+                    "name": "Kyle Ashley O. Domingo"
+                },
+                {
+                    "name": "Maegan Therese A. Gabriana"
+                },
+                {
+                    "name": "Marielle Vaay"
+                },
+                {
+                    "name": "Mark Andrei T. Llanes"
+                },
+                {
+                    "name": "Mary Angeline Corral"
+                },
+                {
+                    "name": "Michael Anthony C. Kho"
+                },
+                {
+                    "name": "Miguel Angelo Bartolome"
+                },
+                {
+                    "name": "Neille Cedrick F. Juan"
+                },
+                {
+                    "name": "Princess Bea Castillo"
+                },
+                {
+                    "name": "Renee Anne Joy G. Gula"
+                },
+                {
+                    "name": "Sumatra, Mark Daniel C."
+                },
+                {
+                    "name": "Yael Cabrales"
+                },
+                {
+                    "name": "Jerloy Mathew Tugadi Tudio"
+                },
+                {
+                    "name": "Barlin, Jericho"
+                },
+                {
+                    "name": "Sean Kobe Adawag"
+                },
+                {
+                    "name": "Mark Bernard S Estrada"
+                }
+            ]
+        },
+        {
+            "id": "publicity",
+            "name": "Publicity Committee",
+            "description": "The Publicity Committee played a vital role in promoting the event to its target audience. They collaborated with the Creatives Committee to publish visually-appealing and informative materials on social media platforms like Facebook. In addition, they took charge of the marketing aspect of the event by coming up with captivating captions that caught the attention of the intended audience.",
+            "heads": [
+                {
+                    "name": "Francis Miguel Dela Cruz",
+                    "image": "71.png"
+                },
+                {
+                    "name": "Christiana Aleyna Sy",
+                    "image": "2.png"
+                }
+            ],
+            "members": [
+                {
+                    "name": "Aaron John S. Fernandez"
+                },
+                {
+                    "name": "Harley Steven C. Vergara"
+                },
+                {
+                    "name": "James Florence M. Conales"
+                },
+                {
+                    "name": "James Lanbert Javier"
+                },
+                {
+                    "name": "James Ralph P. Balagtas"
+                },
+                {
+                    "name": "John Benedict Villacorta"
+                },
+                {
+                    "name": "Jose Rafael T. Cruz"
+                },
+                {
+                    "name": "Kathlene Jane F. Roxas"
+                },
+                {
+                    "name": "Kenji Shimizu"
+                },
+                {
+                    "name": "Korj Philip R. Luna"
+                },
+                {
+                    "name": "Medrick Amis"
+                },
+                {
+                    "name": "Micah Aguila Pablo"
+                },
+                {
+                    "name": "Paul Bryan T. Co"
+                },
+                {
+                    "name": "Raph Edchris L. Salmorin"
+                },
+                {
+                    "name": "Richard Neil B. Punzalan"
+                },
+                {
+                    "name": "Richmond Jyron M. Esguerra"
+                },
+                {
+                    "name": "Vernes U. Abella"
+                }
+            ]
+        },
+        {
+            "id": "dev",
+            "name": "Developers Committee",
+            "description": "The Developers Committee (Website) played a vital role in the success of the CS EXPO 2022. Comprising proficient developers, they were responsible for creating the website application that housed essential information regarding the event. With oversight of the website, they ensured that the content displayed on each section, including the thesis projects, speakers, sponsors, and faculty, met high-quality standards.",
+            "heads": [
+                {
+                    "name": "Karl Matthew Parafina",
+                    "image": "17.png"
+                },
+                {
+                    "name": "Marc Steven Clemen",
+                    "image": "173.png"
+                }
+            ],
+            "members": [
+                {
+                    "name": "Eduardo Villanueva"
+                },
+                {
+                    "name": "Marc Ivan Guillermo"
+                },
+                {
+                    "name": "Mark Angelo Capili"
+                },
+                {
+                    "name": "Mark Jason T. Galang"
+                },
+                {
+                    "name": "Noor, Mohammad N."
+                }
+            ]
+        },
+        {
+            "id": "externals",
+            "name": "Externals Committee",
+            "description": "The Externals Committee is responsible for all external communications and aspect of the event. They are responsible for sponsorships, speaker selection, and defense panelist selection. They identify potential sponsors, reach out to speakers and panelists, and negotiate agreements.",
+            "heads": [
+                {
+                    "name": "Geraldine Sophia Quizon",
+                    "image": "202.png"
+                },
+                {
+                    "name": "Janezen Dagami",
+                    "image": "189.png"
+                }
+            ],
+            "members": [
+                {
+                    "name": "Dave Arthur D. Amiana"
+                },
+                {
+                    "name": "Dave Bornilla"
+                },
+                {
+                    "name": "Cyril John P. Altares"
+                },
+                {
+                    "name": "John Jordan Espiritu"
+                },
+                {
+                    "name": "Elijah Velasco"
+                },
+                {
+                    "name": "Elyzza Jane O. Abrigo"
+                },
+                {
+                    "name": "Jenerose Corpuz"
+                },
+                {
+                    "name": "Ella Fritz Sarmiento"
+                },
+                {
+                    "name": "Salvador, Raven John S."
+                },
+                {
+                    "name": "Steven Go"
+                },
+                {
+                    "name": "William Vincent S. Talaña"
+                },
+                {
+                    "name": "Jefferson L. Jadoc"
+                },
+                {
+                    "name": "Charles Dmitri M. Peñaranda"
+                },
+                {
+                    "name": "Vicencio, Vernon Gabriel Angelo A."
+                },
+                {
+                    "name": "Claveria, Kyle Sebastian T."
+                }
+            ]
+        }
+    ]
+}
