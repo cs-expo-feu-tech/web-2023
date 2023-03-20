@@ -2,6 +2,9 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 import CSESpeakersPage from "../../components/CSESpeakersPage.astro";
+
+import schedule_day1 from "../../assets/schedules/expo_day1.json";
+import schedule_day2 from "../../assets/schedules/expo_day2.json";
 ---
 
 <style is:global>
@@ -15,7 +18,6 @@ import CSESpeakersPage from "../../components/CSESpeakersPage.astro";
     }
 
     .cse-header {
-        background-color: rgb(var(--background-color));
         background-image: url("/assets/images/events/expo_bg.png");
         background-position: center;
         background-repeat: no-repeat;
@@ -24,52 +26,38 @@ import CSESpeakersPage from "../../components/CSESpeakersPage.astro";
         transition: all 0.5s;
         /* padding: 0; */
 
-        height: 500px;
+        height: 800px;
+    }    
+
+    .tape {
+        position: relative;
+        color: black;
+        font-weight: bolder;
+        background-image: url("/assets/images/dt4.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: scale(120%);
     }
 
-    .cse-header > .cse-header-gradient-overlay {
-        background: linear-gradient(
-            180deg,
-            rgba(var(--background-color), 0) 70%,
-            rgba(var(--background-color), 255) 100%
-        );
+    td {
+        color: inherit !important;
+    }
+
+    a {
+        color: white;
     }
 </style>
 
 <BaseLayout title="About CS EXPO 2023">
     <div class="container-fluid position-relative cse-header d-flex align-items-center justify-content-center text-white lh-1" >
-        <div class="h-100 w-100 position-absolute cse-header-gradient-overlay"></div>
+        <div class="h-100 w-100 position-absolute"></div>
         <style>
-            .cse-date-sticker {
-                position: absolute;
-                right: 10%;
-                bottom: 20%;
-                transform: rotate(16deg);
-                padding: 0;
-
-                z-index: 3;
-            }
-
-            .tape {
-                position: relative;
-                color: black;
-                font-weight: bolder;
-                background-image: url("/assets/images/dt4.png");
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: contain;
-                transform: scale(120%);
-            }
-
-            .darker: {
-                background-color: rgba(0, 0, 0, 255);
-            }
-
             .cse-expo-logo {
                 min-width: 384px;
                 min-height: 384px;
-                max-width: 512px;
-                max-height: 512px;
+                max-width: 1024px;
+                max-height: 1024px;
                 z-index: 10;
             }
 
@@ -79,12 +67,22 @@ import CSESpeakersPage from "../../components/CSESpeakersPage.astro";
         </style>
         
         <img class="cse-expo-logo" src="/assets/images/expo_logo.png" alt="CS Expo 2023 logo">
-        <div class="h-100 w-100 position-absolute top-0 darker"/>
 
         <div class="cse-date-sticker">
-            <div class="px-3 py-3 tape">
+            <style>
+                .cse-date-sticker {
+                    position: absolute;
+                    right: 10%;
+                    bottom: 20%;
+                    transform: rotate(16deg);
+                    padding: 0;
+    
+                    z-index: 3;
+                }
+            </style>
+            <div class="p-4 p-lg-5 tape">
                 <p class="w-100 m-0 text-center">March</p>
-                <p class="w-100 mx-0 my-3 text-center h1">14-15</p>
+                <p class="w-100 mx-0 my-3 text-center h2">14-15</p>
             </div>
         </div>
 
@@ -96,75 +94,79 @@ import CSESpeakersPage from "../../components/CSESpeakersPage.astro";
 
     </div>
 
-    <div class="container-fluid py-5 text-white cse-content-bg position-relative">
+    <div class="container-fluid container-spill text-white position-relative">
         <style>
-            .cse-content-bg {
-                background-color: rgb(var(--background-color));
+            .container-spill {
+                position: relative;
+                z-index: 0;
+            }
+
+            .container-spill::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: calc(100% + 256px);
+                background-color: white;
+
+                top: -128px;
+                left: 0;
+
+                background-image: url("/src/images/white_paper_tile.png");
+                background-repeat: repeat;
+                background-size: 128px 128px;
+                mask-image: url("/src/images/rip_mask.png");
+                mask-size: 100% 100%;
+
+                -webkit-mask-image: url("/src/images/rip_mask.png");
+                -webkit-mask-size: cover;
+            }
+            
+            @media only screen and (min-width: 768px) {
+                .container-spill::before {
+                    -webkit-mask-size: 100% 100%;
+                }
+            }
+
+            .container-spill > .container {
+                position: relative;
+                z-index: 1;
             }
         </style>
-        <div class="container">
+        <div class="container py-5 text-black">
             <h1>What is CS EXPO?</h1>
             <p>
-                <span>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Consequatur et eum eos deleniti iste ad nemo ex veniam molestias
-                    voluptatem voluptas aliquid laboriosam itaque commodi rerum,
-                    similique libero nesciunt distinctio.</span>
-                <span>
-                    Odio sit ad, molestias iusto temporibus voluptatum. Nemo
-                    reprehenderit fugiat quae possimus amet excepturi nulla,
-                    facilis, quasi ratione consectetur tenetur commodi dicta,
-                    placeat pariatur provident blanditiis doloribus qui iste
-                    perferendis?</span>
-                <span>
-                    Dolorem sint qui molestias obcaecati suscipit aspernatur nemo
-                    adipisci quisquam facilis aut quos illo reiciendis nihil
-                    veritatis sequi mollitia, praesentium eligendi dignissimos porro
-                    minima inventore neque quo! Voluptatibus, facilis enim.</span>
-                <span>
-                    Accusantium expedita ducimus facilis assumenda consequuntur
-                    adipisci quam neque. Nesciunt eum laudantium ratione tenetur
-                    corporis placeat, temporibus in dolorum soluta rem totam
-                    sapiente quis maxime est. Sed animi quas eos.</span>
-                <span>
-                    Iste animi saepe vitae non quo, incidunt unde tempore quis.
-                    Nostrum praesentium quidem, debitis quia odit doloremque non
-                    alias aliquid. Voluptas nesciunt ratione autem ea accusantium
-                    inventore reprehenderit eos sed.</span>
+                CS EXPO is a pivotal event highlighting the students' diversity in providing 
+                innovative and bright solutions in various areas. Through the students' 
+                collaboration and headstrong endeavors, this event serves as a turning point 
+                for them to showcase their projects and share their solutions with their technologies, 
+                may it be from image processing, facial recognition, machine learning, and so much more! 
+                Attendees will get to even know more about the students' projects with their engaging 
+                presentations and insightful discussions with panelists. There's so much more to 
+                anticipate and more than what meets the eye, so make sure to attend the CS EXPO to 
+                brace yourself for a mind-stimulating and insightful experience.
             </p>            
         </div>
     </div>
-    <div class="cse-content-gradient-overlay w-100">
-        <style>    
-            .cse-content-gradient-overlay {
-                height: 100px;
-                background: linear-gradient(
-                    180deg,
-                    rgba(var(--background-color), 255) 0%,
-                    rgba(var(--background-color), 0) 100%
-                );
-            }
-        </style>
-    </div>
 
-    <div class="container py-3 py-md-5 text-white">
+    <div class="container mt-5 py-3 py-md-5 text-white">
         <h1 class="w-100 m-auto text-center text-uppercase py-5 display-2">Speakers</h1> 
-        <CSESpeakersPage title="Keynote Title" name="Speaker Name" credential="Speaker Credentials" image_url="https://via.placeholder.com/200" />     
+        <CSESpeakersPage title="AI: Assistance or Replacement?" name="Anthony De Luna" credential="President and CEO, Flipside AI" image_url="/src/images/speakers/AnthonyDeLuna.jpeg" />     
+        <CSESpeakersPage title="Careers in Cybersecurity" name="Ambrosio Berdijo Jr." credential="Trend Micro" image_url="/src/images/partners/bronze/trend.jpg" />     
     </div>
 
     <div class="container py-3 py-md-5 text-white">
         <h1 class="w-100 m-auto text-center text-uppercase py-5 display-2">Schedule</h1>
         <ul class="nav nav-pills justify-content-center p-3" id="day-tab" role="tablist">
-            <li class="nav-item">
+            <li class="nav-item px-3">
                 <button class="nav-link active px-5" id="day-tab-1" data-bs-toggle="tab" data-bs-target="#day-1" type="button" role="tab" aria-controls="day-1" aria-selected="true" aria-current="page">Day 1</button>
             </li>
-            <li class="nav-item">
+            <li class="nav-item px-3">
                 <button class="nav-link px-5" id="day-tab-2" data-bs-toggle="tab" data-bs-target="#day-2" type="button" role="tab" aria-controls="day-2" aria-selected="false">Day 2</button>
             </li>
         </ul>
         <div class="tab-content container" id="day-tab-content">
             <div class="tab-pane active" id="day-1" role="tabpanel" aria-labelledby="day-tab-1">
-                <table class="table table-dark table-striped text-white">
+                <table class="table table-dark table-striped">
                     <thead>
                         <tr>
                             <th scope="col" class="col-4">Time</th>
@@ -172,38 +174,34 @@ import CSESpeakersPage from "../../components/CSESpeakersPage.astro";
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>07:00 AM to 08:00 AM</td>
-                            <td>Registration (for Day 1)</td>
-                        </tr>
-                        <tr>
-                            <td>08:00 AM to 09:00 AM</td>
-                            <td>Invocation and Opening Remarks</td>
-                        </tr>
-                        <tr>
-                            <td>09:00 AM to 09:30 AM</td>
-                            <td>Keynote Speaker</td>
-                        </tr>
-                        <tr>
-                            <td>09:30 AM to 11:30 AM</td>
-                            <td>Speaker 1</td>
-                        </tr>
-                        <tr>
-                            <td>11:30 AM to 12:30 PM</td>
-                            <td>Lunch</td>
-                        </tr>
-                        <tr>
-                            <td>12:30 PM to 02:30 PM</td>
-                            <td>Speaker 2</td>
-                        </tr>
-                        <tr>
-                            <td>02:30 PM to 03:30 PM</td>
-                            <td>Awardings</td>
-                        </tr>
-                        <tr>
-                            <td>03:30 PM to 04:00 PM</td>
-                            <td>Closing Remarks</td>
-                        </tr>
+                        {
+                            schedule_day1.timeslots.map((event, idx) => {
+                                var x;
+
+                                if(event.groups) {
+                                    x = event.groups.map((group) => (
+                                        <tr>
+                                            <td class="fst-italic" style="color: gray !important">{`${group.group_name}`}</td>
+                                            <td><a href={`/projects/${group.id}`}>{group.thesis_name}</a></td>
+                                        </tr>
+                                    ))
+                                }
+
+                                let main = (
+                                    <tr style={`color: ${event.color};`}>
+                                        <td>{`${event.time_start} - ${event.time_end}`}</td>
+                                        <td>{event.event}</td>
+                                    </tr>
+                                )
+
+                                return (
+                                    <>
+                                        {main}
+                                        {x}
+                                    </>
+                                )
+                            })
+                        }
                     </tbody>
                 </table>
             </div>
@@ -216,38 +214,39 @@ import CSESpeakersPage from "../../components/CSESpeakersPage.astro";
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>07:00 AM to 08:00 AM</td>
-                            <td>Registration (for Day 2)</td>
-                        </tr>
-                        <tr>
-                            <td>08:00 AM to 09:00 AM</td>
-                            <td>Invocation and Opening Remarks</td>
-                        </tr>
-                        <tr>
-                            <td>09:00 AM to 09:30 AM</td>
-                            <td>Keynote Speaker</td>
-                        </tr>
-                        <tr>
-                            <td>09:30 AM to 11:30 AM</td>
-                            <td>Speaker 1</td>
-                        </tr>
-                        <tr>
-                            <td>11:30 AM to 12:30 PM</td>
-                            <td>Lunch</td>
-                        </tr>
-                        <tr>
-                            <td>12:30 PM to 02:30 PM</td>
-                            <td>Speaker 2</td>
-                        </tr>
-                        <tr>
-                            <td>02:30 PM to 03:30 PM</td>
-                            <td>Awardings</td>
-                        </tr>
-                        <tr>
-                            <td>03:30 PM to 04:00 PM</td>
-                            <td>Closing Remarks</td>
-                        </tr>
+                        <style>
+                            tr {
+                                color: unset;
+                            }
+                        </style>
+                        {
+                            schedule_day2.timeslots.map((event, idx) => {
+                                var x;
+
+                                if(event.groups) {
+                                    x = event.groups.map((group) => (
+                                        <tr>
+                                            <td class="fst-italic" style="color: gray !important">{`${group.group_name}`}</td>
+                                            <td><a href={`/projects/${group.id}`}>{group.thesis_name}</a></td>
+                                        </tr>
+                                    ))
+                                }
+
+                                let main = (
+                                    <tr style={`color: ${event.color};`}>
+                                        <td>{`${event.time_start} - ${event.time_end}`}</td>
+                                        <td>{event.event}</td>
+                                    </tr>
+                                )
+
+                                return (
+                                    <>
+                                        {main}
+                                        {x}
+                                    </>
+                                )
+                            })
+                        }
                     </tbody>
                 </table>
             </div>
