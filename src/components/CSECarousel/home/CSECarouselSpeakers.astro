@@ -1,0 +1,31 @@
+---
+import CSECarousel from "../CSECarousel.astro";
+import CSECarouselCardSpeaker from "./CSECarouselCardSpeaker.astro";
+
+export interface Props {
+    speakers: {
+        event: string,
+        speakers: {
+            name: string,
+            credential: string,
+            bionote?: string,
+            photo: string,
+            talk_title: string
+        }[]
+    }
+}
+
+const { speakers } = Astro.props;
+
+const speakerlist = speakers.reduce((acc, curr) => {
+  return acc.concat(curr.speakers);
+}, []);
+
+const id = "carousel_speakers";
+---
+
+<CSECarousel id={id} size={speakerlist.length}>
+    {speakerlist.map((speaker, index) => (
+        <CSECarouselCardSpeaker index={index} speaker={speaker} />
+    ))}
+</CSECarousel>

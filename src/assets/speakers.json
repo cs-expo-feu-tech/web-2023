@@ -1,0 +1,28 @@
+{
+    "speakers": [
+        {
+            "event": "cs-expo",
+            "speakers": [
+                {
+                    "name": "Anthony De Luna",
+                    "credential": "President and CEO, Flipside AI",
+                    "bionote": "",
+                    "photo": "AnthonyDeLuna.jpeg",
+                    "talk_title": "AI: Assistance or Replacement?"
+                }
+            ]
+        },
+        {
+            "event": "devday",
+            "speakers": [
+                {
+                    "name": "Juan Dela Cruz",
+                    "credential": "Student",
+                    "bionote": "The Quick Brown Fox Jumps Over The Lazy Dog.",
+                    "photo": "placeholder.png",
+                    "talk_title": "A sample"
+                }
+            ]
+        }
+    ]
+}

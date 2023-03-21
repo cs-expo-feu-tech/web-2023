@@ -1,0 +1,45 @@
+---
+import CSECarouselCard from "../CSECarouselCard.astro";
+
+export interface Props {
+    index: number,
+    speaker: {
+        name: string,
+        credential: string,
+        bionote?: string,
+        photo: string,
+        talk_title: string
+    }
+}
+
+const { index, speaker } = Astro.props;
+---
+<style>
+    .cse-speakers-image {
+        width: 100%;
+        height: 100%;
+        max-width: 300px;
+        max-height: 300px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+    .cse-speakers-text {
+        margin-top: 1rem;
+    }
+</style>
+<CSECarouselCard index={index}>
+    <div class="p-5 d-flex flex-column flex-md-row align-items-center justify-content-center">
+        <div class="cse-speakers-image mb-3 mb-md-0 shimmer-circle shimmer-animate">
+            <img class="ratio ratio-1x1" src={`/images/speakers/${speaker.photo}`} alt={`Image of ${speaker.name}`}>
+        </div>
+        <div class="cse-speakers-text px-5 d-flex flex-column justify-content-center">
+            <p class="h1 text-center text-md-start font-akira-expanded">{speaker.name}</p>
+            <p class="h3 text-center text-md-start font-din">{speaker.credential}</p>
+        </div>
+    </div>
+    { speaker.bionote &&
+        <div class="px-3 px-md-5 py-3 text-center fst-italic">
+            <p class="fs-4">{speaker.bionote}</p>
+        </div>
+    }
+</CSECarouselCard>
