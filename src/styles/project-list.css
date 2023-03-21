@@ -43,9 +43,11 @@
 .content {
     z-index: 2;
 }
-#tape{
-    width: 100vw;
-    display: block;
+.plastic {
+    background-image: url("../images/plastic.png");
+    background-size: cover;
+    height: 20vh;
+    width: 100%;
 }
 @media screen and (max-width: 1453px){
     /* .project-item > img{

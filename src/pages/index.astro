@@ -7,6 +7,7 @@ import Speakers from '../assets/speakers.json'
 import Partners from '../assets/partners.json'
 
 import '../styles/home.css';
+import '../styles/scroll-animation.css';
 
 // import Speakers from '../components/Speakers.astro';
 // import About from '../components/About.astro';
@@ -24,103 +25,6 @@ Partners.partner_groups.forEach((group) => {
     });
 });
 ---
-
-<style>
-    .cs-expo .tape {
-        color: black;
-        font-weight: bolder;
-        background-image: url("/images/dt4.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        transform: scale(120%);
-    }
-
-    .cs-expo .cse-date-sticker {
-        position: absolute;
-        right: 10%;
-        bottom: 20%;
-        transform: rotate(16deg);
-        padding: 0;
-
-        z-index: 2;
-    }
-
-    .devday {
-        overflow: hidden;
-    }
-
-    .devday .tape {
-        color: black;
-        font-weight: bolder;
-        background-image: url("/images/dt3.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        transform: scale(120%);
-    }
-
-    .devday .cse-date-sticker {
-        position: absolute;
-        left: 10%;
-        bottom: 20%;
-        transform: rotate(-16deg);
-        padding: 0;
-
-        z-index: 2;
-    }
-
-    .cse-button {
-        text-decoration: none;
-        color: white;
-
-        background-image: url("/images/FW_Paper_Black_27.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 100%;
-        padding: 1rem 2rem;
-
-        mask-image: url("/images/btnmask.png");
-        mask-size: 100% 100%;
-
-        transition: transform 0.2s ease;
-    }
-
-    .cse-button:hover {
-        color: white;
-        transform: scale(1.2);
-    }
-
-    #speakers {
-        background: url('/images/cs_expo_2.png') no-repeat;
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-    }
-
-    #sponsors {
-        overflow: hidden;
-    }
-
-    img.partner {
-        width: 128px !important;
-        height: 128px;
-        object-fit: contain;
-
-        padding: 0.75rem;
-        margin: 1rem;
-        border-radius: 1rem;
-
-        box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.25);
-        transition: transform 0.2s, box-shadow 0.2s;
-    }
-    
-    img.partner:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 0.5rem 0.25rem rgba(0, 0, 0, 0.25);
-    }
-
-</style>
 
 <BaseLayout>
     <div class="container-fluid home-container">
@@ -142,8 +46,8 @@ Partners.partner_groups.forEach((group) => {
         <div class="devday position-relative text-white d-flex flex-column justify-content-center align-items-center p-5 section-dev-day">
             <div class="text-white d-flex flex-column justify-content-center align-items-center p-5">
                 <div class="cse-text-container py-5 py-sm-0 position-relative start-0 bottom-0 z-1">
-                    <p class="lh-1 m-0 fs-logo-size-sub font-thedus-wide">// CS EXPO 2023</p>
-                    <p class="lh-1 fw-bold m-0 font-akira-expanded display-1">DEVDAY</p>
+                    <p class="ease-anim fade-bottom lh-1 m-0 fs-logo-size-sub font-thedus-wide">// CS EXPO 2023</p>
+                    <p class="ease-anim fade-bottom-2 lh-1 fw-bold m-0 font-akira-expanded display-1">DEVDAY</p>
                 </div>
                 <a href="/events/dev" class="cse-button" style="z-index: 2">Learn More</a>
                 <div class="p-4 p-lg-5 tape cse-date-sticker">
@@ -157,21 +61,24 @@ Partners.partner_groups.forEach((group) => {
 
     <section id="speakers" class="container-fluid py-5">
         <div class="container text-white text-center">
-            <h1 class="display-1">SPEAKERS</h1>
-            <p class="fs-5">
+            <h1 class="display-1 ease-anim fade-bottom">SPEAKERS</h1>
+            <p class="fs-5 ease-anim fade-bottom-2">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua
             </p>
         </div>
-        <CSECarouselSpeakers speakers={Speakers.speakers} />
+        <div class="ease-anim fade-bottom-3">
+            { /* @ts-ignore */ }
+            <CSECarouselSpeakers speakers={Speakers.speakers} />
+        </div>
     </section>
 
     <!-- <About /> -->
-    <section id="about" class="d-flex flex-column align-items-center container py-5">
-        <div class="text-center d-flex flex-column justify-content-center py-5">
-            <h1 class="display-3">ABOUT CS EXPO</h1>
+    <section id="about" class="d-flex flex-column align-items-center container-fluid py-5">
+        <div class="col-10 text-center d-flex flex-column justify-content-center py-5">
+            <h1 class="display-3 ease-anim fade-bottom">ABOUT CS EXPO</h1>
     
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            <p class="ease-anim fade-bottom-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
@@ -186,22 +93,24 @@ Partners.partner_groups.forEach((group) => {
     <!-- <Partners /> -->
     <section id="sponsors" class="d-flex flex-column align-items-center justify-content-center container-fluid text-center py-5">
         <div class="container">
-            <h1 class="display-3">SPONSORS AND PARTNERS</h1>
-            <p class="speakersparagraph">
+            <div class="spacer"></div>
+            <h1 class="display-3 ease-anim fade-bottom" style="color: white;">SPONSORS AND PARTNERS</h1>
+            <p class="speakersparagraph ease-anim fade-bottom-2">
                 Greatest thanks to all the sponsors and partners who are with us for this year's CS Expo! This event wouldn't
                 be where it is today without your support.
             </p>
-
-            <div class="row row-cols-3 ">
+            <div class="spacer"></div>
+            <div class="row row-cols-3 ease-anim fade-bottom-3">
                 {
                 partners_info.map((partner) => (
                     <img class="col partner" src={partner.src} alt={partner.alt} />
                     ))
                 }
             </div>
-            
+            <div class="spacer"></div>
             <a href="/partners" class="cse-button">Check them out!</a>
+            <div class="spacer"></div>
         </div>
     </section>
-      
+    <script src="../scripts/scroll-animation.js"></script>
 </BaseLayout>

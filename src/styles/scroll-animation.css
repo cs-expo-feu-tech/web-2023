@@ -1,0 +1,95 @@
+.ease-anim {
+    position: relative;
+    opacity: 0;
+}
+
+.ease-anim.active {
+    opacity: 1;
+}
+
+.active.fade-bottom {
+    animation: fade-bottom 0.3s ease-in 100ms backwards;
+}
+
+.active.fade-bottom-2 {
+    animation: fade-bottom 0.3s ease-in 300ms backwards;
+}
+
+.active.fade-bottom-3 {
+    animation: fade-bottom 0.3s ease-in 500ms backwards;
+}
+
+.active.fade-left {
+    animation: fade-left 0.3s ease-in;
+}
+
+.active.fade-right {
+    animation: fade-right 0.3s ease-in;
+}
+
+.active.drop-in {
+    animation: drop-in 1s ease 200ms backwards;
+}
+
+.active.drop-in-2 {
+    animation: drop-in 1s ease 500ms backwards;
+}
+
+.drop-in {
+    animation: drop-in 1s ease 200ms backwards;
+}
+
+.drop-in-2 {
+    animation: drop-in 1s ease 500ms backwards;
+}
+
+.ease-left {
+    animation: fade-left 1s ease 500ms;
+}
+
+@keyframes fade-bottom {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes fade-left {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-right {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes drop-in {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}

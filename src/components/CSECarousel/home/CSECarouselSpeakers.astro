@@ -17,6 +17,7 @@ export interface Props {
 
 const { speakers } = Astro.props;
 
+{ /* @ts-ignore */ }
 const speakerlist = speakers.reduce((acc, curr) => {
   return acc.concat(curr.speakers);
 }, []);

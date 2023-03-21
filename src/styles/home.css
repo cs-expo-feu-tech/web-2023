@@ -1,5 +1,6 @@
 .home-container{
     padding: 0;
+    background-image: url("../images/expo_bg-2.png");
 }
 .section-cs-expo{
     background-image: url("../images/expo_bg-2.png");
@@ -19,7 +20,7 @@
     transform: scale(1.2);
 }
 .section-dev-day{
-    background-image: url("../images/indiv-projects-bg.png");
+    background-image: url("../images/bg_4.png");
     background-size: cover;
     background-position: center;
 }
@@ -28,4 +29,111 @@
     font-size: 10rem;
     text-align: center;
     color: #D9D9D9;
+}
+.cs-expo .tape {
+    color: black;
+    font-weight: bolder;
+    background-image: url("/images/dt4.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: scale(120%);
+}
+
+.cs-expo .cse-date-sticker {
+    position: absolute;
+    right: 10%;
+    bottom: 20%;
+    transform: rotate(16deg);
+    padding: 0;
+
+    z-index: 2;
+}
+
+.devday {
+    overflow: hidden;
+}
+
+.devday .tape {
+    color: black;
+    font-weight: bolder;
+    background-image: url("/images/dt3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: scale(120%);
+}
+
+.devday .cse-date-sticker {
+    position: absolute;
+    left: 10%;
+    bottom: 20%;
+    transform: rotate(-16deg);
+    padding: 0;
+
+    z-index: 2;
+}
+
+.cse-button {
+    text-decoration: none;
+    color: white;
+
+    background-image: url("/images/FW_Paper_Black_27.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 1rem 2rem;
+
+    mask-image: url("/images/btnmask.png");
+    mask-size: 100% 100%;
+
+    transition: transform 0.2s ease;
+}
+
+.cse-button:hover {
+    color: white;
+    transform: scale(1.2);
+}
+
+#about{
+    background: url('/images/white_paper_tile.png');
+}
+
+#speakers {
+    background: url('/images/indiv-projects-bg.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#sponsors {
+    overflow: hidden;
+    background: url('images/indiv-projects-bg.png');
+}
+
+.speakersparagraph{
+    color: white;
+}
+
+img.partner {
+    width: 128px !important;
+    height: 128px;
+    object-fit: contain;
+    background-color: white;
+
+    padding: 0.75rem;
+    margin: 1rem;
+    border-radius: 1rem;
+
+    box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+img.partner:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 0.5rem 0.25rem rgba(0, 0, 0, 0.25);
+}
+
+.spacer{
+    height: 10vh;
 }

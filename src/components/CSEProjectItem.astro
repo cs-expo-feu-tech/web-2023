@@ -1,4 +1,6 @@
 ---
+import "../styles/scroll-animation.css"
+
 export interface Props {
     id: string;
     title: string;
@@ -55,13 +57,15 @@ const { id, title, poster, group_name } = Astro.props;
     .project-item:hover img {
         transform: scale(1.1);
     }
+    
 </style>
 
 <a href={`/projects/${id}`}>
-    <div class="project-item">
+    <div class="project-item ease-anim fade-bottom">
         <img class="project-item-imgs" src={poster} alt={`${group_name}'s poster`} />
         <p class="group-name h4">
             {title}
         </p>
     </div>
 </a>
+<script src="../scripts/scroll-animation.js"></script>

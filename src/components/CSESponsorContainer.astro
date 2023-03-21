@@ -1,4 +1,6 @@
 ---
+import '../styles/scroll-animation.css'
+
 export interface Props {
     id?: string
     category_color: string;
@@ -24,8 +26,10 @@ const { id, category_color, category_name } = Astro.props;
 </style>
 
 <div id={id} class="cse-sponsor-container container-fluid p-5">
-    <div class="container">
+    <div class="container ease-anim fade-right">
         <p id="category_name" class="h4 pb-3 fs-1">{category_name}</p>
         <slot />
     </div>
 </div>
+
+<script src="../scripts/scroll-animation.js"></script>

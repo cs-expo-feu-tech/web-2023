@@ -2,7 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import CSEProjectItem from "../../components/CSEProjectItem.astro";
 import "../../styles/project-list.css";
-
+import "../../styles/scroll-animation.css"
 import groups from "../../assets/groups.json";
 ---
 
@@ -10,8 +10,8 @@ import groups from "../../assets/groups.json";
     <div class="projectlist">
         <div class="content">
             <div class="header container">
-                <h1 class="title fs-1">COLLECTIONS OF INNOVATION</h1>
-                <p class="desc fs-5">
+                <h1 class="title fs-1 drop-in">COLLECTIONS OF INNOVATION</h1>
+                <p class="desc fs-5 drop-in-2">
                     Come and see the diverse range of projects presented by each
                     group at our event. Witness the demonstration of their
                     knowledge and skills, showcasing unique ideas and cool
@@ -40,6 +40,6 @@ import groups from "../../assets/groups.json";
 
             </div>
         </div>
-        <img id="tape" src="/images/FW_Tape_21.png" alt="tape" style="transform: scale(120%); padding-top: 16rem; margin: -10%"/>
+        <div class="plastic col-12"></div>
     </div>
 </BaseLayout>
