@@ -20,7 +20,7 @@
     transform: scale(1.2);
 }
 .section-dev-day{
-    background-image: url("../images/bg_4.png");
+    background-image: url("/images/bg_4.png");
     background-size: cover;
     background-position: center;
 }

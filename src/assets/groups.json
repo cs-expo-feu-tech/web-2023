@@ -575,8 +575,8 @@
             }
         ]
     },
-    "nakakapagpagabag": {
-        "slug": "nakakapagpagabag",
+    "nakakapagpabagabag": {
+        "slug": "nakakapagpabagabag",
         "group_name": "Nakakapagpabagabag",
         "poster": "Nakakapagpabagabag.png",
         "title": "Android Mobile Application for Detecting Fake Medicine Packaging Through Application of Image Processing",
@@ -661,11 +661,11 @@
     "samgroupsal": {
         "slug": "samgroupsal",
         "group_name": "Samgroupsal",
-        "poster": "Samgroupsal.png",
+        "poster": "Samgroupsal.PNG",
         "title": "Cobb Angle Digital Measurement Mobile Application: An Object and Landmark detection application for diagnosing scoliosis using Convolutional Neural Network",
         "abstract": "Measuring and acquiring one's Cobb angle is often done manually to diagnose and classify conditions related to one's spine. Dealing with manual computations is time-consuming, and human errors are likely to occur. To solve this problem, the researchers devised a mobile application that automatically performs the calculations required to obtain the Cobb angle. The doctor only needs to upload or take a photo of the spine radiograph of the patient then the app will automatically compute the cobb angle. The app will utilize image pre-processing techniques and computer vision applications such as object detection and landmark detection in conjunction with a Convolutional Neural Network technique to carry out measurements on the photo. This will aid medical professionals with a quick assessment that can assist them in making a diagnosis of a patient's spine condition.",
         "description": "CADMA is a mobile application that utilize object detection, landmark detection, and convolutional neural network that can automate the manual measurement of the spine's cobb angle and classify the gathered data depending on the guidelines set for each scoliosis type.",
-        "group_photo": "Samgroupsal",
+        "group_photo": "samgroupsal.png",
         "group_avp": "",
         "group_manuscript": "",
         "developers": [
