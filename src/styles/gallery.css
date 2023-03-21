@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+h2{
+    color: white;
+    text-align: center;
+}
 
 .gallery-container{
     background-image: url("../images/indiv-projects-bg-chain.png"), url("../images/indiv-projects-bg.png");
