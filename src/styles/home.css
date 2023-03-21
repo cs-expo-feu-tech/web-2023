@@ -6,14 +6,12 @@
     background-image: url("/images/expo_bg-2.png");
     background-size: cover;
     background-position: center;
-
     overflow: hidden;
 }
 .logo{
     transition: transform 0.5s;
-    width: 64vw;
+    width: 48vw;
     min-width: 384px;
-
     object-fit: cover;
 }
 .logo:hover{
@@ -32,21 +30,17 @@
 }
 .cs-expo .tape {
     color: black;
-    font-weight: bolder;
-    background-image: url("/images/dt4.png");
+    background-image: url("/images/dt5.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    transform: scale(120%);
+    transform: scale(70%);
+    font-family: "Akira Expanded";
 }
 
 .cs-expo .cse-date-sticker {
     position: absolute;
-    right: 10%;
-    bottom: 20%;
-    transform: rotate(16deg);
     padding: 0;
-
     z-index: 2;
 }
 
@@ -57,21 +51,62 @@
 .devday .tape {
     color: black;
     font-weight: bolder;
-    background-image: url("/images/dt3.png");
+    background-image: url("/images/FW_Duct_Tape_Gray_02.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    transform: scale(120%);
+    transform: scale(70%);
+    font-family: "Akira Expanded";
 }
 
 .devday .cse-date-sticker {
     position: absolute;
-    left: 10%;
-    bottom: 20%;
-    transform: rotate(-16deg);
     padding: 0;
-
     z-index: 2;
+}
+
+@media (min-width: 576px) {
+    .cs-expo .cse-date-sticker {
+        right: 5%;
+        bottom: 15%;
+    }
+    .devday .cse-date-sticker {
+        right: 0%;
+        bottom: 20%;
+    }
+}
+
+@media (min-width: 768px) {
+    .cs-expo .cse-date-sticker {
+        right: 10%;
+        bottom: 15%;
+    }
+    .devday .cse-date-sticker {
+        right: 10%;
+        bottom: 20%;
+    }
+}
+
+@media (min-width: 992px) {
+    .cs-expo .cse-date-sticker {
+        right: 15%;
+        bottom: 15%;
+    }
+    .devday .cse-date-sticker {
+        right: 15%;
+        bottom: 20%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .cs-expo .cse-date-sticker {
+        right: 20%;
+        bottom: 20%;
+    }
+    .devday .cse-date-sticker{
+        right: 20%;
+        bottom: 20%;
+    }
 }
 
 .cse-button {
@@ -83,7 +118,7 @@
     background-repeat: no-repeat;
     background-size: 100%;
     padding: 1rem 2rem;
-
+    font-family: "Akira Expanded";
     mask-image: url("/images/btnmask.png");
     mask-size: 100% 100%;
 
