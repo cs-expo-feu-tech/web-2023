@@ -1,0 +1,53 @@
+---
+import CSECarouselCard from '../CSECarouselCard.astro';
+
+export interface Props {
+    index: number;
+    committee: {
+        id: string,
+        name: string,
+        description: string,
+        heads: {
+            name: string,
+            image: string
+        }[],
+        members: {
+            name: string
+        }[]
+    }
+}
+
+const { index, committee } = Astro.props;
+---
+
+<style>
+    .committee-photo {
+        min-width: 100px;
+        max-width: 256px;
+
+        aspect-ratio: 1;
+
+        object-fit: cover;
+    }
+</style>
+
+<CSECarouselCard index={index}>
+    <div class="d-flex flex-row row">
+        {            
+            committee.heads.map((head) => (
+                <div class="d-flex flex-column align-items-center p-3 col">
+                    <img src={`/images/about/committee/${head.image}`} alt={`Photo of ${head.name}`} class="ratio ratio-1x1 rounded-circle committee-photo">
+                    <p class="text-center fs-2 fw-bold mt-3">{head.name}</p>
+                </div>
+            ))
+        }
+    </div>
+    <div class="px-3 px-md-5 py-3 text-center">
+        <h2 class="fw-bold fs-2" id={`carousel-${index}`}>
+            {committee.name}
+        </h2>
+        <p class="fs-5">
+            {committee.description}
+        </p>
+    </div>
+</CSECarouselCard> 

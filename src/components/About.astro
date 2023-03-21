@@ -1,0 +1,127 @@
+---
+
+---
+<style>
+*{
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline:none;
+    transition: all .2s linear;
+}
+.section{
+    padding:0 7%;
+}
+
+h1{
+    font-size: 7rem;
+}
+
+p{
+    font-size: 3rem;
+}
+
+.about{
+    height: auto;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: url('/images/cs_expo_2.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 2rem;
+}
+
+.about .content{
+    padding:4rem;
+    flex:1 1 40rem;
+    text-align: justify;
+    text-justify: inter-word;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about .content h1{
+    font-size: 4rem;
+    color:#fff;
+    text-align:center;
+}
+
+.about .content p{
+    font-size: 1rem;
+    color:#fff;
+    padding:1rem 0;
+}
+
+a.button1{
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-weight:300;
+    color:#FFFFFF;
+    text-align:center;
+    transition: all 0.2s;
+}
+
+a.button1:hover{
+    color:#000000;
+    background-color:#FFFFFF;
+}
+
+.partners{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: url("/images/cs_expo_2.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 9rem;
+}
+
+@media (max-width:768px){
+    .home .content{
+        text-align: center;
+    }
+}
+
+@media (max-width:600px){
+    .home .content h1{
+        font-size: 4rem;
+    }
+    a.button1{
+        display:block;
+        margin:0.4em auto;
+    }
+}
+
+</style>
+
+<section class="about" id="about">
+
+    <div class="content">
+        <h1>ABOUT CS EXPO 2023</h1>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+        Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+        
+        <a href="something" class="button1">LEARN MORE</a>
+    </div>
+
+
+</section>

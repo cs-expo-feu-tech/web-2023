@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h2{
+    color: white;
+    text-align: center;
+}
+
+.gallery-container{
+    background-image: url("../images/indiv-projects-bg-chain.png"), url("../images/indiv-projects-bg.png");
+    background-position: top, bottom;
+    background-repeat: no-repeat, repeat;
+    background-size: contain;
+    overflow: hidden;
+}
+header{
+    width: min(80vw, 900px);
+    margin: 4rem auto;
+    color: #fff; 
+}
+header .primary-text{
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    font-size: min(10vw, 5rem);
+    letter-spacing: 3px;
+    text-align: center;
+    font-family: "Akira Expanded";
+}
+header .secondary-text{
+    font-family: "DIN";
+    text-align: justify;
+    font-size: min(3vw, 1.5rem);
+}
+
+.img-container{
+    display: grid;
+    align-content: center;
+    margin: 6rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 30px;
+}
+
+.img-container img{
+    background-color: #e1e1e1;
+    display: block;
+    width: min(100%, 600px);
+    height: auto;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 768px){
+    .img-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .img-container{
+        margin: 4rem;
+    }
+
+    
+}
+@media screen and (max-width: 576px){
+    .img-container img{
+        width: min(100%, 300px);
+    }
+    .img-container{
+        margin: 2rem;
+    }
+    
+}

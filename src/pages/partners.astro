@@ -1,0 +1,159 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import CSESponsorContainer from "../components/CSESponsorContainer.astro";
+import CSESponsorCard from "../components/CSESponsorCard.astro";
+
+import partners from "../assets/partners.json";
+---
+
+<style>
+.partners-container {
+    background-image: url("../images/indiv-projects-bg-chain.png"), url("../images/indiv-projects-bg.png");
+    background-position: top, bottom;
+    background-repeat: no-repeat, repeat;
+    background-size: contain;
+    color: white;
+}
+
+.partners-img {
+    -webkit-mask-image: url("/images/mask.png");
+    mask-image: url("/images/mask.png");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    position: relative;
+}
+
+.shape {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+}
+
+.spacer {
+    height: 10vh;
+}
+
+.section-bg-1 {
+    background-image: url("../components/FW_Paper_Black_27.png");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    padding: 200px 70px 50px 70px;
+    margin: 70px 0 100px 0;
+    opacity: 60%;
+}
+
+.section-bg-2 {
+    background-image: url("../components/FW_Paper_Black_26.png");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    padding: 50px 70px 50px 70px;
+    margin-top: 70px;
+    opacity: 60%;
+}
+
+.card-groups {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 20px 0 20px;
+}
+
+@media screen and (max-width: 500px) {
+    .section-bg-1 {
+        padding: 300px 70px 50px 70px;
+        margin: 0px 0 100px 0;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .chain-container {
+        margin-bottom: -260px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .card-groups {
+        justify-content: center;
+    }
+}
+</style>
+
+<BaseLayout title="Partners">
+    <div class="partners-container">
+        <!-- Start of Banner -->
+        <div class="d-flex flex-wrap">
+            <div class="row g-0 justify-content-center justify-content-lg-end align-items-center">
+                <div class="mt-5 col-10 col-lg-4">
+                    <h1 class="text-white">
+                        OUR PARTNERS
+                    </h1>
+                    <p>
+                        We are delighted to announce that CS EXPO 2023 is made
+                        possible by our partnerships with exceptional companies
+                        and organizations in the industry. These partners bring
+                        valuable knowledge and expertise to the event, ensuring
+                        that it is informative, engaging, and impactful. It's an
+                        honor to work with them to make this event a success.
+                    </p>
+                </div>
+                <div class="spacer d-lg-none"></div>
+                <div class="d-none d-lg-block offset-lg-1 col-10 col-lg-6 partners-img">
+                    <img class="w-100" src="/images/filler.png" />
+                    <img class="shape" src="/images/shape_89.png" />
+                </div>
+                <div class="d-block d-lg-none offset-lg-1 col-10 col-lg-6">
+                    <img class="w-100" src="/images/filler.png" />
+                </div>
+            </div>
+        </div>
+        <!-- End of Banner -->
+        
+
+        {
+            partners.partner_groups.map((partner_group) => {
+                const card_elements = partner_group.partners.map((partner) => {
+                    var elem;
+
+                    if (partner.requires_bg_logo) {
+                        elem = (
+                            <CSESponsorCard
+                                html_class="col"
+                                partner_name={partner.name}
+                                partner_img={`/images/partners/${partner_group.path}/${partner.logo}`}
+                                links={partner.links}
+                                requires_bg_logo
+                                bg_color={partner.bg_color}
+                            />
+                        )
+                    } else {
+                        elem = (
+                            <CSESponsorCard
+                                html_class="col"
+                                partner_name={partner.partner_name}
+                                partner_img={partner.partner_img}
+                                links={partner.links}
+                            />
+                        )
+                    }
+
+                    return elem;
+                });
+
+                return (
+                    <CSESponsorContainer category_name={partner_group.title} category_color={partner_group.color}>
+                        <div class="row row-cols-1 row-cols-md-3 row-cols-xl-4">
+                            {card_elements}
+                        </div>
+                    </CSESponsorContainer>
+                    <div class="spacer" />
+                );
+            })
+        }
+    </div>
+</BaseLayout>

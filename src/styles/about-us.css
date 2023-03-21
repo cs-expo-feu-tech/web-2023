@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.spacer{
+    height: 5rem;
+}
+.about-container{
+    background-image: url("../images/indiv-projects-bg-chain.png"), url("../images/indiv-projects-bg.png");
+    background-position: top, bottom;
+    background-repeat: no-repeat, repeat;
+    background-size: contain;
+    overflow: hidden;
+}
+
+.carousel-caption{
+    transform: translateY(60%);
+}
+.carousel-caption p, .carousel-caption h5{
+    font-size: min(3vw, 1.25rem);
+}
+
+.container-secondary-text{
+    padding: 2rem;
+}
+.header .primary-text{
+    font-size: min(10vw, 5rem);
+}
+.primary-text{
+    color: #fff; 
+    font-family: "Akira Expanded";
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: min(7vw, 3.5rem);
+    letter-spacing: 3px;
+    text-align: center;
+}
+.secondary-text{
+    font-family: "DIN";
+    text-align: justify;
+    font-size: min(3vw, 1.5rem);
+    color: #fff; 
+    width: min(80vw, 900px);
+    margin: 0 auto;
+}
+
+
+@media screen and (max-width: 768px){
+    .spacer{
+        height: 3rem;
+    }
+    .img-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .img-container{
+        margin: 4rem;
+    }
+    .carousel-caption{
+        top: 85% !important;
+        transform: translateY(0);
+        margin-bottom: 5rem;
+    }
+
+    
+}
+@media screen and (max-width: 576px){
+    .spacer{
+        height: 1.5rem;
+    }
+    .img-container img{
+        width: min(100%, 300px);
+    }
+    .img-container{
+        margin: 2rem;
+    }  
+    .carousel-inner{
+        /* height: max(90vw, 750px); */
+    }
+    .carousel-caption{
+        margin-bottom: 5rem;
+    }
+}

@@ -1,0 +1,31 @@
+---
+export interface Props {
+    id?: string
+    category_color: string;
+    category_name: string;
+}
+
+const { id, category_color, category_name } = Astro.props;
+---
+
+<style define:vars={{category_color}}>    
+    .cse-sponsor-container {
+        position: relative;
+        box-shadow: inset 0 0 5em black;
+    }
+    
+    .container{
+        position: relative;
+    }
+    
+    #category_name {
+        color: var(--category_color);
+    }
+</style>
+
+<div id={id} class="cse-sponsor-container container-fluid p-5">
+    <div class="container">
+        <p id="category_name" class="h4 pb-3 fs-1">{category_name}</p>
+        <slot />
+    </div>
+</div>

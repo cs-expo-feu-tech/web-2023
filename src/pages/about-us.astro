@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/about-us.css';
+
+import faculty from '../assets/about/faculty.json';
+import committee from '../assets/about/committee.json';
+
+import CSECarouselFaculty from '../components/CSECarousel/about/CSECarouselFaculty.astro';
+import CSECarouselCommittee from '../components/CSECarousel/about/CSECarouselCommittee.astro';
+---
+
+<BaseLayout>
+    <div class="container-fluid about-container text-white text-center">
+      <div class="container mt-5">
+        <h1 class="title fs-1 pt-5">About CS EXPO 2023</h1>
+        <p class="desc fs-5 py-5">
+          The CS Expo showcases diverse students' innovative solutions in areas such as image processing and machine learning, with engaging presentations and insightful discussions. It's a must-attend event for an insightful experience.
+        </p>
+      </div>
+    
+      <main class="my-5">
+        <section class="mt-5 faculty-container">
+          <h1 class="primary-text">
+              Faculty
+          </h1>
+        
+          <CSECarouselFaculty faculty={faculty} />
+        </section>
+
+        <section class="mt-5 commitee-container">
+          <h1 class="primary-text">
+            Committee
+          </h1>
+          <CSECarouselCommittee committees={committee} />
+        </section>
+      </main>
+    </div>
+</BaseLayout>
