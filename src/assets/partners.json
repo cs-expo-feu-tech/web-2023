@@ -61,19 +61,6 @@
                     }
                 },
                 {
-                    "id": "cgi",
-                    "name": "CGI Philippines, Inc.",
-                    "logo": "cgi.png",
-                    "requires_bg_logo": true,
-                    "bg_color": "#ffffff",
-                    "links": {
-                        "facebook": "https://www.facebook.com/connect2CGI",
-                        "linkedin": "https://www.linkedin.com/company/cgi/",
-                        "website": "https://www.cgi.com/philippines/en",
-                        "twitter": "https://twitter.com/CGI_Global"
-                    }
-                },
-                {
                     "id": "trend_micro",
                     "name": "Trend Micro",
                     "logo": "trend.jpg",

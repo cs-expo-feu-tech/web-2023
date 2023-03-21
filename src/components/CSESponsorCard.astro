@@ -18,6 +18,10 @@ const { html_class, partner_img, partner_name, requires_bg_logo, links } = Astro
 const bg_color = Astro.props.bg_color || "#ffffff";
 ---
 <style define:vars={{bg_color}}>
+    .tooltip {
+        padding-bottom: 0.5rem !important;
+    }
+
     .bg {
         background-color: var(--bg_color);
     }
@@ -29,45 +33,121 @@ const bg_color = Astro.props.bg_color || "#ffffff";
     .partner-img > img {
         object-fit: contain;
     }
+
+    .hyper {
+        display: block;
+        width: 100%;
+        margin-top: 0.25rem;
+        padding: 0.5rem;
+        background-color: rgb(48, 48, 48);
+        border-radius: 0.25rem;
+
+        transition-property: box-shadow, transform;
+        transition-duration: 0.1s;
+        transition-timing-function: ease;
+    }
+
+    .hyper:hover {
+        transform: translate(-2px, -2px);
+        box-shadow: 2px 2px aqua;
+    }
+
+    .hyper * {
+        color: white;
+    }
+
+    .bx {
+        font-size: 1rem;
+        margin-right: 0.5rem;
+    }
+
+    .marquee-mask {
+        mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
+    }
+
+    .marquee {
+        animation: marquee 10s ease-in-out alternate infinite;
+    }
+
+    @keyframes marquee {
+        0% {
+            transform: translate(20, 0);
+        }
+        100% {
+            transform: translate(-120%, 0);
+        }
+    }
 </style>
 
 <div class={`${html_class} d-flex flex-column align-items-center py-5`}>
-    <div class={`${requires_bg_logo && 'bg'} partner-img ratio ratio-1x1 rounded overflow-hidden mb-3`}>
+    <div class={`${requires_bg_logo && 'bg'} partner-img ratio ratio-1x1 rounded overflow-hidden mb-3`} data-bs-toggle="tooltip" data-bs-placement="top" title={partner_name}>
         <img class="p-4" src={partner_img} alt={`${partner_name}'s logo`}>
     </div>
     
-    <div class="card-body text-white">
-        <p class="h4 text-center card-title" style="text-shadow: 1px 1px aqua">{ partner_name }</p>
+        <div class="w-100 overflow-hidden">
+            <p class="h4 text-center card-title mb-3 text-nowrap partner-names" style="text-shadow: 1px 1px aqua">{ partner_name }</p>
+        </div>
 
         {
             links.website && (
-                <a target="_blank" href={links.website} class="card-text text-white text-decoration-none">
-                <i class='bx bxl-chrome' ></i> <span style="color: aqua;">Website</span></a><br>
+                <a target="_blank" href={links.website} class="hyper card-text text-white text-decoration-none">
+                <i class='bx bx-globe' ></i> <span class="w-100">Website</span></a>
             )
         }
         {
             links.facebook && (
-                <a target="_blank" href={links.facebook} class="card-text text-white text-decoration-none">
-                <i class='bx bxl-facebook-circle'></i> <span style="color: aqua;">Facebook</span></a><br>
+                <a target="_blank" href={links.facebook} class="hyper card-text text-white text-decoration-none">
+                <i class='bx bxl-facebook-circle' ></i> <span class="w-100">Facebook</span></a>
             )
         }
         {
             links.twitter && (
-                <a target="_blank" href={links.twitter} class="card-text text-white text-decoration-none">
-                <i class='bx bxl-twitter' ></i> <span style="color: aqua;">Twitter</span></a><br>
+                <a target="_blank" href={links.twitter} class="hyper card-text text-white text-decoration-none">
+                <i class='bx bxl-twitter' ></i> <span class="w-100">Twitter</span></a>
             )
         }
         {
             links.instagram && (
-                <a target="_blank" href={links.instagram} class="card-text text-white text-decoration-none">
-                <i class='bx bxl-instagram' ></i> <span style="color: aqua;">Instagram</span></a><br>
+                <a target="_blank" href={links.instagram} class="hyper card-text text-white text-decoration-none">
+                <i class='bx bxl-instagram' ></i> <span class="w-100">Instagram</span></a>
             )
         }
         {
             links.linkedin && (
-                <a target="_blank" href={links.linkedin} class="card-text text-white text-decoration-none">
-                <i class='bx bxl-linkedin' ></i> <span style="color: aqua;">LinkedIn</span></a><br>
+                <a target="_blank" href={links.linkedin} class="hyper card-text text-white text-decoration-none">
+                <i class='bx bxl-linkedin' ></i> <span class="w-100">LinkedIn</span></a>
             )
         }
-    </div>
 </div>
+
+<script>
+    function isElementOverflowing(element) {
+        var overflowX = element.offsetWidth < element.scrollWidth,
+            overflowY = element.offsetHeight < element.scrollHeight;
+
+        return (overflowX || overflowY);
+    }
+
+    // Get all the partner names
+    const partner_names = document.querySelectorAll(".partner-names");
+
+    document.addEventListener("DOMContentLoaded", e => {
+        // Loop through all the partner names
+        partner_names.forEach((partner_name) => {
+            // If the partner name is overflowing, add marquee class
+            if (isElementOverflowing(partner_name)) {
+                partner_name.classList.add("marquee");
+
+                // add marquee mask to parent div
+                partner_name.parentElement.classList.add("marquee-mask");
+            }
+        });
+
+        // Initialize tooltip
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            // @ts-ignore
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    })
+</script>

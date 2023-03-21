@@ -1,24 +1,89 @@
 {
     "faculty_members": [
         {
-            "id": "jdelacruz",
-            "name": "Juan Dela Cruz",
-            "image": "placeholder-image.png",
-            "bio": "Everyone has the right to an effective remedy by the competent national tribunals for acts"
+            "id": "sambat",
+            "name": "Dr. Shaneth Ambat",
+            "image": "ambat.JPG"
         },
         {
-            "id": "jodoe",
-            "name": "John Doe",
-            "image": "placeholder-image.png",
-            "bio": "The quick brown fox jumps over the lazy dog.",
-            "quote": "[DEMO TEXT] Congratulations! You have taken the first step to a better future. I am here to help you achieve your goals. Again, congratulations!"
+            "id": "emalasaga",
+            "name": "Ms. Elisa Malasaga",
+            "image": "malasaga.JPG"
         },
         {
-            "id": "jadoe",
-            "name": "John Doe",
-            "image": "placeholder-image.png",
-            "bio": "Whereas disregard and contempt for human rights have resulted",
-            "quote": "[DEMO TEXT] Congratulations! You have taken the first step to a better future. I am here to help you achieve your goals. Again and again, congratulations!"
+            "id": "aarguzon",
+            "name": "Mr. Angelo Arguzon",
+            "image": "arguzon.jpeg"
+        },
+        {
+            "id": "smoraga",
+            "name": "Dr. Shirley Moraga",
+            "image": "moraga.png"
+        },
+        {
+            "id": "galcober",
+            "name": "Ms. Geliza Marie Alcober",
+            "image": "alcober.jpeg"
+        },
+        {
+            "id": "htejuco",
+            "name": "Dr. Hadji Tejuco",
+            "image": "tejuco.jpeg"
+        },
+        {
+            "id":"amagpantay",
+            "name": "Mr. Abraham Magpantay",
+            "image": "magpantay.jpeg"
+        },
+        {
+            "id": "trevano",
+            "name": "Mr. Teodoro Revano Jr.",
+            "image": "revano.jpeg"
+        },
+        {
+            "id": "ebustillos",
+            "name": "Mr. Edward Bustillos",
+            "image": "bustillos.png"
+        },
+        {
+            "id": "mdumlao",
+            "name": "Dr. Menchita Dumlao",
+            "image": "dumlao.jpeg"
+        },
+        {
+            "id": "jandales",
+            "name": "Mr. John Kenneth Andales",
+            "image": "andales.jpeg"
+        },
+        {
+            "id": "dbayyou",
+            "name": "Dr. Demeke Bayyou",
+            "image": "bayyou.png"
+        },
+        {
+            "id": "jcperalta",
+            "name": "Mr. JC Albert Peralta",
+            "image": "peralta.jpeg"
+        },
+        {
+            "id": "mreyes",
+            "name": "Mr. Marc Reyes",
+            "image": "reyes.jpeg"
+        },
+        {
+            "id": "bhabal",
+            "name": "Ms. Beau Gray Habal",
+            "image": "habal.JPG"
+        },
+        {
+            "id": "jraviz",
+            "name": "Dr. Jennalyn Raviz",
+            "image": "raviz.png"
+        },
+        {
+            "id": "eflores",
+            "name": "Dr. Emerson Flores",
+            "image": "emerson.jpeg"
         }
     ]
 }

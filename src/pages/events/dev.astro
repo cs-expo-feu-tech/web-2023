@@ -4,8 +4,17 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import CSESpeakersPage from "../../components/CSESpeakersPage.astro";
 
 import schedule_dev from "../../assets/schedules/devday.json";
+import speaker_list from "../../assets/speakers.json";
 
 import "../../styles/fonts.css";
+
+const speakers = [];
+
+speaker_list.speakers.filter(speaker => speaker.event_id === "devday").forEach(speaker_group => {
+    speaker_group.speakers.forEach(speaker => {
+        speakers.push(speaker);
+    });
+});
 ---
 
 <style is:global>
@@ -112,15 +121,12 @@ import "../../styles/fonts.css";
                 background-repeat: repeat;
                 background-size: 128px 128px;
                 mask-image: url("/images/rip_mask.png");
-                mask-size: 100% 100%;
-
-                -webkit-mask-image: url("/images/rip_mask.png");
-                -webkit-mask-size: cover;
+                mask-size: cover;
             }
             
             @media only screen and (min-width: 768px) {
                 .container-spill::before {
-                    -webkit-mask-size: 100% 100%;
+                    mask-size: 100% 100%;
                 }
             }
 
@@ -149,9 +155,13 @@ import "../../styles/fonts.css";
 
     <div class="container mt-5 py-3 py-md-5 text-white">
         <h1 class="w-100 m-auto text-center text-uppercase py-5 display-2">Speakers</h1> 
-        <CSESpeakersPage title="Keynote Title" name="Speaker Name" credential="Speaker Credentials" image_url="https://via.placeholder.com/200" />        
-        <CSESpeakersPage title="Talk 1 Title" name="Speaker Name" credential="Speaker Credentials" image_url="https://via.placeholder.com/200" />        
-        <CSESpeakersPage title="Talk 2 Title" name="Speaker Name" credential="Speaker Credentials" image_url="https://via.placeholder.com/200" />        
+        {
+            speakers.map(speaker => {
+                return (
+                    <CSESpeakersPage title={speaker.talk_title} name={speaker.name} credential={speaker.credential} image_url={`/images/speakers/${speaker.photo}`} />
+                );
+            })
+        }
     </div>
 
     <div class="container py-3 py-md-5 text-white">

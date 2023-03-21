@@ -1,0 +1,29 @@
+{
+    "faculty_members": [
+        {
+            "id": "jdelacruz",
+            "name": "Juan Dela Cruz",
+            "image": "placeholder-image.png",
+            "bio": "Everyone has the right to an effective remedy by the competent national tribunals for acts"
+        },
+        {
+            "id": "jodoe",
+            "name": "John Doe",
+            "image": "placeholder-image.png",
+            "bio": "The quick brown fox jumps over the lazy dog.",
+            "quote": "[DEMO TEXT] Congratulations! You have taken the first step to a better future. I am here to help you achieve your goals. Again, congratulations!"
+        },
+        {
+            "id": "jadoe",
+            "name": "John Doe",
+            "image": "placeholder-image.png",
+            "bio": "Whereas disregard and contempt for human rights have resulted",
+            "quote": "[DEMO TEXT] Congratulations! You have taken the first step to a better future. I am here to help you achieve your goals. Again and again, congratulations!"
+        },
+        {
+            "id": "jadoe",
+            "name": "John Doe",
+            "image": "placeholder-image.png"
+        }
+    ]
+}

@@ -21,6 +21,7 @@ Partners.partner_groups.forEach((group) => {
         partners_info.push({
             src: `/images/partners/${group.path}/${partner.logo}`,
             alt: `Logo of ${partner.name}`,
+            tooltip: partner.name
         });
     });
 });
@@ -63,8 +64,11 @@ Partners.partner_groups.forEach((group) => {
         <div class="container text-white text-center">
             <h1 class="display-1 ease-anim fade-bottom">SPEAKERS</h1>
             <p class="fs-5 ease-anim fade-bottom-2">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua
+                We are thrilled to introduce our esteemed speakers who are experts in the fields 
+                of artificial intelligence and cybersecurity. They bring a wealth of knowledge and 
+                experience to this event, and we are honored to have them share their insights with 
+                us. Get ready to learn about the latest advancements in AI and how to stay secure 
+                in today's digital landscape. Let's give a warm welcome to our talented speakers!
             </p>
         </div>
         <div class="ease-anim fade-bottom-3">
@@ -78,13 +82,10 @@ Partners.partner_groups.forEach((group) => {
         <div class="col-10 text-center d-flex flex-column justify-content-center py-5">
             <h1 class="display-3 ease-anim fade-bottom">ABOUT CS EXPO</h1>
     
-            <p class="ease-anim fade-bottom-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
-            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+            <p class="ease-anim fade-bottom-2">Get ready to witness the brilliance of various groups as they 
+                participate in our upcoming event. Each group will showcase their knowledge and skills, 
+                offering unique and innovative ideas and solutions. Be prepared to experience cutting-edge 
+                technologies such as machine learning, image classification, and much more!</p>
             
         </div>
         <a href="/about-us" class="cse-button">Learn More</a>
@@ -100,12 +101,10 @@ Partners.partner_groups.forEach((group) => {
                 be where it is today without your support.
             </p>
             <div class="spacer"></div>
-            <div class="row row-cols-3 ease-anim fade-bottom-3">
-                {
-                partners_info.map((partner) => (
-                    <img class="col partner" src={partner.src} alt={partner.alt} />
-                    ))
-                }
+            <div class="row row-cols-3 ease-anim fade-bottom-3 d-flex justify-content-center">
+                { partners_info.map((partner) => (
+                    <img class="col partner" src={partner.src} alt={partner.alt} data-bs-toggle="tooltip" data-bs-placement="top" title={partner.tooltip}/>
+                ))}
             </div>
             <div class="spacer"></div>
                 <a href="/partners" class="cse-button">Check them out!</a>
@@ -114,3 +113,14 @@ Partners.partner_groups.forEach((group) => {
     </section>
     <script src="../scripts/scroll-animation.js"></script>
 </BaseLayout>
+
+<script>
+    document.addEventListener("DOMContentLoaded", e => {
+        // Initialize tooltip
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            // @ts-ignore
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    })
+</script>

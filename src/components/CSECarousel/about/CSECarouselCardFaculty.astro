@@ -7,7 +7,7 @@ export interface Props {
         id: string,
         name: string,
         image: string,
-        bio: string,
+        bio?: string,
         quote?: string
     };
 }
@@ -17,7 +17,7 @@ const { faculty_member, index } = Astro.props;
 
 <style>
     img {
-        max-height: 384px;
+        max-height: 256px;
         object-fit: contain;
         aspect-ratio: 1;
     }
@@ -44,14 +44,12 @@ const { faculty_member, index } = Astro.props;
 </style>
 
 <CSECarouselCard index={index}>
-    <img src={`/images/about/faculty/${faculty_member.image}`} class="w-100" alt={`Photo of ${faculty_member.name}`}/>
+    <img src={`/images/about/faculty/${faculty_member.image}`} class="rounded-circle" alt={`Photo of ${faculty_member.name}`}/>
     <div class="px-3 px-md-5 py-3 text-center">
         <h2 class="fw-bold fs-2" id={`faculty-${index}`}>
             {faculty_member.name}
         </h2>
         {faculty_member.quote && <blockquote class="fs-4 fst-italic"> {`${faculty_member.quote}`} </blockquote>}
-        <p class="fs-5">
-            {faculty_member.bio}
-        </p>
+        {faculty_member.bio   && <p class="fs-5">{faculty_member.bio}</p> }
     </div>
 </CSECarouselCard> 

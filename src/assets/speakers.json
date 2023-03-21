@@ -1,7 +1,7 @@
 {
     "speakers": [
         {
-            "event": "cs-expo",
+            "event_id": "cs-expo",
             "speakers": [
                 {
                     "name": "Anthony De Luna",
@@ -13,14 +13,21 @@
             ]
         },
         {
-            "event": "devday",
+            "event_id": "devday",
             "speakers": [
                 {
-                    "name": "Juan Dela Cruz",
-                    "credential": "Student",
-                    "bionote": "The Quick Brown Fox Jumps Over The Lazy Dog.",
-                    "photo": "placeholder.png",
-                    "talk_title": "A sample"
+                    "name": "Cherry Murillon",
+                    "credential": "Founder-Chief Executive Officer, Cawil.AI Solutions",
+                    "bionote": "Ma'am Cherry has experience as a CFO and business development focusing on partnerships in the ports and maritime industry as well as AI technology. Additionally, she has experience in science and research, specifically in environmental applications and computer vision research. She has received various awards and recognitions for her work, including being chosen as one of the \"Startup Pinay Founders\" for the Singapore Week of Innovation and Technology (SWITCH) Philippine Delegate and being an alumni founder of Ideaspace Foundation. In addition, she has also participated in various acceleration and mentorship programs, including the AWS ASEAN Women Founders Mentorship Program and the PortXL First Maritime Acceleration Program. She holds a Bachelor of Science in Chemistry from Mapua University and has completed various entrepreneurship and management programs from the Asian Institute of Management.",
+                    "photo": "CherryMurillon.png",
+                    "talk_title": "Maximizing the Power of Image Processing to Improve Day-to-Day Functions"
+                },
+                {
+                    "name": "Terrence Errard D. Teh",
+                    "credential": "Data Science, BPI",
+                    "bionote": "Terrence currently heads BPI's Data Science & Analytics division, where he works with a large multidisciplinary group of data scientists, analysts, and strategists, to drive maximum opportunities and value to the enterprise through thorough and responsible use of AI and data. He is also acting OIC of the Bank's Customer Insights & Analytics team, which provides strategic and tactical support to various business units towards BPI's mission of becoming a customer-centric organization. Prior to joining the Bank, he studied Mathematics at the University of the Philippines-Diliman as a recipient of the DOST ASTHRDP Scholarship. As a researcher, he specializes in applications of Functional Analysis and Matrix Theory, having published and presented his work locally and abroad. As an educator, he has taught high school, competitive, and undergraduate level math. He also regularly conducts general audience workshops, seminars and career talks on Data Science, AI, Mathematics, and Finance. Outside his professional endeavors, Terrence is a classically trained musician and a choral conductor. An alumnus of the world-renowned Philippine Madrigal Singers, he continues to pursue his musical interests as part of the BPI Voices Chorale. He is also an avid language learner, and is proud of his 1600-day Duolingo streak.",
+                    "photo": "TerrenceTeh.jpg",
+                    "talk_title": "Data Analytics and How to Keep Up with a Data-Driven Generation"
                 }
             ]
         }
