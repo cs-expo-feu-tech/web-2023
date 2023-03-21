@@ -1,31 +1,207 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+import CSECarouselSpeakers from '../components/CSECarousel/home/CSECarouselSpeakers.astro';
+
+import Speakers from '../assets/speakers.json'
+import Partners from '../assets/partners.json'
+
 import '../styles/home.css';
-import Speakers from '../components/Speakers.astro';
-import About from '../components/About.astro';
-import Partners from '../components/Partners.astro';
+
+// import Speakers from '../components/Speakers.astro';
+// import About from '../components/About.astro';
+// import Partners from '../components/Partners.astro';
+
+const partners_info = [];
+
+// Enumerate through the partners
+Partners.partner_groups.forEach((group) => {
+    group.partners.forEach((partner) => {
+        partners_info.push({
+            src: `/images/partners/${group.path}/${partner.logo}`,
+            alt: `Logo of ${partner.name}`,
+        });
+    });
+});
 ---
+
+<style>
+    .cs-expo .tape {
+        color: black;
+        font-weight: bolder;
+        background-image: url("/images/dt4.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: scale(120%);
+    }
+
+    .cs-expo .cse-date-sticker {
+        position: absolute;
+        right: 10%;
+        bottom: 20%;
+        transform: rotate(16deg);
+        padding: 0;
+
+        z-index: 2;
+    }
+
+    .devday {
+        overflow: hidden;
+    }
+
+    .devday .tape {
+        color: black;
+        font-weight: bolder;
+        background-image: url("/images/dt3.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: scale(120%);
+    }
+
+    .devday .cse-date-sticker {
+        position: absolute;
+        left: 10%;
+        bottom: 20%;
+        transform: rotate(-16deg);
+        padding: 0;
+
+        z-index: 2;
+    }
+
+    .cse-button {
+        text-decoration: none;
+        color: white;
+
+        background-image: url("/images/FW_Paper_Black_27.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        padding: 1rem 2rem;
+
+        mask-image: url("/images/btnmask.png");
+        mask-size: 100% 100%;
+
+        transition: transform 0.2s ease;
+    }
+
+    .cse-button:hover {
+        color: white;
+        transform: scale(1.2);
+    }
+
+    #speakers {
+        background: url('/images/cs_expo_2.png') no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    #sponsors {
+        overflow: hidden;
+    }
+
+    img.partner {
+        width: 128px !important;
+        height: 128px;
+        object-fit: contain;
+
+        padding: 0.75rem;
+        margin: 1rem;
+        border-radius: 1rem;
+
+        box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.25);
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    img.partner:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 0.5rem 0.25rem rgba(0, 0, 0, 0.25);
+    }
+
+</style>
 
 <BaseLayout>
     <div class="container-fluid home-container">
-        <div class="container-fluid section-cs-expo">
-            <div class="row justify-content-center align-items-center logo-row">
-                <div class="logo-container">
-                    <a href="/events/expo">
-                        <img class="img-fluid mx-auto d-block logo" src="/images/logo-2.png" width="40%">
-                    </a>
-                </div>  
+        <div class="cs-expo p-5 position-relative d-flex flex-column justify-content-center align-items-center section-cs-expo">
+            <div style="z-index: 1">
+                <img class="p-5 m-0 logo" src="/images/logo-2.png">
+            </div>
+            <a href="/events/expo" class="cse-button" style="z-index: 3">Learn More</a>
+            <div class="container w-100 h-100 position-absolute d-flex flex-column align-items-center justify-content-center">
+                <img src="/images/events/text_white_thin.svg" role="presentation" class="p-1"/>
+                <img src="/images/events/text_white_thin.svg" role="presentation" class="p-1"/>
+                <img src="/images/events/text_white_thin.svg" role="presentation" class="p-1"/>
+            </div>
+            <div class="p-4 p-lg-5 tape cse-date-sticker">
+                <p class="w-100 m-0 text-center">March</p>
+                <p class="w-100 mx-0 my-3 text-center h2">14-15</p>
             </div>
         </div>
-        <div class="container-fluid section-dev-day">
-            <div class="row justify-content-center">
-                <div class="col-8">
-                    <p class="dev-day-title">DEVDAY</p>
+        <div class="devday position-relative text-white d-flex flex-column justify-content-center align-items-center p-5 section-dev-day">
+            <div class="text-white d-flex flex-column justify-content-center align-items-center p-5">
+                <div class="cse-text-container py-5 py-sm-0 position-relative start-0 bottom-0 z-1">
+                    <p class="lh-1 m-0 fs-logo-size-sub font-thedus-wide">// CS EXPO 2023</p>
+                    <p class="lh-1 fw-bold m-0 font-akira-expanded display-1">DEVDAY</p>
+                </div>
+                <a href="/events/dev" class="cse-button" style="z-index: 2">Learn More</a>
+                <div class="p-4 p-lg-5 tape cse-date-sticker">
+                    <p class="w-100 m-0 text-center">March</p>
+                    <p class="w-100 m-0 text-center h1">22</p>
                 </div>
             </div>
         </div>
     </div>
-    <Speakers />
-    <About />
-    <Partners />
+    <!-- <Speakers /> -->
+
+    <section id="speakers" class="container-fluid py-5">
+        <div class="container text-white text-center">
+            <h1 class="display-1">SPEAKERS</h1>
+            <p class="fs-5">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua
+            </p>
+        </div>
+        <CSECarouselSpeakers speakers={Speakers.speakers} />
+    </section>
+
+    <!-- <About /> -->
+    <section id="about" class="d-flex flex-column align-items-center container py-5">
+        <div class="text-center d-flex flex-column justify-content-center py-5">
+            <h1 class="display-3">ABOUT CS EXPO</h1>
+    
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+            
+        </div>
+        <a href="/about-us" class="cse-button">Learn More</a>
+    </section>
+    
+    <!-- <Partners /> -->
+    <section id="sponsors" class="d-flex flex-column align-items-center justify-content-center container-fluid text-center py-5">
+        <div class="container">
+            <h1 class="display-3">SPONSORS AND PARTNERS</h1>
+            <p class="speakersparagraph">
+                Greatest thanks to all the sponsors and partners who are with us for this year's CS Expo! This event wouldn't
+                be where it is today without your support.
+            </p>
+
+            <div class="row row-cols-3 ">
+                {
+                partners_info.map((partner) => (
+                    <img class="col partner" src={partner.src} alt={partner.alt} />
+                    ))
+                }
+            </div>
+            
+            <a href="/partners" class="cse-button">Check them out!</a>
+        </div>
+    </section>
+      
 </BaseLayout>

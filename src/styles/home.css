@@ -4,22 +4,24 @@
 .section-cs-expo{
     background-image: url("../images/expo_bg-2.png");
     background-size: cover;
-    height: 100vh;
-}
-.logo-row{
-    height: 100%;
-}
-.logo-container{
-    padding: 0;
+    background-position: center;
+
+    overflow: hidden;
 }
 .logo{
     transition: transform 0.5s;
+    width: 64vw;
+    min-width: 384px;
+
+    object-fit: cover;
 }
 .logo:hover{
     transform: scale(1.2);
 }
 .section-dev-day{
     background-image: url("../images/indiv-projects-bg.png");
+    background-size: cover;
+    background-position: center;
 }
 .dev-day-title{
     font-family: "Akira Expanded";
