@@ -12,20 +12,21 @@ export async function getStaticPaths() {
             description: group.description,
             photo: group.poster,
             developers: group.developers,
-            avp: group.group_avp,
+            awards: group.awards ? group.awards : null,
+	    avp: group.group_avp,
             manuscript: group.group_manuscript
         }
     });
 
-    return pages.map(({slug, name, title, abstract, description, photo, developers, avp, manuscript}) => {
+    return pages.map(({slug, name, title, abstract, description, photo, developers, awards, avp, manuscript}) => {
         return {
             params: { slug },
-            props: { slug, name, title, abstract, description, photo, developers, avp, manuscript }
+            props: { slug, name, title, abstract, description, photo, developers, awards, avp, manuscript }
         }
     });
 }
 
-const { slug, name, title, abstract, description, photo, developers, avp, manuscript } = Astro.props;
+const { slug, name, title, abstract, description, photo, developers, awards, avp, manuscript } = Astro.props;
 
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CSEDevCard from "../../components/CSEDevCard.astro";
@@ -55,8 +56,20 @@ import '../../styles/scroll-animation.css';
                 </p>
             </div>
         </div>
+	{ awards &&
+	<div class="drop-in text-white text-center">
+		<div class="spacer"></div>
+		<div class="container">
+			<p class="fs-1 h1">Awards<p>
+			<p>Congratulations to the group's hard work! in DEVDAY, they have received the following awards:</p>
+			{
+				awards.map((award) => (<p class="d-inline-block mx-1 px-3 rounded-pill text-bg-success">{award.award_title}</p>))
+			}
+		</div>
+	</div>
+	}
         <div class="spacer"></div>
-        <div class="row justify-content-center align-items-top">
+	<div class="row justify-content-center align-items-top">
             <div class="col-10 col-xl-4">
                 <style>
                     .poster-img {
