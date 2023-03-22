@@ -26,6 +26,12 @@
                 "name": "Joshua Matthew Padilla",
                 "photo": "151.png"
             }
+        ],
+        "awards": [
+            {
+                "award_title": "Innovative Award",
+                "place": 2
+            }
         ]
     },
     "4horsemen": {
@@ -84,6 +90,16 @@
                 "name": "Vernes Abella",
                 "photo": "53.png"
             }
+        ],
+        "awards": [
+            {
+                "award_title": "Best Thesis for Category",
+                "data": "Image Processing"
+            },
+            {
+                "award_title": "Overall Best Thesis",
+                "place": 3
+            }
         ]
     },
     "bamm": {
@@ -108,6 +124,12 @@
             {
                 "name": "Marc Ivan Guillermo",
                 "photo": "136.png"
+            }
+        ],
+        "awards": [
+            {
+                "award_title": "Innovative Award",
+                "place": 1
             }
         ]
     },
@@ -166,6 +188,12 @@
             {
                 "name": "Ruth De Guzman",
                 "photo": "218.png"
+            }
+        ],
+        "awards": [
+            {
+                "award_title": "Best Thesis for Category",
+                "data": "Artificial Intelligence and Deep Learning"
             }
         ]
     },
@@ -312,6 +340,12 @@
                 "name": "Lealyn Rose Froilan",
                 "photo": "41.png"
             }
+        ],
+        "awards": [
+            {
+                "award_title": "Best Thesis for Category",
+                "data": "Path Finding"
+            }
         ]
     },
     "edith": {
@@ -340,6 +374,16 @@
             {
                 "name": "Neille Cedrick Juan",
                 "photo": "115.png"
+            }
+        ],
+        "awards": [
+            {
+                "award_title": "Best Thesis for Category",
+                "data": "Data Analytics"
+            },
+            {
+                "award_title": "Overall Best Thesis",
+                "place": 2
             }
         ]
     },
@@ -457,6 +501,24 @@
                 "name": "Roland Val Tristan Bonus",
                 "photo": "27.png"
             }
+        ],
+        "awards": [
+            {
+                "award_title": "Best Poster",
+                "place": 1
+            },
+            {
+                "award_title": "O&B Award for Best Presentation",
+                "custom_color": "#f36d28"
+            },
+            {
+                "award_title": "Best Thesis for Category",
+                "data": "Data Analytics"
+            },
+            {
+                "award_title": "Overall Best Thesis",
+                "place": 1
+            }
         ]
     },
     "kamigami": {
@@ -514,6 +576,16 @@
             {
                 "name": "Kendrew Javelosa",
                 "photo": "230.png"
+            }
+        ],
+        "awards": [
+            {
+                "award_title": "Best Thesis for Category",
+                "data": "Artificial Intelligence"
+            },
+            {
+                "award_title": "Innovative Award",
+                "place": 3
             }
         ]
     },
@@ -597,6 +669,12 @@
             {
                 "name": "Renee Anne Joy Gula",
                 "photo": "232.png"
+            }
+        ],
+        "awards": [
+            {
+                "award_title": "Best Poster",
+                "place": 3
             }
         ]
     },
@@ -829,6 +907,16 @@
             {
                 "name": "Marielle Vaay",
                 "photo": "6.png"
+            }
+        ],
+        "awards": [
+            {
+                "award_title": "Best Thesis for Category",
+                "data": "AI, Deep Learning, and Health"
+            },
+            {
+                "award_title": "Best Poster",
+                "place": 2
             }
         ]
     },
