@@ -12,8 +12,8 @@ export async function getStaticPaths() {
             description: group.description,
             photo: group.poster,
             developers: group.developers,
-            awards: group.awards ? group.awards : null,
-	    avp: group.group_avp,
+            awards: group.awards,
+	        avp: group.group_avp,
             manuscript: group.group_manuscript
         }
     });
