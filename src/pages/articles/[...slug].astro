@@ -17,6 +17,30 @@ const { Content } = await article.render();
     .astro-code {
         padding: 1rem;
         border-radius: 0.5rem;
+
+        background-color: rgb(44, 44, 44) !important;
+    }
+
+    a {
+        color: cyan;
+    }
+
+    code {
+        color: magenta;
+        font-weight: bold;
+
+        background-color: #f5f5f5d5;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+    }
+
+    pre > code {
+        color: unset;
+        font-weight: unset;
+
+        background-color: unset;
+        padding: unset;
+        border-radius: unset;
     }
     
     img {
@@ -34,12 +58,18 @@ const { Content } = await article.render();
 
         filter: brightness(0.6);
     }
-    .content-container{
+
+    body {
         background-image: url("../images/indiv-projects-bg.png");
         background-repeat: repeat;
         background-size: contain;
-        color: white;
     }
+
+    .article-container{
+        color: white;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
 </style>
 
 <BaseLayout title={ article.data.title }>
@@ -50,8 +80,8 @@ const { Content } = await article.render();
                 <h1 class="text-center text-white display-2">{ article.data.title }</h1>
             </div>
         </div>
-        <div class="container px-3 py-5 fs-5">
-            <p class="fs-">
+        <div class="container my-sm-5 p-5 fs-5 article-container rounded-sm-3">
+            <p>
                 <i class="bx bx-calendar-alt" /> { article.data.publish_date.toLocaleDateString("en-US", {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'}) }
                 <br />
                 <i class="bx bx-user" /> { article.data.author }
