@@ -47,6 +47,10 @@
     animation: fade-left 1s ease 500ms;
 }
 
+.ease-right {
+    animation: fade-right 1s ease 500ms;
+}
+
 @keyframes fade-bottom {
     from {
         transform: translateY(50px);

@@ -34,10 +34,16 @@ const { Content } = await article.render();
 
         filter: brightness(0.6);
     }
+    .content-container{
+        background-image: url("../images/indiv-projects-bg.png");
+        background-repeat: repeat;
+        background-size: contain;
+        color: white;
+    }
 </style>
 
 <BaseLayout title={ article.data.title }>
-    <div class="container-fluid p-0">
+    <div class="container-fluid p-0 content-container">
         <div class="position-relative">
             <img src={ article.data.image.src } alt={ article.data.image.alt } class="img-fluid heading-img">
             <div class="position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center">

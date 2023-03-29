@@ -21,11 +21,6 @@ header{
     color: #fff; 
 }
 header .primary-text{
-    font-weight: 800;
-    text-transform: uppercase;
-    margin-bottom: 2rem;
-    font-size: min(10vw, 5rem);
-    letter-spacing: 3px;
     text-align: center;
     font-family: "Akira Expanded";
 }

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import '../styles/gallery.css';
+import '../styles/scroll-animation.css';
 ---
 
 <style>
@@ -37,80 +38,81 @@ import '../styles/gallery.css';
 <BaseLayout>
     <div class="container-fluid gallery-container">
         <header>
-            <h1 class="primary-text">Gallery</h1>
-            <p class="secondary-text">In years to come, CS EXPO continues to showcase innovative ideas from CS students. Various groups work together to brainstorm and develop systems to present to the institution, in turn being presented to the public. Here is a glimpse of the previous expos held by CS students in FEU Tech!</p>
+            <h1 class="fs-1 p-5 primary-text drop-in">Gallery</h1>
+            <p class="secondary-text drop-in-2">In years to come, CS EXPO continues to showcase innovative ideas from CS students. Various groups work together to brainstorm and develop systems to present to the institution, in turn being presented to the public. Here is a glimpse of the previous expos held by CS students in FEU Tech!</p>
         </header>
         <main class="container">
-            <p class="category-heading h2">CS EXPO 2022</p>
+            <p class="category-heading h2 ease-anim fade-bottom">CS EXPO 2022</p>
             <div class="img-container" >
-                <div class="list-item">
+                <div class="list-item ease-anim fade-bottom">
                     <img src="/images/previous-csexpo/2022-1.jpg" alt="">
                 </div>
-                <div class="list-item">
+                <div class="list-item ease-anim fade-bottom">
                     <img src="/images/previous-csexpo/2022-2.png" alt="">
                 </div>
-                <div class="list-item">
+                <div class="list-item ease-anim fade-bottom">
                     <img src="/images/previous-csexpo/2022-3.jpg" alt="">
                 </div>
-                <div class="list-item">
+                <div class="list-item ease-anim fade-bottom">
                     <img src="/images/previous-csexpo/2022-4.png" alt="">
                 </div>
             </div>
-            <p class="category-heading h2">CS EXPO 2019</p>
+            <p class="category-heading h2 ease-anim fade-bottom">CS EXPO 2019</p>
             <div class="img-container">
-                <div class="list-item">
+                <div class="list-item ease-anim fade-bottom">
                     <img src="/images/previous-csexpo/2019-1.jpg" alt="">
                 </div>
-                <div class="list-item">
+                <div class="list-item ease-anim fade-bottom">
                     <img src="/images/previous-csexpo/2019-2.jpg" alt="">
                 </div>
-                <div class="list-item">
+                <div class="list-item ease-anim fade-bottom">
                     <img src="/images/previous-csexpo/2019-3.jpg" alt="">
                 </div>
-                <div class="list-item">
+                <div class="list-item ease-anim fade-bottom">
                     <img src="/images/previous-csexpo/2019-4.jpg" alt="">
                 </div>
             </div>
             
-            <p class="category-heading h2">CS EXPO 2018</p>
+            <p class="category-heading h2 ease-anim fade-bottom">CS EXPO 2018</p>
             <div class="img-container">
-                <div class="list-item">
+                <div class="list-item ease-anim fade-bottom">
                     <img src="/images/previous-csexpo/2k18-1.jpg" alt="">
                 </div>
-                <div class="list-item">
+                <div class="list-item ease-anim fade-bottom">
                     <img src="/images/previous-csexpo/2k18-2.jpg" alt="">
                 </div>
-                <div class="list-item">
+                <div class="list-item ease-anim fade-bottom">
                     <img src="/images/previous-csexpo/2k18-3.jpg" alt="">
                 </div>
-                <div class="list-item">
+                <div class="list-item ease-anim fade-bottom">
                     <img src="/images/previous-csexpo/2k18-4.jpg" alt="">
                 </div>
-                <div class="list-item">
+                <div class="list-item ease-anim fade-bottom">
                     <img src="/images/previous-csexpo/2k18-6.jpg" alt="">
                 </div>
-                <div class="list-item">
+                <div class="list-item ease-anim fade-bottom">
                     <img src="/images/previous-csexpo/2k18-8.jpg" alt="">
                 </div>
             </div>
-            <p class="category-heading h2">CS EXPO 2017</p>
+            <p class="category-heading h2 ease-anim fade-bottom">CS EXPO 2017</p>
             <div class="img-container">
-                <div class="list-item">
+                <div class="list-item ease-anim fade-bottom">
                     <img src="/images/previous-csexpo/2k17-1.jpg" alt="">
                 </div>
-                <div class="list-item">
+                <div class="list-item ease-anim fade-bottom">
                     <img src="/images/previous-csexpo/2k17-2.png" alt="">
                 </div>
-                <div class="list-item">
+                <div class="list-item ease-anim fade-bottom">
                     <img src="/images/previous-csexpo/2k17-3.jpg" alt="">
                 </div>
-                <div class="list-item">
+                <div class="list-item ease-anim fade-bottom">
                     <img src="/images/previous-csexpo/2k17-4.png" alt="">
                 </div>
-                <div class="list-item">
+                <div class="list-item ease-anim fade-bottom">
                     <img src="/images/previous-csexpo/2k17-5.jpg" alt="">
                 </div>
             </div>
         </main>
     </div>
+    <script src="../scripts/scroll-animation.js"></script>
 </BaseLayout>
