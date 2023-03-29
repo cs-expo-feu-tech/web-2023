@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+import { getCollection } from 'astro:content';
+const articleEntries = await getCollection('articles');
+---
+
+<BaseLayout title="Articles">
+    <div class="container-fluid py-5">
+        <div class="container">
+            <p>Hello World!</p>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+                {articleEntries.map(articleEntry => (
+                    <div class="col">
+                        <a href={`/articles/${articleEntry.slug}`} class="text-decoration-none text-reset">
+                            <div class="card p-0">
+                                <img src={articleEntry.data.image.src} alt={articleEntry.data.image.alt} class="card-image img-fluid ratio ratio-16x9">
+                                <div class="card-body">
+                                    <p class="card-title h5">{articleEntry.data.title}</p>
+                                    <p class="card-text">{articleEntry.data.description}</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </div>
+</BaseLayout>
