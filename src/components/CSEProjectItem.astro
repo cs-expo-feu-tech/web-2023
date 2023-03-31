@@ -1,5 +1,6 @@
 ---
 import "../styles/scroll-animation.css"
+import "shimmer-css/shimmer.css"
 
 export interface Props {
     id: string;
@@ -20,10 +21,11 @@ const { id, title, poster, group_name } = Astro.props;
     }
 
     .project-item > img {
-        width: 420px;
-        height: 594px;
+        aspect-ratio: 1/1.41; /* A4 */
+        width: 100%;
         display: block;
     }
+
     .group-name {
         font-family: "DIN";
         position: absolute;
@@ -44,16 +46,20 @@ const { id, title, poster, group_name } = Astro.props;
     .project-item:hover {
         cursor: pointer;
     }
+    
     .project-item:hover .group-name {
         opacity: 1;
     }
+
     .project-item:hover {
         filter: brightness(70%);
         transition: 0.3s;
     }
+
     .project-item img {
         transition: 0.3s ease-out;
     }
+
     .project-item:hover img {
         transform: scale(1.1);
     }
@@ -61,11 +67,12 @@ const { id, title, poster, group_name } = Astro.props;
 </style>
 
 <a href={`/projects/${id}`}>
-    <div class="project-item ease-anim fade-bottom">
+    <div class="project-item shimmer-wrapper shimmer-animate">
         <img class="project-item-imgs" src={poster} alt={`${group_name}'s poster`} />
         <p class="group-name h4">
             {title}
         </p>
     </div>
 </a>
-<script src="../scripts/scroll-animation.js"></script>
+
+<!-- <script src="../scripts/scroll-animation.js"></script> -->
