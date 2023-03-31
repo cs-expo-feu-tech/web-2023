@@ -11,6 +11,8 @@ export async function getStaticPaths() {
 import BaseLayout from '../../layouts/BaseLayout.astro';
 const { article } = Astro.props;
 const { Content } = await article.render();
+
+const header_img = `url(${article.data.image.src})`;
 ---
 
 <style is:global>
@@ -19,6 +21,15 @@ const { Content } = await article.render();
         border-radius: 0.5rem;
 
         background-color: rgb(44, 44, 44) !important;
+    }
+
+    p:not(.meta), a, h1, h2, h3, h4 {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+
+        word-break: break-word;
+
+        hyphens: auto;
     }
 
     a {
@@ -50,7 +61,7 @@ const { Content } = await article.render();
     }
 </style>
 
-<style>
+<style define:vars={{header_img}}>
     .heading-img {
         width: 100%;
         max-height: 400px;
@@ -68,20 +79,35 @@ const { Content } = await article.render();
     .article-container{
         color: white;
         background-color: rgba(0, 0, 0, 0.3);
+
+        text-align: justify;
+    }
+
+    .title-header {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                    var(--header_img);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        mask-image: url("/public/images/rip_mask_bottom.png");
+        mask-repeat: no-repeat;
+        mask-size: cover;
+        mask-position: bottom;
+
+        padding: 6rem 0;
+        padding-bottom: calc(6rem + 8vw);
     }
 
 </style>
 
 <BaseLayout title={ article.data.title }>
     <div class="container-fluid p-0 content-container">
-        <div class="position-relative">
-            <img src={ article.data.image.src } alt={ article.data.image.alt } class="img-fluid heading-img">
-            <div class="position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center">
-                <h1 class="text-center text-white display-2">{ article.data.title }</h1>
-            </div>
+        <div class="title-header">
+            <h1 class="container text-center text-white display-4">{ article.data.title }</h1>
         </div>
-        <div class="container my-sm-5 p-5 fs-5 article-container rounded-sm-3">
-            <p>
+        <div class="container mb-5 p-5 fs-5 article-container rounded rounded-sm-3">
+            <p class="meta">
                 <i class="bx bx-calendar-alt" /> { article.data.publish_date.toLocaleDateString("en-US", {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'}) }
                 <br />
                 <i class="bx bx-user" /> { article.data.author }
