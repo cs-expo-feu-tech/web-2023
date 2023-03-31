@@ -100,7 +100,7 @@ const award_fg_colors = ["white", "black", "white", "white"]
         <div id="awards" class="text-center">
             <div class="container z-1">
                 <p class="fs-1 h1">Awards</p>
-                <p>Congratulations to the group's hard work! in <span class="font-akira-expanded">DEVDAY</span>, they have received the following awards:</p>
+                <p>Congratulations to the group's hard work! in <span class="devday">DEVDAY</span>, they have received the following awards:</p>
                 {
                     awards.map((award) => {
                         var bg_color;
@@ -117,7 +117,7 @@ const award_fg_colors = ["white", "black", "white", "white"]
                             fg_color = award_fg_colors[0];
                         }
 
-                        return (<p class="d-inline-block mx-1 px-3 rounded-pill" style={`background-color: ${bg_color}; color: ${fg_color}`} >{award.award_title}</p>)
+                        return (<p class="d-inline-block mx-1 px-3 rounded-pill award-hover" style={`background-color: ${bg_color}; color: ${fg_color}`} >{award.award_title}</p>)
                     })
                 }
             </div>
@@ -165,3 +165,20 @@ const award_fg_colors = ["white", "black", "white", "white"]
         <div class="col-12 spacer plastic"></div>
     </div>
 </BaseLayout>
+
+<script>
+    import JSConfetti from "js-confetti";
+    
+    const confetti = new JSConfetti();
+
+    document.querySelectorAll(".award-hover").forEach((award) => {
+        award.addEventListener("mouseover", () => {
+            confetti.addConfetti({
+                // Add pastel rainbow colors
+                confettiColors: ['#a864fd', '#29cdff', '#78ff44', '#ff718d', '#fdff6a'],
+                confettiRadius: 6,
+                confettiNumber: 200,
+            });
+        })
+    })
+</script>
