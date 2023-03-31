@@ -61,6 +61,13 @@
                 "name": "Miguel Angelo Bartolome",
                 "photo": "266.png"
             }
+        ],
+        "awards": [
+            {
+                "award_title": "Best Presenter Award",
+                "place": 3,
+                "data": "Sean Kobe Adawag"
+            }
         ]
     },
     "alphabeta": {
@@ -675,6 +682,11 @@
             {
                 "award_title": "Best Poster",
                 "place": 3
+            },
+            {
+                "award_title": "Best Presenter Award",
+                "place": 2,
+                "data": "Nicole Anne Mabale"
             }
         ]
     },
@@ -791,6 +803,13 @@
             {
                 "name": "Juan Miguel Duran",
                 "photo": "175.png"
+            }
+        ],
+        "awards": [
+            {
+                "award_title": "Best Presenter Award",
+                "place": 1,
+                "data": "Marc Steven Clemen"
             }
         ]
     },
