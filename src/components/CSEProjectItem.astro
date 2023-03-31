@@ -18,6 +18,9 @@ const { id, title, poster, group_name } = Astro.props;
         text-align: center;
         margin: auto auto;
         overflow: hidden;
+
+
+        transition: all 0.2s;
     }
 
     .project-item > img {
@@ -53,11 +56,10 @@ const { id, title, poster, group_name } = Astro.props;
 
     .project-item:hover {
         filter: brightness(70%);
-        transition: 0.3s;
     }
 
     .project-item img {
-        transition: 0.3s ease-out;
+        transition: 0.2s ease-out;
     }
 
     .project-item:hover img {
@@ -67,7 +69,7 @@ const { id, title, poster, group_name } = Astro.props;
 </style>
 
 <a href={`/projects/${id}`}>
-    <div class="project-item shimmer-wrapper shimmer-animate">
+    <div class="project-item ease-anim fade-bottom shimmer-wrapper shimmer-animate border border-white border-5">
         <img class="project-item-imgs" src={poster} alt={`${group_name}'s poster`} />
         <p class="group-name h4">
             {title}
@@ -75,4 +77,4 @@ const { id, title, poster, group_name } = Astro.props;
     </div>
 </a>
 
-<!-- <script src="../scripts/scroll-animation.js"></script> -->
+<script src="../scripts/scroll-animation.js"></script>
