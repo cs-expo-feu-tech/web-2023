@@ -130,6 +130,18 @@
                         "linkedin": "https://www.linkedin.com/company/sparkup-ph/",
                         "website": "https://www.bworldonline.com/sparkup/"
                     }
+                },
+                {
+                    "id": "wish1075",
+                    "name": "Wish 107.5",
+                    "logo": "wish.png",
+                    "requires_bg_logo": true,
+                    "bg_color": "#ffffff",
+                    "links": {
+                        "facebook": "https://www.facebook.com/WishFM1075",
+                        "website": "https://www.wish1075.com/",
+                        "twitter": "https://twitter.com/wish1075"
+                    }
                 }
             ]
         },
