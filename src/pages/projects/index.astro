@@ -22,22 +22,28 @@ import groups from "../../assets/groups.json";
                 </p>
             </div>
             <div class="spacer"></div>
-            <div class="project-list-container">
+            <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
                 
                 <!-- For each item in 'groups', put them in CSEProjectItem. (astro) -->
                 { Object.keys(groups).map((key) => {
                     const group = groups[key];
                     return (
-                        <CSEProjectItem
-                            id={key}
-                            group_name={group.group_name}
-                            poster={`/images/group-posters/${group.poster}`}
-                            title={group.title}
-                        />
+                        <>
+                        <div class="col">
+                            <CSEProjectItem
+                                id={key}
+                                group_name={group.group_name}
+                                poster={`/images/group-posters/${group.poster}`}
+                                title={group.title}
+                            />
+                        </div>
+                        </>
                     );
                 })}
                 <!-- End foreach -->
 
+            </div>
             </div>
         </div>
         <div class="plastic col-12"></div>
