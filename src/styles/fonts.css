@@ -86,3 +86,9 @@ code, pre, tt {
     font-size: 1rem;
     font-family: "Space Mono", "Courier New", "Courier", "monospace";
 }
+
+.devday {
+    font-family: "Thedus Wide", "Arial Black", "sans-serif" !important;
+    font-weight: 900;
+    font-size: 1.25rem;
+}
