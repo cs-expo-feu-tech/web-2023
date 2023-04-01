@@ -1,11 +1,11 @@
 ---
 title: 'Journey to the FEUture: FEU Tech Kicks Off CS EXPO and DevDay 2023 Featuring Innovations in Technology'
 image: {
-    src: 'https://images.unsplash.com/photo-1680001660273-2a78887352a2',
-    alt: 'Sample Image'
+    src: '/article_assets/pre_event/hero.png',
+    alt: 'CS Expo 2023 hero'
 }
 author: 'CS EXPO Team'
-publish_date: '2023-03-26'
+publish_date: '2023-03-22'
 description: "Get ready for CS EXPO 2023's return!"
 ---
 This March 2023, FEU Institute of Technology spotlights the return of
@@ -66,7 +66,12 @@ that explored all avenues, whether in enhancing the quality of
 machinery, lifting opportunities for products, or augmenting economic
 growth.
 
-CS EXPO 2023 is co-presented by Gold Sponsors Orange & Bronze Software Labs, Philippine Coffee and Barista Institute, and 1740 Coffee Genesis; and is also brought to you by Bronze Sponsors The Chalkboard INC. and Trend Micro. It is also presented by our media partners INQUIRER.net, InqPOP, PILIPINO Mirror, SparkUp, and Wish 107.5, in cooperation with organization partners from different universities.
+CS EXPO 2023 is co-presented by Gold Sponsors Orange & Bronze Software 
+Labs, Philippine Coffee and Barista Institute, and 1740 Coffee Genesis; 
+and is also brought to you by Bronze Sponsors The Chalkboard INC. and 
+Trend Micro. It is also presented by our media partners INQUIRER.net, 
+InqPOP, PILIPINO Mirror, SparkUp, and Wish 107.5, in cooperation with 
+organization partners from different universities.
 
 The three-day conference is open to all students of Computer Science at
 FEU Institute of Technology. For inquiries, please visit the official
