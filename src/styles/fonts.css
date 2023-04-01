@@ -65,6 +65,11 @@
     font-weight: 900;
 }
 
+.font-space-mono {
+    font-family: "Space Mono", "Courier New", "Courier", "monospace" !important;
+    font-weight: 400;
+}
+
 p, a {
     font-family: "DIN", "Bahnscrift", "Arial", "sans-serif";
 }
