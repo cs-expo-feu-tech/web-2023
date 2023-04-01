@@ -100,12 +100,12 @@
         ],
         "awards": [
             {
-                "award_title": "Best Thesis for Category",
-                "data": "Image Processing"
-            },
-            {
                 "award_title": "Overall Best Thesis",
                 "place": 3
+            },
+            {
+                "award_title": "Best Thesis for Category",
+                "data": "Batch 2"
             }
         ]
     },
@@ -200,7 +200,7 @@
         "awards": [
             {
                 "award_title": "Best Thesis for Category",
-                "data": "Artificial Intelligence and Deep Learning"
+                "data": "Batch 3"
             }
         ]
     },
@@ -351,7 +351,7 @@
         "awards": [
             {
                 "award_title": "Best Thesis for Category",
-                "data": "Path Finding"
+                "data": "Batch 6"
             }
         ]
     },
@@ -385,12 +385,12 @@
         ],
         "awards": [
             {
-                "award_title": "Best Thesis for Category",
-                "data": "Data Analytics"
-            },
-            {
                 "award_title": "Overall Best Thesis",
                 "place": 2
+            },
+            {
+                "award_title": "Best Thesis for Category",
+                "data": "Batch 4"
             }
         ]
     },
@@ -519,12 +519,12 @@
                 "custom_color": "#f36d28"
             },
             {
-                "award_title": "Best Thesis for Category",
-                "data": "Data Analytics"
-            },
-            {
                 "award_title": "Overall Best Thesis",
                 "place": 1
+            },
+            {
+                "award_title": "Best Thesis for Category",
+                "data": "Batch 1"
             }
         ]
     },
@@ -587,12 +587,12 @@
         ],
         "awards": [
             {
-                "award_title": "Best Thesis for Category",
-                "data": "Artificial Intelligence"
-            },
-            {
                 "award_title": "Innovative Award",
                 "place": 3
+            },
+            {
+                "award_title": "Best Thesis for Category",
+                "data": "Batch 7"
             }
         ]
     },
@@ -930,12 +930,12 @@
         ],
         "awards": [
             {
-                "award_title": "Best Thesis for Category",
-                "data": "AI, Deep Learning, and Health"
-            },
-            {
                 "award_title": "Best Poster",
                 "place": 2
+            },
+            {
+                "award_title": "Best Thesis for Category",
+                "data": "Batch 5"
             }
         ]
     },
