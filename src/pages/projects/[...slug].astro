@@ -12,27 +12,68 @@ export async function getStaticPaths() {
             description: group.description,
             photo: group.poster,
             developers: group.developers,
-            avp: group.group_avp,
+            awards: group.awards,
+	        avp: group.group_avp,
             manuscript: group.group_manuscript
         }
     });
 
-    return pages.map(({slug, name, title, abstract, description, photo, developers, avp, manuscript}) => {
+    return pages.map(({slug, name, title, abstract, description, photo, developers, awards, avp, manuscript}) => {
         return {
             params: { slug },
-            props: { slug, name, title, abstract, description, photo, developers, avp, manuscript }
+            props: { slug, name, title, abstract, description, photo, developers, awards, avp, manuscript }
         }
     });
 }
 
-const { slug, name, title, abstract, description, photo, developers, avp, manuscript } = Astro.props;
+const { slug, name, title, abstract, description, photo, developers, awards, avp, manuscript } = Astro.props;
 
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CSEDevCard from "../../components/CSEDevCard.astro";
 
 import '../../styles/individual-projects.css';
 import '../../styles/scroll-animation.css';
+
+const award_colors = ["green", "gold", "gray", "brown"];
+const award_fg_colors = ["white", "black", "white", "white"]
 ---
+
+<style>
+    #awards {
+        position: relative;
+        margin: 128px 0 ;
+    }
+
+    #awards::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: calc(100% + 256px);
+        background-color: white;
+
+        top: -128px;
+        left: 0;
+
+        background-image: url("/images/white_paper_tile.png");
+        background-repeat: repeat;
+        background-size: 128px 128px;
+        mask-image: url("/images/rip_mask.png");
+        mask-size: cover;
+
+        z-index: 0;
+    }
+
+    #awards>.container {
+        position: relative;
+        z-index: 1;
+    }
+
+    @media only screen and (min-width: 768px) {
+        #awards::before {
+            mask-size: 100% 100%;
+        }
+    }
+</style>
 
 <BaseLayout title={`${title} by group ${name}`}>
     <script src="../../scripts/scroll-animation.js"></script>
@@ -55,8 +96,42 @@ import '../../styles/scroll-animation.css';
                 </p>
             </div>
         </div>
-        <div class="spacer"></div>
-        <div class="row justify-content-center align-items-top">
+        { awards &&
+        <div id="awards" class="text-center">
+            <div class="container z-1 py-5 py-md-0">
+                <p class="fs-1 h1 drop-in">Awards</p>
+                <p class="drop-in-2">Congratulations to the group's hard work! On <span class="devday">DEVDAY</span>, they have received the following awards:</p>
+                {
+                    awards.map((award) => {
+                        var bg_color;
+                        var fg_color;
+
+                        if (award.custom_color) {
+                            bg_color = award.custom_color;
+                            fg_color = "black";
+                        } else if (award.place) {
+                            bg_color = award_colors[award.place];
+                            fg_color = award_fg_colors[award.place];
+                        } else {
+                            bg_color = award_colors[0];
+                            fg_color = award_fg_colors[0];
+                        }
+
+                        return (
+                            <div class="col-10 col-md-5 col-lg-4 d-inline-block m-2 m-md-3 rounded rounded-2" style={`background-color: ${bg_color} !important; vertical-align: middle;`}>
+                                <div class="m-2 px-5 py-3 rounded rounded-2" style="background-color: rgba(255, 255, 255, 0.75); ">
+                                    <p class="m-0 fs-5 fw-bold">{award.award_title}</p>
+                                    {award.data && <p class="m-0 fs-6">{award.data}</p>}
+                                </div>
+                            </div>
+                        )
+                    })
+                }
+            </div>
+        </div>
+	    }
+    <div class="spacer"></div>
+	<div class="row justify-content-center align-items-top">
             <div class="col-10 col-xl-4">
                 <style>
                     .poster-img {
@@ -97,3 +172,19 @@ import '../../styles/scroll-animation.css';
         <div class="col-12 spacer plastic"></div>
     </div>
 </BaseLayout>
+
+<script>
+    import JSConfetti from "js-confetti";
+    
+    const confetti = new JSConfetti();
+
+    document.getElementById("awards")
+        .addEventListener("mouseenter", () => {
+            confetti.addConfetti({
+                // Add pastel rainbow colors
+                confettiColors: ['#a864fd', '#29cdff', '#78ff44', '#ff718d', '#fdff6a'],
+                confettiRadius: 6,
+                confettiNumber: 200,
+            });
+        });
+</script>

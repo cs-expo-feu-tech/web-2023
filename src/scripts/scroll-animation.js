@@ -12,3 +12,9 @@ function ease(){
 }
 
 window.addEventListener("scroll", ease);
+
+// Added this to load animations without triggering "scrolling" - 
+// elements that are supposed to be shown are not animated unless you "scroll"
+// this also solves the problem of elements that are above the viewport so as
+// to make them not jarring when you scroll back up to them
+document.addEventListener("DOMContentLoaded", ease);
