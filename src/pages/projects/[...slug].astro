@@ -171,14 +171,13 @@ const award_fg_colors = ["white", "black", "white", "white"]
     
     const confetti = new JSConfetti();
 
-    document.querySelectorAll(".award-hover").forEach((award) => {
-        award.addEventListener("mouseover", () => {
+    document.getElementById("awards")
+        .addEventListener("mouseenter", () => {
             confetti.addConfetti({
                 // Add pastel rainbow colors
                 confettiColors: ['#a864fd', '#29cdff', '#78ff44', '#ff718d', '#fdff6a'],
                 confettiRadius: 6,
                 confettiNumber: 200,
             });
-        })
-    })
+        });
 </script>

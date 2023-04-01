@@ -30,7 +30,7 @@ import groups from "../../assets/groups.json";
                     const group = groups[key];
                     return (
                         <>
-                        <div class="col">
+                        <div class="col ease-anim fade-bottom">
                             <CSEProjectItem
                                 id={key}
                                 group_name={group.group_name}
@@ -49,3 +49,5 @@ import groups from "../../assets/groups.json";
         <div class="plastic col-12"></div>
     </div>
 </BaseLayout>
+
+<script src="../../scripts/scroll-animation.js"> </script>

@@ -1,5 +1,4 @@
 ---
-import "../styles/scroll-animation.css"
 import "shimmer-css/shimmer.css"
 
 export interface Props {
@@ -69,12 +68,10 @@ const { id, title, poster, group_name } = Astro.props;
 </style>
 
 <a href={`/projects/${id}`}>
-    <div class="project-item ease-anim fade-bottom shimmer-wrapper shimmer-animate border border-white border-5">
-        <img class="project-item-imgs" src={poster} alt={`${group_name}'s poster`} />
+    <div class="project-item shimmer-wrapper shimmer-animate border border-white border-5">
+        <img class="project-item-imgs" src={poster} alt={`${group_name}'s poster`} loading="lazy" />
         <p class="group-name h4">
             {title}
         </p>
     </div>
 </a>
-
-<script src="../scripts/scroll-animation.js"></script>
