@@ -90,7 +90,7 @@ const header_img = `url(${article.data.image.src})`;
         background-size: cover;
         background-position: center;
 
-        mask-image: url("/public/images/rip_mask_bottom.png");
+        mask-image: url("/images/rip_mask_bottom.png");
         mask-repeat: no-repeat;
         mask-size: cover;
         mask-position: bottom;
@@ -99,6 +99,12 @@ const header_img = `url(${article.data.image.src})`;
         padding-bottom: calc(6rem + 8vw);
     }
 
+    .deco {
+        color: #636363;
+        font-style: italic;
+
+        font-size: 1rem;
+    }
 </style>
 
 <BaseLayout title={ article.data.title }>
@@ -106,14 +112,17 @@ const header_img = `url(${article.data.image.src})`;
         <div class="title-header">
             <h1 class="container text-center text-white display-4">{ article.data.title }</h1>
         </div>
-        <div class="container mb-5 p-5 fs-5 article-container rounded rounded-sm-3">
+        <div class="container mb-5 p-4 p-sm-5 fs-5 article-container rounded rounded-sm-3">
             <p class="meta">
                 <i class="bx bx-calendar-alt" /> { article.data.publish_date.toLocaleDateString("en-US", {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'}) }
                 <br />
                 <i class="bx bx-user" /> { article.data.author }
             </p>
+            <p class="font-space-mono deco w-100 text-start" role="presentation">// begin article</p>
             <hr>
             <Content />
+            <hr>
+            <p class="font-space-mono deco w-100 text-end" role="presentation">// end article</p>
         </div>
     </div>
 </BaseLayout>
