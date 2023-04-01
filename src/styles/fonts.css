@@ -70,6 +70,10 @@
     font-weight: 400;
 }
 
+* {
+    font-variant-ligatures: none;
+}
+
 p, a {
     font-family: "DIN", "Bahnscrift", "Arial", "sans-serif";
 }

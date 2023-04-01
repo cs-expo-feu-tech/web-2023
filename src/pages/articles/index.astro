@@ -26,19 +26,21 @@ import '../../styles/scroll-animation.css';
         <div class="container">
             <h1 class="page-title fs-1 p-5 drop-in">Articles</h1>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 drop-in-2">
-                {articleEntries.map(articleEntry => (
-                    <div class="col">
-                        <a href={`/articles/${articleEntry.slug}`} class="text-decoration-none text-reset">
-                            <div class="card p-0">
-                                <img src={articleEntry.data.image.src} alt={articleEntry.data.image.alt} class="card-image img-fluid ratio ratio-16x9">
-                                <div class="card-body">
-                                    <p class="card-title h5">{articleEntry.data.title}</p>
-                                    <p class="card-text">{articleEntry.data.description}</p>
+                {articleEntries.map(articleEntry => {
+                    if(!articleEntry.data.draft) return (
+                        <div class="col" style="height: 100%">
+                            <a href={`/articles/${articleEntry.slug}`} class="text-decoration-none text-reset d-block" style="height: 100%">
+                                <div class="card p-0" style="height: 100%">
+                                    <img src={articleEntry.data.image.src} alt={articleEntry.data.image.alt} class="card-image img-fluid ratio ratio-16x9">
+                                    <div class="card-body">
+                                        <p class="card-title h5">{articleEntry.data.title}</p>
+                                        <p class="card-text">{articleEntry.data.description}</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
-                ))}
+                            </a>
+                        </div>
+                    )
+                })}
             </div>
         </div>
     </div>

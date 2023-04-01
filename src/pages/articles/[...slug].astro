@@ -8,12 +8,17 @@ export async function getStaticPaths() {
     }));
 }
 
-import BaseLayout from '../../layouts/BaseLayout.astro';
 const { article } = Astro.props;
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
 const { Content } = await article.render();
 
 const header_img = `url(${article.data.image.src})`;
 ---
+
+<!-- Of course, this won't work if JS is disabled -->
+<!-- It's a bit hacky, but this should do -->
+{article.data.draft && <script>window.location.href = "/articles";</script>}
 
 <style is:global>
     .astro-code {
@@ -59,6 +64,34 @@ const header_img = `url(${article.data.image.src})`;
         height: auto;
         aspect-ratio: 16/9;
     }
+
+    blockquote {
+        border-left: 0.25rem solid #636363;
+        padding-left: 1rem;
+    }
+
+    a {
+        font: inherit;
+    }
+
+    table {
+        /* border-collapse: collapse;  */
+        width: 100%;
+
+        background-color: #2c2c2c;
+        border-radius: 0.5rem;
+
+        overflow: hidden;
+        margin-bottom: 1rem;
+    }
+    th, td {
+        padding: 0.5rem;
+    }
+
+    table, th, td {
+        border: 2px solid #636363;
+    }
+    
 </style>
 
 <style define:vars={{header_img}}>

@@ -4,7 +4,7 @@ image: {
     src: '/article_assets/pre_event/hero.png',
     alt: 'CS Expo 2023 hero'
 }
-author: 'CS EXPO Team'
+author: 'Micah A. Pablo'
 publish_date: '2023-03-22'
 description: "Get ready for CS EXPO 2023's return!"
 ---

@@ -12,6 +12,7 @@ const articles = defineCollection({
         author: z.string(),
         publish_date: z.string().transform((str) => new Date(str)),
         description: z.string(),
+        draft: z.boolean(false).optional(),
     })
 });
 
