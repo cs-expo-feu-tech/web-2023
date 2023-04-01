@@ -336,3 +336,7 @@ Unlike a pre-formatted code block, a code span indicates code within a
 normal paragraph. For example:
 
 Use the `printf()` function.
+
+---
+
+Markdown file from [this Github repo](https://github.com/mxstbr/markdown-test-file/blob/master/TEST.md).
