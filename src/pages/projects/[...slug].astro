@@ -98,7 +98,7 @@ const award_fg_colors = ["white", "black", "white", "white"]
         </div>
         { awards &&
         <div id="awards" class="text-center">
-            <div class="container z-1">
+            <div class="container z-1 py-5 py-md-0">
                 <p class="fs-1 h1">Awards</p>
                 <p>Congratulations to the group's hard work! in <span class="devday">DEVDAY</span>, they have received the following awards:</p>
                 {
@@ -117,7 +117,14 @@ const award_fg_colors = ["white", "black", "white", "white"]
                             fg_color = award_fg_colors[0];
                         }
 
-                        return (<p class="d-inline-block mx-1 px-3 rounded-pill award-hover" style={`background-color: ${bg_color}; color: ${fg_color}`} >{award.award_title}</p>)
+                        return (
+                            <div class="d-inline-block m-2 m-md-3 rounded rounded-2" style={`background-color: ${bg_color} !important; vertical-align: middle;`}>
+                                <div class="m-2 px-5 py-3 rounded rounded-2" style="background-color: rgba(255, 255, 255, 0.75); ">
+                                    <p class="m-0 fs-5 fw-bold">{award.award_title}</p>
+                                    {award.data && <p class="m-0 fs-6">{award.data}</p>}
+                                </div>
+                            </div>
+                        )
                     })
                 }
             </div>
