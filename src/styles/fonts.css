@@ -70,3 +70,8 @@ p, a {
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .title {
     font-family: "Akira Expanded", "Arial Black", "sans-serif";
 }
+
+* {
+    /* Happy April Fools. Comic sans for all. */
+    font-family: "Comic Sans MS", "Comic Sans", "Chalkboard", "ChalkboardSE-Regular", "Marker Felt", "Apple Chancery", "ITC Zapf Chancery", "Zapf Dingbats", "cursive", "sans-serif" !important;
+}
