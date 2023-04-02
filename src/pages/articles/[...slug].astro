@@ -1,0 +1,161 @@
+---
+import { getCollection } from 'astro:content';
+export async function getStaticPaths() {
+    const articleEntries = await getCollection('articles');
+    return articleEntries.map((article) => ({
+        params: { slug: article.slug },
+        props: { article } 
+    }));
+}
+
+const { article } = Astro.props;
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const { Content } = await article.render();
+
+const header_img = `url(${article.data.image.src})`;
+---
+
+<!-- Of course, this won't work if JS is disabled -->
+<!-- It's a bit hacky, but this should do -->
+{article.data.draft && <script>window.location.href = "/articles";</script>}
+
+<style is:global>
+    .astro-code {
+        padding: 1rem;
+        border-radius: 0.5rem;
+
+        background-color: rgb(44, 44, 44) !important;
+    }
+
+    p:not(.meta), a, h1, h2, h3, h4 {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+
+        word-break: break-word;
+
+        hyphens: auto;
+    }
+
+    a {
+        color: cyan;
+    }
+
+    code {
+        color: magenta;
+        font-weight: bold;
+
+        background-color: #f5f5f5d5;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+    }
+
+    pre > code {
+        color: unset;
+        font-weight: unset;
+
+        background-color: unset;
+        padding: unset;
+        border-radius: unset;
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+    }
+
+    blockquote {
+        border-left: 0.25rem solid #636363;
+        padding-left: 1rem;
+    }
+
+    a {
+        font: inherit;
+    }
+
+    table {
+        /* border-collapse: collapse;  */
+        width: 100%;
+
+        background-color: #2c2c2c;
+        border-radius: 0.5rem;
+
+        overflow: hidden;
+        margin-bottom: 1rem;
+    }
+    th, td {
+        padding: 0.5rem;
+    }
+
+    table, th, td {
+        border: 2px solid #636363;
+    }
+    
+</style>
+
+<style define:vars={{header_img}}>
+    .heading-img {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+
+        filter: brightness(0.6);
+    }
+
+    body {
+        background-image: url("../images/indiv-projects-bg.png");
+        background-repeat: repeat;
+        background-size: contain;
+    }
+
+    .article-container{
+        color: white;
+        background-color: rgba(0, 0, 0, 0.3);
+
+        text-align: justify;
+    }
+
+    .title-header {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                    var(--header_img);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        mask-image: url("/images/rip_mask_bottom.png");
+        mask-repeat: no-repeat;
+        mask-size: cover;
+        mask-position: bottom;
+
+        padding: 6rem 0;
+        padding-bottom: calc(6rem + 8vw);
+    }
+
+    .deco {
+        color: #636363;
+        font-style: italic;
+
+        font-size: 1rem;
+    }
+</style>
+
+<BaseLayout title={ article.data.title }>
+    <div class="container-fluid p-0 content-container">
+        <div class="title-header">
+            <h1 class="container text-center text-white display-4">{ article.data.title }</h1>
+        </div>
+        <div class="container mb-5 p-4 p-sm-5 fs-5 article-container rounded rounded-sm-3">
+            <p class="meta">
+                <i class="bx bx-calendar-alt" /> { article.data.publish_date.toLocaleDateString("en-US", {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'}) }
+                <br />
+                <i class="bx bx-user" /> { article.data.author }
+            </p>
+            <p class="font-space-mono deco w-100 text-start" role="presentation">// begin article</p>
+            <hr>
+            <Content />
+            <hr>
+            <p class="font-space-mono deco w-100 text-end" role="presentation">// end article</p>
+        </div>
+    </div>
+</BaseLayout>

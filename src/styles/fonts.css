@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
 @font-face {
     font-family: "Thedus Wide";
     src: url("/fonts/Thedus-Wide.woff2") format("woff2"),
@@ -63,12 +65,26 @@
     font-weight: 900;
 }
 
+.font-space-mono {
+    font-family: "Space Mono", "Courier New", "Courier", "monospace" !important;
+    font-weight: 400;
+}
+
+* {
+    font-variant-ligatures: none;
+}
+
 p, a {
     font-family: "DIN", "Bahnscrift", "Arial", "sans-serif";
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .title {
     font-family: "Akira Expanded", "Arial Black", "sans-serif";
+}
+
+code, pre, tt {
+    font-size: 1rem;
+    font-family: "Space Mono", "Courier New", "Courier", "monospace";
 }
 
 .devday {

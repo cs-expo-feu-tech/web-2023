@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+import { getCollection } from 'astro:content';
+const articleEntries = await getCollection('articles');
+
+import '../../styles/scroll-animation.css';
+---
+<style>
+    .article-container{
+        background-image: url("../images/indiv-projects-bg-chain.png"), url("../images/indiv-projects-bg.png");
+        background-position: top, bottom;
+        background-repeat: no-repeat, repeat;
+        background-size: contain;
+    }
+
+    .page-title{
+        font-family: "Akira Expanded";
+        text-align: center;
+        color: white;
+    }
+</style>
+
+<BaseLayout title="Articles">
+    <div class="container-fluid py-5 article-container">
+        <div class="container">
+            <h1 class="page-title fs-1 p-5 drop-in">Articles</h1>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 drop-in-2">
+                {articleEntries.map(articleEntry => {
+                    if(!articleEntry.data.draft) return (
+                        <div class="col" style="height: 100%">
+                            <a href={`/articles/${articleEntry.slug}`} class="text-decoration-none text-reset d-block" style="height: 100%">
+                                <div class="card p-0" style="height: 100%">
+                                    <img src={articleEntry.data.image.src} alt={articleEntry.data.image.alt} class="card-image img-fluid ratio ratio-16x9">
+                                    <div class="card-body">
+                                        <p class="card-title h5">{articleEntry.data.title}</p>
+                                        <p class="card-text">{articleEntry.data.description}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    )
+                })}
+            </div>
+        </div>
+    </div>
+</BaseLayout>
