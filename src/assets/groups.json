@@ -13,8 +13,8 @@
             "background": "#01254e"
         },
         "group_avp": {
-            "link": "",
-            "embed_allows": false
+            "link": "https://youtu.be/oA3ac8NwDOg",
+            "embed_allows": true
         },
         "group_manuscript": "",
         "developers": [
@@ -56,8 +56,8 @@
             "background": "#ffffff"
         },
         "group_avp": {
-            "link": "",
-            "embed_allows": false
+            "link": "https://youtu.be/F41BMniRdKQ",
+            "embed_allows": true
         },
         "group_manuscript": "",
         "developers": [
@@ -186,8 +186,8 @@
             "background": "#6499b8"
         },
         "group_avp": {
-            "link": "",
-            "embed_allows": false
+            "link": "https://youtu.be/06AzjPgrWyI",
+            "embed_allows": true
         },
         "group_manuscript": "",
         "developers": [
@@ -223,8 +223,8 @@
             "background": "#e2e6ee"
         },
         "group_avp": {
-            "link": "",
-            "embed_allows": false
+            "link": "https://youtu.be/RTCKu16pmTY",
+            "embed_allows": true
         },
         "group_manuscript": "",
         "developers": [
@@ -303,8 +303,8 @@
             "background": "#ff6b52"
         },
         "group_avp": {
-            "link": "",
-            "embed_allows": false
+            "link": "https://youtu.be/aIHbw8Jcj84",
+            "embed_allows": true
         },
         "group_manuscript": "",
         "developers": [
@@ -414,8 +414,8 @@
             "background": "#ffde59"
         },
         "group_avp": {
-            "link": "",
-            "embed_allows": false
+            "link": "https://youtu.be/nQZUC7P76q4",
+            "embed_allows": true
         },
         "group_manuscript": "",
         "developers": [
@@ -457,8 +457,8 @@
             "background": "#ffffff"
         },
         "group_avp": {
-            "link": "",
-            "embed_allows": false
+            "link": "https://youtu.be/F0KDoLmmsyQ",
+            "embed_allows": true
         },
         "group_manuscript": "",
         "developers": [
@@ -541,8 +541,8 @@
             "background": "#ffffff"
         },
         "group_avp": {
-            "link": "",
-            "embed_allows": false
+            "link": "https://youtu.be/F60P00OWgpE",
+            "embed_allows": true
         },
         "group_manuscript": "",
         "developers": [
@@ -578,8 +578,8 @@
             "background": "#ef72fc"
         },
         "group_avp": {
-            "link": "",
-            "embed_allows": false
+            "link": "https://youtu.be/No7wq3_ZyfI",
+            "embed_allows": true
         },
         "group_manuscript": "",
         "developers": [
@@ -670,8 +670,8 @@
             "background": "#ffffff"
         },
         "group_avp": {
-            "link": "",
-            "embed_allows": false
+            "link": "https://youtu.be/zOz6LNdm9yA",
+            "embed_allows": true
         },
         "group_manuscript": "",
         "developers": [
@@ -707,8 +707,8 @@
             "background": "#e2ae39"
         },
         "group_avp": {
-            "link": "",
-            "embed_allows": false
+            "link": "https://youtu.be/zqeGDVmzArY",
+            "embed_allows": true
         },
         "group_manuscript": "",
         "developers": [
@@ -754,8 +754,8 @@
             "background": "#ece7ca"
         },
         "group_avp": {
-            "link": "",
-            "embed_allows": false
+            "link": "https://youtu.be/WJJCKch17V0",
+            "embed_allows": true
         },
         "group_manuscript": "",
         "developers": [
@@ -777,22 +777,22 @@
             }
         ]
     },
-    "loveableboys": {
-        "slug": "loveableboys",
-        "group_name": "Loveable Boys",
+    "lovableboys": {
+        "slug": "lovableboys",
+        "group_name": "Lovable Boys",
         "poster": "Loveable-Boys.png",
         "title": "A Secure and Safe Application Using Hybrid Cryptography Based End-to-End Encryption and Explicit Image Filtering",
         "abstract": "EfasChas is a social messaging application that uses hybrid cryptography-based end-to-end encryption (E2EE) with explicit image filtering to provide a secure and safe platform for users to communicate and exchange content. The explicit content detector (ECD) feature, a trained model using Convolutional Neural Network to classify images, achieved 88% accuracy in detecting explicit images, preventing the sending of the image to another user and protecting the users from seeing such images. In addition to the application, it uses hybrid cryptography, which combines symmetric (Advanced Encryption Standard) and asymmetric (Rivest-Shamir-Adleman) encryption to secure the communication between users and the server, ensuring only authorized users have access to the transmitted messages. Through user evaluation and testing, we found that the majority of the respondents strongly agreed that the ECD feature and the encryption mechanism to them messages effectively protected their privacy and made the more likely to use the application.",
         "description": "This program is a safe and secure tool that employs end-to-end encryption in cooperation with hybrid cryptography to safeguard user data. In order to ensure that only relevant content is shared, it also includes explicit image filtering. Users of the program can be assured of a high level of security, preventing unauthorized access to personal information and maintaining the confidentiality of their communications.",
-        "group_photo": "Loveable Boys",
+        "group_photo": "Lovable Boys",
         "group_logo": {
             "src": "loveableboys.png",
             "requires_background": true,
             "background": "#93a4ac"
         },
         "group_avp": {
-            "link": "",
-            "embed_allows": false
+            "link": "https://youtu.be/Doj11iWvg4o",
+            "embed_allows": true
         },
         "group_manuscript": "",
         "developers": [
@@ -872,8 +872,8 @@
             "background": "#6fb4e0"
         },
         "group_avp": {
-            "link": "",
-            "embed_allows": false
+            "link": "https://youtu.be/_8CPHAL_MjM",
+            "embed_allows": true
         },
         "group_manuscript": "",
         "developers": [
@@ -909,8 +909,8 @@
             "background": "#ffffff"
         },
         "group_avp": {
-            "link": "",
-            "embed_allows": false
+            "link": "https://youtu.be/F8Mqb5Tl0A4",
+            "embed_allows": true
         },
         "group_manuscript": "",
         "developers": [
@@ -946,8 +946,8 @@
             "background": "#0a1e3a"
         },
         "group_avp": {
-            "link": "",
-            "embed_allows": false
+            "link": "https://youtu.be/HCB28XLFgZ4",
+            "embed_allows": true
         },
         "group_manuscript": "",
         "developers": [
@@ -983,8 +983,8 @@
             "background": "#ffffff"
         },
         "group_avp": {
-            "link": "",
-            "embed_allows": false
+            "link": "https://youtu.be/ugYrOmfetCQ",
+            "embed_allows": true
         },
         "group_manuscript": "",
         "developers": [
@@ -1064,8 +1064,8 @@
             "background": "#105885"
         },
         "group_avp": {
-            "link": "",
-            "embed_allows": false
+            "link": "https://youtu.be/epIXGwvwxj4",
+            "embed_allows": true
         },
         "group_manuscript": "",
         "developers": [
@@ -1101,8 +1101,8 @@
             "background": "#024c6b"
         },
         "group_avp": {
-            "link": "",
-            "embed_allows": false
+            "link": "https://youtu.be/P1pHIBRcZKc",
+            "embed_allows": true
         },
         "group_manuscript": "",
         "developers": [
@@ -1138,8 +1138,8 @@
             "background": "#4f0f10"
         },
         "group_avp": {
-            "link": "",
-            "embed_allows": false
+            "link": "https://youtu.be/IzFnDhgsVgo",
+            "embed_allows": true
         },
         "group_manuscript": "",
         "developers": [
@@ -1222,8 +1222,8 @@
             "background": "#b8d88e"
         },
         "group_avp": {
-            "link": "",
-            "embed_allows": false
+            "link": "https://youtu.be/VC8QXzsFfHk",
+            "embed_allows": true
         },
         "group_manuscript": "",
         "developers": [
