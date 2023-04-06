@@ -5,19 +5,23 @@ export interface Props {
     id: string;
     title: string;
     poster: string;
+    logo: {
+        src: string,
+        requires_background: boolean,
+        background?: string
+    }
     group_name: string;
 }
 
-const { id, title, poster, group_name } = Astro.props;
+const { id, title, poster, group_name, logo } = Astro.props;
+const logobg = logo.requires_background ? logo.background : "#ffffff00";
 ---
 
-<style>
+<style define:vars={{logobg}}>
     .project-item {
         position: relative;
-        text-align: center;
         margin: auto auto;
         overflow: hidden;
-
 
         transition: all 0.2s;
     }
@@ -29,20 +33,12 @@ const { id, title, poster, group_name } = Astro.props;
     }
 
     .group-name {
-        font-family: "DIN";
-        position: absolute;
-        bottom: 0;
-        background: rgb(0, 0, 0);
         background: rgba(0, 0, 0, 0.8);
-        color: #f1f1f1;
         width: 100%;
-        transition: 0.5s ease;
-        opacity: 0;
-        color: white;
-        font-size: 20px;
-        padding: 20px;
-        text-align: left;
-        margin-bottom: 0;
+        
+        transform: translateY(100%);
+        transition: 0.3s ease;
+        /* opacity: 0; */
     }
 
     .project-item:hover {
@@ -50,19 +46,26 @@ const { id, title, poster, group_name } = Astro.props;
     }
     
     .project-item:hover .group-name {
-        opacity: 1;
+        /* opacity: 1; */
+        transform: translateY(0%)
     }
 
-    .project-item:hover {
+    .project-item:hover img:not(.logo) {
         filter: brightness(70%);
     }
 
     .project-item img {
-        transition: 0.2s ease-out;
+        transition: 0.3s ease-out;
     }
 
     .project-item:hover img {
         transform: scale(1.1);
+    }
+
+    .logo {
+        width: 64px;
+        height: 64px;
+        background-color: var(--logobg);
     }
     
 </style>
@@ -70,8 +73,11 @@ const { id, title, poster, group_name } = Astro.props;
 <a href={`/projects/${id}`}>
     <div class="project-item shimmer-wrapper shimmer-animate border border-white border-5">
         <img class="project-item-imgs" src={poster} alt={`${group_name}'s poster`} loading="lazy" />
-        <p class="group-name h4">
-            {title}
-        </p>
+        <div class="position-absolute bottom-0 p-3 group-name">
+            <img class="logo mx-1 mt-2 mb-3 p-1 rounded-3" src={`/images/group-logos/${logo.src}`} alt={`${group_name}'s logo`}>
+            <p class="fs-5 font-din text-start text-white m-0">
+                {title}
+            </p>
+        </div>
     </div>
 </a>
