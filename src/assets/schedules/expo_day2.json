@@ -59,8 +59,36 @@
             "color": "white"
         },
         {
-            "time_start": "11:55 AM",
+            "time_start": "11:50 AM",
             "time_end": "1:15 PM",
+            "event": "Health and Artificial Intelligence",
+            "color": "white",
+            "groups": [
+                {
+                    "id": "vaccshift",
+                    "group_name": "Vaccshift",
+                    "thesis_name": "iCHOR: Classification of Different Red Blood Cell Abnormalities using Deep Learning"
+                },
+                {
+                    "id": "4horsemen",
+                    "group_name": "4Horsemen",
+                    "thesis_name": "EmoBot: A Depression Prevention Android App using Machine Learning"
+                },
+                {
+                    "id": "samgroupsal",
+                    "group_name": "SAMGROUPSAL",
+                    "thesis_name": "Cobb Angle Digital Measurement App: An Object and Landmark detection application for diagnosing Scoliosis using Convolutional Neural Network"
+                },
+                {
+                    "id": "providence",
+                    "group_name": "Providence",
+                    "thesis_name": "Detection and Classification of Malaria: An Image Processing and Deep Learning Automated Program Study for Selected Clinics Around Manila"
+                }
+            ]
+        },
+        {
+            "time_start": "1:25 AM",
+            "time_end": "2:45 PM",
             "event": "Path Finding",
             "color": "white",
             "groups": [

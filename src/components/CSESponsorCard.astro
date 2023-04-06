@@ -1,4 +1,6 @@
 ---
+import "../styles/scroll-animation.css"
+
 export interface Props {
     html_class?: string;
     partner_img: string;
@@ -60,23 +62,6 @@ const bg_color = Astro.props.bg_color || "#ffffff";
         font-size: 1rem;
         margin-right: 0.5rem;
     }
-
-    .marquee-mask {
-        mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
-    }
-
-    .marquee {
-        animation: marquee 10s ease-in-out alternate infinite;
-    }
-
-    @keyframes marquee {
-        0% {
-            transform: translate(20, 0);
-        }
-        100% {
-            transform: translate(-120%, 0);
-        }
-    }
 </style>
 
 <div class={`${html_class} d-flex flex-column align-items-center py-5`}>
@@ -85,7 +70,7 @@ const bg_color = Astro.props.bg_color || "#ffffff";
     </div>
     
         <div class="w-100 overflow-hidden">
-            <p class="h4 text-center card-title mb-3 text-nowrap partner-names" style="text-shadow: 1px 1px aqua">{ partner_name }</p>
+            <p class="h4 text-center mb-3 text-nowrap d-inline-block partner-names" style="text-shadow: 1px 1px aqua; min-width: 100%;">{ partner_name }</p>
         </div>
 
         {
@@ -121,12 +106,6 @@ const bg_color = Astro.props.bg_color || "#ffffff";
 </div>
 
 <script>
-    function isElementOverflowing(element) {
-        var overflowX = element.offsetWidth < element.scrollWidth,
-            overflowY = element.offsetHeight < element.scrollHeight;
-
-        return (overflowX || overflowY);
-    }
 
     // Get all the partner names
     const partner_names = document.querySelectorAll(".partner-names");
@@ -135,7 +114,11 @@ const bg_color = Astro.props.bg_color || "#ffffff";
         // Loop through all the partner names
         partner_names.forEach((partner_name) => {
             // If the partner name is overflowing, add marquee class
-            if (isElementOverflowing(partner_name)) {
+            // if (isElementOverflowing(partner_name)) {
+
+            // Compare parent width with child (this) width
+            // If parent width is less than child width, add marquee class
+            if (partner_name.parentElement.offsetWidth < partner_name.clientWidth) {                
                 partner_name.classList.add("marquee");
 
                 // add marquee mask to parent div
