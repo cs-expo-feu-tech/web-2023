@@ -75,7 +75,7 @@ const logobg = logo.requires_background ? logo.background : "#ffffff00";
     <div class="project-item shimmer-wrapper shimmer-animate border border-white border-5">
         <img class="project-item-imgs" src={poster} alt={`${group_name}'s poster`} loading="lazy" />
         <div class="position-absolute bottom-0 p-3 group-name">
-            <img class="logo mx-1 mt-2 mb-3 p-1 rounded-3" src={`/images/group-logos/${logo.src}`} alt={`${group_name}'s logo`}>
+            <img class={`logo mx-1 mt-2 mb-3 rounded-3 ${logo.requires_background && "p-1"}`} src={`/images/group-logos/${logo.src}`} alt={`${group_name}'s logo`}>
             <p class="fs-5 font-din text-start text-white m-0">
                 {title}
             </p>
