@@ -44,16 +44,23 @@ const award_fg_colors = ["white", "black", "white", "white"]
 ---
 
 <style>
+    .video-bg {
+        background-image: url("/images/video_bg.svg");
+        background-color: #c8c8c8;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 2%;
+    }
+
     .project_video {
         width: 100%;
         aspect-ratio: 16/9;
     }
-
     #awards {
         position: relative;
         margin: 128px 0 ;
     }
-
     #awards::before {
         content: '';
         position: absolute;
@@ -179,7 +186,7 @@ const award_fg_colors = ["white", "black", "white", "white"]
         })}
         </div>
         <div class="spacer"></div>
-        
+
         {avp && avp.embed_allows && 
             <>
             <div class="row justify-content-center">
@@ -189,7 +196,7 @@ const award_fg_colors = ["white", "black", "white", "white"]
                 </div>
             </div>
             <div class="spacer"></div>
-            <div class="container">
+            <div class="container video-bg">
                 <iframe src={`https://www.youtube-nocookie.com/embed/${avp.link}?fs=0&color=white&disablekb=1`} title={`Group ${name}'s AVP`} class="project_video"></iframe>
             </div>
             <div class="spacer"></div>
