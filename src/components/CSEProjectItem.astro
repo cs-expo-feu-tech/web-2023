@@ -49,8 +49,8 @@ const logobg = logo.requires_background ? logo.background : "#ffffff00";
         background-color: var(--logobg);
     }
 
-        /* query for screens that can show more than 1 column of posters */
-    @media (any-hover: hover) {
+    /* query for screens that are possibly desktops */
+    @media (hover: hover) and (pointer: fine) {
         .group-name {
             transform: translateY(100%);
             font-size: 1.25rem;
@@ -89,6 +89,9 @@ const logobg = logo.requires_background ? logo.background : "#ffffff00";
         <img class="project-item-imgs" src={poster} alt={`${group_name}'s poster`} loading="lazy" />
         <div class="position-absolute bottom-0 p-3 group-name">
             <img class={`logo mx-1 mt-2 mb-3 rounded-3 ${logo.requires_background && "p-1"}`} src={`/images/group-logos/${logo.src}`} alt={`${group_name}'s logo`}>
+            <p class="h5 text-white text-truncate">
+                {group_name}
+            </p>
             <p class="font-din text-start text-white m-0">
                 {title}
             </p>
