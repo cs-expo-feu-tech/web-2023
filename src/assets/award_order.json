@@ -1,0 +1,43 @@
+{
+    "overall_best": {
+        "award_names": "Overall Best Thesis",
+        "is_ordered": true,
+        "group_ids": ["kairos", "edith", "alphabeta"]
+    },
+
+    "best_poster": {
+        "award_names": "Best Poster",
+        "is_ordered": true,
+        "group_ids": ["kairos", "vaccshift", "nakakapagpabagabag"]
+    },
+    
+    "best_presenter": {
+        "award_names": "Best Presenter",
+        "is_ordered": true,
+        "group_ids": ["semicolonizers", "nakakapagpabagabag", "4horsemen"]
+    },
+    
+    "innovator": {
+        "award_names": "Innovative Award",
+        "is_ordered": true,
+        "group_ids": ["bamm", "4bytes", "lambdainvariants"]
+    },
+
+    "best_avp": {
+        "award_names": "Best Ausio-Visual Presentation Award",
+        "is_ordered": true,
+        "group_ids": ["bethesdaboys", "hblhbldrivers", "edith"]
+    },
+    
+    "best_category": {
+        "award_names": "Best Thesis for Category",
+        "is_ordered": false,
+        "group_ids": ["kairos", "alphabeta", "brocode", "edith", "vaccshift", "direckt", "lambdainvariants"]
+    },
+    
+    "onb_special": {
+        "award_names": "O&B Award for Best Presentation",
+        "is_ordered": false,
+        "group_ids": ["kairos"]
+    }
+}

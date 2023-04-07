@@ -1,0 +1,155 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CSEAwardItem from '../../components/CSEAwardItem.astro';
+import AwardOrder from '../../assets/award_order.json';
+import Groups from '../../assets/groups.json';
+
+const colors_ordered = [
+    "#f7d000", // gold
+    "#bababa", // silver
+    "#c77b30", // bronze
+]
+---
+
+<style>
+    main {
+        background-image: url("../images/indiv-projects-bg-chain.png"), url("../images/indiv-projects-bg.png");
+        background-position: top, bottom;
+        background-repeat: no-repeat, repeat;
+        background-size: contain;
+        color: white;
+    }
+
+    .page-title{
+        font-family: "Akira Expanded";
+        text-align: center;
+    }
+</style>
+
+<BaseLayout title="Hall of Fame">
+    <main class="container-fluid py-5 text-white">
+        <div class="container">
+            <h1 class="page-title display-2 p-5 drop-in">The Hall of Fame</h1>
+            <p class="text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis expedita culpa assumenda fugiat commodi numquam eos vitae itaque unde porro ea eius officiis ipsum nulla tenetur laudantium, ipsa, perspiciatis placeat.</p>
+        </div>
+        <div class="container py-5" id="best-presenter">
+            <h2 class="display-4 text-center">Overall Best Thesis</h2>
+            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quae quia repellat quis, ad corporis, amet mollitia consequatur in aliquam accusamus quibusdam ut! Sit, expedita unde. Vel nam doloribus quas?</p>
+            <div class="mt-5 row row-cols-1 row-cols-md-2 row-cols-lg-3">
+            { 
+                AwardOrder.overall_best.group_ids.map((group, idx) => {
+                    const group_info = Groups[group];
+                    const color = colors_ordered[idx];
+                    return (
+                        <div class="col p-3">
+                            <CSEAwardItem border={color} id={group_info.slug} poster={`/images/group-posters/${group_info.poster}`} group_name={group_info.group_name} title={group_info.title} />
+                        </div>
+                    )
+                })
+            }
+            </div>
+        </div>
+        <div class="container py-5" id="best-poster">
+            <h2 class="display-4 text-center">Best Poster</h2>
+            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quae quia repellat quis, ad corporis, amet mollitia consequatur in aliquam accusamus quibusdam ut! Sit, expedita unde. Vel nam doloribus quas?</p>
+            <div class="mt-5 row row-cols-1 row-cols-md-2 row-cols-lg-3">
+            { 
+                AwardOrder.best_poster.group_ids.map((group, idx) => {
+                    const group_info = Groups[group];
+                    const color = colors_ordered[idx];
+                    return (
+                        <div class="col p-3">
+                            <CSEAwardItem border={color} id={group_info.slug} poster={`/images/group-posters/${group_info.poster}`} group_name={group_info.group_name} title={group_info.title} />
+                        </div>
+                    )
+                })
+            }
+            </div>
+        </div>
+        <div class="container py-5" id="best-presenter">
+            <h2 class="display-4 text-center">Best Presenter</h2>
+            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quae quia repellat quis, ad corporis, amet mollitia consequatur in aliquam accusamus quibusdam ut! Sit, expedita unde. Vel nam doloribus quas?</p>
+            <div class="mt-5 row row-cols-1 row-cols-md-2 row-cols-lg-3">
+            { 
+                AwardOrder.best_presenter.group_ids.map((group, idx) => {
+                    const group_info = Groups[group];
+                    const color = colors_ordered[idx];
+                    return (
+                        <div class="col p-3">
+                            <CSEAwardItem border={color} id={group_info.slug} poster={`/images/group-posters/${group_info.poster}`} group_name={group_info.group_name} title={group_info.title} />
+                        </div>
+                    )
+                })
+            }
+            </div>
+        </div>
+        <div class="container py-5" id="innovative">
+            <h2 class="display-4 text-center">Innovative Award</h2>
+            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quae quia repellat quis, ad corporis, amet mollitia consequatur in aliquam accusamus quibusdam ut! Sit, expedita unde. Vel nam doloribus quas?</p>
+            <div class="mt-5 row row-cols-1 row-cols-md-2 row-cols-lg-3">
+            { 
+                AwardOrder.innovator.group_ids.map((group, idx) => {
+                    const group_info = Groups[group];
+                    const color = colors_ordered[idx];
+                    return (
+                        <div class="col p-3">
+                            <CSEAwardItem border={color} id={group_info.slug} poster={`/images/group-posters/${group_info.poster}`} group_name={group_info.group_name} title={group_info.title} />
+                        </div>
+                    )
+                })
+            }
+            </div>
+        </div>
+        <div class="container py-5" id="best-avp">
+            <h2 class="display-4 text-center">Best Audio-Visual Presentation Award</h2>
+            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quae quia repellat quis, ad corporis, amet mollitia consequatur in aliquam accusamus quibusdam ut! Sit, expedita unde. Vel nam doloribus quas?</p>
+            <div class="mt-5 row row-cols-1 row-cols-md-2 row-cols-lg-3">
+            { 
+                AwardOrder.best_avp.group_ids.map((group, idx) => {
+                    const group_info = Groups[group];
+                    const color = colors_ordered[idx];
+                    return (
+                        <div class="col p-3">
+                            <CSEAwardItem border={color} id={group_info.slug} poster={`/images/group-posters/${group_info.poster}`} group_name={group_info.group_name} title={group_info.title} />
+                        </div>
+                    )
+                })
+            }
+            </div>
+        </div>
+        <div class="container py-5" id="best-category">
+            <h2 class="display-4 text-center">Best Thesis for Category</h2>
+            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quae quia repellat quis, ad corporis, amet mollitia consequatur in aliquam accusamus quibusdam ut! Sit, expedita unde. Vel nam doloribus quas?</p>
+            <div class="mt-5 row row-cols-1 row-cols-md-2 row-cols-lg-3">
+            { 
+                AwardOrder.best_category.group_ids.map((group) => {
+                    const group_info = Groups[group];
+                    const color = "lightblue";
+                    return (
+                        <div class="col p-3">
+                            <CSEAwardItem border={color} id={group_info.slug} poster={`/images/group-posters/${group_info.poster}`} group_name={group_info.group_name} title={group_info.title} />
+                        </div>
+                    )
+                })
+            }
+            </div>
+        </div>
+        <div class="container py-5" id="special-onb">
+            <h2 class="display-4 text-center">O&amp;B Award for Best Presentation</h2>
+            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quae quia repellat quis, ad corporis, amet mollitia consequatur in aliquam accusamus quibusdam ut! Sit, expedita unde. Vel nam doloribus quas?</p>
+            <div class="mt-5 row row-cols-1 row-cols-md-2 row-cols-lg-3">
+            { 
+                AwardOrder.onb_special.group_ids.map((group) => {
+                    const group_info = Groups[group];
+                    const color = "#ff7500";
+                    return (
+                        <div class="col p-3">
+                            <CSEAwardItem border={color} id={group_info.slug} poster={`/images/group-posters/${group_info.poster}`} group_name={group_info.group_name} title={group_info.title} />
+                        </div>
+                    )
+                })
+            }
+            </div>
+        </div>
+    </main>
+</BaseLayout>

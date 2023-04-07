@@ -1,0 +1,54 @@
+---
+import "shimmer-css/shimmer.css"
+
+export interface Props {
+    id: string;
+    title: string;
+    poster: string;
+    group_name: string;
+    border: string;
+}
+
+const { id, title, poster, group_name, border } = Astro.props;
+---
+
+<style define:vars={{border}}>
+    .project-item, .project-item>* {    
+        transition: all 0.2s;
+    }
+
+    .project-item {
+        position: relative;
+        margin: auto auto;
+        overflow: hidden;
+        border: 1rem solid var(--border) !important;
+    }
+
+    .project-item img:not(.logo) {
+        aspect-ratio: 1/1.41; /* A4 */
+        width: 100%;
+        display: block;
+    }
+
+    .group-name {
+        background: rgba(0, 0, 0, 0.8);
+        width: 100%;
+
+        font-size: 1rem;
+    }
+
+</style>
+
+<a href={`/projects/${id}`}>
+    <div class="project-item shimmer-wrapper shimmer-animate">
+        <img class="project-item-imgs" src={poster} alt={`${group_name}'s poster`} loading="lazy" />
+        <div class="position-absolute bottom-0 p-3 group-name">
+            <p class="h5 text-white text-truncate">
+                {group_name}
+            </p>
+            <p class="font-din text-start text-white m-0">
+                {title}
+            </p>
+        </div>
+    </div>
+</a>
