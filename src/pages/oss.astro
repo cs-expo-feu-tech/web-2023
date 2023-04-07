@@ -93,17 +93,36 @@ import Licenses from "../assets/oss-attribution/licenseInfos.json";
         </div>
         <div class="container mb-5 p-4 p-sm-5 fs-5 article-container rounded rounded-sm-3">
             <div id="toc">
-                <h2>Table of Contents</h2>
-                <ul>
-                    { Object.keys(Licenses).map((licenseInfo) => {
-                        const license = Licenses[licenseInfo];
-                            
-                        return (
-                            <li><a href={`#${license.name}`}>{`${license.name} | v${license.version}`}</a></li>
-                        )
-                    })}
-                </ul>
+                <h2>Summary of OSS Licenses</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Package Name</th>
+                            <th>Version</th>
+                            <th>License</th>
+                            <th>Repository Link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        { Object.keys(Licenses).map((licenseInfo, idx) => {
+                            const license = Licenses[licenseInfo];
+                                
+                            return (
+                                <tr>
+                                    <td>{idx + 1}</td>
+                                    <td><a href={`#${license.name}`}>{`${license.name}`}</a></td>    
+                                    <td>{license.version}</td>
+                                    <td>{license.license}</td>
+                                    <td><a href={license.url} target="_blank">{license.url}</a></td>
+                                </tr>
+                            )
+                        })}
+                    </tbody>
+                </table>
             </div>
+
+            <hr /> 
 
             { Object.keys(Licenses).map((licenseInfo) => {
                 const license = Licenses[licenseInfo];
