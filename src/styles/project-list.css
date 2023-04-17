@@ -4,87 +4,47 @@
     background-repeat: no-repeat, repeat;
     background-size: contain;
     color: white;
-    align-items: center;    
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    overflow: hidden;
-}
-.header{
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    margin-bottom: 20px;
-}
-.header > .title{
-    margin: 50px 0;
-    text-align: center;
-    font-weight: 800;
-    text-transform: uppercase;
-    font-size: min(10vw, 5rem);
-    letter-spacing: 3px;
-    text-align: center;
-}
-.header > .desc{
-    font-family: 'DIN', sans-serif;
-    text-align: center;
 }
 
-.project-list-container{
-    display: grid;
-    align-content: center;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px 20px;
-}
-.spacer {
-    height: 10vh;
-}
-
-.content {
-    z-index: 2;
-}
 .plastic {
     background-image: url("../images/plastic.png");
     background-size: cover;
     height: 20vh;
     width: 100%;
 }
-@media screen and (max-width: 1453px){
-    /* .project-item > img{
-        width: 336px;
-        height: 475.2px;
-    } */
+
+.cse-button {
+    text-decoration: none;
+    color: white;
+
+    background-image: url("/images/FW_Paper_Black_27.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 1rem 2rem;
+    font-family: "Akira Expanded";
+    mask-image: url("/images/btnmask.png");
+    mask-size: 100% 100%;
+
+    transition: transform 0.2s ease;
 }
+
+.cse-button:hover {
+    color: white;
+    transform: scale(1.2);
+}
+
 @media screen and (max-width: 1024px){
-    /* .project-item > img{
-        width: 268.8px;
-        height: 380.16px;
-    } */
     .chain{
         height: 800px;
     }
 }
 @media screen and (max-width: 768px){
-    .project-list-container{
-        grid-template-columns: auto auto;
-        
-    }
-    /* .project-item > img{
-        width: 241px;
-        height: 342px;
-    } */
     .chain{
         height: 600px;
     }
 }
 @media screen and (max-width: 576px){
-    .project-list-container{
-        grid-template-columns: auto;
-    }
-    /* .project-item > img{
-        width: 336px;
-        height: 475px;
-    } */
     .chain{
         height: 500px;
     }
