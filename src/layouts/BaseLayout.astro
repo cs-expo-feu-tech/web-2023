@@ -41,6 +41,21 @@ const { title } = Astro.props;
   
 		<title>{title ? `${title} | `:''}CS EXPO 2023</title>
 
+		<noscript>
+			<!-- for no script browsers - allows some semblance of a working website, sans some animations. -->
+			<style>
+				* {
+					opacity: 1 !important;
+					text-overflow: ellipsis !important;
+				}
+
+				.partner-names {
+					white-space: unset !important;
+				}
+
+			</style>
+		</noscript>
+
 		<style>
 			html {
 				scroll-behavior: smooth;
