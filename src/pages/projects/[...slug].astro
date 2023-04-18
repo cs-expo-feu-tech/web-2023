@@ -19,6 +19,11 @@ export async function getStaticPaths() {
     });
 
     return pages.map(({slug, name, title, abstract, description, photo, developers, awards, avp, manuscript}) => {
+        if (avp && avp.embed_allows) {
+            // Grab the video ID from the shortened youtu.be link
+            avp.link = avp.link.replace("https://youtu.be/", "")
+        }
+
         return {
             params: { slug },
             props: { slug, name, title, abstract, description, photo, developers, awards, avp, manuscript }
@@ -39,11 +44,23 @@ const award_fg_colors = ["white", "black", "white", "white"]
 ---
 
 <style>
+    .video-bg {
+        background-image: url("/images/video_bg.svg");
+        background-color: #c8c8c8;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 2%;
+    }
+
+    .project_video {
+        width: 100%;
+        aspect-ratio: 16/9;
+    }
     #awards {
         position: relative;
         margin: 128px 0 ;
     }
-
     #awards::before {
         content: '';
         position: absolute;
@@ -149,7 +166,7 @@ const award_fg_colors = ["white", "black", "white", "white"]
                 <p class="project-long-desc fst-italic">
                     {abstract}
                 </p>
-                {avp && <a href={avp} target="_blank" class="btn btn-primary">Project AVP</a>}
+                {avp && !avp.embed_allows && <a href={avp.link} target="_blank" class="btn btn-primary">Project AVP</a>}
                 {manuscript && <a href={manuscript} target="_blank" class="btn btn-primary">Download Manuscript</a>}
             </div>
         </div>
@@ -162,29 +179,61 @@ const award_fg_colors = ["white", "black", "white", "white"]
         </div>
         <div class="spacer"></div>
         <div class="row justify-content-center card-container">
-        {developers.map(dev => {
+            {developers.map(dev => {
             return (
                 <CSEDevCard slug={slug} name={dev.name} image={dev.photo} />
             )
         })}
         </div>
         <div class="spacer"></div>
+
+        {avp && avp.embed_allows && 
+            <>
+            <div class="row justify-content-center">
+                <div class="col-10 col-lg-6 col-xl-4 title-container ease-anim fade-bottom">
+                    <img class="title-bg" src="/images/tape.png">
+                    <span class="title">AVP</span>
+                </div>
+            </div>
+            <div class="spacer"></div>
+            <div class="container video-bg">
+                <iframe src={`https://www.youtube-nocookie.com/embed/${avp.link}?fs=0&color=white&disablekb=1`} title={`Group ${name}'s AVP`} class="project_video"></iframe>
+            </div>
+            <div class="spacer"></div>
+            </>
+        }
+
         <div class="col-12 spacer plastic"></div>
     </div>
-</BaseLayout>
 
-<script>
-    import JSConfetti from "js-confetti";
-    
-    const confetti = new JSConfetti();
+    <script>
+        import JSConfetti from "js-confetti";
+        
+        const confetti = new JSConfetti();
 
-    document.getElementById("awards")
-        .addEventListener("mouseenter", () => {
-            confetti.addConfetti({
-                // Add pastel rainbow colors
-                confettiColors: ['#a864fd', '#29cdff', '#78ff44', '#ff718d', '#fdff6a'],
-                confettiRadius: 6,
-                confettiNumber: 200,
+        // scrolling protection
+        window.onscroll = () => {
+            document.body.classList.add("scrolling");
+            clearTimeout(window.scrollTimeout);
+            window.scrollTimeout = setTimeout(() => {
+                document.body.classList.remove("scrolling");
+            }, 100);
+        }
+
+        document.getElementById("awards")
+            .addEventListener("mouseenter", () => {
+                if (document.body.classList.contains("scrolling")) return;
+
+                confetti.addConfetti({
+                    // Add pastel rainbow colors
+                    confettiRadius: 12,
+                    confettiNumber: 200,
+                });
+
+                confetti.addConfetti({
+                    emojis: ['🎉', '🎊', '🎈', '🏆', '🏅'],
+                    confettiNumber: 20,
+                })
             });
-        });
-</script>
+    </script>
+</BaseLayout>

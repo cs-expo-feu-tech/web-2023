@@ -1,0 +1,57 @@
+{
+    "overall_best": {
+        "award_names": "Overall Best Thesis",
+        "is_ordered": true,
+        "color": null,
+        "group_ids": ["kairos", "edith", "alphabeta"],
+        "award_description": "We award the Overall Best Thesis to the thesis that stood out the most with its presentation, content, and overall impact! This recognition highlights the quality and caliber of your projects. We can't wait to see the impact your work will have on your respective fields and beyond. 🌎🚀"
+    },
+    
+    "innovator": {
+        "award_names": "Innovative Award",
+        "is_ordered": true,
+        "color": null,
+        "group_ids": ["bamm", "4bytes", "lambdainvariants"],
+        "award_description": "Presenting the Best Innovative Projects! These groups have shown exceptional creativity and ingenuity in their research. They have demonstrated the ability to think outside the box and come up with innovative solutions to real-world problems. We can't wait to see what you come up with next! 🚀"
+    },
+
+    "best_poster": {
+        "award_names": "Best Poster",
+        "is_ordered": true,
+        "color": null,
+        "group_ids": ["kairos", "vaccshift", "nakakapagpabagabag"],
+        "award_description": "We award the Best Poster to the thesis that exhibits the best use of their posters to convey their research. This recognition demonstrates exceptional designing skills. Your hard work, dedication, and innovative ideas have truly set you apart from the rest. 🎨"
+    },
+    
+    "best_avp": {
+        "award_names": "Best Ausio-Visual Presentation Award",
+        "is_ordered": true,
+        "color": null,
+        "group_ids": ["bethesdaboys", "hblhbldrivers", "edith"],
+        "award_description": "One way to make your projects stand out is through an audio-visual presentation. These groups have shown exceptional creativity and ingenuity in their AVPs. It's no easy feat to create an AVP that is both informative and entertaining! 🎥"
+    },
+
+    "best_presenter": {
+        "award_names": "Best Presenter",
+        "is_ordered": true,
+        "color": null,
+        "group_ids": ["semicolonizers", "nakakapagpabagabag", "4horsemen"],
+        "award_description": "These brilliant groups and their respective presenters stood out the most with their presentation skills. They were able to convey their research in a clear and concise manner, and confidently faced the crowd with their defense. Let's give them a round of applause! 🌟"
+    },
+
+    "best_category": {
+        "award_names": "Best Thesis for Category",
+        "is_ordered": false,
+        "color": "#add8e6", 
+        "group_ids": ["kairos", "alphabeta", "brocode", "edith", "vaccshift", "direckt", "lambdainvariants"],
+        "award_description": "Each category has its own set of criteria, and these groups have excelled in their respective categories. We are proud of your hard work and dedication, and we can't wait to see what you come up with next! 🌟"
+    },
+    
+    "onb_special": {
+        "award_names": "O&B Award for Best Presentation",
+        "is_ordered": false,
+        "color": "#ff7500", 
+        "group_ids": ["kairos"],
+        "award_description": "On behalf of our Gold Sponsor Orange & Bronze Software Labs, it's a great pleasure to announce the group with the Best Presentation Skills! 🍊"
+    }
+}

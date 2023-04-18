@@ -6,14 +6,53 @@ import "../../styles/scroll-animation.css"
 import groups from "../../assets/groups.json";
 ---
 
+<style>
+    #awards {
+        position: relative;
+        margin: 128px 0 ;
+    }
+    #awards::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: calc(100% + 256px);
+        background-color: white;
+
+        top: -128px;
+        left: 0;
+
+        background: url("/images/poster-hero.png"),
+                    url("/images/indiv-projects-bg.png"),
+                    #161616;
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: blur(10px) brightness(0.5);
+        mask-image: url("/images/rip_mask.png");
+        mask-size: cover;
+
+        z-index: 0;
+    }
+
+    #awards>.container {
+        position: relative;
+        z-index: 1;
+    }
+
+    @media only screen and (min-width: 768px) {
+        #awards::before {
+            mask-size: 100% 100%;
+        }
+    }
+</style>
+
 <BaseLayout>
     <div class="projectlist">
         <div class="content">
-            <div class="header container">
-                <h1 class="title fs-1 drop-in">COLLECTIONS OF INNOVATION</h1>
-                <p class="desc fs-5 drop-in-2">
+            <div class="header container text-center py-5">
+                <h1 class="display-4 drop-in pt-5 pb-2">COLLECTIONS OF INNOVATION</h1>
+                <p class="fs-4 drop-in-2">
                     Come and see the diverse range of projects presented by each
-                    group at our event. Witness the demonstration of their
+                    groups at CS EXPO 2022! Witness the demonstration of their
                     knowledge and skills, showcasing unique ideas and cool
                     applications in the field of machine learning, image
                     processing, and more. Explore the exciting potential of
@@ -21,29 +60,36 @@ import groups from "../../assets/groups.json";
                     your own projects.
                 </p>
             </div>
-            <div class="spacer"></div>
-            <div class="container">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
-                
-                <!-- For each item in 'groups', put them in CSEProjectItem. (astro) -->
-                { Object.keys(groups).map((key) => {
-                    const group = groups[key];
-                    return (
-                        <>
-                        <div class="col ease-anim fade-bottom">
-                            <CSEProjectItem
-                                id={key}
-                                group_name={group.group_name}
-                                poster={`/images/group-posters/${group.poster}`}
-                                title={group.title}
-                            />
-                        </div>
-                        </>
-                    );
-                })}
-                <!-- End foreach -->
 
+            <div id="awards" class="text-center">
+                <div class="container z-1 py-5 mb-5 py-md-0 text-white">
+                    <h1 class="display-4">Hall of Fame</h1>
+                    <p class="fs-5 pb-5">Introducing the top groups who are worthy to receive prestigious awards at <span class="devday">DEVDAY</span>, from the best thesis, posters, audio-visual presentations and more!</p>
+                    <a href="/projects/awards" class="cse-button">Let's go!</a>
+                </div>
             </div>
+
+            <div class="container mt-5 pt-5">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3">
+                    <!-- For each item in 'groups', put them in CSEProjectItem. (astro) -->
+                    { Object.keys(groups).map((key) => {
+                        const group = groups[key];
+                        return (
+                            <>
+                            <div class="col ease-anim fade-bottom">
+                                <CSEProjectItem
+                                    id={key}
+                                    group_name={group.group_name}
+                                    poster={`/images/group-posters/${group.poster}`}
+                                    title={group.title}
+                                    logo={group.group_logo}
+                                />
+                            </div>
+                            </>
+                        );
+                    })}
+                    <!-- End foreach -->
+                </div>
             </div>
         </div>
         <div class="plastic col-12"></div>

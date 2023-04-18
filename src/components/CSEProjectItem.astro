@@ -5,73 +5,96 @@ export interface Props {
     id: string;
     title: string;
     poster: string;
+    logo: {
+        src: string,
+        requires_background: boolean,
+        background?: string
+    }
     group_name: string;
 }
 
-const { id, title, poster, group_name } = Astro.props;
+const { id, title, poster, group_name, logo } = Astro.props;
+const logobg = logo.requires_background ? logo.background : "#ffffff00";
 ---
 
-<style>
-    .project-item {
-        position: relative;
-        text-align: center;
-        margin: auto auto;
-        overflow: hidden;
-
-
+<style define:vars={{logobg}}>
+    
+    .project-item, .project-item>* {    
         transition: all 0.2s;
     }
 
-    .project-item > img {
+    .project-item {
+        position: relative;
+        margin: auto auto;
+        overflow: hidden;
+    }
+
+    .project-item img:not(.logo) {
         aspect-ratio: 1/1.41; /* A4 */
         width: 100%;
         display: block;
     }
 
     .group-name {
-        font-family: "DIN";
-        position: absolute;
-        bottom: 0;
-        background: rgb(0, 0, 0);
         background: rgba(0, 0, 0, 0.8);
-        color: #f1f1f1;
         width: 100%;
-        transition: 0.5s ease;
-        opacity: 0;
-        color: white;
-        font-size: 20px;
-        padding: 20px;
-        text-align: left;
-        margin-bottom: 0;
+
+        font-size: 1rem;
     }
 
-    .project-item:hover {
-        cursor: pointer;
-    }
-    
-    .project-item:hover .group-name {
-        opacity: 1;
-    }
-
-    .project-item:hover {
-        filter: brightness(70%);
+    .logo {
+        width: 48px;
+        height: 48px;
+        object-fit: contain;
+        background-color: var(--logobg);
     }
 
-    .project-item img {
-        transition: 0.2s ease-out;
-    }
+    /* query for screens that are possibly desktops */
+    @media (hover: hover) and (pointer: fine) {
+        .group-name {
+            transform: translateY(100%);
+            font-size: 1.25rem;
+        }
 
-    .project-item:hover img {
-        transform: scale(1.1);
+        .logo {
+            width: 64px;
+            height: 64px;
+        }
+        
+        .project-item:hover {
+            cursor: pointer;
+        }
+        
+        .project-item:hover .group-name {
+            /* opacity: 1; */
+            transform: translateY(0%)
+        }
+
+        .project-item:hover img:not(.logo) {
+            filter: brightness(70%);
+        }
+
+        .project-item img {
+            transition: 0.3s ease-out;
+        }
+
+        .project-item:hover img:not(.logo) {
+            transform: scale(1.1);
+        }
     }
-    
 </style>
 
 <a href={`/projects/${id}`}>
     <div class="project-item shimmer-wrapper shimmer-animate border border-white border-5">
         <img class="project-item-imgs" src={poster} alt={`${group_name}'s poster`} loading="lazy" />
-        <p class="group-name h4">
-            {title}
-        </p>
+        <div class="position-absolute bottom-0 p-3 group-name">
+            <img class={`logo mx-1 mt-2 mb-3 rounded-3 ${logo.requires_background && "p-1"}`} src={`/images/group-logos/${logo.src}`} alt={`${group_name}'s logo`}>
+            <p class="h5 text-white text-truncate">
+                {group_name}
+            </p>
+            <p class="font-din text-start text-white m-0">
+                {title}
+            </p>
+        </div>
     </div>
 </a>
