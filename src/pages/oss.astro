@@ -1,0 +1,144 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Licenses from "../assets/oss-attribution/licenseInfos.json";
+---
+
+<style is:global>
+
+    p:not(.meta), a, h1, h2, h3, h4 {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+
+        word-break: break-word;
+
+        hyphens: auto;
+    }
+
+    pre {
+        color: unset;
+        font-weight: unset;
+
+        background-color: unset;
+        padding: 1.25rem;
+        border-radius: 0.5rem;
+
+        word-wrap: normal;
+        
+        background-color: rgb(44, 44, 44) !important;
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+    }
+
+    blockquote {
+        border-left: 0.25rem solid #636363;
+        padding-left: 1rem;
+    }
+
+    a {
+        font: inherit;
+    }
+
+    table {
+        /* border-collapse: collapse;  */
+        width: 100%;
+
+        background-color: #2c2c2c;
+        border-radius: 0.5rem;
+
+        overflow: hidden;
+        margin-bottom: 1rem;
+    }
+
+    th, td {
+        padding: 0.5rem;
+    }
+
+    table, th, td {
+        border: 2px solid #636363;
+    }
+    
+</style>
+
+<style>
+    body {
+        background-image: url("../images/indiv-projects-bg.png");
+        background-repeat: repeat;
+        background-size: contain;
+    }
+
+    .article-container{
+        color: white;
+        background-color: rgba(0, 0, 0, 0.3);
+
+        text-align: justify;
+    }
+
+    .deco {
+        color: #636363;
+        font-style: italic;
+
+        font-size: 1rem;
+    }
+</style>
+
+<BaseLayout title="OSS Attributions">
+    <div class="container-fluid p-0 content-container">
+        <div class="container title-header text-white text-center py-5 my-5">
+            <h1 class="container text-center text-white display-4">Open-Source Attributions</h1>
+            <p>This website utilizes various open-source technologies listed below:</p>
+        </div>
+        <div class="container mb-5 p-4 p-sm-5 fs-5 article-container rounded rounded-sm-3">
+            <div id="toc">
+                <h2>Summary of OSS Licenses</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Package Name</th>
+                            <th>Version</th>
+                            <th>License</th>
+                            <th>Repository Link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        { Object.keys(Licenses).map((licenseInfo, idx) => {
+                            const license = Licenses[licenseInfo];
+                                
+                            return (
+                                <tr>
+                                    <td>{idx + 1}</td>
+                                    <td><a href={`#${license.name}`}>{`${license.name}`}</a></td>    
+                                    <td>{license.version}</td>
+                                    <td>{license.license}</td>
+                                    <td><a href={license.url} target="_blank">{license.url}</a></td>
+                                </tr>
+                            )
+                        })}
+                    </tbody>
+                </table>
+            </div>
+
+            <hr /> 
+
+            { Object.keys(Licenses).map((licenseInfo) => {
+                const license = Licenses[licenseInfo];
+                
+                return (
+                    <div>
+                        <h4 id={license.name}>{`${license.name} | v${license.version}`}</h4>
+                        <p>{`License: ${license.license}`}</p>
+                        <pre>
+                            {license.licenseText}
+                        </pre>
+                        <a href="#toc">Return to top</a>
+                        <hr />
+                    </div>
+                )
+            })}
+        </div>
+    </div>
+</BaseLayout>
